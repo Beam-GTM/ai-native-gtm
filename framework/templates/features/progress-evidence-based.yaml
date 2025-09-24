@@ -1,0 +1,212 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.452063Z
+migration_path: auto-generated
+---
+
+<!-- dependencies
+upstream:
+  - framework/workflows/design-new-feature.md
+  - framework/tasks/memory/update-project-memory.md
+downstream:
+  - workspace/features/active/*/active-context.md
+validated: 2025-08-27T17:00:00Z
+health: 100%
+-->
+
+<!-- version: evidence-based-v1.0 -->
+<!-- last-updated: 2025-08-27T17:00:00Z -->
+<!-- document-type: evidence-progress-template -->
+
+# Evidence-Based Progress Template
+# Enforces evidence linking for all progress claims
+
+metadata:
+  name: "evidence-based-progress-template"
+  type: "progress-document"
+  scope: "feature-level"
+  description: "Progress tracking with mandatory evidence linking"
+  purpose: "Prevent progress inflation through evidence enforcement"
+  enforcement_rules: "evidence_links_required"
+  audit_method: "native_tools"
+  last_updated: "2025-08-27"
+
+template_structure:
+  header:
+    - feature_name: "Replace with actual feature name"
+    - status: "planning/implementation/validation"
+    - overall_progress: "X% (Evidence-based calculation)"
+    - priority: "critical/high/medium/low"
+    - owner: "Team or person name"
+
+  evidence_summary:
+    required: true
+    format: |
+      ### Evidence Summary (REQUIRED)
+      - **Code Implementation**: X% ([Evidence: file1.py](file1.py), [Evidence: file2.js](file2.js))
+      - **Test Coverage**: X% ([Evidence: test_file.py](test_file.py))
+      - **Documentation**: X% ([Evidence: README.md](README.md))
+      - **Quality Gates**: X% ([Evidence: quality-gates.md](quality-gates.md))
+
+  phase_progress:
+    format: |
+      ### Phase {N}: {Phase Name} - {X}% Complete
+      **Status**: {planning/in-progress/complete}
+      
+      #### Tasks
+      - [x] **Task {N}.{M}**: {Completed task}
+        - **Evidence**: [Link to file](path/to/file.ext) showing completion
+        - **Quality Check**: {How verified}
+        
+      - [ ] **Task {N}.{M}**: {In progress task}
+        - **Current State**: {What's done}
+        - **Next Step**: {Specific next action}
+
+      #### Evidence of Completion (REQUIRED FOR >80% CLAIMS)
+      - **Implementation Files**: [file1.py](file1.py), [file2.py](file2.py)
+      - **Test Results**: [test_output.log](test_output.log)
+      - **Documentation**: [README.md](README.md)
+
+  audit_section:
+    required: true
+    format: |
+      ## Current Status Audit (REQUIRED)
+      
+      ### Progress Verification
+      **Claim**: {X}% complete
+      **Evidence Count**: {N} implementation files, {N} tests, {N} docs
+      **Last Verified**: {YYYY-MM-DD}
+      **Verified By**: Evidence links above
+      
+      ### Missing Evidence Alert
+      - [ ] No implementation files linked
+      - [ ] No test evidence provided
+      - [ ] Documentation claims unverified
+      - [ ] Quality gates not linked
+
+enforcement_rules:
+  evidence_links:
+    required_for: ">20% progress claims"
+    format: "[Evidence: {description}]({relative-path})"
+    verification: "Use Read tool to verify file exists"
+
+  progress_thresholds:
+    planning: "0-20%: Planning docs, PRD, basic structure"
+    implementation: "20-80%: Implementation files, working code examples"
+    validation: "80-100%: Tests passing, documentation complete, quality gates"
+
+  auto_block_conditions:
+    - "Claims >25% higher than evidence suggests"
+    - "Progress >50% without linked implementation files"
+    - "Progress >80% without passing tests"
+    - "Any progress claim without evidence links"
+
+audit_commands:
+  file_count_audit:
+    implementation_files: "Glob: **/*.py, **/*.js, src/**/*"
+    test_files: "Glob: *test*.py, tests/**/*"
+    documentation: "Glob: README.md, docs/**/*.md"
+    
+  evidence_verification:
+    method: "Read tool to verify each linked file exists"
+    check_content: "Files must be substantial (>100 bytes)"
+    
+  progress_calculation:
+    formula: |
+      Simple Formula:
+      - Code Implementation: 40% weight
+      - Test Coverage: 30% weight
+      - Documentation: 20% weight
+      - Quality Gates: 10% weight
+
+template_content: |
+  # Progress Tracking: {FEATURE_NAME}
+
+  ## Feature Overview
+  **Feature**: {feature-name}
+  **Status**: {planning/implementation/validation}
+  **Overall Progress**: {X}% (Evidence-based calculation)
+  **Priority**: {critical/high/medium/low}
+  **Owner**: {owner-name}
+
+  ### Evidence Summary (REQUIRED)
+  - **Code Implementation**: {X}% ([Evidence: file1.py](file1.py), [Evidence: file2.py](file2.py))
+  - **Test Coverage**: {X}% ([Evidence: test_file.py](test_file.py))
+  - **Documentation**: {X}% ([Evidence: README.md](README.md))
+  - **Quality Gates**: {X}% ([Evidence: quality-gates.md](quality-gates.md))
+
+  ## Phase Progress
+
+  ### Phase 1: {Phase Name} - {X}% Complete
+  **Status**: {planning/in-progress/complete}
+
+  #### Tasks
+  - [ ] **Task 1.1**: {Task description}
+    - **Evidence Required**: {Specific file or output expected}
+    - **Current State**: {What's done}
+    - **Next Step**: {Specific next action}
+
+  #### Evidence of Completion (REQUIRED FOR >80% CLAIMS)
+  - **Implementation Files**: [Link files here]
+  - **Test Results**: [Link test outputs]
+  - **Documentation**: [Link user docs]
+
+  ## Current Status Audit (REQUIRED)
+
+  ### Progress Verification
+  **Claim**: {X}% complete
+  **Evidence Count**: {N} implementation files, {N} tests, {N} docs
+  **Last Verified**: {YYYY-MM-DD}
+  **Verified By**: Evidence links above
+
+  ### Missing Evidence Alert
+  - [ ] No implementation files linked
+  - [ ] No test evidence provided
+  - [ ] Documentation claims unverified
+  - [ ] Quality gates not linked
+
+  ## Next Actions (REQUIRED)
+  1. **Immediate**: {Next specific task with evidence target}
+  2. **This Week**: {Goal with evidence requirements}
+  3. **Evidence Gap**: {What evidence needs to be created}
+
+  ---
+
+  ## EVIDENCE LINKING RULES
+
+  ### Evidence Link Format:
+  ```
+  [Evidence: {description}]({relative-path-to-file})
+  ```
+
+  ### Auto-Block Conditions:
+  - ❌ Claims >25% higher than evidence suggests
+  - ❌ Progress >50% without linked implementation files
+  - ❌ Progress >80% without passing tests
+  - ❌ Any progress claim without evidence links
+
+  ---
+
+  *Template Version*: Evidence-Based v1.0
+  *Last Updated*: {YYYY-MM-DD}
+  *Evidence Required*: YES - All claims must link to actual files
+
+usage_instructions:
+  creation: "Use this template for all new features requiring progress tracking"
+  updates: "Audit evidence before accepting any progress updates"
+  enforcement: "Block progress claims without proper evidence links"
+  integration: "Works with existing orchestrator audit commands"
+
+integration:
+  orchestrator_commands:
+    - "audit-progress [feature]": "Run evidence audit using Glob/Read tools"
+    - "verify-evidence [feature]": "Check all evidence links are valid"
+    - "calculate-progress [feature]": "Auto-calculate from evidence"
+    - "enforce-evidence [feature]": "Apply evidence requirements"
+
+quality_gates:
+  template_quality: "This template enforces evidence-based progress tracking"
+  reduces_inflation: "Prevents >25% discrepancies through evidence requirements"
+  uses_native_tools: "Leverages Claude's Glob/Read tools for audit"
+  process_focused: "Addresses human behavior rather than building new tech"

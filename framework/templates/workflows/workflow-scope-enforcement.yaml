@@ -1,0 +1,207 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.460394Z
+migration_path: auto-generated
+---
+
+# Workflow Scope Enforcement Pattern Template
+# Evidence-based primitive from design-new-feature.md analysis
+# Solves: LLMs consistently expand workflow scope despite explicit constraints
+
+metadata:
+  name: "workflow-scope-enforcement"
+  type: "behavioral-constraint-template"
+  scope: "workflow-phase-control" 
+  purpose: "Prevent LLM scope creep through multiple enforcement layers"
+  version: "1.0.0"
+  evidence_source: "design-new-feature.md (17 enforcement mechanisms across 455 lines)"
+  proven_effective: true
+
+# CORE PROBLEM SOLVED
+problem_statement:
+  behavioral_reality: "LLMs naturally expand scope beyond planning phase"
+  failure_pattern: "Single 'stop after planning' instructions get ignored"  
+  evidence: "design-new-feature.md required 17 different mechanisms"
+  impact: "Workflow scope creep, user loses control over execution phases"
+
+# PROVEN ENFORCEMENT PATTERN
+scope_enforcement_framework:
+  
+  # LAYER 1: STRUCTURAL BARRIERS
+  structural_barriers:
+    disabled_steps:
+      implementation: |
+        - step: "implementation_phase"
+          status: DISABLED
+          action: "NEVER EXECUTED IN THIS WORKFLOW"
+          notes: |
+            THIS STEP IS PERMANENTLY DISABLED:
+            - This workflow STOPS after planning
+            - Implementation requires separate command
+            - User must explicitly choose to proceed
+    
+    mandatory_exit_tool:
+      implementation: |
+        - step: "exit_plan_mode"
+          action: "Present ExitPlanMode tool to user"
+          requires: ["Planning validation PASSED"]
+          notes: |
+            MANDATORY WORKFLOW TERMINATION:
+            - Present planning results to user
+            - Use ExitPlanMode tool
+            - Allow user to choose next action
+            - WORKFLOW ENDS HERE
+
+  # LAYER 2: MULTIPLE REINFORCEMENT
+  reinforcement_mechanisms:
+    title_enforcement:
+      workflow_title: "{{Workflow Name}} (PLANNING ONLY)"
+      critical_notice: |
+        ## 🔴🔴🔴 CRITICAL EXECUTION NOTICE 🔴🔴🔴
+        
+        **THIS WORKFLOW IS PLANNING MODE ONLY - IT NEVER BUILDS OR IMPLEMENTS**
+        
+        **MANDATORY BEHAVIOR:**
+        - ✅ Execute planning phase ONLY
+        - ✅ Generate planning artifacts  
+        - ✅ STOP after planning validation
+        - ❌ NEVER execute implementation phase
+        - ❌ NEVER build workspace
+        - ❌ NEVER create implementation files
+
+    behavioral_reinforcement:
+      workflow_description: >-
+        PLANNING-ONLY workflow that handles {{phase description}}.
+        STOPS after {{phase}} artifacts are generated and validated. NEVER proceeds to implementation.
+        User must explicitly choose to proceed with {{next phase}} using separate command.
+      
+      success_criteria_override:
+        planning_complete: "{{Planning artifacts generated and validated}}"
+        implementation_blocked: "NO implementation executed"
+        user_control: "ExitPlanMode tool presented to user"
+        explicit_guidance: "User prompted to choose next action"
+
+    completion_message_guidance:
+      format: |
+        🎯 {{Phase}} Complete!
+        
+        {{Phase}} Phase:
+        ✅ {{Accomplishment 1}}
+        ✅ {{Accomplishment 2}}  
+        ✅ {{Phase}} artifacts: {{count}} files
+        
+        🔴 {{Next Phase}}: NOT EXECUTED
+        ❌ This workflow STOPS here - {{phase}} complete
+        ❌ No {{next artifacts}} created (by design)
+        ❌ No {{implementation files}} generated
+        
+        🎯 WHAT HAPPENS NEXT:
+        1. Review the {{phase}} artifacts above
+        2. Choose your next action:
+           - Proceed with {{next phase}} using {{next workflow}}
+           - Modify the {{phase}} artifacts
+           - Save for later {{implementation}}
+        
+        💡 {{PHASE}} SESSION COMPLETE - CLOSE CHAT RECOMMENDED:
+        Type "close" to end this {{phase}} session and preserve your work.
+
+  # LAYER 3: TECHNICAL CONSTRAINTS
+  technical_enforcement:
+    execution_constraints:
+      subagent_usage: "DO_NOT_TRIGGER_SUBAGENTS"
+      implementation_execution: "ABSOLUTELY_FORBIDDEN"
+      workspace_creation: "NEVER_EXECUTE"
+      building_phase: "PERMANENTLY_DISABLED" 
+      exit_plan_mode: "MANDATORY_AT_END"
+      reason: "Workflow executes {{PHASE}} ONLY - NEVER builds or implements"
+
+    quality_gate_constraints:
+      planning_gates: "ACTIVE"
+      implementation_gates: 
+        status: "DISABLED"
+        note: "Implementation gates not used - use {{next workflow}}"
+      workspace_gates:
+        status: "DISABLED" 
+        note: "Workspace gates not used - {{phase}} only"
+
+# IMPLEMENTATION GUIDE
+implementation_instructions:
+  
+  step_1_title_enforcement:
+    action: "Change workflow title to include (PLANNING ONLY)"
+    location: "workflow.name field"
+    example: "Design New Feature (PLANNING ONLY)"
+  
+  step_2_critical_notices:
+    action: "Add 🔴🔴🔴 CRITICAL EXECUTION NOTICE section"
+    location: "Top of workflow file, after title"
+    content: "Use critical_notice template above"
+  
+  step_3_disable_steps:
+    action: "Add status: DISABLED to unwanted steps"
+    location: "sequence section"
+    implementation: |
+      - step: "{{unwanted_step}}"
+        status: DISABLED
+        action: "NEVER EXECUTED IN THIS WORKFLOW"
+        notes: "THIS STEP IS PERMANENTLY DISABLED"
+  
+  step_4_mandatory_exit:
+    action: "Add mandatory ExitPlanMode presentation"
+    location: "Before disabled steps"
+    requirement: "Must use ExitPlanMode tool"
+  
+  step_5_completion_message:
+    action: "Add explicit user guidance at completion"
+    location: "completion_message section"  
+    content: "Use completion_message_guidance template"
+
+# USAGE PATTERNS
+application_scenarios:
+  
+  planning_only_workflows:
+    description: "Workflows that should stop after planning phase"
+    examples: ["design-new-feature", "requirements-analysis", "architecture-planning"]
+    enforcement_level: "MAXIMUM - all 3 layers required"
+  
+  phase_separated_workflows:
+    description: "Multi-phase workflows with user control points"
+    examples: ["build-deploy-test", "research-design-implement"]
+    enforcement_level: "MODERATE - structural barriers + completion guidance"
+  
+  bounded_execution_workflows:
+    description: "Workflows with specific scope boundaries"
+    examples: ["security-audit-only", "performance-analysis-only"]
+    enforcement_level: "BASIC - technical constraints + clear messaging"
+
+# VALIDATION CHECKLIST
+enforcement_validation:
+  structural_check:
+    - "Implementation steps have status: DISABLED"
+    - "ExitPlanMode tool presentation included"
+    - "Quality gates appropriately disabled"
+  
+  messaging_check:
+    - "Title includes (PLANNING ONLY) or equivalent"
+    - "Critical execution notice at top"
+    - "Completion message provides clear user guidance"
+  
+  technical_check:
+    - "execution_constraints.implementation_execution: ABSOLUTELY_FORBIDDEN"
+    - "exit_plan_mode: MANDATORY_AT_END" 
+    - "Appropriate workflow termination points"
+
+# PROVEN EFFECTIVENESS
+evidence_validation:
+  source: "framework/workflows/design-new-feature.md"
+  mechanisms_counted: 17
+  lines_analyzed: 455
+  effectiveness: "Successfully prevents scope creep in production usage"
+  user_feedback: "Enables reliable workflow phase control"
+  
+success_metrics:
+  scope_adherence: "100% - workflows stay within defined phase boundaries"
+  user_control: "100% - users maintain control over execution progression"
+  clarity: "95% - clear understanding of workflow boundaries"
+  reusability: "HIGH - pattern applicable to any phase-separated workflow"

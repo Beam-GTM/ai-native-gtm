@@ -1,0 +1,240 @@
+# Learning Parser Component
+# Parses and normalizes learnings from various sources
+
+component:
+  id: learning-parser
+  name: Learning Parser and Normalizer
+  type: parser
+  version: "1.0"
+  description: >-
+    Parses learnings from multiple formats (markdown, yaml, json) and
+    normalizes them into a standard structure for analysis
+
+parser_configuration:
+  supported_formats:
+    - markdown
+    - yaml
+    - json
+    - text
+  
+  input_sources:
+    core_learnings:
+      path: "workspace/memory/core-learnings.md"
+      format: markdown
+      parser: parse_core_learnings
+      
+    template_learnings:
+      path: "workspace/template-learnings/*.md"
+      format: markdown
+      parser: parse_template_learnings
+      
+    staging_inputs:
+      path: "workspace/inputs/learnings/staging/**/*"
+      format: auto_detect
+      parser: parse_staged_input
+      
+    manual_submissions:
+      path: "workspace/inputs/learnings/staging/manual-submissions/*"
+      format: yaml
+      parser: parse_manual_submission
+
+parsing_strategies:
+  markdown_parser:
+    patterns:
+      learning_pattern: "^[0-9]+\\.\\s+\\*\\*(.+?)\\*\\*:\\s+(.+)"
+      context_pattern: "Context:\\s+(.+)"
+      impact_pattern: "Impact:\\s+(.+)"
+      severity_pattern: "Severity:\\s+(\\d+)"
+      category_extraction: "\\[([^\\]]+)\\]"
+    
+    extraction_rules:
+      - extract: title
+        from: heading_level_2
+      - extract: pattern
+        from: bold_text
+      - extract: description
+        from: paragraph_after_bold
+      - extract: metadata
+        from: yaml_frontmatter
+  
+  yaml_parser:
+    schema_validation: true
+    schema_path: "workspace/inputs/learnings/schemas/learning-schema.yaml"
+    strict_mode: false
+    fallback_defaults:
+      severity: 5
+      frequency: 1
+      category: "other"
+  
+  json_parser:
+    schema_validation: true
+    nested_extraction: true
+    array_handling: flatten
+  
+  text_parser:
+    nlp_extraction: true
+    patterns:
+      - "learned that"
+      - "discovered"
+      - "found that"
+      - "issue with"
+      - "problem:"
+      - "pattern:"
+
+normalization_rules:
+  field_mapping:
+    # Map various field names to standard schema
+    title: ["name", "summary", "heading"]
+    pattern: ["issue", "problem", "observation"]
+    context: ["description", "details", "background"]
+    severity: ["priority", "impact_level", "criticality"]
+    frequency: ["occurrences", "count", "instances"]
+  
+  value_normalization:
+    severity:
+      type: integer
+      range: [1, 10]
+      mappings:
+        critical: 9
+        high: 7
+        medium: 5
+        low: 3
+        trivial: 1
+    
+    frequency:
+      type: integer
+      min: 1
+      default: 1
+    
+    category:
+      type: enum
+      allowed: ["usability", "performance", "functionality", "documentation", 
+                "integration", "security", "workflow", "configuration", "other"]
+      default: "other"
+    
+    users_affected:
+      type: enum
+      allowed: ["single", "few", "many", "all"]
+      mappings:
+        "1": "single"
+        "2-10": "few"
+        "11-100": "many"
+        "100+": "all"
+  
+  text_cleaning:
+    - trim_whitespace
+    - remove_markdown_formatting
+    - normalize_quotes
+    - fix_encoding
+    - remove_duplicates
+
+deduplication:
+  strategy: similarity_matching
+  algorithm: levenshtein
+  threshold: 0.85
+  fields_to_compare:
+    - pattern
+    - context
+  merge_strategy:
+    - keep_highest_severity
+    - sum_frequencies
+    - union_evidence
+    - earliest_timestamp
+
+quality_scoring:
+  factors:
+    completeness:
+      weight: 0.3
+      checks:
+        - has_pattern
+        - has_context
+        - has_impact
+        - has_category
+    
+    clarity:
+      weight: 0.2
+      checks:
+        - pattern_length_appropriate
+        - context_provides_detail
+        - actionable_information
+    
+    evidence:
+      weight: 0.3
+      checks:
+        - has_evidence_links
+        - frequency_documented
+        - source_identified
+    
+    consistency:
+      weight: 0.2
+      checks:
+        - severity_matches_description
+        - category_matches_pattern
+        - no_contradictions
+  
+  minimum_quality_score: 0.6
+
+output_format:
+  structure:
+    learnings:
+      type: array
+      items:
+        id: string
+        timestamp: datetime
+        pattern: string
+        context: string
+        impact:
+          severity: integer
+          frequency: integer
+          users_affected: string
+        category: string
+        source: string
+        evidence: array
+        quality_score: float
+        processing_notes: object
+    
+    metadata:
+      total_parsed: integer
+      duplicates_found: integer
+      quality_failures: integer
+      parsing_errors: array
+      processing_timestamp: datetime
+
+error_handling:
+  parse_failure:
+    strategy: quarantine
+    location: "workspace/inputs/learnings/failed/"
+    log: true
+    notify: false
+  
+  validation_failure:
+    strategy: attempt_recovery
+    fallback: use_defaults
+    log: true
+  
+  duplicate_found:
+    strategy: merge
+    keep_original: true
+    log: false
+
+example_parsing:
+  input: |
+    ## Learning from Template Execution
+    **Pattern**: Users struggle with finding workflow menu
+    Context: During onboarding, 5 out of 5 users asked where workflows were
+    Severity: 7
+    Evidence: session-logs-2025-01-27.md
+  
+  parsed:
+    id: "learning-2025-01-27-001"
+    timestamp: "2025-01-27T10:00:00Z"
+    pattern: "Users struggle with finding workflow menu"
+    context: "During onboarding, 5 out of 5 users asked where workflows were"
+    impact:
+      severity: 7
+      frequency: 5
+      users_affected: "many"
+    category: "usability"
+    source: "template-execution"
+    evidence: ["session-logs-2025-01-27.md"]
+    quality_score: 0.85

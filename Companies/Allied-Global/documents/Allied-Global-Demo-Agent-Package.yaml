@@ -1,0 +1,232 @@
+# Allied Global Demo Agent Package
+# Generated: 2025-01-27T20:45:00Z
+# Purpose: Complete demo agent package for webhook deployment
+
+demo_agent_package:
+  metadata:
+    client: "Allied Global"
+    package_version: "1.0.0"
+    generated_date: "2025-01-27T20:45:00Z"
+    demo_type: "product_demo"
+    duration: "45_minutes"
+    language: "english"
+    webhook_endpoint: "https://api.beam.ai/demo-agents/allied-global"
+    
+  package_contents:
+    workflow_definition: "Allied-Global-Demo-Workflow.yaml"
+    prompt_library: "Allied-Global-Demo-Prompts.yaml"
+    test_cases: "Allied-Global-Demo-Test-Cases.yaml"
+    deployment_config: "Allied-Global-Demo-Deployment.yaml"
+    
+  deployment_payload:
+    agent_id: "allied-global-demo-agent"
+    agent_name: "Allied Global Demo Agent"
+    agent_type: "product_demo"
+    client_context:
+      company: "Allied Global"
+      industry: "BPO Services"
+      employees: 29000
+      delivery_centers: 19
+      current_ai: "Basic orchestrator"
+      pain_points: ["Manual O2C processes", "Manual P2P processes", "Manual RPO processes"]
+      partnership_interest: "Revenue share model, 12-month flexible agreements"
+      
+    demo_configuration:
+      duration: 45
+      language: "english"
+      attendees: ["Strategy Leader", "Automation Leader"]
+      demo_type: "product_demo"
+      
+    technical_requirements:
+      voice_integration: "SIP/SBC connectivity"
+      ccaas_integration: "Genesys/Five9/Amazon Connect"
+      erp_integration: "SAP/Oracle/Dynamics/Salesforce"
+      security: "SOC2/ISO compliance, data residency, SSO/SCIM"
+      
+    business_objectives:
+      primary: "Validate technical integration (SIP/SBC, CCaaS)"
+      secondary: "Demonstrate business value (ROI with real use cases)"
+      tertiary: "Confirm partnership fit (revenue share model)"
+      
+    success_criteria:
+      technical_validation: "Live integration demonstration successful"
+      business_value: "ROI metrics clearly demonstrated"
+      partnership_alignment: "Revenue share model acceptable"
+      next_steps: "Timeline and deliverables agreed"
+      
+  workflow_phases:
+    platform_overview:
+      duration: 10
+      objective: "Establish credibility and technical foundation"
+      prompts: "platform_overview_prompts"
+      test_cases: "platform_overview_tests"
+      
+    live_demo:
+      duration: 25
+      objective: "Demonstrate real business value with live use cases"
+      agents: ["o2c_agent", "p2p_agent", "rpo_agent"]
+      prompts: "live_demo_prompts"
+      test_cases: "live_demo_tests"
+      
+    partnership_discussion:
+      duration: 10
+      objective: "Confirm partnership framework and next steps"
+      prompts: "partnership_discussion_prompts"
+      test_cases: "partnership_discussion_tests"
+      
+  decision_branches:
+    technical_validation:
+      condition: "Technical integration questions arise"
+      response: "Provide detailed technical specifications and integration examples"
+      fallback: "Schedule follow-up technical session with Cesar"
+      
+    business_value_questions:
+      condition: "ROI or business impact questions arise"
+      response: "Present specific metrics and case studies from similar implementations"
+      fallback: "Provide detailed ROI calculator and implementation timeline"
+      
+    partnership_concerns:
+      condition: "Partnership model questions arise"
+      response: "Clarify revenue share structure and implementation flexibility"
+      fallback: "Schedule separate partnership discussion session"
+      
+    competitive_comparison:
+      condition: "Comparison to Retail AI/Brainbase arises"
+      response: "Highlight proven enterprise implementations and revenue share advantages"
+      fallback: "Provide detailed competitive analysis document"
+      
+  integration_specifications:
+    sip_sbc_integration:
+      protocol: "SIP"
+      connectivity: "SIP trunk + SBC"
+      configuration: "Voice integration specifications"
+      testing: "Connectivity test and call routing validation"
+      
+    ccaas_integration:
+      platforms: ["Genesys", "Five9", "Amazon Connect"]
+      connectivity: "API integration and call routing"
+      configuration: "Platform-specific integration settings"
+      testing: "Call routing and platform connectivity validation"
+      
+    erp_integration:
+      systems: ["SAP", "Oracle", "Dynamics", "Salesforce"]
+      connectivity: "API integration and data synchronization"
+      configuration: "System-specific integration settings"
+      testing: "Data access and synchronization validation"
+      
+  security_compliance:
+    certifications: ["SOC2 Type II", "ISO 27001"]
+    data_residency: "Client-controlled data location"
+    pii_handling: "Encrypted processing and storage"
+    access_controls: "SSO/SCIM integration"
+    audit_trails: "Complete activity logging and reporting"
+    
+  performance_requirements:
+    response_time: "< 2 seconds"
+    accuracy: "> 95%"
+    reliability: "> 99% uptime"
+    scalability: "Enterprise deployment (29K employees, 19 centers)"
+    
+  deployment_instructions:
+    webhook_deployment:
+      endpoint: "https://api.beam.ai/demo-agents/allied-global"
+      method: "POST"
+      authentication: "Bearer token required"
+      payload_format: "JSON"
+      
+    configuration_steps:
+      1. "Deploy demo agent package to webhook endpoint"
+      2. "Configure technical integration settings"
+      3. "Set up security and compliance parameters"
+      4. "Test all integration points and decision branches"
+      5. "Validate performance and reliability requirements"
+      
+    testing_protocol:
+      1. "Execute all test cases in test_cases.yaml"
+      2. "Validate decision branch responses"
+      3. "Test technical integration points"
+      4. "Verify performance requirements"
+      5. "Confirm security and compliance settings"
+      
+  monitoring_metrics:
+    technical_metrics:
+      - "Response time per phase"
+      - "Integration connectivity status"
+      - "Error rates and handling"
+      - "Performance degradation detection"
+      
+    business_metrics:
+      - "Demo completion rate"
+      - "Question response accuracy"
+      - "Partnership interest indicators"
+      - "Next steps engagement"
+      
+    quality_metrics:
+      - "Prompt clarity scores"
+      - "Decision branch effectiveness"
+      - "Test case pass rates"
+      - "Overall demo satisfaction"
+      
+  maintenance_requirements:
+    regular_updates:
+      - "Prompt optimization based on performance"
+      - "Test case updates for new scenarios"
+      - "Integration updates for platform changes"
+      - "Security updates and compliance checks"
+      
+    monitoring_frequency:
+      - "Real-time during demo sessions"
+      - "Daily performance reviews"
+      - "Weekly quality assessments"
+      - "Monthly optimization updates"
+      
+  support_resources:
+    technical_support:
+      - "Integration troubleshooting"
+      - "Performance optimization"
+      - "Security compliance assistance"
+      - "Platform updates and maintenance"
+      
+    business_support:
+      - "Demo content updates"
+      - "Partnership material updates"
+      - "ROI calculation assistance"
+      - "Competitive analysis updates"
+      
+  success_validation:
+    deployment_success:
+      - "Webhook endpoint accessible"
+      - "All integration points functional"
+      - "Test cases passing"
+      - "Performance requirements met"
+      
+    demo_success:
+      - "45-minute demo completed successfully"
+      - "All phases executed as planned"
+      - "Decision branches responding correctly"
+      - "Client engagement and interest confirmed"
+      
+    partnership_success:
+      - "Technical validation completed"
+      - "Business value demonstrated"
+      - "Partnership framework discussed"
+      - "Next steps timeline agreed"
+      
+  post_demo_actions:
+    immediate_follow_up:
+      - "Send demo recording and materials"
+      - "Schedule technical session with Cesar"
+      - "Provide partnership framework details"
+      - "Confirm next steps timeline"
+      
+    short_term_goals:
+      - "Partnership agreement finalization"
+      - "Pilot project selection and planning"
+      - "Allied Global team training"
+      - "Joint go-to-market strategy development"
+      
+    long_term_vision:
+      - "Multiple client implementations"
+      - "Market expansion and penetration"
+      - "Revenue growth and profitability"
+      - "Strategic partnership development"

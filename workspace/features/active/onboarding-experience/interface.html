@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS OS v3.0 | Quantum Knowledge Matrix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-glow: #00ff88;
+            --secondary-glow: #00ffff;
+            --tertiary-glow: #ff00ff;
+            --warning-glow: #ffaa00;
+            --danger-glow: #ff0066;
+            --quantum-blue: #0099ff;
+            --matrix-green: #00ff44;
+            --void-black: #0a0a0f;
+            --glass-white: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            font-family: 'Consolas', 'Courier New', monospace;
+            background: var(--void-black);
+            color: var(--primary-glow);
+            overflow-x: hidden;
+            position: relative;
+            cursor: crosshair;
+        }
+
+        /* Quantum Matrix Background */
+        .quantum-field {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 60%);
+            animation: quantumShift 20s ease-in-out infinite;
+        }
+
+        @keyframes quantumShift {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            33% { transform: rotate(120deg) scale(1.1); }
+            66% { transform: rotate(240deg) scale(0.9); }
+        }
+
+        /* Matrix Rain Effect */
+        .matrix-rain {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .matrix-column {
+            position: absolute;
+            top: -100%;
+            font-size: 12px;
+            line-height: 12px;
+            color: var(--matrix-green);
+            text-shadow: 0 0 5px currentColor;
+            animation: matrixFall linear infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes matrixFall {
+            to { transform: translateY(200vh); }
+        }
+
+        /* Neural Network Grid */
+        .neural-grid {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.05;
+            background-image: 
+                linear-gradient(var(--primary-glow) 1px, transparent 1px),
+                linear-gradient(90deg, var(--primary-glow) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: gridPulse 4s ease-in-out infinite;
+        }
+
+        @keyframes gridPulse {
+            0%, 100% { opacity: 0.05; }
+            50% { opacity: 0.1; }
+        }
+
+        /* Holographic Sidebar */
+        .holo-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: linear-gradient(135deg, 
+                rgba(0, 255, 136, 0.1) 0%, 
+                rgba(0, 255, 255, 0.05) 50%,
+                rgba(255, 0, 255, 0.05) 100%);
+            border-right: 2px solid var(--primary-glow);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow: hidden;
+        }
+
+        .holo-sidebar::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                var(--primary-glow),
+                transparent,
+                var(--secondary-glow),
+                transparent
+            );
+            animation: holographicScan 10s linear infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes holographicScan {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .sidebar-header {
+            padding: 30px 20px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .system-logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .hexagon {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            animation: hexRotate 20s linear infinite;
+        }
+
+        @keyframes hexRotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hexagon svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 20px var(--secondary-glow));
+        }
+
+        .system-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--primary-glow), var(--secondary-glow), var(--tertiary-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: titlePulse 3s ease-in-out infinite;
+            letter-spacing: 3px;
+        }
+
+        @keyframes titlePulse {
+            0%, 100% { filter: brightness(1); }
+            50% { filter: brightness(1.5); }
+        }
+
+        .system-version {
+            font-size: 0.8rem;
+            color: var(--secondary-glow);
+            margin-top: 5px;
+            opacity: 0.8;
+            letter-spacing: 2px;
+        }
+
+        .nav-container {
+            padding: 20px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 25px;
+            color: var(--primary-glow);
+            text-decoration: none;
+            position: relative;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            overflow: hidden;
+        }
+
+        .nav-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: var(--secondary-glow);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                rgba(0, 255, 255, 0.2) 0%,
+                transparent 100%);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .nav-item:hover {
+            color: var(--secondary-glow);
+            text-shadow: 0 0 10px currentColor;
+            padding-left: 35px;
+        }
+
+        .nav-item:hover::before {
+            transform: scaleY(1);
+        }
+
+        .nav-item:hover::after {
+            transform: translateX(0);
+        }
+
+        .nav-item.active {
+            color: #ffffff;
+            background: rgba(0, 255, 255, 0.1);
+        }
+
+        .nav-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .status-panel {
+            position: absolute;
+            bottom: 30px;
+            left: 20px;
+            right: 20px;
+            padding: 15px;
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid var(--primary-glow);
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: var(--primary-glow);
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: statusBlink 2s ease-in-out infinite;
+        }
+
+        @keyframes statusBlink {
+            0%, 100% { opacity: 1; box-shadow: 0 0 10px currentColor; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Quantum Menu Toggle */
+        .quantum-toggle {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            z-index: 1001;
+            width: 50px;
+            height: 50px;
+            background: none;
+            border: 2px solid var(--primary-glow);
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .quantum-toggle:hover {
+            transform: rotate(90deg) scale(1.1);
+            border-color: var(--secondary-glow);
+            box-shadow: 0 0 30px var(--secondary-glow);
+        }
+
+        .toggle-lines {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .toggle-line {
+            width: 20px;
+            height: 2px;
+            background: var(--primary-glow);
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Main Content Area */
+        .main-interface {
+            margin-left: 280px;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+            padding: 40px;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text {
+            position: relative;
+            color: var(--secondary-glow);
+            text-shadow: 
+                0 0 20px var(--secondary-glow),
+                0 0 40px var(--secondary-glow),
+                0 0 60px var(--primary-glow);
+            animation: glitchAnimation 10s infinite;
+        }
+
+        @keyframes glitchAnimation {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 20px var(--secondary-glow),
+                    0 0 40px var(--secondary-glow),
+                    0 0 60px var(--primary-glow);
+            }
+            25% {
+                text-shadow: 
+                    -2px 0 var(--danger-glow),
+                    2px 0 var(--quantum-blue),
+                    0 0 40px var(--secondary-glow);
+            }
+            50% {
+                text-shadow: 
+                    2px 0 var(--tertiary-glow),
+                    -2px 0 var(--primary-glow),
+                    0 0 60px var(--warning-glow);
+            }
+        }
+
+        .subtitle {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            color: var(--primary-glow);
+            opacity: 0.8;
+            letter-spacing: 3px;
+        }
+
+        /* Holographic Cards */
+        .knowledge-grid {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(650px, 1fr));
+            perspective: 1000px;
+        }
+
+        .holo-card {
+            background: linear-gradient(135deg, 
+                rgba(0, 255, 136, 0.05) 0%,
+                rgba(0, 255, 255, 0.05) 50%,
+                rgba(255, 0, 255, 0.05) 100%);
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, 
+                var(--primary-glow), 
+                var(--secondary-glow), 
+                var(--tertiary-glow)) 1;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .holo-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0deg,
+                var(--primary-glow) 60deg,
+                transparent 120deg
+            );
+            animation: hologramSweep 6s linear infinite;
+            opacity: 0.1;
+        }
+
+        @keyframes hologramSweep {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .holo-card:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 
+                0 20px 40px rgba(0, 255, 136, 0.3),
+                0 40px 80px rgba(0, 255, 255, 0.2),
+                inset 0 0 60px rgba(255, 0, 255, 0.1);
+        }
+
+        .card-header {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--secondary-glow);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .card-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--secondary-glow), 
+                transparent);
+            animation: scanLine 3s ease-in-out infinite;
+        }
+
+        @keyframes scanLine {
+            0%, 100% { width: 100px; }
+            50% { width: 200px; }
+        }
+
+        /* Enhanced Hierarchy Visualization */
+        .quantum-hierarchy {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .hierarchy-node {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .node-core {
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .node-core::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transition: left 0.5s ease;
+        }
+
+        .node-core:hover::before {
+            left: 100%;
+        }
+
+        .node-core:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 30px currentColor;
+        }
+
+        .agent-node {
+            border-color: var(--danger-glow);
+            color: var(--danger-glow);
+            box-shadow: 0 0 20px var(--danger-glow);
+        }
+
+        .workflow-node {
+            border-color: var(--warning-glow);
+            color: var(--warning-glow);
+            box-shadow: 0 0 20px var(--warning-glow);
+        }
+
+        .task-node {
+            border-color: var(--primary-glow);
+            color: var(--primary-glow);
+            box-shadow: 0 0 20px var(--primary-glow);
+        }
+
+        .feature-node {
+            border-color: var(--tertiary-glow);
+            color: var(--tertiary-glow);
+            box-shadow: 0 0 20px var(--tertiary-glow);
+        }
+
+        .node-description {
+            position: absolute;
+            left: calc(100% + 20px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid var(--primary-glow);
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .hierarchy-node:hover .node-description {
+            opacity: 1;
+        }
+
+        .quantum-arrow {
+            font-size: 2.5rem;
+            color: var(--secondary-glow);
+            text-shadow: 0 0 15px currentColor;
+            animation: arrowPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes arrowPulse {
+            0%, 100% { 
+                transform: translateY(0) scale(1); 
+                opacity: 0.8;
+            }
+            50% { 
+                transform: translateY(5px) scale(1.2); 
+                opacity: 1;
+            }
+        }
+
+        /* Enhanced Flow Visualization */
+        .quantum-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .flow-node {
+            background: linear-gradient(135deg, 
+                rgba(0, 255, 255, 0.2), 
+                rgba(0, 255, 136, 0.2));
+            border: 2px solid var(--secondary-glow);
+            color: var(--secondary-glow);
+            padding: 20px 30px;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 
+                0 0 20px rgba(0, 255, 255, 0.3),
+                inset 0 0 20px rgba(0, 255, 255, 0.1);
+            max-width: 500px;
+            width: 100%;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .flow-node::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.3), 
+                transparent);
+            transition: left 0.7s ease;
+        }
+
+        .flow-node:hover::before {
+            left: 100%;
+        }
+
+        .flow-node:hover {
+            transform: translateX(10px) scale(1.05);
+            box-shadow: 
+                0 0 40px rgba(0, 255, 255, 0.5),
+                inset 0 0 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .step-indicator {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 255, 255, 0.3);
+            border: 2px solid var(--secondary-glow);
+            border-radius: 50%;
+            width: 35px;
+            height: 35px;
+            margin-right: 15px;
+            font-weight: bold;
+            box-shadow: 0 0 15px var(--secondary-glow);
+        }
+
+        .flow-connector {
+            width: 2px;
+            height: 30px;
+            background: linear-gradient(180deg, 
+                var(--secondary-glow), 
+                transparent);
+            margin: -5px 0;
+            position: relative;
+            animation: flowPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes flowPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Enhanced Guidelines */
+        .protocol-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .protocol-section {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .protocol-header {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            padding: 15px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .authorized-header {
+            background: linear-gradient(135deg, 
+                rgba(0, 255, 136, 0.3), 
+                rgba(0, 255, 136, 0.1));
+            border: 2px solid var(--primary-glow);
+            color: var(--primary-glow);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+        }
+
+        .forbidden-header {
+            background: linear-gradient(135deg, 
+                rgba(255, 0, 102, 0.3), 
+                rgba(255, 0, 102, 0.1));
+            border: 2px solid var(--danger-glow);
+            color: var(--danger-glow);
+            box-shadow: 0 0 20px rgba(255, 0, 102, 0.3);
+        }
+
+        .protocol-list {
+            list-style: none;
+        }
+
+        .protocol-item {
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 45px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .protocol-item::before {
+            position: absolute;
+            left: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .protocol-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent);
+            transition: left 0.5s ease;
+        }
+
+        .protocol-item:hover::after {
+            left: 100%;
+        }
+
+        .authorized-item {
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            border-left: 4px solid var(--primary-glow);
+            color: var(--primary-glow);
+        }
+
+        .authorized-item::before {
+            content: '✓';
+            color: var(--primary-glow);
+            text-shadow: 0 0 5px currentColor;
+        }
+
+        .authorized-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
+            background: rgba(0, 255, 136, 0.2);
+        }
+
+        .forbidden-item {
+            background: rgba(255, 0, 102, 0.1);
+            border: 1px solid rgba(255, 0, 102, 0.3);
+            border-left: 4px solid var(--danger-glow);
+            color: var(--danger-glow);
+        }
+
+        .forbidden-item::before {
+            content: '⚠';
+            color: var(--danger-glow);
+            text-shadow: 0 0 5px currentColor;
+        }
+
+        .forbidden-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 0 20px rgba(255, 0, 102, 0.3);
+            background: rgba(255, 0, 102, 0.2);
+        }
+
+        /* Enhanced Error Modes */
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .error-module {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid var(--warning-glow);
+            box-shadow: 0 0 25px rgba(255, 170, 0, 0.3);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .error-module:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(255, 170, 0, 0.4);
+        }
+
+        .error-header {
+            background: linear-gradient(135deg, 
+                rgba(255, 170, 0, 0.3), 
+                rgba(255, 170, 0, 0.1));
+            color: var(--warning-glow);
+            padding: 15px 20px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px currentColor;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-header::before {
+            content: '⚠ ';
+            margin-right: 10px;
+            animation: warningBlink 2s ease-in-out infinite;
+        }
+
+        @keyframes warningBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .error-symptom {
+            background: rgba(255, 170, 0, 0.1);
+            padding: 15px 20px;
+            border-left: 4px solid var(--warning-glow);
+            color: var(--warning-glow);
+            font-size: 0.95rem;
+        }
+
+        .error-remedy {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 15px 20px;
+            border-left: 4px solid var(--primary-glow);
+            color: var(--primary-glow);
+            font-size: 0.95rem;
+        }
+
+        .error-symptom strong,
+        .error-remedy strong {
+            color: inherit;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-right: 10px;
+        }
+
+        /* Enhanced Reliability Systems */
+        .system-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .system-module {
+            background: linear-gradient(135deg, 
+                rgba(170, 0, 255, 0.2), 
+                rgba(0, 255, 255, 0.2));
+            border: 2px solid var(--tertiary-glow);
+            color: var(--tertiary-glow);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .system-module::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                transparent 70%);
+            transform: scale(0);
+            transition: transform 0.5s ease;
+        }
+
+        .system-module:hover::before {
+            transform: scale(1);
+        }
+
+        .system-module:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 
+                0 15px 40px rgba(170, 0, 255, 0.4),
+                0 0 60px rgba(0, 255, 255, 0.3);
+            color: var(--secondary-glow);
+            border-color: var(--secondary-glow);
+        }
+
+        .system-module h4 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px currentColor;
+        }
+
+        .system-module p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        /* Context Management Visualization */
+        .context-flow {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 30px 0;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .context-phase {
+            text-align: center;
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .phase-box {
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            border: 2px solid;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px currentColor;
+            box-shadow: 0 0 25px currentColor;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phase-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.1), 
+                transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+
+        .phase-box:hover::before {
+            transform: translateX(100%);
+        }
+
+        .phase-box:hover {
+            transform: scale(1.1) rotate(2deg);
+            box-shadow: 0 0 40px currentColor;
+        }
+
+        .plan-phase {
+            background: rgba(52, 152, 219, 0.2);
+            border-color: #3498db;
+            color: #3498db;
+        }
+
+        .implement-phase {
+            background: rgba(230, 126, 34, 0.2);
+            border-color: #e67e22;
+            color: #e67e22;
+        }
+
+        .validate-phase {
+            background: rgba(39, 174, 96, 0.2);
+            border-color: #27ae60;
+            color: #27ae60;
+        }
+
+        .phase-arrow {
+            font-size: 2.5rem;
+            color: var(--primary-glow);
+            text-shadow: 0 0 15px currentColor;
+            animation: arrowFlow 2s ease-in-out infinite;
+        }
+
+        @keyframes arrowFlow {
+            0%, 100% { 
+                transform: translateX(0); 
+                opacity: 0.6;
+            }
+            50% { 
+                transform: translateX(10px); 
+                opacity: 1;
+            }
+        }
+
+        .phase-details {
+            font-size: 0.9rem;
+            color: var(--primary-glow);
+            background: rgba(0, 255, 136, 0.1);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            padding: 12px;
+            border-radius: 8px;
+            line-height: 1.4;
+        }
+
+        .context-rationale {
+            text-align: center;
+            background: linear-gradient(135deg, 
+                rgba(0, 255, 136, 0.15), 
+                rgba(0, 255, 255, 0.15));
+            border: 2px solid var(--primary-glow);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            color: var(--primary-glow);
+            font-size: 1rem;
+            line-height: 1.5;
+            box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+        }
+
+        /* Interactive Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+        }
+
+        .tooltip-content {
+            visibility: hidden;
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: var(--primary-glow);
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid var(--primary-glow);
+            white-space: nowrap;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: 0.85rem;
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .tooltip:hover .tooltip-content {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Particle Effects */
+        .particle {
+            position: fixed;
+            pointer-events: none;
+            opacity: 0;
+            z-index: 10000;
+        }
+
+        .particle.active {
+            animation: particleFloat 3s ease-out forwards;
+        }
+
+        @keyframes particleFloat {
+            0% {
+                opacity: 1;
+                transform: translate(0, 0) scale(0);
+            }
+            50% {
+                opacity: 1;
+                transform: translate(var(--x), var(--y)) scale(1);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(calc(var(--x) * 2), calc(var(--y) * 2)) scale(0);
+            }
+        }
+
+        /* Loading Animation */
+        .loading-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--void-black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            animation: fadeOut 2s ease 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        .loading-container {
+            text-align: center;
+        }
+
+        .loading-hexagon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            animation: hexSpin 2s linear infinite;
+        }
+
+        @keyframes hexSpin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .loading-text {
+            color: var(--primary-glow);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            animation: loadingPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes loadingPulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 968px) {
+            .quantum-toggle {
+                display: block;
+            }
+
+            .holo-sidebar {
+                transform: translateX(-100%);
+            }
+
+            .holo-sidebar.active {
+                transform: translateX(0);
+            }
+
+            .main-interface {
+                margin-left: 0;
+            }
+            
+            .knowledge-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .protocol-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-title {
+                font-size: 2rem;
+            }
+
+            .context-flow {
+                flex-direction: column;
+            }
+
+            .phase-arrow {
+                transform: rotate(90deg);
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 255, 136, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, 
+                var(--primary-glow), 
+                var(--secondary-glow));
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, 
+                var(--secondary-glow), 
+                var(--tertiary-glow));
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-overlay">
+        <div class="loading-container">
+            <div class="loading-hexagon">
+                <svg viewBox="0 0 100 100">
+                    <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" 
+                             fill="none" 
+                             stroke="#00ff88" 
+                             stroke-width="2"/>
+                </svg>
+            </div>
+            <div class="loading-text">INITIALIZING NEXUS OS</div>
+        </div>
+    </div>
+
+    <!-- Quantum Background Effects -->
+    <div class="quantum-field"></div>
+    <div class="neural-grid"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+
+    <!-- Quantum Menu Toggle -->
+    <button class="quantum-toggle" onclick="toggleSidebar()">
+        <div class="toggle-lines">
+            <div class="toggle-line"></div>
+            <div class="toggle-line"></div>
+            <div class="toggle-line"></div>
+        </div>
+    </button>
+
+    <!-- Holographic Sidebar -->
+    <nav class="holo-sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="system-logo">
+                <div class="hexagon">
+                    <svg viewBox="0 0 100 100">
+                        <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" 
+                                 fill="none" 
+                                 stroke="#00ffff" 
+                                 stroke-width="2"/>
+                        <polygon points="50,15 80,30 80,70 50,85 20,70 20,30" 
+                                 fill="none" 
+                                 stroke="#00ff88" 
+                                 stroke-width="1"/>
+                        <polygon points="50,25 70,35 70,65 50,75 30,65 30,35" 
+                                 fill="none" 
+                                 stroke="#ff00ff" 
+                                 stroke-width="1"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="system-title">NEXUS OS</div>
+            <div class="system-version">v3.0.∞ QUANTUM</div>
+        </div>
+        
+        <div class="nav-container">
+            <a href="#hierarchy" class="nav-item active" onclick="scrollToSection('hierarchy')">
+                <span class="nav-icon">⬡</span> System Hierarchy
+            </a>
+            <a href="#execution" class="nav-item" onclick="scrollToSection('execution')">
+                <span class="nav-icon">⚡</span> Execution Path
+            </a>
+            <a href="#protocols" class="nav-item" onclick="scrollToSection('protocols')">
+                <span class="nav-icon">⚙</span> Protocol Rules
+            </a>
+            <a href="#errors" class="nav-item" onclick="scrollToSection('errors')">
+                <span class="nav-icon">⚠</span> Error Handling
+            </a>
+            <a href="#stability" class="nav-item" onclick="scrollToSection('stability')">
+                <span class="nav-icon">🛡</span> Stability Systems
+            </a>
+            <a href="#context" class="nav-item" onclick="scrollToSection('context')">
+                <span class="nav-icon">🔄</span> Context Strategy
+            </a>
+        </div>
+
+        <div class="status-panel">
+            <div><span class="status-indicator"></span> STATUS: ONLINE</div>
+            <div style="margin-top: 5px; font-size: 0.85rem; color: var(--secondary-glow);">
+                QUANTUM CORES: ACTIVE<br>
+                KNOWLEDGE WORKERS: DEPLOYED
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Interface -->
+    <main class="main-interface">
+        <header class="header-section">
+            <h1 class="main-title glitch-text">NEXUS SYSTEM</h1>
+            <p class="subtitle">QUANTUM KNOWLEDGE WORKER PROTOCOLS</p>
+        </header>
+
+        <div class="knowledge-grid">
+            <!-- System Hierarchy Module -->
+            <article class="holo-card" id="hierarchy">
+                <h2 class="card-header">[SYSTEM.HIERARCHY]</h2>
+                <div class="quantum-hierarchy">
+                    <div class="hierarchy-node">
+                        <div class="node-core agent-node">
+                            AGENT
+                        </div>
+                        <div class="node-description">
+                            Quantum Orchestrator • Workflow Executor
+                        </div>
+                    </div>
+                    <div class="quantum-arrow">⟱</div>
+                    <div class="hierarchy-node">
+                        <div class="node-core workflow-node">
+                            WORKFLOW
+                        </div>
+                        <div class="node-description">
+                            Task Sequencer • Plan → Implement → Test
+                        </div>
+                    </div>
+                    <div class="quantum-arrow">⟱</div>
+                    <div class="hierarchy-node">
+                        <div class="node-core task-node">
+                            TASK
+                        </div>
+                        <div class="node-description">
+                            Atomic Operation • Workflow Component
+                        </div>
+                    </div>
+                    <div class="quantum-arrow">⟷</div>
+                    <div class="hierarchy-node">
+                        <div class="node-core feature-node">
+                            FEATURE
+                        </div>
+                        <div class="node-description">
+                            Temporal Container • Change Boundary
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Execution Path Module -->
+            <article class="holo-card" id="execution">
+                <h2 class="card-header">[EXECUTION.PATH]</h2>
+                <div class="quantum-flow">
+                    <div class="flow-node">
+                        <span class="step-indicator">01</span>
+                        <strong>INITIALIZE</strong><br>
+                        Load Nexus Template → Preload Orchestrator
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-node">
+                        <span class="step-indicator">02</span>
+                        <strong>PLAN</strong><br>
+                        Execute "Plan Feature" → Single Objective
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-node">
+                        <span class="step-indicator">03</span>
+                        <strong>REVIEW</strong><br>
+                        Validate Insights → Definition → PRD
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-node">
+                        <span class="step-indicator">04</span>
+                        <strong>IMPLEMENT</strong><br>
+                        New Session → Link Feature → Execute
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-node">
+                        <span class="step-indicator">05</span>
+                        <strong>VALIDATE</strong><br>
+                        Verify Context → Run UltraThink
+                    </div>
+                    <div class="flow-connector"></div>
+                    <div class="flow-node">
+                        <span class="step-indicator">06</span>
+                        <strong>DEPLOY</strong><br>
+                        Test → Close Chat → Status: COMPLETED
+                    </div>
+                </div>
+            </article>
+
+            <!-- Protocol Rules Module -->
+            <article class="holo-card" id="protocols">
+                <h2 class="card-header">[PROTOCOL.RULES]</h2>
+                <div class="protocol-grid">
+                    <div class="protocol-section">
+                        <h3 class="protocol-header authorized-header">
+                            ✓ AUTHORIZED OPERATIONS
+                        </h3>
+                        <ul class="protocol-list">
+                            <li class="protocol-item authorized-item">
+                                One feature per chat: Plan → Implement → Test
+                            </li>
+                            <li class="protocol-item authorized-item">
+                                Always "Close Chat" to persist memory & status
+                            </li>
+                            <li class="protocol-item authorized-item">
+                                Use Framework → Templates for canonical schemas
+                            </li>
+                            <li class="protocol-item authorized-item">
+                                Map migrations to operations/agents|workflows|tasks
+                            </li>
+                            <li class="protocol-item authorized-item">
+                                Execute UltraThink after plan & implement phases
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="protocol-section">
+                        <h3 class="protocol-header forbidden-header">
+                            ⚠ FORBIDDEN OPERATIONS
+                        </h3>
+                        <ul class="protocol-list">
+                            <li class="protocol-item forbidden-item">
+                                Don't implement multiple features in one chat
+                            </li>
+                            <li class="protocol-item forbidden-item">
+                                Don't keep duplicate/old orchestrators
+                            </li>
+                            <li class="protocol-item forbidden-item">
+                                Don't assume full PRD read by default
+                            </li>
+                            <li class="protocol-item forbidden-item">
+                                Don't generate whole systems at once
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Error Handling Module -->
+            <article class="holo-card" id="errors">
+                <h2 class="card-header">[ERROR.HANDLING]</h2>
+                <div class="error-container">
+                    <div class="error-module">
+                        <div class="error-header">PARTIAL.DATA.READ</div>
+                        <div class="error-symptom">
+                            <strong>SYMPTOM:</strong> ~100 lines only • Confident but incorrect
+                        </div>
+                        <div class="error-remedy">
+                            <strong>REMEDY:</strong> Execute UltraThink • Flag critical • Verify loading
+                        </div>
+                    </div>
+
+                    <div class="error-module">
+                        <div class="error-header">ORCHESTRATOR.MISMATCH</div>
+                        <div class="error-symptom">
+                            <strong>SYMPTOM:</strong> Legacy files • Dated briefs • Unexpected behavior
+                        </div>
+                        <div class="error-remedy">
+                            <strong>REMEDY:</strong> Purge old versions • Maintain framework only
+                        </div>
+                    </div>
+
+                    <div class="error-module">
+                        <div class="error-header">FILE.ROUTING.ERROR</div>
+                        <div class="error-symptom">
+                            <strong>SYMPTOM:</strong> Wrong directory outputs • Misplaced files
+                        </div>
+                        <div class="error-remedy">
+                            <strong>REMEDY:</strong> Add core learning • Map to tasks/workflows
+                        </div>
+                    </div>
+
+                    <div class="error-module">
+                        <div class="error-header">CONTEXT.DRIFT</div>
+                        <div class="error-symptom">
+                            <strong>SYMPTOM:</strong> Deprecated files • System inconsistency
+                        </div>
+                        <div class="error-remedy">
+                            <strong>REMEDY:</strong> Accept drift • Deploy cleanup feature
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Stability Systems Module -->
+            <article class="holo-card" id="stability">
+                <h2 class="card-header">[SYSTEM.STABILITY]</h2>
+                <div class="system-grid">
+                    <div class="system-module">
+                        <h4>ULTRATHINK.EXE</h4>
+                        <p>Bias detection • Over-engineering check • Critical risk analysis • Execute post-phase</p>
+                    </div>
+                    <div class="system-module">
+                        <h4>INDEX.REGISTRY</h4>
+                        <p>Central mapping • System navigation • Location tracking • Structure maintenance</p>
+                    </div>
+                    <div class="system-module">
+                        <h4>ITERATION.PROTOCOL</h4>
+                        <p>Component building • Complexity reduction • Incremental development • Risk mitigation</p>
+                    </div>
+                    <div class="system-module">
+                        <h4>CHAT.PERSISTENCE</h4>
+                        <p>Knowledge preservation • Status transitions • Memory graphs • Never bypass</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Context Management Module -->
+            <article class="holo-card" id="context">
+                <h2 class="card-header">[CONTEXT.MANAGEMENT]</h2>
+                <div class="context-flow">
+                    <div class="context-phase">
+                        <div class="phase-box plan-phase">
+                            <strong>SESSION 1</strong><br>
+                            PLAN.EXE
+                        </div>
+                        <div class="phase-details">
+                            • Elicitation insights<br>
+                            • Feature definition<br>
+                            • PRD generation<br>
+                            • Scope boundary
+                        </div>
+                    </div>
+                    <div class="phase-arrow">→</div>
+                    <div class="context-phase">
+                        <div class="phase-box implement-phase">
+                            <strong>SESSION 2</strong><br>
+                            IMPLEMENT.EXE
+                        </div>
+                        <div class="phase-details">
+                            • Context loading<br>
+                            • Code generation<br>
+                            • Schema compliance<br>
+                            • Integration logic
+                        </div>
+                    </div>
+                    <div class="phase-arrow">→</div>
+                    <div class="context-phase">
+                        <div class="phase-box validate-phase">
+                            <strong>SESSION 3</strong><br>
+                            VALIDATE.EXE
+                        </div>
+                        <div class="phase-details">
+                            • System validation<br>
+                            • UltraThink review<br>
+                            • Status completion<br>
+                            • Quality assurance
+                        </div>
+                    </div>
+                </div>
+                <div class="context-rationale">
+                    <strong>QUANTUM PROTOCOL RATIONALE:</strong><br>
+                    Context splitting prevents shallow ~100-line pseudo-solutions.<br>
+                    Each session maintains focused context and clear operational objectives.<br>
+                    Quantum entanglement ensures knowledge persistence across sessions.
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        // Matrix Rain Generation
+        function createMatrixRain() {
+            const matrixRain = document.getElementById('matrixRain');
+            const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            for (let i = 0; i < 30; i++) {
+                const column = document.createElement('div');
+                column.className = 'matrix-column';
+                column.style.left = `${Math.random() * 100}%`;
+                column.style.animationDuration = `${10 + Math.random() * 20}s`;
+                column.style.animationDelay = `${Math.random() * 10}s`;
+                
+                let text = '';
+                for (let j = 0; j < 50; j++) {
+                    text += characters[Math.floor(Math.random() * characters.length)] + '<br>';
+                }
+                column.innerHTML = text;
+                matrixRain.appendChild(column);
+            }
+        }
+
+        // Sidebar Toggle
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+
+        // Smooth Scrolling
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Update active nav
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Close sidebar on mobile
+            if (window.innerWidth <= 968) {
+                document.getElementById('sidebar').classList.remove('active');
+            }
+        }
+
+        // Particle Effects on Click
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.holo-card') || e.target.closest('.nav-item')) {
+                createParticle(e.clientX, e.clientY);
+            }
+        });
+
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = x + 'px';
+            particle.style.top = y + 'px';
+            
+            const size = Math.random() * 20 + 10;
+            particle.style.width = size + 'px';
+            particle.style.height = size + 'px';
+            particle.style.background = `radial-gradient(circle, ${getRandomColor()} 0%, transparent 70%)`;
+            particle.style.borderRadius = '50%';
+            
+            const destinationX = (Math.random() - 0.5) * 200;
+            const destinationY = (Math.random() - 0.5) * 200;
+            particle.style.setProperty('--x', destinationX + 'px');
+            particle.style.setProperty('--y', destinationY + 'px');
+            
+            document.body.appendChild(particle);
+            particle.classList.add('active');
+            
+            setTimeout(() => particle.remove(), 3000);
+        }
+
+        function getRandomColor() {
+            const colors = ['#00ff88', '#00ffff', '#ff00ff', '#ffaa00', '#ff0066'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // Auto-highlight navigation on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.holo-card');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            let currentSection = '';
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top <= 200 && rect.bottom >= 200) {
+                    currentSection = section.id;
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + currentSection) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Close sidebar on outside click (mobile)
+        document.addEventListener('click', function(event) {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.querySelector('.quantum-toggle');
+            
+            if (window.innerWidth <= 968 && 
+                !sidebar.contains(event.target) && 
+                !toggle.contains(event.target) &&
+                sidebar.classList.contains('active')) {
+                sidebar.classList.remove('active');
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            createMatrixRain();
+            
+            // Remove loading screen
+            setTimeout(() => {
+                const loader = document.querySelector('.loading-overlay');
+                if (loader) {
+                    loader.style.display = 'none';
+                }
+            }, 4000);
+        });
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

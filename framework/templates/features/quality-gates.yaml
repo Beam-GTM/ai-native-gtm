@@ -1,0 +1,59 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.453200Z
+migration_path: auto-generated
+---
+
+<!-- dependencies
+upstream:
+  - framework/workflows/design-new-feature.md
+  - framework/tasks/memory/update-project-memory.md
+downstream:
+  - workspace/features/active/*/active-context.md
+validated: 2025-08-26T16:00:00Z
+health: 100%
+-->
+
+<!-- version: 90144706-2987-4369-8d6f-77a33fb1ce6d -->
+<!-- last-updated: 2025-01-20T14:30:00Z -->
+<!-- document-type: memory-document -->
+
+# Repository Feature Quality Gates Structure Definition
+# Repository-level quality gates (inherits from top-level)
+
+metadata:
+  name: "repository-feature-quality-gates"
+  type: "feature-document"
+  scope: "repository-level"
+  description: "Repository feature quality gates (follows top-level format)"
+  purpose: "Repository-specific quality tracking"
+  inherits_from: "top-level/memory/features/quality-gates.yaml"
+  alternative_names: ["test-results.md"]
+  repository_types: ["backend", "frontend", "framework"]
+  last_updated: "2025-08-20"
+
+inheritance:
+  base: "top-level/memory/features/quality-gates.yaml"
+  modifications: "none"
+  note: "Repository-level quality-gates MUST follow the exact same format as top-level for consistency"
+
+document_structure:
+  note: "Identical to top-level quality-gates structure"
+  reference: "../../top-level/memory/features/quality-gates.yaml"
+
+repository_specific_notes:
+  backend:
+    - "API test results"
+    - "Database test coverage"
+    - "Integration test results"
+    - "Performance benchmarks"
+  frontend:
+    - "Component test results"
+    - "E2E test results"
+    - "Visual regression tests"
+    - "Accessibility tests"
+  framework:
+    - "Cross-language test results"
+    - "Plugin test coverage"
+    - "Integration test matrix"

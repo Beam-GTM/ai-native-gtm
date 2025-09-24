@@ -1,0 +1,340 @@
+# Feature Generator Component
+# Transforms detected patterns into actionable feature proposals
+
+generator:
+  id: feature-generator
+  name: Pattern to Feature Proposal Generator
+  type: generator
+  version: "1.0"
+  description: >-
+    Generates feature proposals from detected patterns with prioritization,
+    planning context, and automated workflow integration
+
+generation_rules:
+  critical_patterns:
+    priority: "immediate"
+    workflow: "emergency-fix"
+    template: "critical-fix-template"
+    criteria:
+      - pattern_score >= 8.0
+      - severity >= 8
+      - affects_all_users
+      - security_risk
+    
+    feature_structure:
+      type: "critical-fix"
+      timeline: "24-48 hours"
+      approval: "fast-track"
+      testing: "minimal-viable"
+      rollback_plan: "required"
+  
+  high_priority_patterns:
+    priority: "next-sprint"
+    workflow: "plan-feature"
+    template: "standard-feature-template"
+    criteria:
+      - pattern_score >= 6.0
+      - severity >= 6
+      - affects_many_users
+      - business_impact
+    
+    feature_structure:
+      type: "enhancement"
+      timeline: "1-2 sprints"
+      approval: "standard"
+      testing: "comprehensive"
+      documentation: "required"
+  
+  medium_priority_patterns:
+    priority: "quarterly"
+    workflow: "plan-feature"
+    template: "enhancement-template"
+    criteria:
+      - pattern_score >= 4.0
+      - severity >= 4
+      - quality_of_life
+      - optimization_opportunity
+    
+    feature_structure:
+      type: "improvement"
+      timeline: "quarter"
+      approval: "batched"
+      testing: "standard"
+      documentation: "basic"
+  
+  low_priority_patterns:
+    priority: "backlog"
+    workflow: "backlog-review"
+    template: "backlog-item-template"
+    criteria:
+      - pattern_score < 4.0
+      - nice_to_have
+      - edge_case
+      - future_consideration
+    
+    feature_structure:
+      type: "backlog-item"
+      timeline: "unscheduled"
+      approval: "deferred"
+      testing: "minimal"
+      documentation: "optional"
+
+feature_proposal_structure:
+  metadata:
+    feature_id:
+      format: "feature-{date}-{sequence}"
+      example: "feature-2025-01-27-001"
+    
+    generated_from:
+      pattern_id: string
+      pattern_name: string
+      evidence_count: integer
+    
+    generation_timestamp: datetime
+    generator_version: string
+  
+  feature_definition:
+    name:
+      generation: "pattern_name + solution_suffix"
+      max_length: 50
+      format: "kebab-case"
+    
+    title:
+      generation: "human_readable_description"
+      max_length: 100
+    
+    problem_statement:
+      source: "pattern_description + context"
+      include_evidence: true
+      quantify_impact: true
+    
+    proposed_solution:
+      derived_from: "root_cause_analysis"
+      include_workarounds: true
+      technical_approach: "high_level"
+    
+    success_criteria:
+      - pattern_no_longer_occurs
+      - user_satisfaction_improved
+      - metrics_show_improvement
+    
+    priority:
+      calculation: "pattern_score_based"
+      override_allowed: true
+  
+  evidence_package:
+    pattern_evidence:
+      learning_references: array
+      occurrence_timeline: object
+      affected_users: string
+      severity_history: array
+    
+    impact_analysis:
+      current_impact: string
+      projected_benefit: string
+      risk_if_not_addressed: string
+    
+    supporting_data:
+      workarounds_documented: array
+      user_feedback: array
+      metrics: object
+  
+  technical_specification:
+    components_affected:
+      extraction: "from_pattern_category"
+      mapping:
+        usability: ["ui", "ux", "workflows"]
+        performance: ["backend", "database", "caching"]
+        functionality: ["core", "features", "apis"]
+    
+    implementation_hints:
+      from_workarounds: true
+      from_similar_fixes: true
+      from_patterns: true
+    
+    estimated_effort:
+      calculation:
+        simple_fix: "< 1 day"
+        standard_feature: "3-5 days"
+        complex_feature: "1-2 weeks"
+        major_initiative: "> 2 weeks"
+    
+    dependencies:
+      auto_detect: true
+      from_pattern_context: true
+      warn_if_missing: true
+  
+  resource_planning:
+    team_requirements:
+      based_on: "component_affected"
+      suggestions:
+        ui_changes: ["frontend", "ux"]
+        backend_changes: ["backend", "devops"]
+        workflow_changes: ["product", "qa"]
+    
+    timeline_estimation:
+      factors:
+        - complexity
+        - dependencies
+        - testing_requirements
+        - documentation_needs
+      
+      buffer: "20%"
+    
+    risk_assessment:
+      auto_generate: true
+      categories:
+        - technical_risk
+        - user_impact_risk
+        - timeline_risk
+        - resource_risk
+
+prioritization_algorithm:
+  scoring_factors:
+    user_impact:
+      weight: 0.35
+      calculation: "affected_users * severity"
+    
+    business_value:
+      weight: 0.25
+      calculation: "roi_estimate + strategic_alignment"
+    
+    implementation_cost:
+      weight: 0.20
+      calculation: "effort_estimate + complexity"
+    
+    risk_mitigation:
+      weight: 0.20
+      calculation: "current_risk_level + growth_rate"
+  
+  priority_buckets:
+    p0_critical:
+      score: ">= 9.0"
+      sla: "24 hours"
+      auto_escalate: true
+    
+    p1_high:
+      score: "7.0 - 8.9"
+      sla: "1 week"
+      review_required: true
+    
+    p2_medium:
+      score: "5.0 - 6.9"
+      sla: "1 month"
+      batch_review: true
+    
+    p3_low:
+      score: "< 5.0"
+      sla: "quarterly"
+      backlog: true
+
+workflow_integration:
+  auto_trigger:
+    enabled: true
+    conditions:
+      - priority == "p0_critical"
+      - priority == "p1_high" AND approved
+    
+    workflow_mapping:
+      p0_critical: "emergency-fix-workflow"
+      p1_high: "plan-feature"
+      p2_medium: "plan-feature"
+      p3_low: "backlog-addition"
+  
+  context_preparation:
+    files_to_create:
+      - "feature-definition.yaml"
+      - "technical-approach.yaml"
+      - "resource-plan.yaml"
+      - "evidence-package.yaml"
+    
+    location: "workspace/features/staging/{feature-id}/artifacts/"
+  
+  handoff_package:
+    includes:
+      - feature_proposal
+      - evidence_package
+      - priority_justification
+      - implementation_hints
+      - success_metrics
+
+templates:
+  feature_proposal_template:
+    path: "framework/templates/features/feature-proposal.yaml"
+  
+  planning_context_template:
+    path: "framework/templates/features/planning-context.yaml"
+  
+  evidence_package_template:
+    path: "framework/templates/features/evidence-package.yaml"
+
+quality_validation:
+  proposal_completeness:
+    required_fields:
+      - name
+      - problem_statement
+      - proposed_solution
+      - priority
+      - evidence
+    
+    quality_checks:
+      - problem_clearly_defined
+      - solution_addresses_root_cause
+      - evidence_sufficient
+      - priority_justified
+  
+  feasibility_check:
+    criteria:
+      - technical_approach_viable
+      - resources_available
+      - timeline_realistic
+      - dependencies_manageable
+
+output_format:
+  feature_proposals:
+    location: "workspace/features/generated/{date}/"
+    format: yaml
+    structure:
+      proposal:
+        metadata: object
+        feature_definition: object
+        evidence_package: object
+        technical_specification: object
+        resource_planning: object
+        priority: string
+        workflow_trigger: object
+  
+  generation_report:
+    location: "workspace/reports/feature-generation-{date}.md"
+    includes:
+      - patterns_processed
+      - features_generated
+      - priority_distribution
+      - workflows_triggered
+      - validation_results
+
+example_generation:
+  input_pattern:
+    pattern_id: "pattern-2025-01-27-001"
+    name: "Workflow Menu Discoverability"
+    score: 7.8
+    severity: 7
+    occurrences: 18
+    root_cause: "Menu structure doesn't follow user mental model"
+  
+  generated_feature:
+    feature_id: "feature-2025-01-27-001"
+    name: "improve-workflow-menu-discoverability"
+    title: "Improve Workflow Menu Discoverability"
+    problem_statement: >-
+      Users consistently unable to locate workflow functionality in the menu.
+      18 reported instances affecting many users with severity 7/10.
+    proposed_solution: >-
+      Redesign menu structure to prominently feature workflows with clear
+      icon and top-level placement following user mental model.
+    priority: "p1_high"
+    estimated_effort: "3-5 days"
+    workflow_trigger:
+      trigger: true
+      workflow: "plan-feature"
+      auto_start: false

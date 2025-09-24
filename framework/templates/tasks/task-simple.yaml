@@ -1,0 +1,247 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.457786Z
+migration_path: auto-generated
+---
+
+
+# Simple Task Template - Streamlined for Quick Operations
+# Target: 60% of tasks - operational, utility, and maintenance tasks
+# Compliance Target: 85% (high adoption through simplicity)
+# Template Size: 100-150 lines (vs 786 lines in comprehensive template)
+
+metadata:
+  name: "task-simple"
+  type: "execution-focused"
+  scope: "operational"
+  description: "Streamlined template for quick operational tasks, utility scripts, and simple automation"
+  purpose: "Enable rapid task creation with minimal barriers while maintaining essential structure"
+  target_audience: "Operational tasks, maintenance scripts, utilities"
+  compliance_target: "85%"
+  last_updated: "2025-08-28"
+
+# =============================================================================
+# SIMPLIFIED TASK STRUCTURE (.tasks/{category}/{task-name}.md)
+# =============================================================================
+
+task_file_structure:
+  # MINIMAL DEPENDENCY BLOCK (Auto-generated, simplified)
+  dependency_block:
+    format: |
+      <!-- dependencies
+      upstream:
+        # Executable by: {{infer_agent task_category}}
+        - operations/agents/{{agent_category}}/{{agent_name}}.md  # {{capability_description}}
+        
+      downstream:
+        # Used by: {{search_required}}
+        
+      validated: {{current_timestamp}}
+      health: {{auto_calculate}}%
+      generator: framework/templates/tasks/task-simple.yaml
+      -->
+      
+    requirements:
+      - "Auto-generated from task category and content"
+      - "Single agent inference (no complex routing)"
+      - "Minimal upstream dependencies"
+
+  # SIMPLE HEADER
+  header_section:
+    format: |
+      # {Task Name}
+
+      **Category**: {task_category}  
+      **Type**: Simple/Operational  
+      **Prerequisites**: {simple_prerequisite_list}
+
+      ## Quick Start
+      
+      **Purpose**: {one_line_task_description}  
+      **Expected Time**: {estimated_minutes} minutes  
+      **Outputs**: {expected_results}
+
+  # STREAMLINED EXECUTION + BEHAVIORAL CORRECTION
+  execution_workflow:
+    format: |
+      ## Task Steps
+      
+      ### 🧠 Behavioral Correction Check (Mental Model Framework)
+      {{load_behavioral_patterns: critical_patterns}}
+      <!-- Loads: execution_documentation_paradox, false_completion_syndrome, basic_operations_failure -->
+      
+      ### Prerequisites Check
+      - [ ] {prerequisite_1}
+      - [ ] {prerequisite_2}
+      - [ ] {prerequisite_3}
+      
+      ### Execution Steps
+      
+      **Step 1: {step_1_name}**
+      - Action: {step_1_action}
+      - Expected: {step_1_result}
+      
+      **Step 2: {step_2_name}**
+      - Action: {step_2_action}  
+      - Expected: {step_2_result}
+      
+      **Step 3: {step_3_name}**
+      - Action: {step_3_action}
+      - Expected: {step_3_result}
+      
+      ### Success Verification
+      - [ ] {verification_1}
+      - [ ] {verification_2}
+      
+      ### 🧠 Behavioral Correction Validation
+      {{load_behavioral_pattern_validation: critical_patterns}}
+      <!-- Loads post-completion validation for critical behavioral patterns -->
+      
+      - [ ] Task complete: {completion_criteria}
+
+  # OPTIONAL SECTIONS (add only if needed)
+  optional_sections:
+    error_handling:
+      format: |
+        ## Common Issues & Solutions
+        
+        **Issue**: {common_error_1}
+        **Solution**: {solution_1}
+        
+        **Issue**: {common_error_2}
+        **Solution**: {solution_2}
+    
+    automation:
+      format: |
+        ## Automation Notes
+        
+        **Trigger Conditions**: {when_to_auto_execute}
+        **Auto-execution**: {automation_approach}
+
+  # MINIMAL OUTPUT SPECIFICATION
+  output_specification:
+    format: |
+      ## Task Output
+      
+      **Primary Result**: {main_deliverable}
+      **Location**: {output_location}
+      **Validation**: {how_to_verify_success}
+      
+      **Next Steps**: {recommended_follow_up}
+
+# =============================================================================
+# SIMPLE TASK CATEGORIES
+# =============================================================================
+
+task_categories:
+  memory_operations:
+    description: "Memory rotation, aggregation, cleanup tasks"
+    examples: ["rotate-project-memory", "aggregate-core-learnings", "cleanup-memory-archives"]
+    typical_agent: "orchestrator"
+    
+  system_sync:
+    description: "System synchronization and index updates"
+    examples: ["sync-indices", "update-system-structure", "validate-file-counts"]
+    typical_agent: "orchestrator"
+    
+  utility_operations:
+    description: "Utility scripts and maintenance tasks"
+    examples: ["cleanup-temp-files", "backup-configurations", "reset-feature-state"]
+    typical_agent: "developer"
+    
+  validation_checks:
+    description: "Simple validation and health checks"
+    examples: ["check-file-structure", "validate-template-format", "verify-dependencies"]
+    typical_agent: "quality-assurance"
+
+# =============================================================================
+# TEMPLATE USAGE EXAMPLES
+# =============================================================================
+
+usage_examples:
+  rotate_memory_task:
+    task_name: "Rotate Project Memory"
+    category: "memory_operations"
+    prerequisites: ["Project memory >25 entries", "Archive directory exists"]
+    steps:
+      - "Backup current project-memory.md"
+      - "Move entries to archive with timestamp"
+      - "Reset project-memory.md with template"
+    success_criteria: "Project memory reset, archives updated"
+    
+  sync_indices_task:
+    task_name: "Sync System Indices"
+    category: "system_sync"  
+    prerequisites: ["File system accessible", "Write permissions confirmed"]
+    steps:
+      - "Scan actual filesystem for counts"
+      - "Update INDEX.md files with real data"
+      - "Validate index accuracy"
+    success_criteria: "All indices match filesystem reality"
+
+# =============================================================================
+# SIMPLE TEMPLATE GUIDELINES
+# =============================================================================
+
+design_principles:
+  simplicity_first:
+    - "3-5 steps maximum per task"
+    - "Clear action-oriented language"
+    - "Minimal jargon and complexity"
+    
+  execution_focus:
+    - "Emphasize doing over documenting"
+    - "Clear success criteria"
+    - "Practical verification steps"
+    
+  barrier_removal:
+    - "No mandatory engineering rules loading"
+    - "No complex quality gate frameworks"
+    - "Optional sections clearly marked"
+    
+  organic_evolution:
+    - "Support user format preferences"
+    - "Allow markdown-first or YAML-first approaches"
+    - "Enable gradual complexity increase"
+
+compliance_strategy:
+  high_adoption_tactics:
+    - "Make template faster than writing from scratch"
+    - "Provide immediate value without overhead"
+    - "Support natural task creation patterns"
+    
+  quality_balance:
+    - "Essential structure without bureaucracy"
+    - "Clear outcomes without excessive validation"
+    - "Optional quality features available"
+
+# =============================================================================
+# MIGRATION SUPPORT
+# =============================================================================
+
+migration_from_comprehensive:
+  identification_criteria:
+    - "Task is operational/utility focused"
+    - "No complex compliance requirements"
+    - "Execution time <30 minutes"
+    - "Single agent execution"
+    
+  simplification_process:
+    - "Extract core steps from complex workflow"
+    - "Remove engineering rules integration if not essential"
+    - "Simplify validation to success verification"
+    - "Maintain only essential prerequisites"
+
+template_selection_guidance:
+  use_simple_when:
+    - "Task is straightforward operational work"
+    - "No complex quality requirements"
+    - "Time-sensitive execution needed"
+    - "New team members will use template"
+    
+  upgrade_to_standard_when:
+    - "Task affects multiple components"
+    - "Quality validation becomes important"
+    - "Cross-team coordination required"
+    - "Task complexity grows organically"

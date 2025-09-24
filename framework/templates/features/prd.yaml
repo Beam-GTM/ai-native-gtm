@@ -1,0 +1,63 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.451415Z
+migration_path: auto-generated
+---
+
+<!-- dependencies
+upstream:
+  # Workflows that create PRDs
+  - framework/workflows/design-new-feature.md
+  - framework/workflows/plan-feature.md
+  
+  # Tasks using this template
+  
+downstream:
+  # Documents that reference PRDs
+  - workspace/features/active/*/progress.md
+  - workspace/features/active/*/quality-gates.md
+  
+validated: 2025-08-26T16:00:00Z
+health: 100%
+-->
+
+<!-- version: 8e9f4e36-630c-4c66-9dba-89543ea1016c -->
+<!-- last-updated: 2025-01-20T14:30:00Z -->
+<!-- document-type: memory-document -->
+
+# Repository Feature PRD Structure Definition
+# Repository-level feature PRD (inherits from top-level)
+
+metadata:
+  name: "repository-feature-prd"
+  type: "feature-document"
+  scope: "repository-level"
+  description: "Repository feature PRD (follows top-level format)"
+  purpose: "Repository-specific feature requirements"
+  inherits_from: "top-level/memory/features/prd.yaml"
+  repository_types: ["backend", "frontend", "framework"]
+  last_updated: "2025-08-20"
+
+inheritance:
+  base: "top-level/memory/features/prd.yaml"
+  modifications: "none"
+  note: "Repository-level PRDs MUST follow the exact same format as top-level PRDs for consistency"
+
+document_structure:
+  note: "Identical to top-level PRD structure"
+  reference: "../../top-level/memory/features/prd.yaml"
+
+repository_specific_notes:
+  backend:
+    - "Include API endpoint specifications"
+    - "Database schema changes"
+    - "Service dependencies"
+  frontend:
+    - "Include component hierarchy"
+    - "State management changes"
+    - "UI/UX specifications"
+  framework:
+    - "Include plugin interfaces"
+    - "Cross-language considerations"
+    - "Extension points"

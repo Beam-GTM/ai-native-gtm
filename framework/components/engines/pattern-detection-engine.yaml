@@ -1,0 +1,284 @@
+# Pattern Detection Engine
+# Identifies recurring patterns and themes in learnings
+
+engine:
+  id: pattern-detection-engine
+  name: Learning Pattern Detection and Analysis Engine
+  type: analysis
+  version: "1.0"
+  description: >-
+    Analyzes normalized learnings to detect recurring patterns, trends,
+    and root causes using multiple detection algorithms
+
+detection_algorithms:
+  frequency_analysis:
+    description: "Identifies high-frequency patterns"
+    configuration:
+      min_occurrences: 3
+      time_window: "30_days"
+      similarity_threshold: 0.75
+    
+    process:
+      - group_by_similarity
+      - count_occurrences
+      - calculate_frequency_score
+      - identify_trending
+    
+    scoring:
+      base_score: "occurrences / time_window_days"
+      trend_multiplier: 1.5
+      recency_boost: 0.2
+  
+  clustering_analysis:
+    description: "Groups related learnings into themes"
+    configuration:
+      algorithm: "hierarchical"
+      distance_metric: "cosine_similarity"
+      min_cluster_size: 2
+      max_clusters: 20
+    
+    features_for_clustering:
+      - pattern_text
+      - category
+      - severity
+      - affected_component
+    
+    cluster_labeling:
+      method: "most_common_terms"
+      fallback: "cluster_{id}"
+  
+  root_cause_analysis:
+    description: "Identifies underlying causes"
+    configuration:
+      depth_levels: 3
+      causality_threshold: 0.7
+    
+    techniques:
+      five_whys:
+        - analyze_pattern
+        - identify_immediate_cause
+        - trace_deeper_cause
+        - find_root_cause
+        - validate_causality
+      
+      fishbone_analysis:
+        categories:
+          - people
+          - process
+          - technology
+          - environment
+        
+        mapping:
+          people: ["training", "knowledge", "skills"]
+          process: ["workflow", "procedures", "documentation"]
+          technology: ["tools", "systems", "integrations"]
+          environment: ["configuration", "setup", "dependencies"]
+  
+  trend_identification:
+    description: "Detects emerging and declining patterns"
+    configuration:
+      time_buckets: "weekly"
+      min_data_points: 3
+      trend_threshold: 0.3
+    
+    trend_types:
+      emerging:
+        criteria: "increasing frequency > 30%"
+        priority_boost: 1.2
+      
+      stable:
+        criteria: "frequency variance < 10%"
+        priority_boost: 1.0
+      
+      declining:
+        criteria: "decreasing frequency > 30%"
+        priority_boost: 0.8
+      
+      spike:
+        criteria: "sudden increase > 200%"
+        priority_boost: 1.5
+        alert: true
+
+pattern_classification:
+  categories:
+    critical_issues:
+      indicators:
+        - severity >= 8
+        - affects_core_functionality
+        - blocks_users
+        - security_risk
+      response: immediate
+      auto_escalate: true
+    
+    usability_problems:
+      indicators:
+        - category == "usability"
+        - user_confusion
+        - workflow_friction
+        - discoverability_issue
+      response: standard
+      batch_process: true
+    
+    performance_issues:
+      indicators:
+        - category == "performance"
+        - slow_operation
+        - high_resource_usage
+        - scaling_problem
+      response: standard
+      requires_metrics: true
+    
+    feature_gaps:
+      indicators:
+        - missing_functionality
+        - workaround_required
+        - user_request
+        - competitive_gap
+      response: quarterly_planning
+      collect_requirements: true
+    
+    enhancement_opportunities:
+      indicators:
+        - improvement_suggestion
+        - optimization_possible
+        - better_defaults
+        - workflow_streamline
+      response: backlog
+      roi_analysis: true
+
+pattern_scoring:
+  formula: |
+    score = (frequency_score * 0.3) +
+            (severity_score * 0.4) +
+            (trend_score * 0.2) +
+            (impact_score * 0.1)
+  
+  frequency_scoring:
+    1-2_occurrences: 2
+    3-5_occurrences: 5
+    6-10_occurrences: 8
+    10+_occurrences: 10
+  
+  severity_scoring:
+    direct_mapping: true  # Uses 1-10 scale directly
+  
+  trend_scoring:
+    emerging: 8
+    spike: 10
+    stable: 5
+    declining: 3
+  
+  impact_scoring:
+    all_users: 10
+    many_users: 7
+    few_users: 4
+    single_user: 1
+
+pattern_aggregation:
+  merge_similar:
+    enabled: true
+    similarity_threshold: 0.85
+    merge_strategy:
+      - combine_evidence
+      - max_severity
+      - sum_frequency
+      - union_affected_users
+  
+  hierarchy_building:
+    enabled: true
+    levels:
+      - root_pattern
+      - sub_pattern
+      - specific_instance
+    
+    example:
+      root: "Onboarding Issues"
+      sub: ["Menu Discoverability", "Setup Confusion"]
+      specific: ["Can't find workflows", "Settings unclear"]
+
+output_structure:
+  detected_patterns:
+    - pattern_id: string
+      name: string
+      description: string
+      category: string
+      occurrences: integer
+      severity: integer
+      score: float
+      trend: string
+      root_cause: string
+      evidence:
+        learning_ids: array
+        examples: array
+      clustering:
+        cluster_id: string
+        related_patterns: array
+      recommendations:
+        action: string
+        priority: string
+        estimated_effort: string
+  
+  pattern_report:
+    summary:
+      total_patterns: integer
+      critical_patterns: integer
+      emerging_patterns: integer
+      top_patterns: array
+    
+    by_category:
+      category_name:
+        count: integer
+        avg_severity: float
+        patterns: array
+    
+    trends:
+      emerging: array
+      declining: array
+      stable: array
+      spikes: array
+    
+    recommendations:
+      immediate_action: array
+      next_sprint: array
+      backlog: array
+
+thresholds_and_limits:
+  min_learnings_for_detection: 5
+  max_patterns_per_run: 100
+  confidence_threshold: 0.7
+  pattern_expiry_days: 90
+
+example_detection:
+  input_learnings:
+    - count: 8
+      pattern: "Users can't find workflow menu"
+      severity: 7
+      category: "usability"
+    
+    - count: 6
+      pattern: "Workflow menu not visible"
+      severity: 6
+      category: "usability"
+    
+    - count: 4
+      pattern: "Menu navigation confusing"
+      severity: 5
+      category: "usability"
+  
+  detected_pattern:
+    pattern_id: "pattern-2025-01-27-001"
+    name: "Workflow Menu Discoverability"
+    description: "Users consistently unable to locate workflow functionality"
+    category: "usability"
+    occurrences: 18
+    severity: 7
+    score: 7.8
+    trend: "emerging"
+    root_cause: "Menu structure doesn't follow user mental model"
+    evidence:
+      learning_ids: ["learning-001", "learning-002", "learning-003"]
+      examples: ["Can't find workflows", "Menu not visible", "Navigation confusing"]
+    recommendations:
+      action: "Redesign menu with workflows prominently featured"
+      priority: "high"
+      estimated_effort: "1 sprint"

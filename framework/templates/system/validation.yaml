@@ -1,0 +1,61 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.454753Z
+migration_path: auto-generated
+---
+
+<!-- dependencies
+upstream:
+  # Tasks that use validation rules
+  - framework/tasks/validation/validate-dependencies.md
+  - framework/tasks/validation/validate-bidirectional-dependencies.md
+  
+  # Workflows using validation
+  - operations/workflows/system-maintenance.md
+  
+downstream:
+  # System components depending on validation
+  - framework/tasks/system/system-sync.md
+  
+validated: 2025-08-26T16:00:00Z
+health: 100%
+-->
+
+version: 1
+last_updated: 2025-08-22T16:45:00Z
+
+rules:
+  - id: forbid-deprecated-dot-memory
+    description: "No references to deprecated .memory path"
+    type: regex_forbid
+    pattern: "\\.memory/"
+
+  - id: top-level-memory-path
+    description: "Top-level memory must use Nexus/workspace/memory/"
+    type: regex_require
+    files:
+      - "structure/*.yaml"
+    pattern: "Nexus/workspace/memory/"
+
+  - id: repo-memory-path
+    description: "Repository memory must use Nexus/workspace/repositories/{repo}/memory/"
+    type: regex_require
+    files:
+      - "structure/*.yaml"
+    pattern: "Nexus/workspace/repositories/.+/memory/"
+
+  - id: top-level-features-path
+    description: "Top-level features use Nexus/workspace/features/active/{feature}/"
+    type: regex_require
+    files:
+      - "structure/*.yaml"
+    pattern: "Nexus/workspace/features/active/.+/"
+
+  - id: engineering-rules-path
+    description: "Engineering rules must reference operations/engineeringrules/"
+    type: regex_require
+    files:
+      - "structure/*.yaml"
+    pattern: "operations/engineeringrules/"
+

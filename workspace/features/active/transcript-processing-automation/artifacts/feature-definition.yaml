@@ -1,0 +1,30 @@
+# Feature Definition: transcript-processing-automation
+# Generated: 2025-09-17T17:55:00Z
+# Workflow: plan-feature (Step 1)
+
+feature_name: "transcript-processing-automation"
+problem_statement: "Manual follow-up creation from call transcripts is time-consuming and inconsistent, leading to delayed responses and potential lead loss. Sales reps spend significant time crafting personalized follow-ups instead of focusing on high-value activities."
+
+success_criteria:
+  - "Reduce post-call follow-up time from 15-20 minutes to 2-3 minutes per call"
+  - "Generate follow-ups within 24 hours of call completion (vs current manual delays)"
+  - "Achieve 90%+ satisfaction rate on AI-generated follow-up quality"
+
+feature_type: "integration"
+priority: "high"
+created_date: "2025-09-17T17:55:00Z"
+
+# Context from Personal Sales GTM Operating System
+business_context:
+  primary_goal: "Automate routine sales tasks and enhance presentation/demo creation"
+  target_impact: "50+ hours/month saved on manual tasks"
+  current_pain: "Presentation creation biggest time sink, need for faster detailed follow-ups"
+  
+integration_scope:
+  - "Call transcription database (API-accessible)"
+  - "HubSpot CRM for record updates"
+  - "Email systems (Gmail integration)"
+  - "Slack for notifications"
+  - "Notion for documentation storage"
+
+phase_priority: "Phase 1 (Immediate Impact - Month 1)"

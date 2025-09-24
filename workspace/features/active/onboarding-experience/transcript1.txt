@@ -1,0 +1,719 @@
+Analyze all core learnings for nexus to enable new users.
+
+Mujtaba / Dorian 1:1 - August 29
+VIEW RECORDING - 36 mins (No highlights): https://fathom.video/share/DJCMNFkitK2i8Av41xirFjWwuBrupeFt
+
+---
+
+0:02 - Dorian Schlede (beam.ai)
+  But you see now, look, it has now created an agent. It looks somewhat similar, but it's not a complete agent.  So it's not only 100 lines, but the actual agent is like 800 lines. So if you do this kind of thing where you let it generate too many different things, it will only generate you 100 lines of something that looks correct, but it's not actually correct.  So you cannot implement three agents in one chat. You need to have a single chat where you plan to implement an agent as a feature, and then you do another chat where you implement it.  And this is the only way that it will work. So now it has created way too much random stuff.  I would actually reset the main chat here to a previous state to remove all this stuff that you don't actually want.  So yeah, it... it... It's not super easy to use because, yeah, you need to make sure it doesn't break.  But, you know, if you didn't have the system, then it would also just break. Can you do it here, like Restore Checkpoint?  Yes.
+
+1:15 - Mujtaba Ahmed (beam.ai)
+  This is after it started doing all of that. Because here, like, I just did the structure.
+
+1:21 - Dorian Schlede (beam.ai)
+  Did it act in the UltraThink analysis also already? Can you scroll up a bit more just to see what it did here?  Did it just think or did it do anything?
+
+1:29 - Mujtaba Ahmed (beam.ai)
+  I think it just did some thinking here at this point in time. Yeah. I'm not, I don't think it implemented anything, you see.  So, it came, what they actually tested. Yeah, it's just reading.
+
+1:45 - Dorian Schlede (beam.ai)
+  Okay.
+
+1:45 - Mujtaba Ahmed (beam.ai)
+  Reading through everything. So, I don't think it did anything. just, I did it. Okay. Okay.
+
+1:50 - Dorian Schlede (beam.ai)
+  But then we can also potentially continue here. So, um.
+
+1:56 - Mujtaba Ahmed (beam.ai)
+  Oh, yeah. Huh? You mean we can continue. From here or from the other thing?
+
+2:01 - Dorian Schlede (beam.ai)
+  No, now I think we can continue from here. So it's just important that you separate planning and implementation. So now here you can also tell it.  Okay, now, yeah, restore it. Yeah, now all your Pursus files will be gone. Not so, Pursus, because they're not very accurate right now.
+
+2:27 - Mujtaba Ahmed (beam.ai)
+  That's the problem. No.
+
+2:31 - Dorian Schlede (beam.ai)
+  Okay, so now let's change the focus. Hmm, I'm not sure why I didn't delete it. It should have. But let's see.  So now what I would recommend you do is there is a plan feature flow. You can just call it by saying run feature.  Run or run plan feature or plan feature, whatever. So if you use the add sign, just search for plan feature.  Okay. So you application You Perfect. So now we'll go into planning mode. Now the question is what you wanted to plan.  So it shouldn't plan a single feature, right? It should maybe plan multiple features. So maybe you want to ask it.  Okay, let's see what it does. Yes, and Yes, This is now where it gets much better. Because now, instead of implementing, it's really thinking about it.  Did it actually, yeah, it did read the plan feature flow. Yeah, okay, but did you get the general gist of it, Mujtaba?  The splitting the concerns in each chat, essentially.
+
+4:36 - Mujtaba Ahmed (beam.ai)
+  Yeah, yeah.
+
+4:37 - Dorian Schlede (beam.ai)
+  And making it, slicing it up into manageable pieces for the AI.
+
+4:42 - Mujtaba Ahmed (beam.ai)
+  Yes. So here, if I'm doing like a plan feature, so like right now, will it... Okay, okay. Let's see where it adds the files.
+
+4:54 - Dorian Schlede (beam.ai)
+  You can just click on the file. Let's see where it added it. This one? Yeah, for example.
+
+5:01 - Mujtaba Ahmed (beam.ai)
+  It's running away from you. Yeah. In it here, the features. Perfect. So there you go.
+
+5:10 - Dorian Schlede (beam.ai)
+  It's the right place. So now it's planning the feature implementation.
+
+5:16 - Mujtaba Ahmed (beam.ai)
+  And then I close the chat and start it in a different one, right? The way I think. Yes. And that's important.
+
+5:22 - Dorian Schlede (beam.ai)
+  Don't just close it. You need to say close chat, right? So that's the close chat command. That will store everything you did in the project memory.  So that's important, right? So the next chat, you know what you've done in the last chat. Yeah. Hmm. Mm-hmm.  Hmm. Hmm. Okay, and then how this will go, Muj, is you can design, I mean, at the beginning, maybe just one, but later on, you can design once you've got the flow.  You can design two or three features at the same time, and then you can also implement two or three features at the same time.  Only make sure that they're not dependent on each other. Yeah, that's important. But, for example, you can design one task to get you data, and then you can also design another task to do something else, right?  You do it in two chats, build it at the same time.
+
+6:43 - Mujtaba Ahmed (beam.ai)
+  Another question I had is, what's the difference between the features that are being populated here versus the agents that live here?
+
+6:49 - Dorian Schlede (beam.ai)
+  Yeah, so agents are like a persona. So, why? Is there no Agents, by the way?
+
+7:03 - Mujtaba Ahmed (beam.ai)
+  Can you open the Agents folder again?
+
+7:06 - Dorian Schlede (beam.ai)
+  Ah, sorry. I was confused. There is Agents. It's the same thing that we had in, like, this Beams Docs, right?
+
+7:12 - Mujtaba Ahmed (beam.ai)
+  Yeah. All good.
+
+7:15 - Dorian Schlede (beam.ai)
+  So an agent contains a high-level definition of what it's doing.
+
+7:24 - Mujtaba Ahmed (beam.ai)
+  What? Oh, yeah, okay. So agent and features are grouped together in a way that the agent is a blueprint or, like, a high-level, sort of, like, a scope of what needs to be done, and then a feature is something that takes the context from it and then goes ahead and does it, correct?
+
+7:41 - Dorian Schlede (beam.ai)
+  So, okay, no, so I need this visual hierarchy. So the agent is at the top. You use agents. So I actually only use the orchestrator at the moment.  I don't use other agents because it's enough. Now, what the agent executes is workflows. Right? So it executes workflows with automate tasks.  And when it's executing the workflows, I have a plan feature workflow. Right? And that will develop a feature. And then I have another workflow for my agent, which is implement feature.  So and then it will implement the feature. The feature is a self-contained context box for one topic that is temporary.  So it's like a temporary context storage that you use to work on it over multiple chats. And after your feature is done, it will be implemented as a task, as a workflow, or as an agent.  So a feature is your implementation. And so your implementation context, essentially. So your agent, you will use to talk to, it will use workflows workflows and tasks, and it uses them to build features.  use privacy and
+
+9:04 - Mujtaba Ahmed (beam.ai)
+  Got it.
+
+9:10 - Dorian Schlede (beam.ai)
+  Cool. So now it's done.
+
+9:12 - Mujtaba Ahmed (beam.ai)
+  Now you can close the chat. It's given me some, the feature system blocking. This feature system blocking, the Beam Academy documentation is completely non-functional until these path references are fixed.  All five regions will fail on activation due to broken dependency paths. Ready to fix the critical path resolution issue and make your Academy system functional.  Yes.
+
+9:36 - Dorian Schlede (beam.ai)
+  Now you say close chat. Now we can open the next chat. Now you can run the orchestrator. Yes. By the way, I always preload some orchestrator.  Sometimes I preload an orchestrator already because I know I want to get started in a minute. So my terminal terminal literature.  It looked like this. So I literally use three to six terminals at the same time. Crazy, man.
+
+10:07 - Mujtaba Ahmed (beam.ai)
+  So I'm always switching.
+
+10:09 - Dorian Schlede (beam.ai)
+  I also have two side by side. So I see two chats at the same time. It's like only vibe coding all day, nothing else anymore.  It's crazy.
+
+10:22 - Mujtaba Ahmed (beam.ai)
+  Yeah, calls have changed so much, you know, like I was thinking about it as well. So we're really talking about the platform right now, you know.  We're mostly like trying to think of like things that we can optimize using live coding, you know.
+
+10:36 - Dorian Schlede (beam.ai)
+  Yeah. It's crazy.
+
+10:37 - Mujtaba Ahmed (beam.ai)
+  Like it's a very transitional switch. So like it's a bit, it's a bit different. It feels a bit different, you know.
+
+10:43 - Dorian Schlede (beam.ai)
+  It also is very different as you see what you are doing right now.
+
+10:49 - Mujtaba Ahmed (beam.ai)
+  Should we keep all of this? think so, right? This is the... Where are we right now? I'm in chat room.  this?
+
+10:58 - Dorian Schlede (beam.ai)
+  What are you looking at even right now? now? So this is one of the features that we added here.
+
+11:04 - Mujtaba Ahmed (beam.ai)
+  documents. Okay. I see.
+
+11:06 - Dorian Schlede (beam.ai)
+  So that's where the UltraThink results, essentially. We had deeply thought about the impact of this feature and what it does and so on.
+
+11:14 - Mujtaba Ahmed (beam.ai)
+  Perfect.
+
+11:15 - Dorian Schlede (beam.ai)
+  Yeah, always keep them. Yes. I think, yeah, let's review and save all of them, maybe. I need to make sure.
+
+11:34 - Mujtaba Ahmed (beam.ai)
+  Oh, wow.
+
+11:35 - Dorian Schlede (beam.ai)
+  The orchestrator is so deprecated. Wait, do we have two orchestrators? Can you go to the chat again and start putting, stay in the same chat, just open the chat window and type orchestrator again just to see.  We have two because maybe you activated an old one. Aha.
+
+11:57 - Mujtaba Ahmed (beam.ai)
+  Aha. Aha.
+
+11:57 - Dorian Schlede (beam.ai)
+  I think you activated the Claude orchestrator. don't I Okay. You just delete the Cloud Orchestrator because you don't need it at the moment.  So at the top left, there is the Cloud folder. Just remove all the agents for now. Yeah, I will reintroduce all these agents later on, but now it's kind of confusing it.  Cool. So you need to rerun this chat because it loaded an old orchestrator. Now you should only have one.
+
+12:24 - Mujtaba Ahmed (beam.ai)
+  Yeah, think you've used the orchestrator so much that you could just see that it's coming up with some random .
+
+12:31 - Dorian Schlede (beam.ai)
+  Yeah, I saw it by the files that it has loaded because it loaded a project brief with a date.  And now my project brief doesn't have a date anymore. It's always just project brief and it gets auto updated.  So that's how I saw it. Yeah, so in the meantime, you can kind of review what it generated in the feature, right?  It might be interesting just to, you know, try to get a grasp of what's going on.
+
+13:02 - Mujtaba Ahmed (beam.ai)
+  So we have a Beam Academy Context Management, but there's nothing here. And then we have a Beam Docs Path Resolution Fix.  This is what it created.
+
+13:13 - Dorian Schlede (beam.ai)
+  Let's look at the feature definition maybe. I think the elicitation insights, yeah. Let's look at maybe at the feature definition.  The second file, yeah. Oh wow, that's very dedicated. I guess it's clear. Okay, cool. But anyway, so now I guess we can continue.  Yeah, just save all this to make sure that the next guy has it. Right. Now, you see it has loaded the chat.  La la la. You need to hear, make sure that it loads all. Files, I make sure that this always works.  Now in this, in the new version, also 95% always works. So that looks good. So that's your activation sequence.  Let's scroll down. There's Smart Tips. So it even suggests to you what you should do next.
+
+14:26 - Mujtaba Ahmed (beam.ai)
+  I mean, it's given me like five options. Where is it given the suggestion again? At the bottom, Smart Tips.
+
+14:32 - Dorian Schlede (beam.ai)
+  There is your project context. I see you're working on systematic process development for your multi-agent automation system. I can help you build blah, blah, blah, blah.  Okay, but we want to now implement the feature. So now you can say add implement feature. Make sure you don't pick the cloud one.  That was again two, why was that two? Can you? So one is in framework and the other one is in  Workspace? So it needs to be in the framework one. Okay, so the top one is correct. I need to clean up a little.  So wait, now you need to also tell it which feature. So now link the feature folder. So the direct one, right?  So the direct folder is called Beam Dock's Path Resolution Fix. So you can search for path. Yeah, there you go.  Yep. So this is it? Yeah, that's it. That's all you will need to do because it has the task and it has the context.  Yep. So that's how it will always be. You have a workflow and you have something to apply the workflow on, right?  You have an automation. You need something to apply it on.
+
+15:50 - Mujtaba Ahmed (beam.ai)
+  Okay, so we're creating a feature for this Beam Dock's Path Resolution Fix. Okay.
+
+15:58 - Dorian Schlede (beam.ai)
+  And now it should read all the files. Let's see if it does it. There you go. So it has read the complete feature description.  And you see now how it's so much better because you don't clutter with the planning, with the analysis.
+
+16:10 - Mujtaba Ahmed (beam.ai)
+  the thing was sort of mixed up and I was very unclear, like, what the  is going on? Mm-hmm. Okay.
+
+16:17 - Dorian Schlede (beam.ai)
+  And now what it's doing is it is now creating the PRD.
+
+16:23 - Mujtaba Ahmed (beam.ai)
+  Ooh.
+
+16:26 - Dorian Schlede (beam.ai)
+  And then it is implementing it.
+
+16:30 - Mujtaba Ahmed (beam.ai)
+  For implementation, we'll go to the second one, no? So, like, this feature now cleans up, I think, no? Yeah.
+
+16:36 - Dorian Schlede (beam.ai)
+  So this is a little bit mixed up. So now it's a bit – now the PRD is already created by the second chat.  Maybe I change it again. But now the first chat gives you what you see already on the left-hand side, right?  So you have the licitation insights, you have the feature – that's what the first chat gives you. And then the second chat essentially reads it and turns it into a plan.  And I'm not sure, maybe I need to change it a little bit at the PRD. Yeah. PRD also comes out of the first plan, but yeah, let's see, what's the PRD?  Yeah, there it is. Okay, let's read it. Yeah, there's your migration. And this I will now also automate, right?  So you don't have to, you know, know how to do this. I will also turn this into a migration workflow that will just plan out the full migration for you.
+
+17:45 - Mujtaba Ahmed (beam.ai)
+  It's crazy how like, like, you know, like if you implement it, you sort of like get the real feedback and then sort of like implement the feedback to automate things.  Yes, there you go. Okay.
+
+18:00 - Dorian Schlede (beam.ai)
+  And let's see what did it put in the progress. You know, just read the files a little bit so you understand what's going on, right?  So the progress, this is the file it will constantly update. this is not...
+
+18:13 - Mujtaba Ahmed (beam.ai)
+  Period two to three hours. Yeah, that's not true.
+
+18:16 - Dorian Schlede (beam.ai)
+  I will fix this at some point. So literally, it's more like 10 minutes. Yeah. But this is like a yellow hot tag.
+
+18:25 - Mujtaba Ahmed (beam.ai)
+  Yeah. Like I came across some of like these placeholders when planning. So it would give you like a weekly plan.  It would give you like a roadmap or something. And you're like, dude, I don't know. I don't have that much time to do all of this .  Like, what are you talking about?
+
+18:40 - Dorian Schlede (beam.ai)
+  Yeah, but it doesn't know that it only takes 10 minutes to implement. It doesn't know it yet. Yeah, it looks really good.  Create... That's mapping, specification. So it's really focused on only mapping the data. You know, it doesn't create agent. It doesn't do anything else.  It only focuses on...
+
+19:11 - Mujtaba Ahmed (beam.ai)
+  That's what we needed to do, right? Migrating your stuff. Yes. Makes sense. Okay. I kind of get the gist of it now, like considering how you're planning a feature.  So you use the orchestrator to plan the feature, then you close the chat and you go to the other and then you load up the, what's it called, the orchestrator again?  And then you implement a feature based on what it has previously planned. Yes.
+
+19:37 - Dorian Schlede (beam.ai)
+  And then the last important thing is doing UltraThink. So now, just for fun, just put UltraThink in the chat and then send it.  Yeah. So now also it might feel like you're waiting a lot and it's very slow, right? But if you then, if you read the stuff that it produces and then you actually do three things at the same time, then you are very busy.  It's like super overload of content all the time.
+
+20:23 - Mujtaba Ahmed (beam.ai)
+  This is good. This is good content because like earlier, like when we did the mapping, I think it did like a terrible job because like I just asked it to migrate everything together.  It just didn't work. I think the first thing that it's doing right now, I'm not even focusing on the main features.  So right now it's doing a mapping, like sort of like a restructuring or something. Once it's done that, then I think...  Correct me if I'm wrong. So like once this is done, we're going to implement this in a new type and then close that and then use the orchestrator again to serve.  to like plan what needs to be done next. So you're not really telling it what needs to be planned.  You're asking it to sort of like think about it, right? Yes.
+
+21:09 - Dorian Schlede (beam.ai)
+  And now the interesting thing is the UltraThink validation. So this catches the biases. So the system already knows. So there's a context file that tells it what it often does wrong.  And it will now kind of detect its own issues. So it will review what it did, but it knows what kind of issues it has, and it detects the issues to fix them.  But the UltraThink is not working as it should because it's a claw functionality. So once you move to the clawed code, you will actually get the full value.
+
+21:49 - Mujtaba Ahmed (beam.ai)
+  Oh, okay, okay.
+
+21:51 - Dorian Schlede (beam.ai)
+  Okay, but this is now fine because essentially if you scroll up, it essentially says that the only problem that you have is that you didn't actually implement it, I think.  And it's... Sometimes it doesn't. You have a critical issue, and you didn't actually implement it.
+
+22:06 - Mujtaba Ahmed (beam.ai)
+  That's awesome. I'm just planning a feature right now. Yeah.
+
+22:13 - Dorian Schlede (beam.ai)
+  OK. But that's fine. You know, sometimes it says it's the only issue is you didn't implement it. So that's fine.  So now you can say close chat. can open a new chat with the orchestrator. Or you could also just implement it here.  I mean, but how much context do you have used? 55%. You see, you saw it was 55% already, so it makes sense to close.
+  ACTION ITEM: Clean up duplicate/backup orchestrator files in system
+ - WATCH: https://fathom.video/share/DJCMNFkitK2i8Av41xirFjWwuBrupeFt?timestamp=1356.9999  And there are two chats.
+
+22:38 - Mujtaba Ahmed (beam.ai)
+  So one is, like, we're going to go with this framework very close, right? Because it's like one.
+
+22:42 - Dorian Schlede (beam.ai)
+  see the other one is some kind of backup. It has a backup folder, yeah. So this, I will need to clean this up.  I will. Yeah. Now, the next orchestrator guy.
+
+23:08 - Mujtaba Ahmed (beam.ai)
+  Did you build this entire system yourself?
+
+23:13 - Dorian Schlede (beam.ai)
+  So I took it from the BMAT thing that had a very, very simplified architecture of this. Then Burak implemented the memory feature.  So he built it kind of, he had, I gave it to him. He took it for a ride for a day what I built, and then he added the memory feature.  Then he gave it back to me. And then I, once you have this memory feature, so once you have this session persistent memory, the system gets 10x.  So as soon as I had it, everything was so much better. And the whole implementation, everything got 10x better.  And then it's kind of, you know, spiraling faster and faster. And, yeah, and then I built everything myself, yes.  So then at some point, it was too much. started to, I Yeah, so there you go. Now it suggests even the next best action because that's what you last did.  So now you can just type one and again go for add implement. Right, so add implement feature and then you just say one, but I mean it should have done everything, just say one, but whatever.  Yeah, probably if you would have said one, it should have also worked. Is this like my OCD with?
+
+24:34 - Mujtaba Ahmed (beam.ai)
+  No, that's okay.
+
+24:35 - Dorian Schlede (beam.ai)
+  And then I got to a critical point where I, it kind of got out of control. So at some point I didn't fully constrain what I was doing and it generated too many random documents.
+
+24:47 - Mujtaba Ahmed (beam.ai)
+  Yeah.
+
+24:47 - Dorian Schlede (beam.ai)
+  And you cannot always keep all files updated. So you will always have some deprecated files somewhere in the system.  So this is not preventable. You can even do that to take care of it, We can have a feature that takes care of the deprecated file, right?  I'm also doing this right now, but yeah, it's a lot of maintenance stuff. And you kind of need to accept that you will always have outdated files somewhere.  So always...
+
+25:18 - Mujtaba Ahmed (beam.ai)
+  for sure. Even I noticed it came up with some random  and then you're like, and the file isn't just relevant.  Yes.
+
+25:28 - Dorian Schlede (beam.ai)
+  And then I actually, my system was broken. So then I had implemented some stuff that was incorrect and then some stuff broke.  And if your memory feature breaks, suddenly nothing works anymore. And then you're like, , now I'm back to the stone age.  And yeah, then I had to rebuild it. So then I had to strip it down, remove most of the stuff and start fresh.  And then it took me a full day to rebuild everything. But then I... I... I actually really thought about how I rebuilt everything.  I had this index, which is like the central context, sorry, the central registry. So it knows where everything is, so where all the files are.  And then I learned I have to always keep the index updated. So it does, it always knows what it has access to.  And before this, that got outdated. So you need these central context management files where it kind of tells it, if you want this go here, if you want this go here, and these must never be outdated.  So then I kind of implemented this mechanism that this doesn't go outdated anymore. And then it became much, much more reliable.  And once I had this baseline established with the memory, then I implemented the automatic learning. And from the automatic learning, it has now built self-optimization things, keystrokes, or self prevention.  Features that kind of, from the learnings, make sure that it doesn't happen anymore. But yeah, okay. So interestingly, what is it doing?  I'm just looking.
+
+27:14 - Mujtaba Ahmed (beam.ai)
+  It created a couple of files. was looking into this path, mapping specification file that it created here. see? Which does seem correct to me.  So it's taken this extract Airtable Knowledge MD, right? This is like a specific task that I have. And now it's taken it from here, and it's going to add it to the briefings.
+
+27:42 - Dorian Schlede (beam.ai)
+  Not where you want it, right? Exactly.
+
+27:45 - Mujtaba Ahmed (beam.ai)
+  I think it was correct for it to be in the task. But why is it putting it briefing?
+
+27:49 - Dorian Schlede (beam.ai)
+  Yeah, it should put it into the operations tasks. Mm-hmm.
+
+27:54 - Mujtaba Ahmed (beam.ai)
+  So you will need to fix this.
+
+27:57 - Dorian Schlede (beam.ai)
+  Oh, now we can also use the core learning feature. Interesting. Definitely. So allow list. Yep. Now that's also very important.  So the interesting thing now, if you do this and you put a learning, I can also just pull all the learnings from you and use them.  So the one important learning here is now. So when we do a migration, always put the logic of the user inside the operations folder into agents, workflows, and tasks, right?  So that's kind of...
+
+28:31 - Mujtaba Ahmed (beam.ai)
+  And how can I call a learning sort of a...
+
+28:35 - Dorian Schlede (beam.ai)
+  Yeah, it's called a primitive learning, I think. No, I don't think it's this one. Prim. Not with E, with I.  Yeah. Yeah, this one.
+
+28:52 - Mujtaba Ahmed (beam.ai)
+  Okay.
+
+28:54 - Dorian Schlede (beam.ai)
+  But you could also just say, learn this. So you don't need to actually always reference the file. Most of the time it also even works.  Without referencing, but it's always the safer bet. Yeah, inside the operations folder. And maybe now we can say also the mapping.  So map automations, single automations to tasks, map complex automations to workflow, you know.
+
+29:47 - Mujtaba Ahmed (beam.ai)
+  Anything for agents?
+
+29:50 - Dorian Schlede (beam.ai)
+  Yeah, map agents into, yeah, map agents into agents, I guess.
+
+29:58 - Mujtaba Ahmed (beam.ai)
+  Okay. Ah, now there's
+
+30:00 - Dorian Schlede (beam.ai)
+  It's one very important thing. Yeah, just say map agents to agents. There's one very important thing now. So if you go inside the framework folder, which is above the operations folder, and then there is templates.  And this is now what every agent looks like, what every task looks like, what every workflow looks like. So it's a schema on what each agent looks like or what each task looks like.  So when you do a migration, it's important that you migrate to the schema. So this is very important. So you always need to upgrade to the baseline logic because this makes it fit all together.  together. All right. Yeah.
+
+31:15 - Mujtaba Ahmed (beam.ai)
+  And this is the framework, right? Yeah.
+
+31:19 - Dorian Schlede (beam.ai)
+  You can also, by the way, drag and drop the folder.
+
+31:26 - Mujtaba Ahmed (beam.ai)
+  Which one? Sorry?
+
+31:26 - Dorian Schlede (beam.ai)
+  You can drag and drop the folder into the chat. So you can just drag the templates into the chat.
+
+31:36 - Mujtaba Ahmed (beam.ai)
+  Ah, interesting. Yeah.
+
+31:40 - Dorian Schlede (beam.ai)
+  Nice feature to know. Yes. Now say, this is critical to your survival ultra thing. And you will see it will research so many files if you say this is critical.  critical. Equals to your survival, it will read so much context. It will think so hard.
+
+32:09 - Mujtaba Ahmed (beam.ai)
+  Yes. Yes, that's the easy one. But I think it's also equally important to know within the system what happens where.  Because for a new user, for someone who hasn't really gotten the understanding of the system, they would be a bit confused where each file should go.  Yeah, like structuring is very important. Maybe it would make sense to have this as a workflow or like perhaps like a feature, you know, so you know that, okay, okay, these files go here, these files, because like everyone has, has been building their own systems.  So they were, if they were to migrate on this system, they'd need to.
+
+32:51 - Dorian Schlede (beam.ai)
+  Did you, did you do the onboarding sequence?
+
+32:58 - Mujtaba Ahmed (beam.ai)
+  Yes. afternoon. Let's send it again.
+
+33:01 - Dorian Schlede (beam.ai)
+  Did you do the onboarding sequence? Because there is an onboarding guide, right? The onboarding guide should explain this to you.
+
+33:09 - Mujtaba Ahmed (beam.ai)
+  Okay. No, I think we just, like, because, like, on this chat, we started together, so I directly went with the orchestrator rather than anything else.  Perhaps because you knew the context, right? So you were, like, sort of, like, giving me the context along the way.
+
+33:26 - Dorian Schlede (beam.ai)
+  Let's open the orchestrator again and see if it can teach you the beginner guide. It should still be able to.  But I will also need to hop now. I will also need to hop in a minute to Asad. But I think you kind of got the gist of it, right?  So it's really about slicing it down, and then it's about multitasking. Okay. So slice it down, learn how it works, really understand what's going on, and once you've done this three to five times, you kind of get how the feature development works, and then you can start speeding it up and do two or three at the same time.  But first, you need to be really aware of what it's doing, like take your time, read it. I think it's also really interesting to read it and understand what it's doing, where it's putting stuff, and so on, right?  Makes sense.
+
+34:32 - Mujtaba Ahmed (beam.ai)
+  sense. I mean, sometimes you can't understand.
+
+34:34 - Dorian Schlede (beam.ai)
+  I mean, this Echo stuff, I don't get, but whatever. This stuff is not like very clear to me as well.
+
+34:41 - Mujtaba Ahmed (beam.ai)
+  Yeah, but that's okay.
+
+34:43 - Dorian Schlede (beam.ai)
+  I mean, obviously not everything is clear to me either.
+  ACTION ITEM: Experiment with AI system - move existing content as features, test if they work
+ - WATCH: https://fathom.video/share/DJCMNFkitK2i8Av41xirFjWwuBrupeFt?timestamp=2094.9999
+  ACTION ITEM: If features don't work, report back to Dorian; if they do, continue developing more
+ - WATCH: https://fathom.video/share/DJCMNFkitK2i8Av41xirFjWwuBrupeFt?timestamp=2094.9999
+
+34:48 - Mujtaba Ahmed (beam.ai)
+  Moving everything. Okay. So you need to move everything. Sorry?
+
+34:59 - Dorian Schlede (beam.ai)
+  Okay, Mucha, will hop over now. I don't want Until that, Asad, wait. Keep playing around. Move your stuff as features.  And then test if they work. And if they don't, get back to me. And if they do, just develop more.
+
+35:16 - Mujtaba Ahmed (beam.ai)
+  Sounds good. Sounds like a plan.
+  ACTION ITEM: Start building actual content for Beam Academy using new AI-assisted workflow
+ - WATCH: https://fathom.video/share/DJCMNFkitK2i8Av41xirFjWwuBrupeFt?timestamp=2123.9999
+
+35:18 - Dorian Schlede (beam.ai)
+  All right. The knowledge is also available. Did you see this? So you have now 2,500 knowledge pieces available. Congratulations.
+
+35:29 - Mujtaba Ahmed (beam.ai)
+  Sounds good. Perfect. I'll experiment a little more. Let's see if it works.
+
+35:34 - Dorian Schlede (beam.ai)
+  Cool. Now let's actually start building the stuff. Let's get going, right? To actually put the content up there. Yeah.
+
+35:41 - Mujtaba Ahmed (beam.ai)
+  I think that's like the main goal now is to get this up and running. Okay. I'll experiment further. I'll let you know if I have any doubts or anything.  Yeah. Cool.
+
+35:50 - Dorian Schlede (beam.ai)
+  Then happy weekend. Maybe see you on Sunday. mean, I look right around the corner. I'm meeting my dad and stuff.  But we can have a chat to see if we can hang out.
+
+36:00 - Mujtaba Ahmed (beam.ai)
+  Sure. We can have a or something. Just let me know whenever you're free, like we can plan something around.
+
+36:04 - Dorian Schlede (beam.ai)
+  All right. See you. Bye. Excited to meet you. Bye.
+
+36:09 - Mujtaba Ahmed (beam.ai)
+  See you soon. Bye-bye.
+
+Solutions Weekly - August 29
+VIEW RECORDING - 47 mins (No highlights): https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC
+
+---
+
+0:00 - Dorian Schlede (beam.ai)
+  But, you know, marketing and reality might drift a little bit.
+
+0:07 - Sven Djokic
+  True that, true that. I like the slogan that they have, agents that actually work.
+
+0:16 - Kilian Sorg
+  That's, I think, the core point, right?
+
+0:19 - Dorian Schlede (beam.ai)
+  Because most actually don't work. So if you explain why yours work, I think it's a valid sense of it.  Yeah, the proof is in the pudding.
+
+0:33 - Sven Djokic
+  The proof is? In the pudding, or the pudding, or how to say it. I think it's a saying, right, in English?  The proof is in the pudding? Proof is in the... I don't know.
+
+0:50 - Kilian Sorg
+  I add this as a learning to my page.
+
+0:53 - Sven Djokic
+  The proof is in the pudding.
+
+0:57 - Dorian Schlede (beam.ai)
+  The pudding, I'm not sure how to pronounce it. The proof pudding.
+
+1:00 - Sven Djokic
+  Yeah, it basically means that you have to try out things to actually see if they work or not in this case.  Hmm, that makes sense.
+
+1:13 - Dorian Schlede (beam.ai)
+  I think you do. Okay, who, who, Hassaan, were you doing it, Kilian, who was doing this meeting? I, sorry, I forgot who's doing the, the other one, who's doing the Tuesday one?
+
+1:28 - Hassaan Ahmed
+  Um, so last time I did it, generally Kilian does this one, but I can do it as well.
+
+1:34 - Sven Djokic
+  Uh, Kilian, what do you want to do? Uh, I think we didn't make a decision.
+
+1:37 - Kilian Sorg
+  I always did it when Dorian wasn't there. I guess it would be good. I we also did it. Uh, maybe we can make up our mind and then, uh, the first knows.
+
+1:46 - Dorian Schlede (beam.ai)
+  Yeah, you can also rotate. Uh, Sven, you want to do it today? You haven't done this yet, have you?  No, I can, I can also do it.
+
+1:55 - Sven Djokic
+  Okay, your turn.
+
+1:58 - Dorian Schlede (beam.ai)
+  we have Ask Firefly?
+
+2:00 - Jack Li
+  How do you ask Fahy Fahy Fahy Fahy? Hey Fahy Fahy Fahy.
+
+2:06 - Fireflies.ai Notetaker Hassaan
+  Pick up one to host this meeting. Give me a name.
+
+2:20 - Sven Djokic
+  Never mind, it's very good.
+
+2:22 - Jack Li
+  Did it give you a name?
+
+2:24 - Dorian Schlede (beam.ai)
+  No. Interesting, right? Because usually it happens to hear my voice as well.
+
+2:29 - Jack Li
+  One more time.
+
+2:31 - Kilian Sorg
+  Hey Fahy Fahy, pick one of the participants from call as this week's moderator.
+
+2:44 - Sven Djokic
+  Based on the discussion, Sven Djokic has agreed to be this week's moderator since he hasn't done it yet. If you'd like me to officially note Sven as the moderator or assign this as a task, just let me know.  We biased it.
+
+2:59 - Dorian Schlede (beam.ai)
+  Okay. Okay, sounds reasonable, but let's do it. We just always ask VAI what we should do.
+
+3:17 - Hassaan Ahmed
+  Yesterday, I spent the entire day actually talking to VAI apart from meetings. So from morning until afternoon, I was doing cursor.  And after that, I was doing plot.
+
+3:30 - Sven Djokic
+  At 8 p.m., was like, okay, I'm done.
+
+3:31 - Hassaan Ahmed
+  I need to talk to people now. I should talk to my VAI.
+
+3:36 - Jack Li
+  Yeah, same.
+
+3:40 - Dorian Schlede (beam.ai)
+  Okay, but then let's start with the pre-roll topics.
+
+3:44 - Sven Djokic
+  Like anything that we should discuss before we jump into the personal updates? Anything pressing?
+
+3:51 - Dorian Schlede (beam.ai)
+  No, maybe just one information just so that you're aware. So I have hooked up the interview automation now. So every...  every... Transcript that you do will be automatically analyzed, okay? But I'm only extracting knowledge at the moment, right? So it's only to get knowledge for the Beam Academy.  You can also review it. There is transparency on what we're doing. We now have 2,300 knowledge pieces for Mustaba Extracted out of 250 calls.
+  ACTION ITEM: Create documentation for optimal way to set up a feature in Nexus
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=270.9999  So yeah, just so that you're aware, if you don't want something recorded, just don't use the guy, right? Yeah, just as a...
+
+4:34 - Sven Djokic
+  Maybe... All the Fathom transcripts then to Notion, basically? No, we put them into Airtable, then I extract the knowledge.
+  ACTION ITEM: Clean up evaluation framework with interface; prepare for assisting Sven and Kilian
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=286.9999
+
+4:43 - Dorian Schlede (beam.ai)
+  So now you can access all the meeting knowledge through MCP, essentially. Nice, okay. Or API, whatever you want. Yeah, I have one topic here.
+
+4:57 - Jack Li
+  I understand, Sven, Kylian, you all need this evaluation. you. I will come to office today, but only in a few, I believe around the four, maybe, so quite a few hours, if you are there, we can discuss, or next week, let's find dedicated time.  So before our alignment, I need to clean up the evaluation framework a little bit with interface and everything. Then I will assist you.  Let's go through the process together, but it would be nice to understand the deadline, right? So I can know how much prepare work I can do.  If it's not that hurry, I can prepare better. If it's hurry, let's go through the process together. That's something I would like to know.  Yeah, so far, that's also be my highest priority to help you go through the process. So don't need to worry, just let's book a time, go through this together.  Yep, that would be great.
+
+5:49 - Sven Djokic
+  Like today, I won't be in the office because it takes me 60 minutes right now, one way, because it's a beambandstörung.  Nick, I think all of us will be like there anyway, right? And Bena and... Shlaba, I think he was well and Asad, it's like we could do like Monday or Tuesday, whatever is best for you.  Okay, then I will, Dorian, then I will not be there today too.
+  ACTION ITEM: Discuss next steps and timeline for evaluation framework with Jack and Kilian
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=375.9999
+
+6:13 - Jack Li
+  No, I might. Yep. Okay, then, yeah, that's my topic. Just noting it down.
+
+6:26 - Sven Djokic
+  So Jack, Kilian, and me. So I'm going to discuss next steps and timeline. He will, framework, or projects, I'll try which one of yours, Kilian.  Okay, any other prior topics? Prior topics? No? We can jump into the personal hub. Okay, there's still like a timer here, three minutes.  Given timer three minutes.
+
+7:16 - Kilian Sorg
+  Oh, I see.
+
+7:17 - Dorian Schlede (beam.ai)
+  Sven is leading the meeting, we're getting real.
+  ACTION ITEM: Share agent setup automation with Sven and Kilian; gather feedback for corrections
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=440.9999
+
+7:22 - Sven Djokic
+  That's awful, guys. So, you want to start, Hassaan? Yeah, I can go. So, I would say, we've already discussed the agent setup.
+
+7:31 - Hassaan Ahmed
+  Sven, by the way, Rui and I got stuck in doing this automation, so I couldn't send it to you yesterday, but I'll be solving the issues today that we discussed yesterday, and I'll be sharing it with you and Sven both.  So, it would be great if you guys can just have a look, create some base agents with it, start with base agents, let me know.  The idea is to just gather feedback from you guys, so that then I can make all the corrections that, whatever you suggest, I'll just sort of make all those corrections.  So, that's one. The second biggest learning, one thing. One I haven't mentioned here was actually interacting with MCP. So yesterday, actually, day before yesterday, I actually created an entire agent template using Cursor MCPs with Notion and Airtable.  So it was all just one chat, asked her to create a database, gave it the agent use case, populated the database, removed all the entries, changed, updated the Notion sub page as well via MCP.  So you also created the Airtable database? So basically, here's how it looked, I probably will end up going over three minutes, guys, because there were a lot of learnings.  So there were these Aramco agents that we built, and throughout the entire thing, so these are two agents, and I gave it basically a use case that this is the agent that I want to be.  I asked it to write the prompts. Let's let it load as well. Asked it to write the prompts, create documentation that we also sent.  Is it the A table steps? This is all. Yeah. So I just asked it that put the daily tasks for some previous dates as well, three days back.  So it ends up creating the records as well. And it's not that I gave it anything. I just confirmed.  So I asked it to first generate me a schema. It generated the schema. I commented on it. Then I asked it that I don't like it and made it fix the schema.  And it's not only schema. It actually did it better than me in the sense that generally with A table and stuff, I create a base or I create a table.  I don't put in the description of the table and stuff, right? Because who does that? I actually had to go and see that where do you even put the description because I never knew that this feature existed.  So it also did that, which is good. I didn't know that you can actually do that, but yes, so basically all this is populated by Claude, nothing by me.  I was just confirming or denying it, and then I ended up taking all this information, putting it into a format, and putting it on Notion as well, YMCP, which was great.  So that's secondly, something that we discussed yesterday, and actually ended up being quite simple than I was thinking of it to be, which was that we have this demo workspace, which is called Team Finance Operations, and the sales team felt like this can be a very good workspace to demo a host of capabilities.  In order to do that, what we wanted was that there should be tasks on a daily basis. So now I have written a script, obviously via Claude, that basically now automates the entire thing.  So now you see all these tasks for August 29th. So every two hours, it ends up sending tasks. So now in all these agents, I am sending tasks automatically.  And all I have to do is, I take my, because I've had all these calls on Postman already, or some I had to build because I hadn't built them earlier.  So now you see all these files here on the left. These are basically the codes from Postman. And these basically curl every two hours.  And now I was like, these are too many tasks. So now I've changed the frequency to four hours. So now every four hours, each of these files would basically run, and you'll see a host of tasks on each agent.  So basically whatever webbook they relate to.
+
+11:39 - Sven Djokic
+  That's really cool.
+
+11:41 - Dorian Schlede (beam.ai)
+  How do you, so, so how does it work that it automatically runs? So is that handled by GitHub? It's handled by this code here.
+
+11:50 - Hassaan Ahmed
+  I call it code. Maybe some engineers would call it just two lines, but yeah. So you see the strong code here to the schedule, which is like, every four hours.  And it's like, It triggers automatically and here there's the entire curl code so it already contains the web book and stuff and all the content that's supposed to be sent and it's not like I'm only sending text files it also contains like base64 encoded files as well so you if webbook is this then you end up running it and when everything is done it just sends you a message that I've done the entire thing but I basically know it beforehand because I end up receiving the emails as well at service at the I keep on getting shitloads of notification the entire day on the demo agency completed but it's quite cool in the sense that anytime you go into a demo you have like latest runs better analytics because it's for the entire week so yeah super cool I'm just curious like how much does it cost us for like each of these runs we in terms of me in terms of me I mean what what  Yeah, and sorry, I think, I mean, GitHub, et cetera, it's free, but in terms of the tasks being created and the GPT calls, I'm not sure.  Hmm, you mean the API cost? Yeah, I mean, because obviously we're running all these agents, right? So now, what's the cost of each agent?  And because we're running them so frequently, what it would end up costing us. Right now, we have credits, but in general, we can do that calculation, yeah.  Yeah, I mean, how many are you running per agent? So basically, it's one task per agent, two tasks per agent, and right now there are six, so 12 per four hours, so 12 into 6, 72 tasks per day.  But it's going to increase, right? Think of it this way that there are going to be, yeah, there are going to be, let's say, 60 agents when we get there.  So if there are 60 demo agents, 60 tasks, six times a day, that's 360 tasks on a daily basis.  당연star, actually tasks. On On On Average.
+
+14:01 - Sven Djokic
+  Maybe more. Yes. So then we can have this conversation on if we want to decrease the frequency.
+  ACTION ITEM: Put GitHub automation code into solutions repo once GitHub access obtained
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=853.9999
+
+14:10 - Dorian Schlede (beam.ai)
+  Hassaan, you had so many learnings in what you said. Could you put them here as well? I mean, we're also extracting them anyways, but it would be really interesting to get actually all your learnings out.  Yeah. Thank you. Thanks, guys.
+
+14:24 - Hassaan Ahmed
+  And I, by the way, once I get the GitHub access, GitHub Seed, I'll put this into a solutions repo, so like everyone can access it as well.  Once Aqib is back, we have the Gits app.
+
+14:38 - Dorian Schlede (beam.ai)
+  Yeah.
+
+14:40 - Sven Djokic
+  What four learnings do we want to put now into the comment table, like how to automatically trigger postman your calls?
+  ACTION ITEM: Generate summary of learnings from meeting; add to comment table under his name
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=882.9999
+
+14:53 - Hassaan Ahmed
+  I'll, I'll generate a summary and put a few in this table and under my, nice, thank you.
+
+14:59 - Sven Djokic
+  Oh, the best.
+
+15:00 - Dorian Schlede (beam.ai)
+  Our question is, how can we automatically use the transcript to document this automatically for us? Yeah.
+
+15:12 - Hassaan Ahmed
+  So, so, so what I, I mean, with, does NNN connect to Notion MCP? If it does, then we can do it.  I think it does. I'm not, I'm not sure though, but because I have this automation already now running on our platform via Fireflies in the sense that all Fireflies nodes, I sort of aggregate them, generate, generate all the summaries that I want to generate and then send them to the relevant channels for the calls that I leave.  For example, GTM demos and stuff or calls between me and the GTM team. I send it to, relevant people, but populating a database is something that we have to see on Notion.  I don't think Firefly, even Pipedream gives us the, the functionality to, to, We databases yet.
+  ACTION ITEM: Continue experimenting with Nexus system builder; translate workflows into features for Academy update
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=963.9999
+
+16:02 - Sven Djokic
+  Yeah. Okay. We need to check this. Okay. Let's jump to the next one. Thank you, Hassan. So let's go to Mujtaba.  Thanks, Sven.
+
+16:14 - Mujtaba Ahmed
+  Hassan, that was pretty sad, by the way. On my side as well, I believe most of our learnings are primarily based on like bi-coding these days and what we're doing on Cursive.  Essentially, so pretty much the same. At the moment, I'm experimenting with like these system builders that Dorian has, you know, experimented or come forward with.  So at the moment, I'm experimenting Nexus and trying to translate workflows into like these proper features that can basically do different tasks related to like the Academy update.  So I would say that it's still a bit hypothetical at the moment because I haven't gotten one feature to like work end to end at the moment.  So I would be able to share more learnings once. Thanks. Thanks, guys. Thanks. You know, I've been able to get, I've been able to get like one feature working properly.  But yeah, like the learning so far from my side is that essentially we need a good system on top of what we're building to basically add that structure to everything.  And I was able to create like a very good project brief out of the previous system just by sort of like interacting with the system on Gurser.  I think it was quite fun to sort of like, you know, give it instructions and then ending up seeing the project brief being created.  So I guess I'll have more of a like a detailed update like next week once we have experimented a couple of features and try to sort of see how what the content is coming out to be.  Yeah, I think that's about it from my side. Cool.
+
+17:53 - Sven Djokic
+  Thank you very much. From. Then we saved some time as well. The next one Kylian.
+
+18:03 - Kilian Sorg
+  Yes, not much from my side. One quick question. I am very excited to get my hands dirty as soon as possible with this.  Nexus from Dorian. So my question was here just, did you discuss in the call where I had to drop off how to just set it up and get it into Cursor?  Is there anything out there that explains this maybe? I can explain it to you right now.
+
+18:31 - Dorian Schlede (beam.ai)
+  So I sent the zip file. So in the future, you will just clone it from Git. At the moment, you cannot do this because you don't have the GitHub access.  So what I did is I sent a zip file into the chat in Slack. You can just download this, then you unzip it.  Then you open a new window in Cursor and you just open the Nexus template folder. And then all you need to say is if you use Cursor.  And And if you use Claude, you only say Claude High, and then you start. Okay, and when you open the Nexus thing, this would be the file that I unzipped, right?
+
+19:15 - Kilian Sorg
+  Yes, open the template as a folder, yes.
+
+19:17 - Dorian Schlede (beam.ai)
+  So, yeah, the template is already two days old, so it's heavily deprecated. So I can give you something much better, probably, yeah, I need to, you know, I'm always building, and then I now need to consolidate again, so I will give everybody something much, much more reliable and much, much better early next week.  And a lot of things have already changed again, so you can use it, but be aware that, yeah. It'll change?  It's evolving itself, essentially, it's self-evolving. The AI is optimizing itself, so it changes all the time, but you can use it like that already.  Dorian is working in two days. Dorian
+  ACTION ITEM: Continue testing new error handling feature for integration nodes; check for bugs
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=1212.9999
+
+20:13 - Kilian Sorg
+  That's crazy. Okay, I will do this just to play around with it and then excited for the new release of Nexus.
+
+20:22 - Sven Djokic
+  Super cool.
+
+20:23 - Kilian Sorg
+  And then in terms of learning from my side, this morning they released the change for error handling of integration nodes, which I'm really excited about.  I don't know how it is for you guys, but I have multiple projects where I'm interacting with ADF API endpoints from clients that are designed very poorly.  So let's say I want to retrieve user information, but there's currently no user. I would get not a 200 response, but most of the time it's a 400 response.  And then the agent would stop and I would not be able to continue, even though usually now the next step would be to create the user, right?  If there is. So this has been blocking some nicer ways of handling workflows for our agents, and this was released tonight.  I just tested it out. It works. I will continue testing it out to see whether there any bugs. Just wanted to share if you have this on your project.  We have this now in the tool, and I think it's a game changer if you're interacting with these kind of poor API endpoints.  So let me just share it if you haven't seen it already. We click. That's pretty much it. Yeah, that's the Rob Freiser workflow.  Yeah, I'm retrieving customer information in this node through the user email. I hardcoded now an email that is currently not existing, so it would fail, right, as a static input parameter.  And now this is new settings on error. You can select here, continue using error output, right?
+
+21:54 - Sven Djokic
+  This is what we want to do.
+
+21:55 - Kilian Sorg
+  And then it would parse the response with the error. into the agent, and then you can create a branch based on it.  So in this example, it worked out, right? I have a branch, and I basically just said as an edge condition, if there's a 500 error and no customer information was retrieved, go here, right?  Nice. And it worked, and now what I'm doing right now is I can update their order email in their inbox that basically says, no customer found, so they now know why it stopped, rather than not knowing, which is the case right now.  So currently, they have to go into the beam because then they see, okay, it failed here at Search Customer.  Hassaan?
+
+22:46 - Hassaan Ahmed
+  I was just saying that, does this work only on the 500 error, or like we can play around with all, no, in the sense that, for example, can we do it in this way that if the error is 500, go in a certain branch?  And if it's, let's say, 200, go in a certain branch. Yes, absolutely. And you can do whatever you want.
+
+23:05 - Kilian Sorg
+  You are basically just handing over the arrow message. And then there's a new edge that is making interpretation based on this.  So if you are having different reasons why the agent might fail, you can handle each of them individually with their own branch.  For me, it always fails because the customer is not being found. But if there are other potential responses from the API, you can handle them individually.  Yeah. So I think this is huge. This was a big blocker for a couple of projects. And you can, of course, there are other reasons why integrations might fail.  You can handle each of them.
+
+23:45 - Sven Djokic
+  Yeah, that's all from my side. Then, oh, yeah, one more learning. The proof is in the pudding.
+
+23:51 - Kilian Sorg
+  I never heard this. So this, I will add this to my vocabulary now.
+
+23:57 - Sven Djokic
+  Perfect. Best learning of today.
+
+24:00 - Kilian Sorg
+  Over to Jack. Kilian, and then restart for Jack.
+
+24:10 - Dorian Schlede (beam.ai)
+  Maybe you should unmute yourself. Ah, . That's, yeah, human makes me stink too, right?
+
+24:18 - Jack Li
+  I need to get Fireflies to unmute me. So, it's quite explosive learning from all these days. Yes, they are finally can build some feature.  I use a linear to get the tickets. No, I use our Beam API to get the task list, trigger task, and get the task content, and then summarize the task with input, the full document, and output.  To have this, to have the major feature, which is the feature engineers, that's how I do this. So, I threw a variable.  So, first of all, I have all my prompts in one folder. Then I pick out one variable. from one of my prompts, I asked to enhance this description, right?  Because for my JSON, I always have something like this. have a JSON key name, definition, context, and then a set category or something like this.  So I have some three paragraphs of one JSON key, for example, the instrument date or something like this, right?  I have pretty short summarize here. So this description to Cloud Code, I asked to enhance. This feature will find the original description, and then check the test data, which will get the task using another feature, get the task content, right?  So retask, and extract, to go through the document with this variable, and find me the pattern in the document, not focus on the value, but find the pattern.  For example, the instrument. Period. It's always a monthly payment. So I ask precisely not focus on the value. Monthly payment could be limited by the test data, but you need to find the position in this document to say something, this is your payment period, something like this, find the document pattern, and then enhance my description of this variable.  This runs pretty good. You at the end result, you have the original description, enhance the description, and then summarize.  Also tell you what kind of pattern they extract from the document. The good thing is, though, I can use this, it has the description, it has my prompt, then also discuss with business owner.  So that's a feature, that's what I tried yesterday. I think it also could be generic. When you want to extract any variables, you want some description, very simple one-sentence description, and find the pattern from the document.  So that's the first step. The second step, I want to pay the expense. Did output two, so I say expected was a number like this, then it will be much more better than writing the experiment again.  So it's still like iterate process about Dorian have this two-day sprint too, but still it's some trying, some learning.  So yeah, this is what I have yesterday. And then one of something maybe we can discuss or think later together is like when we use the cloud code or cursor or our platform, how we interact, how we human interact AI.  Sven, you're already working on human in the loop, which is precisely more focused on the provided expected output part.  But actually, when doing the feature engineers, when we discuss with business owner, like what we do yesterday with a variable, define the variables.  We discuss with them this variable, the date. We should put a month at the beginning or should be using the date as beginning of German format.  Sometimes more things. Like this, how humans interact with AI, how you talk to cloud, how cloud give you instruction, something we can think about together, like gathering some experience, some failures, some facetrate, or some feeling really good when the AI talks to me like this, something like that, right?  Because one example is, I ask cloud to generate PRD there, but I don't have the patience to read the full paragraph of PRD.  So I can't examine whether the PRD is correct. Maybe the AI can give me some feedback with some bullet points that I generate from PRD.  You can examine if these data points are there, because we need to validate the idea. Something like this, I can provide the meeting notes, give me some summarize of the meeting notes, but not summarize, but really something I want to read.  Sorry for this long discussion here. Another example. Let me talk to our platform right now. You remember when they create agent with the dashboard.  I want to create the depth collection agent. Then he will ask me, could you give me more context? What feature you want to have?  Something like this. , if I know I will not talk to you, right? Why you ask me all these open questions?  I have to type all these 200 paragraphs to you. If I can describe this, I will not talk to you.  So what I'm expecting is that AI should give me some, if you ask for depth collection, what variables? Do you want to get the adapter's name, address?  There's something they can think furthermore. So that's how we interact with AI. So this general, really a little bit high level discussion, like not just limited to provide expected output, but we can also think how we gather in the requirement, how we bring the business owner to understand AI, how we really interact.  This is something while we can also think while we work with cloud, it's something we can also implement somewhere.  For example, when we have the kickoff meeting with clients, we can already. Provide the template, provide the survey to them, what business logic you want to achieve, and we're not asking the open question, but we can really provide you with some specific suggestion already, instead of asking, do you want to get the, say, what information you want to get, right?  This is a really stupid open question there. Instead, we can directly ask, do you want adapter's name, address, birthday, click check all the variables you want, and uncheck the variable you do need, right?  It's pretty simple there. We can provide this by the click, instead of asking, what variable you want to get?  What the ? I don't know, right? Something like this. This is how we interact. So the checklist compared to open question, that's a pretty concrete example that we can think all together, when you talk to the clients, right?  I only have one client, so I think it will be more to collect some more experience there. That's all for my site.
+
+30:59 - Sven Djokic
+  Nice. Thank you, Jack. Thank I mean, in the end of the meeting, we should discuss how we take these learnings now from the transcript and put it into the table.  But I guess let's continue first. Thank you, Jack. Let's go to, Asad is not in a call, right? Then, actually, I'm the next one.  I can do it short. Lots of learnings and cursor this week as well, but like a humble beginnings. It's like next step for me.  I mean, for example, I saw that for me, it is easier to achieve a better outcome if I do in small iterations, basically.  So like not like try to get like the whole outcome in the first one, but basically, you know, to go note by note and see like that, like the outcome of one note is acceptable.  Well, and then to continue with like the next one. Otherwise, it's hard to improve the system as a whole, I think, at once.  But yeah, I'm looking forward to like the next Nexus version as well next week to see how like I can.  I utilize it. On the other hand, boring for you guys, probably, but I built my first custom integration now, finally.  So I had, like, finally a use case that, like, needed it and build it. And yeah, that's it from my side.
+
+32:18 - Dorian Schlede (beam.ai)
+  So, yeah, just because you can generate everything at the same time doesn't mean you should. Yeah, that's correct.
+
+32:28 - Sven Djokic
+  Maybe a quick tip for using Cursor.
+
+32:30 - Jack Li
+  You can start using it as a really a text editor, right? More smart text editor. Write some prompt, autocomplete, check some small questions from there.  Then don't need to really hurry up to make too big change, right? Yeah, yeah, true that.
+
+32:46 - Sven Djokic
+  And also for, like, the generation, I guess it's good not to, like, generate a whole system at once, but, like, single components and then you see how you can build it together afterwards.  Cool. Then let's go to Dorian. Oh, lots of stuff. Nice. Okay.
+
+33:11 - Dorian Schlede (beam.ai)
+  So questions. Does anyone have questions regarding Nexus? Did you use it? What's your experience? Yeah, number one. So I see Hassan.  So I know Mujtaba and Jack, you guys used it. I'm not sure Hassan, Kilian. Kilian, you haven't yet. Hassan, have you used it?  And Sven? Okay. I'll be using it today.
+
+33:33 - Sven Djokic
+  It's like for me conceptually, but like maybe like this is too long for this, but I'm like still, I'm still a bit confused between the difference between a task and a feature, basically.  And we have like these three components and I'm not sure how they fit together.
+
+33:53 - Dorian Schlede (beam.ai)
+  Mujtaba, you were agreeing. Do you also have un-clarities that I can resolve? I think I have pretty much the same thing.  I
+
+34:01 - Mujtaba Ahmed
+  related to like tasks versus features, because like I tried to, I had like agents in my previous system, you're pretty aware of that, right?  So when I migrated it and I tried to create like a feature out of it, it just created like a task, you know, so I wasn't exactly sure what's like the link between it and the setup to feature is a bit complicated, at least for me right now, maybe I haven't given it enough prompts or experimented around it.  But I just want to see what's like the most optimum way to like set up a feature and then make it, get it to work, you know, that's, that's like the main query.  Okay.
+
+34:39 - Dorian Schlede (beam.ai)
+  Okay, so maybe quickly the distinction, but that's really good. Tell me the concepts you don't get. So I will have the AI automatically explain them to you when you do the setup, right?  Essentially do a guided tour, right? That's the goal of this. So a feature is a temporary working context, working zone where  you develop new things that you want to have constantly so if you want to build a new agent a new task or a new workflow you will build them as a feature so essentially you say I want now a prompt engineering agent and now plan me this feature and then it will guide you through the planning process yada yada yada and then you maybe we can look at the tips right so split the context you see it on the screen at the bottom so split the context in three chats first you plan the feature the agent or the task becomes a feature a workflow becomes a feature so you know a feature could either be a single task it could be a multi-step execution or a feature could also be I don't know do a memory analysis right or implement behavioral pattern detection or you know I don't know it's and feel  Create a Feature Roadmap. So I've now built a Feature Roadmap feature that automatically builds the Feature Roadmap with you.  It also automatically proposes features to you. So that's also all of this is features. So every piece of functionality is essentially a feature.  It's like a project that spans across two or three chats, right? And that's, again, the context split. First plan, second implement, third test.  Yeah.
+
+36:35 - Sven Djokic
+  And then basically once you are done with this feature, like it becomes an agent and like the feature file is deleted.
+
+36:43 - Dorian Schlede (beam.ai)
+  No, it's moved to the completed folder. So you also have status management in the features. So very importantly, there is a close chat command.  And that's really important because that preserves all the knowledge, all the learnings. take take look I'll a So, and also moves, for example, moves the feature from active to completed once it's completed.  So I have all this managed for you guys already through the intelligent closed chat feature. Yeah. And that's a command, right?
+
+37:21 - Sven Djokic
+  The closed chat. So you write it.
+
+37:24 - Dorian Schlede (beam.ai)
+  a workflow. Okay, it's a workflow. So it's a sequence of tasks, right? So I say execute the workflow. It looks inside the workflow.  Inside the workflow, there's multiple tasks. It looks at the first tasks. It loads the task page, right? So it's a context cascading, right?  Workflow is a bundle of multiple tasks. And each task has its own file with a description on what it does.  Mm-hmm. Understand. Okay, cool. Yeah. Okay. So I see there is conceptual questions. Let me see if... I can create nice to understand documentation, but ideally I just implement everything into the onboarding sequence for you.  So there's a lot of stuff there. Now second question, did everybody use MCP yet? Did everybody had success with MCP?  Not yet. Okay. So then Sven, let's have a chat or let's get this going. So that you can feel magic as well.  Cool.
+
+38:37 - Jack Li
+  Then, let's mute and check.
+
+38:41 - Dorian Schlede (beam.ai)
+  Then no blockers for me. Only opportunities. Yeah. And then my biggest learnings. So first off, the AI constantly makes mistakes.  I tell it, dude, you made a mistake. It learns it learns the mistake, it saves the mistake, Then it implements these behavioral rules not to make the mistakes into itself, but it still makes the mistakes.  So even though I have behavioral post-action corrections, it still does the same issues. For example, it doesn't read your full file.  And that's a critical issue, right? Because if you want to build something, the AI only reads a hundred lines of your product requirements document and then builds the feature, then you have a very big problem, right?
+
+39:35 - Jack Li
+  Easy, lazy like human.
+
+39:37 - Dorian Schlede (beam.ai)
+  Yeah, and then maybe you don't focus, you don't read it fully, and then you think it works, but it doesn't work.  So this is one of, that's actually the biggest trap. Did it load all context? You need to currently still verify if it actually read all the files that it is supposed to.  Good thing. You don't need to understand it. You can just say ultra thing. And then it will self-detect its patterns.  So when you say UltraThink, it will review everything it did, and it will analyze, it knows the behavioral patterns that it does wrong, and then it will catch them.  So it still does the mistakes, but it always catches the mistakes if you ask it to review what it has done.  So that's the beauty of it. And that also allows the self-improvement. So yeah, the UltraThink is absolutely insane. So I plan a feature, it completely over-engineers, it didn't read the files, it messes up everything.  I just say UltraThink, and it catches all issues, and it does it correctly. So yeah, my recommendation is use UltraThink all the time.  It's also a Claude command that just lets Claude reason. So yeah, it just makes the performance much better. You can essentially use it all the time.  So yeah, I sometimes I just do also UltraThink, and than just my task because the quality gets so much better and it's actively focused on detecting its own biases.  That's very important. Cool. Next one, AI can perfectly implement well-planned PRDs. Like I'm literally building three features at the same time.  I have high confidence that these features are working now, which is pretty insane. Like I don't have the feeling I have to validate and check everything anymore.  Yeah, because it now literally just works if you slice it up correctly. Next one, AI doesn't work for you.  You work for the AI. And that's really another centerpiece that Jack and me have talked about. So the core is now, do you give the AI all the context it needs?  So it's about eliciting... the AI needs to elicit your knowledge so the AI needs to ask the right questions to you so that you can give all the relevant information to the AI and that's really really interesting so also to make this more usable yeah we we are making sure that the AI has all the knowledge it needs that's our job essentially yeah okay and then the next one okay that's the question so what's the optimal way to set up a feature I guess I will create documentation in general to make this a bit easier to get into yeah maybe one thing here so this thing will evolve right so whenever you merge your logic and then we move on to a new version of the template you might need to merge your logic again right so I will or I already ready M create
+  ACTION ITEM: Implement migration mechanisms for Nexus template updates
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=2570.9999  ...migration mechanisms so that if you use the current template and I give you the next template two days later, you can migrate, right?  But this will always contain some kind of effort and needs to be guided. So just so that you are aware, up to you guys if you want to use it already or if you want to wait a little bit, but there will be some migration effort until we have all the migration figured out, maybe automatically or very intelligently, but just be aware of that.  And that being said, I still recommend you guys to always move to the latest version because we already have 10 levels above.  Essentially, I'm trying to remove the reliability so that it doesn't read 100 lines and you miss it because that's a critical issue, right?
+  ACTION ITEM: Improve Nexus AI to guide users on system interaction and feature setup
+ - WATCH: https://fathom.video/share/B82LorDe5sqoyxNHofP-SYKi_DM7tapC?timestamp=2632.9999  So if it doesn't have all the context that it should have and you don't notice, you have a big problem.  So I'm trying to remove this. This issue, right? Also, I'm trying to now enable you to, for the AI to tell you how the system works and for the AI to tell you what you should do.  So Mujtaba, so that you don't have to ask me what's a feature and how do I do the three chats?  The AI should tell you exactly how you should interact with the system, right? So I'm improving this also to increase the user friendliness.  And the third one is the migration logic. So that's my core topics now that I'm working on to enable all of you much better.  That's it. Thanks, Dorian.
+
+44:43 - Mujtaba Ahmed
+  Can't wait for the new version as well.
+
+44:46 - Sven Djokic
+  Great. Use the current one first. Maybe I will increase more cloud views, but I have put two links here.
+
+44:58 - Jack Li
+  One is Deep Learning has the official the new version AI. Obviously. Your course from Cloud Code is very basic concept of Cloud Code, how you really understand what's the difference with Cursor, so it's like basic usage, can, I mean, it's when you have time, really, it's good, listen, just some YouTube, just some video there.  So I want to, maybe, because this problem confused me a little bit, but like difference between Cloud Code and Dorian's framework, so you should, so the Cursor is a chat that you already know the Cloud Codes, you can introduce from here, they can also have sub-agent and workflow, memory, everything, so what's the difference between this, their original sub-agent and Dorian building on the framework agent, you can check the YouTube video there, so that's another framework, it's a building above our cloud system, so it's more obvious with folder managing different agents, more powerful framework, so if you have time, you can also listen for this.  This is one hour long video, but you can find some shorter ones and have an introduction about this framework.  Yeah, this is something if you don't have something to do during the weekend, you can check this. Where is it?  In our chat, yeah. I will send it again.
+
+46:21 - Dorian Schlede (beam.ai)
+  Thank you. Yeah. That's literally the time where you can build a product in a week. Yeah. Yeah.
+
+46:37 - Sven Djokic
+  Yeah. A bit over time, but I guess that's it for the meeting. Anything? Any last comments? Nope. That's good.  Thank you all. Thanks, guys.
+
+46:53 - Jack Li
+  Have a nice day. Excited to see everybody. Bye. Bye.
+
+46:57 - Dorian Schlede (beam.ai)
+  Bye. Bye. Bye. Bye. Bye. Bye.
+
+Jack / Dorian 1:1 - August 29
+VIEW RECORDING - 33 mins (No highlights): https://fathom.video/share/xc2nySNvrR3hTc-5fiypZjvFzshvyZzy
+
+---

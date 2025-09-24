@@ -1,0 +1,261 @@
+# Technical Design: transcript-processing-automation
+# Generated: 2025-09-17T18:45:00Z
+# Workflow: plan-feature (Step 3)
+# Based on: Real ICS RFI Presentation Workshop transcript (900 lines)
+
+# REAL BUSINESS CONTEXT ANALYSIS
+business_context:
+  meeting_type: "RFI (Request for Information) presentation"
+  presenter: "Beam AI (Speakers 1 & Dorian Schlede)"
+  client: "ICS - Financial services transaction monitoring"
+  participants:
+    - "Mitch: Analytical engineer from Data Hub"
+    - "Jessica: Business developer (Accenture background)"
+    - "Dean: KYC operations" 
+    - "Dorian: Procurement (commercial focus)"
+    - "Manuel: Technical expert asking detailed integration questions"
+    - "Rina: Operations department (end user experience focus)"
+  
+  competitive_context:
+    - "Multiple suppliers presenting this week"
+    - "Assessment phase following presentations"
+    - "Preferred supplier selection for commercial discussion"
+    - "12 distinct use cases to be addressed"
+
+# TECHNICAL ARCHITECTURE
+
+architecture_approach: "Real-world Sales Intelligence Pipeline"
+description: "Process actual sales presentation transcripts to generate intelligent follow-up communications and capture competitive intelligence"
+
+# KEY COMPONENTS (Based on Real Analysis)
+
+key_components:
+  
+  1_transcript_processor:
+    purpose: "Process raw meeting transcripts into structured business intelligence"
+    inputs:
+      - "Raw transcript files (like ICS RFI workshop - 900 lines)"
+      - "Meeting metadata (date, participants, company)"
+    outputs:
+      - "Structured meeting summary"
+      - "Participant profiles and roles"
+      - "Technical requirements extracted"
+      - "Competitive context analysis"
+    technical_approach:
+      - "LLM-powered entity extraction for participants"
+      - "Business context classification (RFI, demo, discovery, etc.)"
+      - "Technical requirement parsing from Q&A sections"
+      - "Competitive signal detection"
+  
+  2_intelligence_synthesizer:
+    purpose: "Convert transcript analysis into actionable business intelligence"
+    inputs:
+      - "Structured transcript data"
+      - "Company context (from Companies/{name}/ folders)"
+      - "Historical interaction data"
+    outputs:
+      - "Meeting insights report"
+      - "Follow-up action items"
+      - "Competitive positioning analysis"
+      - "Technical objection handling notes"
+    capabilities:
+      - "Pain point identification (e.g., ICS 12 use cases)"
+      - "Technical concern extraction (e.g., 'tokens', 'multi-tenant vs single-tenant')"
+      - "Decision maker sentiment analysis"
+      - "Next step recommendations"
+  
+  3_follow_up_generator:
+    purpose: "Generate personalized follow-up communications"
+    inputs:
+      - "Meeting intelligence report"
+      - "Participant roles and concerns"
+      - "Technical questions raised"
+    outputs:
+      - "Personalized follow-up emails per participant"
+      - "Technical FAQ document addressing specific concerns"
+      - "Proposal outline based on discovered requirements"
+    personalization_logic:
+      - "Role-specific messaging (technical vs commercial vs operational)"
+      - "Address specific questions raised (e.g., Manuel's SDK questions)"
+      - "Reference specific use cases mentioned"
+      - "Acknowledge competitive context appropriately"
+  
+  4_crm_integration_engine:
+    purpose: "Update CRM systems with enriched meeting data"
+    inputs:
+      - "Meeting intelligence"
+      - "Participant data"
+      - "Follow-up status"
+    outputs:
+      - "HubSpot contact updates"
+      - "Opportunity progression tracking"
+      - "Activity logging with rich context"
+    automation_capabilities:
+      - "Auto-create contacts for new participants"
+      - "Update deal stage based on meeting type and outcomes"
+      - "Flag competitive situations"
+      - "Schedule follow-up tasks"
+
+# INTEGRATION POINTS (From Real Requirements)
+
+integration_points:
+  
+  companies_folder_structure:
+    current_state: "Companies/ICS/transcripts/RFI Presentation Workshop"
+    enhanced_structure: |
+      Companies/ICS/
+      ├── transcripts/
+      │   ├── RFI-Presentation-Workshop-2025-09-17.txt
+      │   └── processed/
+      │       ├── RFI-Presentation-Workshop-analysis.yaml
+      │       └── RFI-Presentation-Workshop-intelligence.json
+      ├── emails/
+      │   ├── outbound/
+      │   │   ├── follow-up-mitch-data-hub.md
+      │   │   ├── follow-up-manuel-technical.md
+      │   │   └── follow-up-dorian-commercial.md
+      │   └── templates/
+      └── documents/
+          ├── requirements-analysis.md
+          ├── competitive-positioning.md
+          └── proposal-outline.md
+  
+  crm_integration:
+    hubspot_fields:
+      - "meeting_type: RFI, Demo, Discovery, etc."
+      - "participant_roles: Technical, Commercial, Operations"
+      - "technical_concerns: Array of specific objections/questions"
+      - "competitive_context: Multi-vendor, preferred vendor, etc."
+      - "use_case_count: Number of specific use cases identified"
+    
+    automation_triggers:
+      - "New transcript file → Auto-process and update CRM"
+      - "Meeting completion → Generate follow-up tasks"
+      - "Competitive context detected → Alert sales team"
+  
+  email_generation:
+    gmail_integration:
+      - "Draft personalized emails in Gmail"
+      - "Attach relevant technical documentation"
+      - "Schedule send times based on participant timezones"
+    
+    template_personalization:
+      technical_participants: "Focus on integration details, API capabilities, security"
+      commercial_participants: "Focus on ROI, pricing models, implementation timeline"
+      operational_participants: "Focus on user experience, training, change management"
+
+# IMPLEMENTATION PHASES
+
+implementation_phases:
+  
+  phase_1_core_processing:
+    duration: "2-3 weeks"
+    components:
+      - "Basic transcript processing and entity extraction"
+      - "Company folder structure automation"
+      - "Simple follow-up email generation"
+    success_criteria:
+      - "Process ICS transcript and generate participant analysis"
+      - "Create structured follow-up emails for each role type"
+      - "Auto-organize outputs in Companies/ICS/ structure"
+  
+  phase_2_intelligence_enhancement:
+    duration: "2-3 weeks"
+    components:
+      - "Advanced business intelligence synthesis"
+      - "Competitive context analysis"
+      - "Technical objection handling"
+    success_criteria:
+      - "Identify 12 use cases mentioned in ICS transcript"
+      - "Generate competitive positioning analysis"
+      - "Create technical FAQ addressing Manuel's questions"
+  
+  phase_3_crm_automation:
+    duration: "2-3 weeks"
+    components:
+      - "HubSpot integration and automation"
+      - "Activity logging and deal progression"
+      - "Alert system for competitive situations"
+    success_criteria:
+      - "Auto-update HubSpot with ICS meeting data"
+      - "Create follow-up tasks for sales team"
+      - "Flag competitive RFI process in deal record"
+
+# PERFORMANCE CONSIDERATIONS
+
+performance_considerations:
+  processing_speed:
+    - "Target: 900-line transcript processed in <5 minutes"
+    - "Large files (>2000 lines) processed in chunks"
+    - "Real-time processing for shorter transcripts"
+  
+  accuracy_requirements:
+    - "95%+ accuracy for participant identification"
+    - "90%+ accuracy for technical requirement extraction"
+    - "100% data consistency in CRM updates"
+  
+  scalability:
+    - "Support 50+ transcript files per month"
+    - "Multi-company parallel processing"
+    - "Auto-scaling for peak usage periods"
+
+# QUALITY GATES
+
+technical_validation:
+  - "Process ICS transcript successfully and verify all 6 participants identified"
+  - "Generate role-appropriate follow-up for Mitch (technical) vs Dorian (commercial)"
+  - "Extract all 12 use cases mentioned by Manuel"
+  - "Identify competitive context (multiple suppliers, assessment phase)"
+  - "Create appropriate folder structure in Companies/ICS/"
+
+business_validation:
+  - "Sales team can review and approve generated follow-ups"
+  - "CRM data accurately reflects meeting context and participants"
+  - "Follow-up emails address specific questions raised in meeting"
+  - "Technical documentation answers Manuel's SDK and integration questions"
+
+# RISK MITIGATION
+
+identified_risks:
+  transcript_quality:
+    risk: "Poor audio quality leading to transcript errors"
+    mitigation: "Manual transcript review step before processing"
+    
+  participant_privacy:
+    risk: "Sensitive client information in transcripts"
+    mitigation: "Local processing, no cloud storage of raw transcripts"
+    
+  follow_up_personalization:
+    risk: "Generic follow-ups that don't reflect meeting nuances"
+    mitigation: "Manual review and approval step for all outbound communications"
+    
+  competitive_sensitivity:
+    risk: "Inappropriate disclosure of competitive information"
+    mitigation: "Approval workflow for any competitive intelligence sharing"
+
+# SUCCESS METRICS
+
+success_metrics:
+  efficiency_gains:
+    - "Reduce post-meeting follow-up time from 2 hours to 15 minutes"
+    - "Generate 6 personalized follow-ups from single transcript"
+    - "Capture 100% of technical questions for FAQ development"
+  
+  accuracy_targets:
+    - "95% participant identification accuracy"
+    - "90% technical requirement extraction accuracy"
+    - "Zero data errors in CRM updates"
+  
+  business_impact:
+    - "Faster follow-up response time (same day vs. 2-3 days)"
+    - "More personalized communication based on participant roles"
+    - "Better competitive intelligence capture for deal strategy"
+
+# FUTURE ENHANCEMENTS
+
+future_capabilities:
+  - "Real-time transcript processing during live meetings"
+  - "Integration with Zoom/Teams for automatic transcript capture"
+  - "Sentiment analysis for participant engagement scoring"
+  - "Automated proposal generation based on discovered requirements"
+  - "Competitive intelligence database for pattern recognition across deals"

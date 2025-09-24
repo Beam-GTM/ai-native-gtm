@@ -1,0 +1,379 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.458980Z
+migration_path: auto-generated
+---
+
+
+# Standard Task Template - Balanced Complexity for Feature Work
+# Target: 30% of tasks - feature tasks, validation tasks, complex operations
+# Compliance Target: 70% (balanced complexity with practical utility)
+# Template Size: 200-300 lines (balanced between simple and comprehensive)
+
+metadata:
+  name: "task-standard"
+  type: "feature-focused"
+  scope: "balanced"
+  description: "Balanced template for feature development, validation, and complex operational tasks"
+  purpose: "Provide structured approach with quality validation while maintaining usability"
+  target_audience: "Feature tasks, validation tasks, multi-step operations"
+  compliance_target: "70%"
+  last_updated: "2025-08-28"
+
+# =============================================================================
+# STANDARD TASK STRUCTURE (.tasks/{category}/{task-name}.md)
+# =============================================================================
+
+task_file_structure:
+  # STRUCTURED DEPENDENCY BLOCK
+  dependency_block:
+    format: |
+      <!-- dependencies
+      upstream:
+        # AUTO-DETECTED Executable By:
+        {{#detect_patterns task_content 'callable_by:\\s*\\[([^\\]]+)\\]|executed_by:\\s*([\\w/-]+)|agent[s]?:\\s*([\\w-]+)'}}
+        - operations/agents/{{infer_category '{{match}}'}}/{{match}}.md  # Capability: {{infer_capability '{{match}}'}}
+        {{/detect_patterns}}
+        
+        # AUTO-DETECTED Engineering Rules (Optional):
+        {{#detect_patterns task_content 'rules:\\s*\\[([^\\]]+)\\]|engineering_rules:\\s*([\\w/-]+\\.md)'}}
+        - framework/engineeringrules/{{match}}  # Applied: {{detect_context '{{match}}'}}
+        {{/detect_patterns}}
+        
+        # AUTO-DETECTED Resources Used:
+        {{#detect_patterns task_content 'template[s]?:\\s*([\\w/-]+\\.yaml)|dependencies:\\s*\\[([^\\]]+)\\]'}}
+        - {{match}}  # Purpose: {{detect_usage_purpose '{{match}}'}}
+        {{/detect_patterns}}
+        
+      downstream:
+        # AUTO-DETECTED Dependencies (bidirectional validation recommended)
+        # Search pattern: 'task[s]?:\\s*{{task_name}}|uses:\\s*framework/tasks/{{task_name}}\\.md'
+        
+      validated: {{current_timestamp}}
+      health: {{calculate_health}}%
+      generator: framework/templates/tasks/task-standard.yaml
+      -->
+
+  # ENHANCED HEADER WITH CONTEXT
+  header_section:
+    format: |
+      # {Task Name}
+
+      <!-- 🔴 DIRECTIVE #1 ENFORCEMENT: ALWAYS READ COMPLETE FILES -->
+      <!-- CRITICAL: This task may read multiple context files - never use limit parameter -->
+      <!-- This directive OVERRIDES token conservation - read files completely -->
+
+      ## Task Overview
+      
+      **Category**: {task_category}
+      **Complexity**: Standard
+      **Prerequisites**: {detailed_prerequisite_list}
+      **Estimated Duration**: {time_estimate}
+      **Quality Level**: Balanced validation with practical focus
+
+      ## Context Requirements
+      
+      **Feature Context** (if applicable):
+      - Load: `.memory/features/{feature-name}/prd.md`
+      - Load: `.memory/features/{feature-name}/progress.md`
+      - Load: `.memory/features/{feature-name}/active-context.md`
+      
+      **System Context**:
+      - Current working directory and repository context
+      - Relevant system documentation for task scope
+
+  # CONTEXT MANAGEMENT SECTION
+  context_management:
+    format: |
+      ## Context Loading and Updates
+
+      ### Context Loading Sequence
+      ```yaml
+      context_loading:
+        step_1_feature_context:
+          condition: "if feature-related task"
+          files: ["{feature}/prd.md", "{feature}/progress.md", "{feature}/active-context.md"]
+          validation: "Feature context accessible and current"
+          
+        step_2_system_context:
+          files: ["relevant system documentation"]
+          validation: "System context aligns with task scope"
+          
+        step_3_dependency_context:
+          condition: "if dependencies exist"
+          files: ["dependency-specific context files"]
+          validation: "All dependencies accessible"
+      ```
+
+      ### Context Update Triggers
+      ```yaml
+      context_updates:
+        during_execution:
+          - trigger: "major_step_completion"
+            update: ".memory/features/{feature-name}/active-context.md"
+            content: "Step progress, decisions made, next actions"
+            
+          - trigger: "quality_checkpoint"
+            update: ".memory/features/{feature-name}/progress.md"
+            content: "Progress update with quality status"
+            
+        post_completion:
+          - update: ".memory/features/{feature-name}/active-context.md"
+            content: "Task completion status, deliverables, handoff context"
+      ```
+
+  # STRUCTURED EXECUTION WORKFLOW + BEHAVIORAL CORRECTION
+  execution_workflow:
+    format: |
+      ## Task Execution Workflow
+
+      ### Phase 0: Behavioral Correction Protocol (Mental Model Framework)
+      **MANDATORY FIRST**: Apply behavioral pattern prevention before proceeding
+      
+      {{load_behavioral_patterns: standard_patterns}}
+      <!-- Loads: execution_documentation_paradox, false_completion_syndrome, basic_operations_failure, complexity_addiction -->
+      
+      ### Phase 1: Preparation and Validation
+
+      **Preparation Steps:**
+      1. **Context Validation**
+         - [ ] Required context files loaded and reviewed
+         - [ ] Prerequisites confirmed available
+         - [ ] Success criteria understood
+         
+      2. **Resource Verification**
+         - [ ] All required inputs accessible
+         - [ ] Output locations writable
+         - [ ] Dependencies operational
+         
+      3. **Scope Confirmation**
+         - [ ] Task scope aligns with current feature/project goals
+         - [ ] Quality expectations clarified
+         - [ ] Timeline realistic for quality level
+
+      ### Phase 2: Core Task Execution
+
+      **Implementation Sequence:**
+      {{#each implementation_steps}}
+      **Step {{step_number}}: {{step_name}}**
+      - **Objective**: {{step_objective}}
+      - **Actions**: 
+        {{#each step_actions}}
+        - {{action_description}}
+        {{/each}}
+      - **Expected Result**: {{expected_outcome}}
+      - **Validation**: {{step_validation}}
+      - **Context Update**: {{context_update_trigger}}
+      
+      {{/each}}
+
+      ### Phase 3: Quality Validation
+
+      **Quality Checkpoints:**
+      - [ ] **Functional Validation**: {{functional_criteria}}
+      - [ ] **Integration Check**: {{integration_validation}}
+      - [ ] **Documentation Update**: {{documentation_requirements}}
+      - [ ] **Context Handoff**: {{handoff_preparation}}
+
+  # OPTIONAL QUALITY GATES (BALANCED APPROACH)
+  optional_quality_gates:
+    format: |
+      ## Quality Gates (Optional - Use When Quality Critical)
+
+      ### Quality Gate 1: Design Review
+      **When to Use**: Complex tasks affecting system architecture
+      
+      **Assessment Criteria:**
+      - [ ] Design approach aligns with system principles
+      - [ ] Integration points identified and validated
+      - [ ] Risk assessment completed
+      
+      **Decision Framework**: PASS/CONCERNS/FAIL/WAIVED
+      **Evidence Required**: Design documentation, integration analysis
+      
+      ### Quality Gate 2: Implementation Review
+      **When to Use**: Code changes, system modifications, complex configurations
+      
+      **Assessment Criteria:**
+      - [ ] Implementation follows established patterns
+      - [ ] Error handling appropriate for context
+      - [ ] Testing approach defined and executed
+      
+      **Decision Framework**: PASS/CONCERNS/FAIL/WAIVED
+      **Evidence Required**: Implementation artifacts, test results
+
+      ### Quality Gate 3: Integration Validation
+      **When to Use**: Tasks affecting multiple system components
+      
+      **Assessment Criteria:**
+      - [ ] Integration points function as designed
+      - [ ] No regression in existing functionality
+      - [ ] Documentation updated appropriately
+      
+      **Decision Framework**: PASS/CONCERNS/FAIL/WAIVED
+      **Evidence Required**: Integration test results, regression analysis
+
+  # COMPREHENSIVE OUTPUT SPECIFICATION
+  output_specification:
+    format: |
+      ## Task Outputs and Deliverables
+
+      ### Primary Deliverable
+      **Type**: {{deliverable_type}}
+      **Location**: {{output_location}}
+      **Format**: {{format_specifications}}
+      **Validation Criteria**: {{validation_requirements}}
+
+      **Required Sections/Components:**
+      {{#each deliverable_sections}}
+      - **{{section_name}}**: {{section_requirements}}
+      {{/each}}
+
+      ### Secondary Deliverables
+      - **Progress Update**: Updated feature progress with task completion status
+      - **Context Handoff**: Prepared context for next task/agent
+      - **Decision Log**: Record of key decisions made during execution
+      {{#each additional_deliverables}}
+      - **{{deliverable_name}}**: {{deliverable_description}}
+      {{/each}}
+
+      ### Quality Validation Checklist
+      - [ ] Primary deliverable meets stated requirements
+      - [ ] Integration points tested and validated
+      - [ ] Documentation updated as needed
+      - [ ] Context files updated with current status
+      - [ ] Next steps clearly defined and actionable
+      {{#each quality_checks}}
+      - [ ] {{quality_criterion}}
+      {{/each}}
+      
+      ### 🧠 Behavioral Correction Validation (Mental Model Framework)
+      **MANDATORY COMPLETION VALIDATION**: Apply behavioral pattern validation
+      {{load_behavioral_pattern_validation: standard_patterns}}
+      <!-- Loads post-completion validation for standard behavioral patterns -->
+
+      ### Context Handoff Preparation
+      **Handoff Context Update:**
+      ```yaml
+      task_completion_handoff:
+        active_context_update:
+          location: ".memory/features/{feature-name}/active-context.md"
+          content: |
+            ## Task Completion: {task_name} - {timestamp}
+            **Status**: COMPLETED
+            **Deliverables**: {deliverable_list}
+            **Quality Status**: {quality_assessment}
+            **Next Recommended Actions**: {next_steps}
+            **Context for Next Agent**: {handoff_context}
+        
+        progress_update:
+          location: ".memory/features/{feature-name}/progress.md"
+          content: |
+            ## Progress Update: {task_name} - {timestamp}
+            **Task Completed**: {task_name}
+            **Outcome**: {completion_summary}
+            **Quality Gates**: {quality_gate_results}
+            **Progress Percentage**: {updated_percentage}
+      ```
+
+# =============================================================================
+# STANDARD TASK CATEGORIES
+# =============================================================================
+
+standard_task_categories:
+  feature_development:
+    description: "Feature implementation, enhancement, and integration tasks"
+    examples: ["implement-user-authentication", "enhance-search-functionality", "integrate-payment-system"]
+    typical_agents: ["developer", "architect"]
+    quality_gates: ["design_review", "implementation_review", "integration_validation"]
+    
+  validation_and_analysis:
+    description: "Complex validation, analysis, and assessment tasks"
+    examples: ["analyze-performance-bottlenecks", "validate-security-implementation", "assess-scalability-requirements"]
+    typical_agents: ["quality-assurance", "analyst"]
+    quality_gates: ["methodology_review", "analysis_validation"]
+    
+  system_integration:
+    description: "Multi-component integration and coordination tasks"
+    examples: ["integrate-third-party-service", "coordinate-microservice-deployment", "synchronize-data-workflows"]
+    typical_agents: ["architect", "developer"]
+    quality_gates: ["integration_design", "implementation_review", "integration_validation"]
+    
+  documentation_and_planning:
+    description: "Comprehensive documentation and planning tasks"
+    examples: ["create-technical-specification", "plan-migration-strategy", "document-api-integration"]
+    typical_agents: ["architect", "product-manager"]
+    quality_gates: ["content_review", "stakeholder_validation"]
+
+# =============================================================================
+# ENGINEERING RULES INTEGRATION (OPTIONAL)
+# =============================================================================
+
+optional_engineering_rules:
+  usage_guidelines:
+    when_to_include:
+      - "Task affects system architecture"
+      - "Code quality critical to project success"
+      - "Compliance requirements exist"
+      - "Cross-team coordination required"
+    
+    when_to_skip:
+      - "Simple operational task"
+      - "Time-critical execution needed"
+      - "Exploratory or experimental work"
+      - "Individual contributor focused work"
+
+  simplified_integration:
+    format: |
+      ## Engineering Rules (Optional - Include When Quality Critical)
+      
+      **Applicable Rules**: {{rule_list}}
+      **Application Scope**: {{application_description}}
+      **Compliance Level**: {{compliance_expectation}}
+      
+      **Rule Application Guidelines:**
+      - Apply rules where they add clear value
+      - Document deviations with business justification
+      - Focus on outcome quality over process compliance
+      - Use rules as quality enhancement, not bureaucratic overhead
+
+# =============================================================================
+# TEMPLATE USAGE AND SELECTION GUIDANCE
+# =============================================================================
+
+template_selection_guidance:
+  use_standard_when:
+    - "Task involves multiple steps with dependencies"
+    - "Quality validation important but not critical"
+    - "Feature development or enhancement work"
+    - "Cross-component integration required"
+    - "Documentation and context management needed"
+    
+  upgrade_from_simple_when:
+    - "Task complexity grows beyond straightforward execution"
+    - "Quality validation becomes important"
+    - "Context management becomes necessary"
+    - "Integration with other components required"
+    
+  upgrade_to_comprehensive_when:
+    - "Critical system components affected"
+    - "Compliance requirements become mandatory"
+    - "Multiple teams need coordination"
+    - "Extensive quality validation required"
+    - "Risk level reaches critical threshold"
+
+migration_support:
+  from_simple_template:
+    enhancement_areas:
+      - "Add context management section"
+      - "Include optional quality gates"
+      - "Expand output specifications"
+      - "Add integration validation"
+    
+  from_comprehensive_template:
+    simplification_areas:
+      - "Make engineering rules optional"
+      - "Simplify quality gate frameworks"
+      - "Reduce user interaction requirements"
+      - "Focus on practical execution over process compliance"

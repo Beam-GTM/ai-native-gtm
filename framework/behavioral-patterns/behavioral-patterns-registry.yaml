@@ -1,0 +1,225 @@
+# Behavioral Patterns Registry
+# Central registry for behavioral correction patterns that can be loaded by reference
+# Enables cleaner template architecture with centralized pattern management
+
+metadata:
+  name: "behavioral-patterns-registry"
+  description: "Central registry for evidence-based behavioral correction patterns"
+  version: "1.0"
+  last_updated: "2025-08-28"
+  target_failure_rate: "91%" # Prevents 91% of AI failure patterns
+
+# =============================================================================
+# CORE BEHAVIORAL PATTERNS
+# =============================================================================
+
+patterns:
+  execution_documentation_paradox:
+    id: "execution-doc-paradox"
+    name: "Execution-Documentation Paradox Prevention"
+    failure_rate: "35%" # Highest impact
+    severity: "critical"
+    description: "Prevents LLMs from documenting tasks instead of executing them"
+    
+    pre_execution_check:
+      question: "Am I about to EXECUTE this task or just DOCUMENT it?"
+      validation: "Commit to execution first, documentation second"
+      evidence_required: "Proof required for all completion claims"
+    
+    activation_trigger: |
+      {{#behavioral_check}}
+      **🧠 EXECUTION-DOCUMENTATION PARADOX CHECK**
+      - [ ] Question: "Am I about to EXECUTE this task or just DOCUMENT it?"
+      - [ ] Action: Commit to execution first, documentation second
+      - [ ] Validation: Evidence required for all completion claims
+      {{/behavioral_check}}
+    
+    post_completion_validation: |
+      **🧠 EXECUTION-DOCUMENTATION VALIDATION**
+      - [ ] **Evidence Collected**: Proof exists for all completion claims
+      - [ ] **Execution Validated**: Functionality tested, not just described
+      - [ ] **No Post-Hoc Documentation**: All documentation created during execution
+    
+  false_completion_syndrome:
+    id: "false-completion"
+    name: "False Completion Syndrome Prevention"
+    failure_rate: "19%"
+    severity: "critical"
+    description: "Prevents claiming completion without actual task fulfillment"
+    
+    pre_execution_check:
+      question: "What proof will validate each completion claim?"
+      validation: "Prepare evidence collection strategy"
+      evidence_required: "Independent verification must be possible"
+    
+    activation_trigger: |
+      {{#behavioral_check}}
+      **🧠 FALSE COMPLETION SYNDROME CHECK**
+      - [ ] Question: "What proof will validate each completion claim?"
+      - [ ] Action: Prepare evidence collection strategy
+      - [ ] Validation: Independent verification possible
+      {{/behavioral_check}}
+    
+    post_completion_validation: |
+      **🧠 FALSE COMPLETION VALIDATION**
+      - [ ] **Independent Verification**: Completion can be validated by others
+      - [ ] **Reality Check**: Deliverables match actual filesystem/system state
+      - [ ] **Evidence-Based Claims**: All completion claims supported by proof
+    
+  basic_operations_failure:
+    id: "basic-ops-failure"
+    name: "Basic Operations Failure Prevention"
+    failure_rate: "21%" # Highest frequency
+    severity: "high"
+    description: "Prevents failures in fundamental operations like file handling, paths, sequences"
+    
+    pre_execution_check:
+      question: "Can I correctly execute these fundamental operations?"
+      validation: "Validate foundation competency before complex operations"
+      evidence_required: "File paths, sequences, and procedures verified"
+    
+    activation_trigger: |
+      {{#behavioral_check}}
+      **🧠 BASIC OPERATIONS FAILURE CHECK**
+      - [ ] Question: "Can I correctly execute these fundamental operations?"
+      - [ ] Action: Validate foundation competency before complex operations
+      - [ ] Validation: File paths, sequences, and procedures verified
+      {{/behavioral_check}}
+    
+    post_completion_validation: |
+      **🧠 BASIC OPERATIONS VALIDATION**
+      - [ ] **File Operations Verified**: All file paths and operations successful
+      - [ ] **Sequence Validation**: All procedural steps executed in correct order
+      - [ ] **Foundation Check**: Basic operations completed successfully
+    
+  complexity_addiction:
+    id: "complexity-addiction"
+    name: "Complexity Addiction Prevention"
+    failure_rate: "16%"
+    severity: "medium"
+    description: "Prevents unnecessary complexity and over-engineering"
+    
+    pre_execution_check:
+      question: "Is this the simplest solution that meets requirements?"
+      validation: "Choose simplicity over complexity where appropriate"
+      evidence_required: "Justify complexity where it adds value"
+    
+    activation_trigger: |
+      {{#behavioral_check}}
+      **🧠 COMPLEXITY ADDICTION CHECK**
+      - [ ] Question: "Is this the simplest solution that meets requirements?"
+      - [ ] Action: Choose simplicity over complexity where appropriate
+      - [ ] Validation: Justify complexity where it adds value
+      {{/behavioral_check}}
+    
+    post_completion_validation: |
+      **🧠 COMPLEXITY VALIDATION**
+      - [ ] **Simplicity Assessment**: Solution is appropriately simple
+      - [ ] **Complexity Justification**: Any complexity adds clear value
+      - [ ] **Maintenance Consideration**: Solution is maintainable
+    
+  systematic_success_reinforcement:
+    id: "success-reinforcement"
+    name: "Systematic Success Reinforcement"
+    failure_rate: "preventive" # Reinforces positive patterns
+    severity: "medium"
+    description: "Reinforces successful behavioral patterns and decision-making"
+    
+    pre_execution_check:
+      question: "What successful patterns can I apply from previous tasks?"
+      validation: "Leverage proven successful approaches"
+      evidence_required: "Reference successful pattern application"
+    
+    activation_trigger: |
+      {{#behavioral_check}}
+      **🧠 SYSTEMATIC SUCCESS REINFORCEMENT**
+      - [ ] Question: "What successful patterns can I apply from previous tasks?"
+      - [ ] Action: Leverage proven successful approaches
+      - [ ] Validation: Reference successful pattern application
+      {{/behavioral_check}}
+    
+    post_completion_validation: |
+      **🧠 SUCCESS REINFORCEMENT VALIDATION**
+      - [ ] **Pattern Application**: Successfully applied proven patterns
+      - [ ] **Success Documentation**: Documented successful approaches for reuse
+      - [ ] **Learning Capture**: Captured lessons for future reinforcement
+
+# =============================================================================
+# PATTERN LOADING REFERENCES
+# =============================================================================
+
+loading_references:
+  # For templates to reference instead of embedding
+  critical_patterns:
+    - execution_documentation_paradox
+    - false_completion_syndrome
+    - basic_operations_failure
+  
+  standard_patterns:
+    - execution_documentation_paradox
+    - false_completion_syndrome
+    - basic_operations_failure
+    - complexity_addiction
+  
+  comprehensive_patterns:
+    - execution_documentation_paradox
+    - false_completion_syndrome
+    - basic_operations_failure
+    - complexity_addiction
+    - systematic_success_reinforcement
+  
+  agent_patterns:
+    - execution_documentation_paradox
+    - false_completion_syndrome
+    - systematic_success_reinforcement
+  
+  workflow_patterns:
+    - execution_documentation_paradox
+    - false_completion_syndrome
+    - basic_operations_failure
+
+# =============================================================================
+# TEMPLATE INTEGRATION SYNTAX
+# =============================================================================
+
+template_integration:
+  reference_syntax:
+    load_pattern: "{{load_behavioral_pattern: pattern_id}}"
+    load_pattern_set: "{{load_behavioral_patterns: pattern_set_name}}"
+    
+  example_usage:
+    simple_task: "{{load_behavioral_patterns: critical_patterns}}"
+    standard_task: "{{load_behavioral_patterns: standard_patterns}}"
+    comprehensive_task: "{{load_behavioral_patterns: comprehensive_patterns}}"
+    agent: "{{load_behavioral_patterns: agent_patterns}}"
+    workflow: "{{load_behavioral_patterns: workflow_patterns}}"
+    
+  custom_loading:
+    format: |
+      {{#load_behavioral_patterns pattern_set}}
+      {{#each patterns}}
+      ### {{name}} ({{failure_rate}} failure prevention)
+      {{activation_trigger}}
+      {{/each}}
+      {{/load_behavioral_patterns}}
+
+# =============================================================================
+# PATTERN CUSTOMIZATION
+# =============================================================================
+
+customization:
+  context_adaptation:
+    - "Patterns adapt to specific task contexts"
+    - "Questions remain consistent, actions adapt"
+    - "Validation criteria adjust to task complexity"
+    
+  severity_filtering:
+    critical_only: ["execution_documentation_paradox", "false_completion_syndrome"]
+    high_impact: ["execution_documentation_paradox", "false_completion_syndrome", "basic_operations_failure"]
+    comprehensive: "all_patterns"
+    
+  template_specific_adaptation:
+    tasks: "Focus on execution and completion validation"
+    agents: "Focus on behavioral consistency and success patterns"
+    workflows: "Focus on process adherence and outcome validation"
+    features: "Focus on quality gates and evidence collection"

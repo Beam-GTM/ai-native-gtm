@@ -1,0 +1,181 @@
+
+# KYC Agent Workflow Diagram
+# Generated from Notion MCP Data + Demo Agent Automation Framework
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                           KYC AGENT WORKFLOW                                    │
+│                    (Based on Notion Agent Templates)                           │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+                    ┌─────────────────┐
+                    │   CUSTOMER      │
+                    │   SUBMISSION    │
+                    └─────────┬───────┘
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │  DOCUMENT       │
+                    │  INTAKE         │
+                    │  & VALIDATION   │
+                    └─────────┬───────┘
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │  DATA           │
+                    │  EXTRACTION     │
+                    │  & OCR          │
+                    └─────────┬───────┘
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │  RISK           │
+                    │  ASSESSMENT     │
+                    │  & PEP CHECK    │
+                    └─────────┬───────┘
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │  IDENTITY       │
+                    │  VERIFICATION   │
+                    │  & AUTHENTICITY │
+                    └─────────┬───────┘
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │  DECISION       │
+                    │  ENGINE         │
+                    │  & ROUTING      │
+                    └─────────┬───────┘
+                              │
+                              ▼
+                    ┌─────────────────┐
+                    │  CUSTOMER       │
+                    │  NOTIFICATION   │
+                    │  & FOLLOW-UP    │
+                    └─────────────────┘
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                            DECISION BRANCHES                                   │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+DECISION POINT: Document Completeness
+├─ ALL DOCUMENTS PRESENT → Continue to Data Extraction
+├─ MISSING DOCUMENTS → Request Resubmission
+└─ INVALID FORMAT → Reject with Instructions
+
+DECISION POINT: Risk Assessment
+├─ LOW RISK + ALL CHECKS PASSED → Auto Approve
+├─ MEDIUM RISK → Manual Review Required
+├─ HIGH RISK → Enhanced Due Diligence
+└─ CRITICAL RISK/SANCTIONS MATCH → Auto Reject
+
+DECISION POINT: Verification Results
+├─ DOCUMENTS AUTHENTIC + IDENTITY VERIFIED → Continue
+├─ FRAUD INDICATORS → Auto Reject
+└─ VERIFICATION FAILED → Manual Review
+
+DECISION POINT: Final Decision
+├─ AUTO APPROVE → Send Approval Notification
+├─ MANUAL REVIEW → Escalate to Compliance Team
+└─ AUTO REJECT → Send Rejection with Reason
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                              KEY STATISTICS                                   │
+│                         (From Notion Agent Data)                              │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+Performance Metrics:
+├─ Manual Review Reduction: 70%
+├─ Time to KYC Completion: < 2 hours
+├─ Exception Identification Rate: 93%
+├─ Document Validation Accuracy: 92%
+├─ Auto Approval Rate: 85%
+└─ Customer Satisfaction Score: 4.8/5
+
+Integration Points:
+├─ Document Storage: Dropbox, Google Drive, AWS S3
+├─ Verification APIs: ComplyAdvantage, World-Check, OFAC
+├─ CRM Systems: Salesforce, HubSpot, Custom CRM
+├─ Notifications: Email, SMS, Slack, In-app
+└─ Compliance: Audit trails, Decision logs, Communication history
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                            TEST SCENARIOS                                      │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+Scenario 1: Low Risk Individual
+├─ Input: US citizen with clear documents
+├─ Process: Standard verification
+├─ Output: Auto Approved (< 2 minutes)
+└─ Risk Level: LOW
+
+Scenario 2: High Risk Business
+├─ Input: Business from high-risk jurisdiction
+├─ Process: Enhanced verification
+├─ Output: Manual Review Required (< 3 minutes)
+└─ Risk Level: HIGH
+
+Scenario 3: PEP Customer
+├─ Input: Politically Exposed Person
+├─ Process: Enhanced Due Diligence
+├─ Output: Manual Review Required (< 5 minutes)
+└─ Risk Level: HIGH
+
+Scenario 4: Document Issues
+├─ Input: Poor quality or missing documents
+├─ Process: Quality assessment
+├─ Output: Request Resubmission (< 1 minute)
+└─ Action Required: Customer follow-up
+
+Scenario 5: Sanctions Match
+├─ Input: Customer on sanctions list
+├─ Process: Immediate sanctions check
+├─ Output: Auto Rejected (< 30 seconds)
+└─ Risk Level: CRITICAL
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                            COMPLIANCE & AUDIT                                  │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+Audit Trail Requirements:
+├─ Complete decision log with timestamps
+├─ Document all data sources used
+├─ Record all API calls and responses
+├─ Maintain customer communication history
+└─ Store all documents for 7+ years
+
+Regulatory Compliance:
+├─ GDPR data protection compliance
+├─ AML/KYC regulatory requirements
+├─ SOX audit trail requirements
+└─ Industry-specific compliance (PCI DSS, etc.)
+
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│                              DEPLOYMENT PHASES                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+Phase 1: Setup (Week 1-2)
+├─ Configure document ingestion endpoints
+├─ Set up OCR and NLP services
+├─ Integrate sanctions/PEP APIs
+└─ Configure CRM connections
+
+Phase 2: Testing (Week 3-4)
+├─ Run test scenarios with sample data
+├─ Validate decision logic accuracy
+├─ Test integration endpoints
+└─ Perform load testing
+
+Phase 3: Deployment (Week 5-6)
+├─ Deploy to staging environment
+├─ Conduct user acceptance testing
+├─ Train compliance team
+└─ Go live with monitoring
+
+Phase 4: Optimization (Ongoing)
+├─ Monitor performance metrics
+├─ Tune decision thresholds
+├─ Optimize processing speed
+└─ Continuous improvement
+
+This workflow diagram shows how the KYC agent processes customers from initial submission through final decision, with clear decision points and expected outcomes based on real-world Notion agent template data.

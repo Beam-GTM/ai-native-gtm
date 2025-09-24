@@ -1,0 +1,524 @@
+{
+  "search_timestamp": "2025-09-22T17:10:38.114743",
+  "total_companies": 15,
+  "tier_1": [
+    {
+      "name": "Remedy Intelligent Staffing",
+      "website": "http://www.remedystaffing.com",
+      "location": "Atlanta, Georgia, United States",
+      "linkedin_url": "http://www.linkedin.com/company/remedy-intelligent-staffing",
+      "phone": "+1 877-785-5125",
+      "apollo_id": "689c7b76f3ac8f0001335d2a",
+      "qualification_score": 85,
+      "tier": "Tier 1 - High Priority",
+      "qualification_reasons": [
+        "Staffing-related company name",
+        "Staffing-related website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    }
+  ],
+  "tier_2": [
+    {
+      "name": "Allegis Group",
+      "website": "http://www.allegisgroup.com",
+      "location": "Hanover, Maryland, United States",
+      "linkedin_url": "http://www.linkedin.com/company/allegis-group",
+      "phone": "+1 410-540-7400",
+      "apollo_id": "689c7b76f3ac8f0001335c2f",
+      "qualification_score": 65,
+      "tier": "Tier 2 - Medium Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "North American location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    }
+  ],
+  "tier_3": [
+    {
+      "name": "Kelly Services Inc.",
+      "website": "http://www.kellyservices.com.mx",
+      "location": "Tabasco, Zacatecas, Mexico",
+      "linkedin_url": "http://www.linkedin.com/company/kelly-services",
+      "phone": "+52 248 362 4444",
+      "apollo_id": "689c7b76f3ac8f0001335ccb",
+      "qualification_score": 60,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "North American location",
+        "Mid-size company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Volt Workforce Solutions",
+      "website": "http://www.volt.com",
+      "location": "Atlanta, Georgia, United States",
+      "linkedin_url": "http://www.linkedin.com/company/volt",
+      "phone": "+1 714-921-8800",
+      "apollo_id": "689c7b7ff3ac8f0001336815",
+      "qualification_score": 60,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "North American location",
+        "Mid-size company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "The Adecco Group",
+      "website": "http://www.adeccogroup.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/theadeccogroup",
+      "phone": null,
+      "apollo_id": "68c9d1deee99f800019831c8",
+      "qualification_score": 55,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "ManpowerGroup",
+      "website": "http://www.manpowergroup.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/manpowergroup",
+      "phone": "+1 414-961-1000",
+      "apollo_id": "689b0d7296264d0001523981",
+      "qualification_score": 55,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "ManpowerGroup Middle East",
+      "website": "http://www.manpowergroup.ae",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/manpowergroup-middleeast",
+      "phone": "+971 4 391 0460",
+      "apollo_id": "689b13be3718ad000126e3b0",
+      "qualification_score": 55,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    }
+  ],
+  "unqualified": [
+    {
+      "name": "Adecco",
+      "website": "http://www.spring.com",
+      "location": "Ferryville, Wisconsin, United States",
+      "linkedin_url": "http://www.linkedin.com/company/spring-singapore",
+      "phone": "+44 113 218 6830",
+      "apollo_id": "689b0e4496264d000152e7f9",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Randstad USA",
+      "website": "http://www.randstadusa.com",
+      "location": "Atlanta, Georgia, United States",
+      "linkedin_url": "http://www.linkedin.com/company/randstadusa",
+      "phone": "+1 770-937-7000",
+      "apollo_id": "689c7b76f3ac8f0001335d27",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Aerotek",
+      "website": "http://www.aerotek.com",
+      "location": "Hanover, Maryland, United States",
+      "linkedin_url": "http://www.linkedin.com/company/aerotek",
+      "phone": "+1 410-540-7400",
+      "apollo_id": "689c7b76f3ac8f0001335c29",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Insight Global",
+      "website": "http://www.insightglobal.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/insight-global",
+      "phone": "+1 404-257-7900",
+      "apollo_id": "689b13bd3718ad000126e3a2",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Volt",
+      "website": "http://www.textvolt.com",
+      "location": "None, None, United States",
+      "linkedin_url": "http://www.linkedin.com/company/text-volt",
+      "phone": "+1 405-400-1648",
+      "apollo_id": "689b0f2996264d000153a6f6",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "staffmark",
+      "website": "http://www.staffmark.com",
+      "location": "Cincinnati, Ohio, United States",
+      "linkedin_url": "http://www.linkedin.com/company/staffmark",
+      "phone": "+1 612-339-2220",
+      "apollo_id": "689c7b7ff3ac8f00013367de",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Adecco",
+      "website": "http://www.adecco.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/adecco",
+      "phone": null,
+      "apollo_id": "68c98d668e81e40001a44b6f",
+      "qualification_score": 35,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "Other location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Randstad UK",
+      "website": "http://www.randstad.co.uk",
+      "location": "Eu, Upper Normandy, France",
+      "linkedin_url": "http://www.linkedin.com/company/randstaduk",
+      "phone": "+44 330 024 8775",
+      "apollo_id": "689b13d73718ad0001270194",
+      "qualification_score": 35,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "Other location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    }
+  ],
+  "all_companies": [
+    {
+      "name": "Remedy Intelligent Staffing",
+      "website": "http://www.remedystaffing.com",
+      "location": "Atlanta, Georgia, United States",
+      "linkedin_url": "http://www.linkedin.com/company/remedy-intelligent-staffing",
+      "phone": "+1 877-785-5125",
+      "apollo_id": "689c7b76f3ac8f0001335d2a",
+      "qualification_score": 85,
+      "tier": "Tier 1 - High Priority",
+      "qualification_reasons": [
+        "Staffing-related company name",
+        "Staffing-related website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Allegis Group",
+      "website": "http://www.allegisgroup.com",
+      "location": "Hanover, Maryland, United States",
+      "linkedin_url": "http://www.linkedin.com/company/allegis-group",
+      "phone": "+1 410-540-7400",
+      "apollo_id": "689c7b76f3ac8f0001335c2f",
+      "qualification_score": 65,
+      "tier": "Tier 2 - Medium Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "North American location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Kelly Services Inc.",
+      "website": "http://www.kellyservices.com.mx",
+      "location": "Tabasco, Zacatecas, Mexico",
+      "linkedin_url": "http://www.linkedin.com/company/kelly-services",
+      "phone": "+52 248 362 4444",
+      "apollo_id": "689c7b76f3ac8f0001335ccb",
+      "qualification_score": 60,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "North American location",
+        "Mid-size company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Volt Workforce Solutions",
+      "website": "http://www.volt.com",
+      "location": "Atlanta, Georgia, United States",
+      "linkedin_url": "http://www.linkedin.com/company/volt",
+      "phone": "+1 714-921-8800",
+      "apollo_id": "689c7b7ff3ac8f0001336815",
+      "qualification_score": 60,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "North American location",
+        "Mid-size company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "The Adecco Group",
+      "website": "http://www.adeccogroup.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/theadeccogroup",
+      "phone": null,
+      "apollo_id": "68c9d1deee99f800019831c8",
+      "qualification_score": 55,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "ManpowerGroup",
+      "website": "http://www.manpowergroup.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/manpowergroup",
+      "phone": "+1 414-961-1000",
+      "apollo_id": "689b0d7296264d0001523981",
+      "qualification_score": 55,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "ManpowerGroup Middle East",
+      "website": "http://www.manpowergroup.ae",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/manpowergroup-middleeast",
+      "phone": "+971 4 391 0460",
+      "apollo_id": "689b13be3718ad000126e3b0",
+      "qualification_score": 55,
+      "tier": "Tier 3 - Low Priority",
+      "qualification_reasons": [
+        "Professional services company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Adecco",
+      "website": "http://www.spring.com",
+      "location": "Ferryville, Wisconsin, United States",
+      "linkedin_url": "http://www.linkedin.com/company/spring-singapore",
+      "phone": "+44 113 218 6830",
+      "apollo_id": "689b0e4496264d000152e7f9",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Randstad USA",
+      "website": "http://www.randstadusa.com",
+      "location": "Atlanta, Georgia, United States",
+      "linkedin_url": "http://www.linkedin.com/company/randstadusa",
+      "phone": "+1 770-937-7000",
+      "apollo_id": "689c7b76f3ac8f0001335d27",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Aerotek",
+      "website": "http://www.aerotek.com",
+      "location": "Hanover, Maryland, United States",
+      "linkedin_url": "http://www.linkedin.com/company/aerotek",
+      "phone": "+1 410-540-7400",
+      "apollo_id": "689c7b76f3ac8f0001335c29",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Insight Global",
+      "website": "http://www.insightglobal.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/insight-global",
+      "phone": "+1 404-257-7900",
+      "apollo_id": "689b13bd3718ad000126e3a2",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "Other location",
+        "Large company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Volt",
+      "website": "http://www.textvolt.com",
+      "location": "None, None, United States",
+      "linkedin_url": "http://www.linkedin.com/company/text-volt",
+      "phone": "+1 405-400-1648",
+      "apollo_id": "689b0f2996264d000153a6f6",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "staffmark",
+      "website": "http://www.staffmark.com",
+      "location": "Cincinnati, Ohio, United States",
+      "linkedin_url": "http://www.linkedin.com/company/staffmark",
+      "phone": "+1 612-339-2220",
+      "apollo_id": "689c7b7ff3ac8f00013367de",
+      "qualification_score": 45,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "North American location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Adecco",
+      "website": "http://www.adecco.com",
+      "location": "None, None, None",
+      "linkedin_url": "http://www.linkedin.com/company/adecco",
+      "phone": null,
+      "apollo_id": "68c98d668e81e40001a44b6f",
+      "qualification_score": 35,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "Other location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    },
+    {
+      "name": "Randstad UK",
+      "website": "http://www.randstad.co.uk",
+      "location": "Eu, Upper Normandy, France",
+      "linkedin_url": "http://www.linkedin.com/company/randstaduk",
+      "phone": "+44 330 024 8775",
+      "apollo_id": "689b13d73718ad0001270194",
+      "qualification_score": 35,
+      "tier": "Unqualified",
+      "qualification_reasons": [
+        "General company",
+        "General website",
+        "Other location",
+        "Small company indicator",
+        "Traditional business"
+      ]
+    }
+  ]
+}

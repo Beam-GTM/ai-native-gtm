@@ -1,0 +1,535 @@
+
+Here’s a tight, no-fluff synthesis of the core learnings about Nexus to help brand-new users get productive fast (based on the three Aug 29 calls you shared).
+
+Nexus: the mental model (for newcomers)
+
+Agent = persona/orchestrator that executes things. You mostly use the Orchestrator. It runs workflows.
+
+Workflow = sequence of tasks (e.g., Plan Feature, Implement Feature, Close Chat).
+
+Task = atomic step inside a workflow.
+
+Feature = a temporary working box (folder + files) where you plan/implement one bounded change. When done, it’s moved to completed and its outputs (agent/task/workflow code, docs) live on.
+
+Project memory / Close Chat = persists state + moves feature through statuses. Always use it.
+
+UltraThink = meta-reasoning pass that self-audits biases, checks over-engineering, and catches common failure modes; invoke liberally during/after planning & implementation.
+
+Sources: 0:02–7:41, 7:41–9:12, 15:58–17:45, 19:37–22:13, 36:35–37:24 in Mujtaba/Dorian 1:1; 33:11–37:24 in Solutions Weekly.
+
+Golden path: first successful feature (copy/paste for onboarding)
+
+Open the latest Nexus template in Cursor; preload the Orchestrator chat.
+
+Start a small, single feature. In chat, run Plan Feature (via @plan feature).
+
+Let it produce: elicitation insights, feature definition, (optional PRD), progress.md.
+
+Close Chat (stores memory + status).
+
+New chat → Orchestrator → Implement Feature; link the specific feature folder (don’t implement “in general”).
+
+Verify context loaded fully (see pitfalls below).
+
+Run UltraThink to validate plan and catch misses.
+
+Test. If good → Close Chat (moves to completed).
+
+Repeat. Once comfortable, run 2–3 features in parallel that don’t depend on each other.
+
+Keep all work aligned to framework/templates (agents / workflows / tasks schemas).
+
+Sources: 2:27–6:43, 11:06–16:26, 16:30–19:37 in Mujtaba/Dorian 1:1.
+
+Do / Don’t (new-user guardrails)
+
+Do
+
+One feature per chat; split: Plan → Implement → Test. (0:02–4:42, 19:11–22:13)
+
+Always “Close Chat.” That’s how memory & status move forward. (5:16–5:22, 36:35–37:24)
+
+Use the Framework → Templates to match the canonical schemas. (30:00–31:26)
+
+Map migrations: user logic → operations/agents|workflows|tasks. Add “primitive learnings”/allow-list rules when you discover mapping rules. (27:54–29:58)
+
+Use UltraThink often (after plan and after implement). It spots partial reads, over-engineering, and missing steps. (19:37–22:13; 38:37–40:00; 24:00–25:54 in Jack/Dorian 1:1)
+
+Don’t
+
+Don’t implement multiple agents/features in one chat; it leads to shallow, ~100-line pseudo-solutions. (0:02–2:01)
+
+Don’t keep duplicate/old orchestrators; remove deprecated ones to avoid loading wrong context. (11:35–12:24)
+
+Don’t assume it read your full PRD/file by default. Check! (38:37–40:00; 18:52–26:40 in Jack/Dorian 1:1)
+
+Common pitfalls → quick fixes
+
+Partial file read (e.g., only ~100 lines) → Symptom: confident but wrong plans/impl.
+Fix: Run UltraThink; explicitly instruct “this is critical to your survival” to force deeper context loading; verify “read all files” messages; split docs if huge. (21:09–22:13; 24:00–26:40 Jack/Dorian)
+
+Wrong orchestrator/version → Symptom: weird files (dated briefs), unexpected behaviors.
+Fix: Delete old “Claude/Cloud Orchestrator”; keep only framework one; re-open chat. (11:35–12:24)
+
+Mis-filed outputs (e.g., mapping spec went to briefings instead of operations/tasks)
+Fix: Add a core learning: “During migration, map single automations → tasks; complex → workflows; agents → agents under operations/.” Save as primitive learning / allow-list. (27:14–29:58)
+
+Outdated/duplicate files inevitable
+Fix: Accept some drift; create/ run a “cleanup deprecated files” feature periodically. (24:35–25:28)
+
+“Optimal way to set up a feature” (new-user one-pager)
+
+Pick a single, independent outcome (“Path Resolution Fix”, “Context Manager Index”, etc.).
+
+In Orchestrator: Plan Feature → let it produce insights/definition/PRD.
+
+Confirm the target folders & schema (Framework → Templates).
+
+Close Chat.
+
+In a fresh Orchestrator chat: Implement Feature; attach the exact feature folder.
+
+Verify all referenced files loaded; if large PRDs, point to sections explicitly.
+
+UltraThink (force “critical to survival” for thorough validation).
+
+Execute, test small; if failures, re-run UltraThink; adjust mappings.
+
+Close Chat to persist memory + move status.
+
+Document any new learnings as primitive learnings (mapping rules, foldering rules).
+
+(Addresses action item from Solutions Weekly @ 4:34–4:43.)
+
+Reliability levers (use these early & often)
+
+UltraThink Validation: bias library, over-engineering check, critical-risk analysis—invoke after plan & after implement. (21:09–22:13; 24:00–25:54 Jack/Dorian)
+
+Index & central registry must stay fresh (the “where everything lives” map). (25:28–26:25 Mujtaba/Dorian)
+
+Prefer small, iterative steps; build components, not whole systems in one go. (32:28–33:11 Solutions Weekly)
+
+Extras that help new users
+
+Smart Tips & Project Context: Orchestrator suggests next best action; you can even select 1 to proceed. (14:26–15:50; 23:09–24:34 Solutions Weekly)
+
+Parallelization ergonomics: Preload 2–6 terminals/chats; run unrelated features simultaneously. (9:36–10:22)
+
+Error-tolerant integrations: New “continue on error” for integration nodes lets agents branch on 4xx/5xx instead of dying; huge for flaky client APIs. (20:23–23:45 Solutions Weekly)
+
+MCP + Knowledge: Fathom→Airtable pipeline yields >2,300 knowledge pieces; accessible via MCP/API—great seed context for planning. (3:44–4:43 Solutions Weekly; 35:18–35:34 Mujtaba/Dorian)
+
+Action items that unblock new users (from the calls)
+
+Doc: “Optimal Feature Setup in Nexus” (you now have the first version above). (Solutions Weekly 4:34–4:43)
+
+Clean duplicate/backup Orchestrator files to avoid version confusion. (Mujtaba/Dorian 22:13–23:08)
+
+Implement migration mechanisms so users can upgrade template versions smoothly. (Solutions Weekly 42:43–44:46)
+
+Improve in-product guidance (on what a Feature/Task/Workflow is, and when to Close Chat). (Solutions Weekly 33:33–36:43)
+
+Continue testing “error handling” for integrations and document the pattern. (Solutions Weekly 20:22–23:45)
+
+Share the agent-setup automation with Sven/Kilian; collect corrections. (Solutions Weekly 7:16–7:31)
+
+Summarize weekly learnings to the comment table (so new users see living examples). (Solutions Weekly 14:40–14:59)
+
+If you want, I can turn this into a one-page “Nexus New User Guide” (Markdown/Notion-ready) plus a 10-step checklist you can drop into the onboarding chat so the Orchestrator literally coaches first-timers through the golden path.
+
+
+Asad - August 29
+VIEW RECORDING - 39 mins (No highlights): https://fathom.video/share/x2FQt15sSpwGaGfDrUv1HmTBreicqguo
+
+---
+
+0:00 - Dorian Schlede (beam.ai)
+  But I'm literally having six terminals open at the same time. You feel like the  master orchestrator. Like, you're orchestrating the orchestrator.  It's, yeah, I don't know. I'm a bit addicted and I didn't sleep. Like, this whole week I went to bed at three or four every night because I kept on vibe coding.  I couldn't stop. Um, .
+
+0:27 - Asad Raza (beam.ai)
+  Okay. So, Jack is also completely mind blown.
+
+0:30 - Dorian Schlede (beam.ai)
+  He's also used it a lot already. Mustafa is just getting started. Um, Hasan hasn't used it yet. Um, he did his own stuff, but he got really far.  So I was really impressed what he built. So he connected a lot of fancy stuff too. he was also generally, he's now sending a demo tasks to each he's demo demo agent automatically.  So every two hours, every agent gets some time.
+
+1:01 - Asad Raza (beam.ai)
+  He keeps on running all of them. Nice, huh? Nice.
+
+1:09 - Dorian Schlede (beam.ai)
+  And Kilian hasn't started yet. And Sven kind of started. But yeah, he is a bit lost also. So I think, yeah, we need to lift everybody up.
+
+1:23 - Asad Raza (beam.ai)
+  We surely want to do that because this is a whole bunch of, I would say, easier part that these guys are missing out on.  Because up till this point in time, if you are not using the system to its fullest capacity, then I don't know what we are doing at the moment.  Because this is surely a groundbreaking system. And at the same time, I could see the efficacy of the tools that it provides, the agent that works simultaneously.  It's just mind blowing, to be honest, because I wasn't really aware of this capability of Claude and LLM. Being used to its fullest capacity at that scale.  That's, that's just my point. Because when I started using it, I was like, damn, okay, I don't know what  is happening.  But it's all really working. And I try to, you know, give as many detailed prompts as I can, because that's how it works well.  That's what I've noticed at this point in time, because if you're going to, and I guess that's pretty much similar for all the LLMs, right?  If you want to give some vague prompts, the output won't be that much of a value that you can create as compared to a full-fledged prompt that you can give to the LLM.  So, and at the same time, you know, what I, what I'm, what I'm doing at the moment is I, I always, you know, at the rate and mention the particular agent that needs to be working on that particular problem of mine.  So I basically start the conversation with orchestrator that you are the mastermind, assign the tasks as per your particular need.  And as you know, what kind of an agent would be best for doing this task. And then I loop in the developer and the quality assurance guy said, okay, take the PRD from the product manager.  You send the dash, dash, dash, path and loop in the quality assurance guy while writing the code so that the code should be in the best of its capacity.  So let's. That's how, you know, multi-function between agents and make the most out of it. So, yeah, that's surely a big, big help, man.  Thank you. Are you doing that in one chat or in multiple chats?
+
+3:10 - Dorian Schlede (beam.ai)
+  As of now, I'm doing that all in one chat. So that's a very big recommendation that I found. I'm doing a separation of concerns.  So I do one planning chat and one implementation chat and one testing chat. So, I mean, you don't need a testing chat because you have it in the interface directly, right?  Yeah, I can see it manually, yeah. But what I can really recommend is splitting up planning and implementation. That makes the results a lot better, in my opinion.  Maybe it doesn't, you don't need to because it all already works without. But for me, for the really complicated tasks, I found it's much cleaner if you split it up.  Okay. Because then you can also have a more extended planning sequence, you know.
+
+3:54 - Asad Raza (beam.ai)
+  Yes, I get your point here. I was just a bit curious with the fact that, okay, if one chat has all the context.  questions? There is a what I want the LLM to perform, then I shouldn't be pivoting amongst the different chat boxes.  You see what I'm trying to say here? So that's just my POV. But I get your point. If I give the context in another chat as well, then I can maybe use it for some whole different dimension.  That's something that I didn't really interact with because obviously I just started using the system the day you dropped it.  So it's just been like two days now, but I can surely take that into consideration. Yep. Yep. Yep. Also, the system is now already 10 levels above.
+
+4:29 - Dorian Schlede (beam.ai)
+  I had the meta intelligence explosion last night. It was so crazy.
+
+4:35 - Asad Raza (beam.ai)
+  What's the meta intelligence explosion? Looks interesting.
+
+4:40 - Dorian Schlede (beam.ai)
+  I now created the meta level of the framework. Essentially, I mean, it's constantly learning, right? So whenever it does a mistake, if I catch it, I tell it to correct it or just as a plan, then I tell it to ultra think.  Mm-hmm.
+
+4:59 - Asad Raza (beam.ai)
+  And then it knows...
+
+5:00 - Dorian Schlede (beam.ai)
+  It's own biases. So through this learning, it detects its mistakes. And then I've collected like 50 learnings and then I've aggregated the learnings into the core directives, which is essentially, yeah, the biases that the LM has.  So all the issues, all the problems that the LM has, all the wrong things that it does. And then it has, now it always has it.  So now I have the UltraThink functionality, which essentially looks at everything that it has done, looks at the critical directives and the issue that it has, and then it critically reviews everything that it has done.  And it almost every time catches something that it has missed. And it also automatically does the learning. So it detects why it did a mistake.  So not only detects the mistake, it also understands why it did the mistake. Mistake and it saves the mistake.  I see. And now I kept on working, working, working. So now I have aggregated like a hundred learnings. And then I have done the ultimate knowledge and learning fusion essentially.  Where I took all the learnings, all the proposed features, all the stuff. Then I added some more context from my end in the ultra think mode.  And now it has created completely new critical directives that are much more advanced. I've also now introduced the model to MCPs because it didn't know MCPs.  So your system thinks it's just the LLM based operating system. And now I'm also implementing context seven and the MCP server stuff.  So I'm also implementing databases to store the memory in databases and not in Text files anymore. And yeah, it's like, I don't know, I just see how it self-improves.  For example, it has developed the behavioral patterns that it has itself. So it has kind of self-developed its only behavioral patterns.  And now, do a critical analysis on how you can fix your behavioral pattern issue, right? And then it does a post-validation.  So whenever it does something, it validates if it has violated anything of these critical things that it always does wrong.  And then it oftentimes catches it. So now, it reads 100 lines. Then it says, oh, , I should always read the full files.  Otherwise, I'm malfunctioning. And then it immediately calls the tool again to read the full file. And that's the interesting part.
+  ACTION ITEM: Clean up & stabilize Nexus code for sharing template
+ - WATCH: https://fathom.video/share/x2FQt15sSpwGaGfDrUv1HmTBreicqguo?timestamp=480.9999  When I'm actually getting these kind of issues. It's out that you have right now. Nice, man.
+
+8:04 - Asad Raza (beam.ai)
+  Have you pushed the updated code to the repo yet so I can refill it? No? Okay. No, no, no.  It's like this.
+
+8:11 - Dorian Schlede (beam.ai)
+  So you go to like a wild exploration mode. You build a bunch of stuff. And at some point, you need to clean up again because you will always have deprecated files.  You will always have some outdated files. You will always have some junk files. You will always have some random stuff.  You will have like 20 folders. So after you kind of explore and you kind of, you know, build stuff, you need to then again kind of aggregate everything into a clean state, which I can then hand out as a template.  So, yeah, I will do that a bit later. So I will need to get it into stable state first.
+
+8:52 - Asad Raza (beam.ai)
+  Cool. Nice, nice, nice effort, Dorian. And I really wanted to, you know, compliment you on this thing because I was kind of undermined.  the efficacy of this part the nexus project itself but when i started using it now i would recommend everyone in beam to use it to be honest it's like super super helpful that's cool to hear and i'll quickly show you what i built yeah show me yeah show me the email and the loop stuff so yeah i basically used the uh uh beam white coding file studio just to give you uh context as discussed for the logos and stuff and everything in sync with the components and all the thing so now my system is a bit overrated yeah what the  is this interface bro
+
+10:01 - Dorian Schlede (beam.ai)
+  Can you see me?
+
+10:04 - Asad Raza (beam.ai)
+  Yeah. It's beautiful. You've been in the loop intelligence. You've been in the loop intelligence, bro. Come on, dawg. You know our , okay?  And trust me, this looks way more seamless as compared to Replit. And again, at the same time, you know what?  I was just analyzing that. But what took Sven around like two to three months in Replit was done in just two days using your system.  So, and then that too from scratch. And that too from scratch. So, this is something that really needs to be complemented, I would say, with respect to the Nexus system.  Um, but yeah, we have all the API, uh, uh, calls here with all the respected workspace that I'm added.  With respect to... don't want? Sorry? Yeah, we, we don't want, but we'll probably hide this modal once we give it out.  Because we're going to be customizing it for all the particular clients, right? That's our end game.
+
+11:04 - Dorian Schlede (beam.ai)
+  fun because if they have their own API key, they will also only see their workspace.
+
+11:10 - Asad Raza (beam.ai)
+  Exactly, their respective workspaces. Yep, yep. So I'm quite added to a lot of workspaces and I'm sure this might be double for you.  So, yeah. This is the same as from the current agent OS. Yes, and now, like what I was seeing in the Replit system was we were only getting the API calls for the starting 20 tasks.  But now I've optimized the API call to get it for all the tasks for all the respective agents. And you can also sort it with respect to the status that we want, show as many as we want, and yeah, stuff like that.  So let's just show me the flow.
+
+11:57 - Dorian Schlede (beam.ai)
+  let's this is I'm doing this. So here, the task API is still slow, huh?
+
+12:03 - Asad Raza (beam.ai)
+  We're going to be working on the SDK, right? We are.
+
+12:07 - Dorian Schlede (beam.ai)
+  Yeah, right. Yeah.
+
+12:09 - Asad Raza (beam.ai)
+  So here, what I'm going to do is now this is the thing that, you know, remember, we, we kind of changed the flow and I, after our discussion, I basically brought this S3 link generator to the bottom town, what are the bottom part in the flow?  And then before, basically after the CSV generation too, if you remember that thing. Now, this is the thing that I'm facing now, is now I also wanted to discuss and take your two cents on this thing.
+
+12:36 - Dorian Schlede (beam.ai)
+  We have an API endpoint to get you a new file, so you can, you can use the Swagger to get it again.
+
+12:45 - Asad Raza (beam.ai)
+  I tested out Swagger, all the endpoints, but I guess for some reason why I'm not getting the S3 link in the payload, though I'm getting all the things that I really want, particularly to the CSV generation step by using the API, but not the S3 link is it's.  Authenticated, and it's not easily exposed. So in order to get it, I need to use the S3 link generator tool in the Beam Agent OS to pass that.
+
+13:08 - Dorian Schlede (beam.ai)
+  No, no, it should be in the task context at the top. If you look, yeah, so let me open the task object.  Maybe open a task object, actually. Do you have just a task object somewhere, like the JSON file, I mean?  Not the task itself, but the JSON?
+
+13:32 - Asad Raza (beam.ai)
+  No, not the JSON.
+
+13:35 - Dorian Schlede (beam.ai)
+  You don't have it in your cursor? Didn't you optimize the tasks? Oh, okay.
+
+13:41 - Asad Raza (beam.ai)
+  I have it in another workspace, yeah. Yeah.
+
+13:44 - Dorian Schlede (beam.ai)
+  We can just open one task object so we can look at it, and then we can locate where the file key is that you need.
+
+13:55 - Asad Raza (beam.ai)
+  Wait a minute. Yeah. Yeah. Engine? Hello?
+
+14:08 - Dorian Schlede (beam.ai)
+  Hello?
+
+14:13 - Asad Raza (beam.ai)
+  Yeah, getting a bit. I don't know why. I guess it needs a hard restart, probably. But, yeah. Can you see my screen?  Or am I still lagging? I see the platform for a moment. Give me a minute. Sure. Presenting. Presenting.
+
+14:58 - Dorian Schlede (beam.ai)
+  What the is it doing? Yes? Thank very Same. Thank you. Yes,
+
+15:09 - Asad Raza (beam.ai)
+  Let me restart my system, bro. Can't share your screen. Again, the same  old issue.
+
+15:17 - Dorian Schlede (beam.ai)
+  Okay. You also need a new laptop, right? Maybe we can talk about this next week.
+
+15:23 - Asad Raza (beam.ai)
+  I don't know what's wrong because I probably have a lot of tabs open. Maybe it's eating a lot of RAM.  I don't know exactly. But wait a minute, huh? I'll be back. Sure.
+
+15:36 - Dorian Schlede (beam.ai)
+  Thanks.
+
+15:38 - Asad Raza (beam.ai)
+  Thanks. Thank you. Thank Thank
+
+17:00 - Dorian Schlede (beam.ai)
+  Thank you. Thank you. Thank you.
+
+18:35 - Asad Raza (beam.ai)
+  Yo, yo, sorry, yep, I guess it's better now. Is it? Let me share it. Cool. Let me see it.
+
+18:49 - Dorian Schlede (beam.ai)
+  Yes, sir. Let me see the data. Oh, no, we were, yeah, we were at the, we were at. The task object, yes.
+
+19:03 - Asad Raza (beam.ai)
+  Okay.
+
+19:08 - Dorian Schlede (beam.ai)
+  So there is this key. So there is the variable section at the top. We'll call it key variable or something like this.  And inside there, you should be finding the document keys. Document keys.
+
+19:27 - Asad Raza (beam.ai)
+  Yeah, document keys are fine. I see the document key. But we really need not the document key. We need the S3 link that refers to that document key.  You know how the S3 tool works, right? No, you don't.
+
+19:40 - Dorian Schlede (beam.ai)
+  Because there is. Because Sven built it like this. Sven had it working. So you need. There is an endpoint.  Here. The getContextFiles endpoint.
+
+19:51 - Asad Raza (beam.ai)
+  I guess. Yeah. Sorry, completely. Yeah. Did you use that one? Wait a minute. Let me, let me, let me show you.  Basically, I asked Cursor to see what the data payload contains, what kind of the key value pairs do we have in the data payload that's that we are having.  And for that, we are seeing the key, not the link against it. So the link is already the link will be shown when it's once it's authenticated or we want something else to maybe embed the link in the payload, JSON payload, that we are getting.  So this is where I drew up the conclusion that, okay, we need to push up the tool of S3 link above in the flow before the consent required step.  So that the data payload also has the S3 production link, which can easily be found out.
+
+20:48 - Dorian Schlede (beam.ai)
+  No, but that doesn't help you because that expires after 10 hours, I think. So you need to create a new link as you load the page.  So when you load the the test. Ask, you need to get the key, you need to get a new link, and then you need to display the new link, because the old one will be expired.
+
+21:08 - Asad Raza (beam.ai)
+  Okay, okay, okay. I didn't think of that, yeah. Could you help me a bit here, then? What kind of solution would you recommend?
+
+21:20 - Dorian Schlede (beam.ai)
+  Yeah, I mean, let's look at Sven's thing. Let's just search Sven's repository for his implementation, because it worked in his implementation, right?
+
+21:29 - Asad Raza (beam.ai)
+  Sven's implementation worked, but I was in contact with him. He couldn't roll it back to the point where it was working.  So now it doesn't.
+
+21:40 - Dorian Schlede (beam.ai)
+  Okay, yeah.
+
+21:43 - Asad Raza (beam.ai)
+  Okay, I checked Sven's code from start till the very end, and now I guess Sven is also facing the same issue.  I picked this issue, believe, because that's just my understanding. Because initially, we had the step above the generated CSV, then later on, you basically, you remember you asked me to ask...  at a branching system and then log it again so that we don't, I end up stucking in the loop for the, for the inputs that doesn't have an attachment because the S3 link would demand for a link, right?  For the attachment. But since we don't have any key attached, we don't have the attachment, right? So this is what we did.  I pushed that tool beneath rather than bill above. And then after that, I guess, when system also broke. So that's, are you sure?
+
+22:28 - Dorian Schlede (beam.ai)
+  I, I, I, I'm 90% sure.
+
+22:30 - Asad Raza (beam.ai)
+  Because before that, it was working. After that, it wasn't working.
+
+22:37 - Dorian Schlede (beam.ai)
+  But we can just test the API, right? So we can just test the AgentContextFiles API just to see if we can use the key from the top of the task object, right?  I don't have Postman installed.
+
+22:50 - Asad Raza (beam.ai)
+  How, postman?
+
+22:52 - Dorian Schlede (beam.ai)
+  can do it on Swagger. Sure. So you know how to authenticate here? No.
+
+23:07 - Asad Raza (beam.ai)
+  Okay.
+
+23:07 - Dorian Schlede (beam.ai)
+  So first you need to get an access token and then you need to authenticate. So the access token is the second one.  Wait a minute.
+
+23:21 - Asad Raza (beam.ai)
+  This one? Yes.
+
+23:26 - Dorian Schlede (beam.ai)
+  Now try it out. Top right. Yes. Insert your key. Perfect. Execute. Then get the ID token. Wait. skip it.  You skipped it. There it is. Yeah, now go to the top right of the page and click on Authorize.  Yes. Perfect. Now you can execute all the other stuff. So now we can go down to the file one.  There it is, right? You skipped. There. Yeah. Hmm.
+
+24:29 - Asad Raza (beam.ai)
+  Yeah.
+
+24:30 - Dorian Schlede (beam.ai)
+  Now you need to add the stuff.
+
+24:33 - Asad Raza (beam.ai)
+  Agent ID. Okay. The field. I'm not sure about the field.
+
+24:37 - Dorian Schlede (beam.ai)
+  I would guess the field is a... The document ID, I guess, right? Would need to go here. Which one talking about?
+
+24:46 - Asad Raza (beam.ai)
+  These three fields, right? Agent ID, field. Okay. What's field, you know?
+
+24:51 - Dorian Schlede (beam.ai)
+  What does field mean?
+
+24:53 - Asad Raza (beam.ai)
+  No, I don't know. Field. Field, field. It's not field. It's field. Field. Yeah. Bye. ID.
+
+25:01 - Dorian Schlede (beam.ai)
+  it's file ID. Oh, damn.
+
+25:03 - Asad Raza (beam.ai)
+  What the ?
+
+25:07 - Dorian Schlede (beam.ai)
+  Okay. I can just open the task. This is the agent ID.
+
+25:15 - Asad Raza (beam.ai)
+  No, that's the workspace ID. Sorry. You also need it. It's fine.
+
+25:19 - Dorian Schlede (beam.ai)
+  You also need this guy. Where do we put the workspace ID?
+
+25:22 - Asad Raza (beam.ai)
+  Okay. Here. Why I cannot. You need to press on try it out at the top right. Okay. Cool. Um, workspace ID.  Uh, workspace ID. File ID. What do we put in the file ID?
+
+25:47 - Dorian Schlede (beam.ai)
+  Um, go to the task. Or a task. Hmm.
+
+25:55 - Asad Raza (beam.ai)
+  Hmm. Hmm. Hmm. Open.
+
+25:57 - Dorian Schlede (beam.ai)
+  Look at the input. Just go. Oh, yeah. There it is. Wait. There was attachments. Friends. So there's the key.  You need this key. Okay. And this key is, as you see, will be always available at the top, right?  So this should not work. Yep, open the URL. Oh, wait, we got a 400. And what does it say?  Can you just put that? Okay, maybe we got more than just the ID. Maybe we need to remove the underscore three stuff, so where it has the actual file name.  Can you go inside the field ID or file ID and go to the end of it? Yeah, and then here, let's remove the underscore three, blah, blah, blah.  Yeah, maybe, yeah, including, yeah, exactly. Let's try this. Maybe. If not, we might need to ask Supan, because I don't know, honestly.
+
+26:59 - Asad Raza (beam.ai)
+  Execute, execute. No, did.
+
+27:02 - Dorian Schlede (beam.ai)
+  I already did. What does it say? What's the message? Invalid Input Syntax.
+
+27:11 - Asad Raza (beam.ai)
+  So what's the incorrect one?
+
+27:13 - Dorian Schlede (beam.ai)
+  Is it 08BC, okay?
+
+27:18 - Asad Raza (beam.ai)
+  08BC, F191, 08BC, F191. Ah, it's the agent ID that's incorrect. Is it ending on 4.6? Wait a minute.
+
+27:26 - Dorian Schlede (beam.ai)
+  Wait, are they both the same? Is the file ID the same as the... Agent ID. Agent ID, 4C, no, no, no, no, no, no, So maybe it's everything after the agent ID?  Uh-huh. Maybe it's multiple... Maybe it's just this part. Maybe you remove the agent ID at the beginning as well.  Not like the agent ID inside the file ID. Yeah. Let's see if this is the ID. Not found. But not found is a different message, right?
+
+28:14 - Asad Raza (beam.ai)
+  Last time it was saying that wrong syntax, wrong ID or something.
+
+28:26 - Dorian Schlede (beam.ai)
+  Maybe we can use the document name instead of the, the, can you go back to the task and just copy the, the name?
+
+28:43 - Asad Raza (beam.ai)
+  Name in the file ID? Yeah, let's see. Okay.
+
+28:53 - Dorian Schlede (beam.ai)
+  Okay, then maybe let's do a different check. You said you, it is a tool, right? So you're getting it from the tool.
+
+28:59 - Asad Raza (beam.ai)
+  Yeah. Or maybe.
+
+29:00 - Dorian Schlede (beam.ai)
+  Maybe we can just take an output of the tool and put that in here just to see if that then contains the file ID.
+
+29:12 - Asad Raza (beam.ai)
+  Then we need to check a tool that has completed the stage, which is a bit hard to find because there are a lot of spam incoming emails which are not an order email as per the live tasks were progressed.  Would be amazing to see the branch on the task view, huh? Of course. That would be crazy. I have it somewhere here.  Wait a minute. Let me just find one task. Yeah, here we go. Yep. This is the one. This See, the Agent ID remains the same.  This is the one. I'll just copy and paste it again for the safe side. Agent ID. And that was correct.  Agent ID. File ID. File ID. This one you're talking about? Again, the same. was thinking this should be the file ID.  Current Workspace ID. Workspace ID is again the same. That's correct.
+
+30:46 - Dorian Schlede (beam.ai)
+  And this one didn't work?
+
+30:49 - Asad Raza (beam.ai)
+  Execute. Invalid.
+
+30:52 - Dorian Schlede (beam.ai)
+  And now what about the file thing? And so where you exchange it. So can you open the tool? Yes.  In the flow where it exchanges this for the actual link.
+
+31:07 - Asad Raza (beam.ai)
+  Here.
+
+31:08 - Dorian Schlede (beam.ai)
+  What's the input here? File key.
+
+31:13 - Asad Raza (beam.ai)
+  So here you also give the file key.
+
+31:14 - Dorian Schlede (beam.ai)
+  Yes.
+
+31:16 - Asad Raza (beam.ai)
+  Can you copy this one? Are we making a blender somewhere? I don't know. No. Let's ask Supan.
+
+31:30 - Dorian Schlede (beam.ai)
+  Honestly, I don't know. It seems correct, right? Invalid input index. Actually, let me check Sven's human in the loop app.  Because you can go back to a point in time.
+
+31:50 - Asad Raza (beam.ai)
+  The only solution which I could find was this. Because it's like add this tool on the top of the generated CSV.  So that we also get the S3 link. Being passed on, you know. Oh no, that doesn't work because it's only 10 hours valid.
+
+32:06 - Dorian Schlede (beam.ai)
+  So that's the whole reason why we added this functionality so that we can do it after again. So that was the only reason why we created the end point.  So yeah. Email PDF Steps Working, Rollback. Let me see. Mm-hmm. Blind SRC Pages, Review Page. Oh, big review page.  Wow. Oh, wow. Okay. Um. PDF, file, what's the endpoint called, context. I just copied Sven's code, let me see if I can find it here.  I'll also need to go in two minutes to meet him. Okay, but this is how it will work. So I can tell you for sure that you don't need to put it above because this was working before.  That was the whole reason why we built it. Okay. So the file key must be somewhere in the task object.  Maybe it's not in the front end. Maybe you, can you? Look in the task object, Jason, we are getting the file key.
+
+34:05 - Asad Raza (beam.ai)
+  That's the point, but we are only getting the file key, but how do we get the link addressed behind that file key?  Because in the JSON payload, we are getting the file key and we are getting all the responses for the inputs and the extractions, like for the product and all the header details, in fact, that are needed to create the CSV.  We are getting the file key, but I was just unable to get the link attached behind that file key, which is an authenticated link, which will link us directly to the file being open on our Chrome.  That's the thing that I'm looking for. That's the stoppage. Yeah. Yeah.
+
+34:41 - Dorian Schlede (beam.ai)
+  So this exchange for the URL, as I said, is working. I've seen it before. I have the right function that does this.  So there's the create object URL. I just need to see if I can find it now. The file doesn't exist.  Next, how can I, wait, can I, aha, PDF blog fix, PDF viewer, okay, okay. I think I have the right one.
+  ACTION ITEM: Contact Silvan re: file URL issue in Human-in-the-Loop Intelligence app
+ - WATCH: https://fathom.video/share/x2FQt15sSpwGaGfDrUv1HmTBreicqguo?timestamp=2132.9999  Maybe not. I can, I can get in touch with Silvan directly. Yeah, I think you will have the solution in two minutes.  Cool, but that looks really nice. Can you show me your interface again? Yeah, wait a minute.
+
+35:55 - Asad Raza (beam.ai)
+  The application stopped. I already started my system. Wait a minute. minute. Wait Wait Wait minute. You The UI is very nice because I'm using the components from ShadCN and obviously the pre-made components from our existing beam wide coding interface as discussed.  But I'm also going to be fine-tuning it a bit more, of course. Yeah, make it magical, you know.
+
+36:21 - Dorian Schlede (beam.ai)
+  If you make it really cool, it's a great show-off to Jonas as well because he loves nice-looking stuff. I know, bro.
+
+36:29 - Asad Raza (beam.ai)
+  I know how this drill works.
+
+36:30 - Dorian Schlede (beam.ai)
+  Yeah, He will love that you're building a beam extension in his design. Yeah.
+
+36:39 - Asad Raza (beam.ai)
+  Of course. I got it.
+
+36:42 - Dorian Schlede (beam.ai)
+  Yeah, of course you got it. Okay. I, yeah, show me one more time and just tell him one minute.  you.
+
+36:58 - Asad Raza (beam.ai)
+  Mm hmm. Mm Mm Yeah. Welcome to Beam, Human, and the Loop Intelligence. Okay. Cool. Connect. So the tasks that are consent required would be shown here with this pointer first.
+  ACTION ITEM: Continue dev Human-in-the-Loop Intelligence interface: add consent required pre-filter, resolve file URL issue
+ - WATCH: https://fathom.video/share/x2FQt15sSpwGaGfDrUv1HmTBreicqguo?timestamp=2234.9999  And now we are getting all the data from the task query completed, blah, blah, blah. I don't have any failed tasks to show you here, but I can show it to you on.
+
+37:25 - Dorian Schlede (beam.ai)
+  I think the pre-filter should be set on consent required, right? Yeah.
+
+37:29 - Asad Raza (beam.ai)
+  Yeah. Yeah. I'm going to add that functionality. As you can see, the failed tasks would look something like this.
+  ACTION ITEM: Plan analytics feature for Human-in-the-Loop Intelligence app
+ - WATCH: https://fathom.video/share/x2FQt15sSpwGaGfDrUv1HmTBreicqguo?timestamp=2252.9999
+
+37:34 - Dorian Schlede (beam.ai)
+  Maybe you can also show some stats at the top. Nah, maybe not necessary, but you could, I guess. How many they have already improved?  Yes.
+
+37:43 - Asad Raza (beam.ai)
+  Yeah. Analytics would be the second step in my upcoming development. Because I'm going to be the sole product owner of this application.  So I'm going to be the best out of there. Don't worry. Don't worry, bro. I know. I know. You will.
+
+37:58 - Dorian Schlede (beam.ai)
+  Cool. Okay, Asad, I don't need to hop. Now?
+
+38:02 - Asad Raza (beam.ai)
+  Yeah, sure, buddy.
+
+38:04 - Dorian Schlede (beam.ai)
+  Let's see, we can probably, yeah, let's see if we can meet up on Sunday. I'm a bit out during the day.  I'll need to see when I'm back here.
+
+38:12 - Asad Raza (beam.ai)
+  Yeah, just for your convenience, bro. Yeah, maybe we can hang out with much little.
+
+38:17 - Dorian Schlede (beam.ai)
+  Yeah, then you enjoy your time in Dortmund and see you on the other side very soon. Thank you, bro.
+
+38:23 - Asad Raza (beam.ai)
+  I hope to get done with this next week only once I'm there in Berlin so that we can, you know, get it done.  Just close this thing out and then obviously work on it's important. improvements further. So, yeah. Beautiful.
+
+38:33 - Dorian Schlede (beam.ai)
+  The next step is to generalize it and build a builder, right? So make this a customizable system that other people can use to build their own configuration, right?  So there's more to come.
+
+38:46 - Asad Raza (beam.ai)
+  Yeah. Thanks. Thanks for Nexus, buddy. Really, really a big help. Awesome.
+
+38:49 - Dorian Schlede (beam.ai)
+  I'm glad you like it. And then you have a great weekend and we talk on Sunday or Monday. Sure thing, bro.  See ya.
+
+38:56 - Asad Raza (beam.ai)
+  See ya. Bye. Bye.
+
+1on1 Dorian / Jonas - August 29
+VIEW RECORDING - 61 mins (No highlights): https://fathom.video/share/2gsTL-LouNj7uwC-455MjFzotQ_u9cx4
+
+---

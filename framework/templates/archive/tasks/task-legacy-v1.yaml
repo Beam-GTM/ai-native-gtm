@@ -1,0 +1,792 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.467217Z
+migration_path: auto-generated
+---
+
+<!-- version: a1b2c3d4-5e6f-7890-abcd-ef1234567890 -->
+<!-- last-updated: 2025-01-27T11:15:00Z -->
+<!-- document-type: structure-definition -->
+
+# Task Structure Definition - Nexus Tasks with Nexus Engineering Rules Integration
+# Template for creating sophisticated tasks that reference and apply hierarchical engineering rules
+
+metadata:
+  name: "task-with-engineering-rules-structure"
+  type: "task-blueprint"
+  scope: "universal"
+  description: "Nexus-style task structure with integrated Nexus engineering rules"
+  purpose: "Template for creating tasks that dynamically load and apply engineering rules"
+  dependencies: ["agent.yaml", "context-map.md", "engineering-rules/*"]
+  integration_patterns:
+    ["rule-loading", "compliance-validation", "hierarchical-inheritance"]
+  last_updated: "2025-01-27"
+
+# =============================================================================
+# TASK FILE STRUCTURE (.tasks/{category}/{task-name}.md)
+# =============================================================================
+
+task_file_structure:
+  # INTELLIGENT DEPENDENCY BLOCK (Pattern-Based Auto-Detection)
+  dependency_block:
+    description: "Auto-generated based on task analysis and content patterns"
+    format: |
+      <!-- dependencies
+      upstream:
+        # AUTO-DETECTED Executable By (agents that can run this):
+        {{#detect_patterns task_content 'callable_by:\\s*\\[([^\\]]+)\\]|executed_by:\\s*([\\w/-]+)|agent[s]?:\\s*([\\w-]+)'}}
+        - operations/agents/{{infer_category '{{match}}''}}/{{match}}.md  # Capability: {{infer_capability '{{match}}'}}
+        {{/detect_patterns}}
+        {{#infer_executors task_category}}
+        - operations/agents/{{category}}/{{executor}}.md  # Inferred: {{capability}}
+        {{/infer_executors}}
+        
+        # AUTO-DETECTED Engineering Rules Applied:
+        {{#detect_patterns task_content 'engineering_rules[_\\s]*integration[^:]*:\\s*([\\w/-]+\\.md)|framework/engineeringrules/([\\w/-]+\\.md)'}}
+        - framework/engineeringrules/{{match}}  # Applied: {{detect_context '{{match}}'}}
+        {{/detect_patterns}}
+        
+        # AUTO-DETECTED Templates/Resources Used:
+        {{#detect_patterns task_content 'template[s]?:\\s*([\\w/-]+\\.yaml)|uses:\\s*framework/templates/([\\w/-]+)|dependencies:\\s*\\[([^\\]]+)\\]|requires:\\s*([\\w/-]+\\.md)'}}
+        - {{match}}  # Purpose: {{detect_usage_purpose '{{match}}'}}
+        {{/detect_patterns}}
+        
+      downstream:
+        # AUTO-DETECTED Dependencies (search required to find what uses this task):
+        # Pattern: 'task[s]?:\\s*{{task_name}}|uses:\\s*framework/tasks/{{task_name}}\\.md|execute[s]?:\\s*{{task_name}}'
+        # Search: operations/workflows/**/*.md, framework/tasks/**/*.md, operations/agents/**/*.md
+        # NOTE: Requires bidirectional validation scan to populate downstream dependencies
+        
+      validated: {{current_timestamp}}
+      health: {{calculate_health upstream downstream}}%
+      generator: framework/templates/task.yaml
+      -->
+      
+    auto_detection_patterns:
+      # Extract WHO CAN EXECUTE this task
+      executable_by_detection:
+        capability_patterns:
+          - 'callable_by:\s*\[([^\]]+)\]'  # explicit callable_by list
+          - 'executed_by:\s*([\w/-]+)'      # explicit executor
+          - 'agent[s]?:\s*([\w-]+)'         # agent references
+        capability_inference:
+          - task_category: 'system-maintenance' -> 'orchestrator'
+          - task_category: 'development' -> 'developer'
+          - task_category: 'architecture' -> 'architect'
+          - task_category: 'validation' -> 'quality-assurance'
+          
+      # Extract WHAT CALLS this task
+      called_by_detection:
+        workflow_patterns:
+          - 'uses:\s*framework/tasks/{{task_name}}\.md'
+          - 'task:\s*{{task_name}}'
+          - 'execute[s]?:\s*{{task_name}}'
+          
+        task_patterns:
+          - 'depends_on:\s*([\w/-]+\.md)'
+          - 'requires:\s*([\w/-]+\.md)'
+          - 'integrated_task[s]?:\s*([\w/-]+\.md)'
+          
+      # Extract RESOURCES USED
+      resource_detection:
+        engineering_rules:
+          - 'engineering_rules[_\s]*integration[^:]*:\s*([\w/-]+\.md)'
+          - 'framework/engineeringrules/([\w/-]+\.md)'
+          
+        templates:
+          - 'template[s]?:\s*([\w/-]+\.yaml)'
+          - 'uses:\s*framework/templates/([\w/-]+)'
+          
+        dependencies:
+          - 'dependencies:\s*\[([^\]]+)\]'
+          - 'requires:\s*([\w/-]+\.md)'
+          
+      # Find DOWNSTREAM (what depends on this task)
+      downstream_detection:
+        search_patterns:
+          - 'task[s]?:\s*{{task_name}}'
+          - 'uses:\s*framework/tasks/{{task_name}}\.md'
+          - 'execute[s]?:\s*{{task_name}}'
+          - 'integrated_task[s]?:\s*framework/tasks/{{task_name}}\.md'
+        search_locations:
+          - 'operations/workflows/**/*.md'
+          - 'framework/tasks/**/*.md'
+          - 'operations/agents/**/*.md'
+    
+    requirements:
+      - "MUST be at top of file before header"
+      - "Auto-generated from content analysis"
+      - "Executability inferred from category/content"
+      - "Dependencies extracted via patterns"
+      - "Reverse dependencies detected via search"
+      
+  # TASK HEADER WITH ENGINEERING RULES INTEGRATION
+  header_section:
+    format: |
+      # {Task Name}
+
+      <!-- 🔴 DIRECTIVE #1 ENFORCEMENT: ALWAYS READ COMPLETE FILES -->
+      <!-- CRITICAL: This task reads multiple files for execution - never use limit parameter -->
+      <!-- This directive OVERRIDES token conservation - read files completely -->
+      <!-- VIOLATION = Missing critical task execution steps and validation processes -->
+
+      ## 🔴 PRE-TASK DIRECTIVE CHECK
+      **MANDATORY**: Before executing this task, verify:
+      - [ ] All file reads will use complete files (no limit parameter)
+      - [ ] Engineering rule file reads will be comprehensive
+      - [ ] Context file reads will provide complete task execution environment
+      - [ ] Template and resource file reads will capture all specifications
+
+      **Category**: {task_category}
+      **Complexity**: {simple/standard/complex}
+      **Prerequisites**: {prerequisite_list}
+
+      ## ⚠️ CRITICAL EXECUTION NOTICE ⚠️
+
+      ### **THIS IS AN EXECUTABLE WORKFLOW - NOT REFERENCE MATERIAL**
+
+      When this task is invoked:
+
+      1. **MANDATORY ENGINEERING RULES LOADING** - Load all required engineering rules before execution
+      2. **HIERARCHY RESPECT** - Apply top-level rules, then repository-specific overrides  
+      3. **COMPLIANCE VALIDATION** - All outputs must comply with loaded engineering rules
+      4. **SEQUENTIAL EXECUTION** - Follow step-by-step workflow with user validation
+      5. **QUALITY GATE INTEGRATION** - Engineering rules compliance checked at each gate
+
+      **VIOLATION INDICATOR:** If you skip rule loading or bypass compliance validation, you have violated this workflow.
+
+  # ENGINEERING RULES INTEGRATION SECTION
+  engineering_rules_integration:
+    format: |
+      ## Engineering Rules Integration
+
+      ### Required Engineering Rules
+      ```yaml
+      engineering_rules_required:
+        # ALWAYS REQUIRED (loaded for every execution)
+        primary_rules:
+          {{#each primary_rules}}
+          - {{rule_file}}          # {{rule_description}}
+          {{/each}}
+        
+        # CONDITIONALLY REQUIRED (loaded based on task context)
+        contextual_rules:
+          {{#each contextual_rules}}
+          - condition: {{condition}}
+            rule: {{rule_file}}
+            reason: {{reason}}
+          {{/each}}
+        
+        # REPOSITORY-SPECIFIC (loaded based on implementation target)
+        repository_specific:
+          {{#each repository_rules}}
+          - repository: {{repository_name}}
+            rules: [{{rule_list}}]
+            override_behavior: {{override_pattern}}
+          {{/each}}
+
+      rule_application_context:
+        load_timing: "During task prerequisite validation phase"
+        scope: "Apply throughout task execution and quality gates"
+        inheritance: "Top-level rules + repository-specific overrides"
+        validation: "All task outputs must comply with loaded rules"
+        conflict_resolution: "Repository-specific overrides top-level, user can waive"
+      ```
+
+      ### Rule Loading Strategy
+      ```yaml
+      loading_strategy:
+        phase_1_always_load:
+          {{#each always_load}}
+          - {{rule_file}}: {{justification}}
+          {{/each}}
+        
+        phase_2_context_based:
+          {{#each context_based}}
+          - if: {{condition}}
+            load: {{rule_file}}
+            apply: {{application_scope}}
+          {{/each}}
+        
+        phase_3_repository_specific:
+          detection_method: "pwd analysis or .memory/active-context.md"
+          loading_pattern: "load + merge + override"
+          conflict_resolution: "repository_specific_wins"
+      ```
+
+  # PREREQUISITES WITH RULE LOADING
+  prerequisites_section:
+    format: |
+      ## Prerequisites
+
+      **BEFORE STARTING THIS TASK:**
+
+      ### Context Loading and Validation
+
+      **Context Loading Sequence:**
+      ```yaml
+      context_loading_sequence:
+        step_1_feature_context:
+          location: ".memory/features/{feature-name}/"
+          files: ["prd.md", "progress.md", "active-context.md", "test-results.md"]
+          validation: "All feature context files accessible and current"
+        
+        step_2_repository_context:
+          location: "{current-repo}/.memory/"
+          files: ["repository-context.md", "key-learnings.md"]
+          validation: "Repository context exists and aligns with task scope"
+        
+        step_3_top_level_context:
+          condition: "if cross-repository work required"
+          location: ".memory/"
+          files: ["system-architecture.md", "development-workflow.md"]
+          validation: "Top-level coordination context available"
+        
+        step_4_context_consistency:
+          validation_points:
+            - "Feature context consistent between top-level and repository"
+            - "Engineering rules align with context requirements"
+            - "No conflicts between context sources"
+            - "All required context accessible for task execution"
+      ```
+
+      **Context Update Triggers:**
+      ```yaml
+      context_update_triggers:
+        during_task_execution:
+          - trigger: "major_step_completion"
+            update: ".memory/features/{feature-name}/active-context.md"
+            content: "Step progress, decisions, next actions"
+          
+          - trigger: "quality_gate_reached"
+            update: ".memory/features/{feature-name}/test-results.md"
+            content: "Gate status, evidence, compliance assessment"
+          
+          - trigger: "engineering_rules_decision"
+            update: ".memory/features/{feature-name}/progress.md"
+            content: "Rule application, compliance status, deviations"
+        
+        post_task_completion:
+          - update: ".memory/features/{feature-name}/progress.md"
+            content: "Task completion, deliverables, next recommended tasks"
+          - update: ".memory/features/{feature-name}/active-context.md"
+            content: "Context for next task/agent, handoff preparation"
+      ```
+
+      **Memory Management Triggers:**
+      ```yaml
+      memory_management:
+        learning_capture:
+          - trigger: "pattern_detected"
+            action: "Execute capture-primitive-learning.md"
+            check: "If learnings.md > 20 entries after capture"
+            followup: "Execute aggregate-core-learnings.md if memory full"
+          
+        memory_full_detection:
+          - trigger: "task_completion_with_learnings"
+            check: "workspace/memory/core-primitives/learnings.md line count"
+            threshold: 20
+            action: "Execute aggregate-core-learnings.md"
+            output: "Update workspace/memory/core-learnings.md"
+          
+        pattern_aggregation:
+          - trigger: "new_pattern_file_created"
+            location: "workspace/memory/core-primitives/patterns/"
+            action: "Trigger aggregate-core-learnings.md"
+            purpose: "Keep core-learnings.md current"
+      ```
+
+      ### Validation Requirements
+
+      **Pre-Execution Validation:**
+      - [ ] Load and review relevant checklist: `.checklists/{task-domain}-checklist.md`
+      - [ ] Validate prerequisites using appropriate quality gates
+      - [ ] Confirm context accessibility and engineering rules compliance
+
+      **Quality Gates During Execution:**
+      - [ ] Checkpoint validation at major milestones using PASS/CONCERNS/FAIL/WAIVED framework
+      - [ ] Evidence collection for all critical {{task-specific}} decisions
+      - [ ] Context updates at validation trigger points
+
+      **Post-Execution Validation:**
+      - [ ] Execute completion validation using domain-specific checklist
+      - [ ] Update context files with validation results and lessons learned
+      - [ ] Prepare handoff validation for next agent/task
+
+      ### Engineering Rules Loading (MANDATORY)
+      - [ ] Load primary engineering rules: {{primary_rules_list}}
+      - [ ] Detect repository context and load repository-specific rules
+      - [ ] Parse rule requirements and quality standards
+      - [ ] Resolve any rule conflicts using hierarchy precedence
+      - [ ] Confirm rule application approach with user
+
+      ### Required Inputs
+      - [ ] Project context loaded from .memory/project-brief.md
+      - [ ] Current feature context from .memory/features/{feature-name}/
+      - [ ] {{#each task_inputs}}
+      - [ ] {{input_description}}
+      {{/each}}
+
+      ### Required Agent State
+      - [ ] Agent has engineering rules loaded and parsed
+      - [ ] Agent understands current repository context
+      - [ ] Agent has quality standards defined from rules
+      - [ ] Agent can validate compliance throughout execution
+
+      ### Environmental Requirements
+      - [ ] User available for rule application decisions
+      - [ ] Access to all referenced engineering rule files
+      - [ ] {{#each environmental_reqs}}
+      - [ ] {{requirement}}
+      {{/each}}
+
+      **CRITICAL:** If engineering rules cannot be loaded or parsed, STOP and request resolution.
+
+  # EXECUTION WORKFLOW WITH RULE INTEGRATION
+  execution_workflow:
+    format: |
+      ## Task Execution Workflow
+
+      ### Step 1: Engineering Rules Loading & Validation
+
+      **Rule Loading Sequence:**
+
+      1. **Load Primary Rules** (Always Required)
+         ```bash
+         {{#each primary_rules}}
+         - Read .engineeringrules/{{rule_file}}
+         - Parse {{rule_aspects}}
+         {{/each}}
+         ```
+
+      2. **Context-Based Rule Loading**
+         ```yaml
+         rule_loading_logic:
+           {{#each contextual_loading}}
+           {{condition_name}}:
+             condition: {{condition}}
+             load: {{rule_files}}
+             apply_to: {{application_scope}}
+           {{/each}}
+         ```
+
+      3. **Repository-Specific Rule Loading**
+         ```yaml
+         repository_detection:
+           current_repository: {detect_from_pwd_or_context}
+           additional_rules_path: {current_repository}/.engineeringrules/
+           loading_pattern:
+             - load: repository_specific_rules
+             - merge_with: top_level_rules  
+             - priority: repository_overrides_top_level
+         ```
+
+      **Engineering Rules Validation** 🔴
+
+      Present loaded rules summary to user:
+
+      **Loaded Engineering Rules:**
+      {{#each rule_categories}}
+      - ✅ **{{category_name}}**: {{rule_summary}}
+      {{/each}}
+
+      **Rule Application Confirmation:**
+
+      1. **Apply all loaded rules** - Use all standards throughout task
+      2. **Selective application** - Choose which rules to prioritize  
+      3. **Rule customization** - Modify standards for this specific task
+      4. **Add additional rules** - Load more engineering rules
+      5. **Repository override** - Prioritize repository-specific rules
+      6. **Minimal compliance** - Apply only essential standards
+      7. **Quality level adjustment** - Adjust rigor based on project phase
+      8. **Stakeholder alignment** - Modify rules based on requirements
+      9. **Custom rule interpretation** - Provide specific guidance
+
+      **WAIT FOR USER RESPONSE** - Ensure rule application approach confirmed.
+
+      ### Step 2: Task Context Gathering with Rule Application
+
+      **Context Gathering with Engineering Rules Awareness:**
+
+      Based on loaded engineering rules, gather context:
+
+      **Current Understanding:**
+      - **Task Objective**: {{task_objective}}
+      - **Engineering Standards**: {{loaded_standards_summary}}
+      - **Quality Requirements**: {{quality_requirements_from_rules}}
+      - **Compliance Scope**: {{compliance_scope}}
+
+      **Rule-Informed Validation Questions:**
+
+      1. **Scope vs Standards** - "Given our {{engineering_standards}}, what scope is realistic?"
+      2. **Quality vs Timeline** - "Our rules require {{quality_level}}, does timeline allow?"
+      3. **Repository Context** - "Are we working in {{repository_name}} with its specific rules?"
+      4. **Compliance Level** - "What level of rule compliance is required? (1-9 scale)"
+      5. **Rule Exceptions** - "Any engineering rules that need to be waived or modified?"
+      6. **Integration Points** - "How do {{integration_rules}} apply to this task?"
+      7. **Validation Approach** - "How should we validate compliance during execution?"
+      8. **Documentation Requirements** - "What documentation do {{doc_rules}} require?"
+      9. **Quality Gate Rigor** - "How strictly should we apply quality gates?"
+
+      **MANDATORY:** Present as numbered list, wait for user response.
+
+      ### Step 3: {{task-specific}} Task Execution
+
+      **Task-Specific Implementation:**
+
+      Based on loaded engineering rules and validated context, execute the task:
+
+      **Implementation Workflow:**
+      {{#each implementation_steps}}
+      {{step_number}}. **{{step_name}}**
+         - **Objective**: {{step_objective}}
+         - **Engineering Rules Applied**: {{applicable_rules}}
+         - **Quality Gate**: {{quality_validation}}
+         - **Context Updates**: {{context_update_requirements}}
+      {{/each}}
+
+      **Task Progress Tracking:**
+      ```yaml
+      progress_tracking:
+        step_completion:
+          - trigger: "step_{{step_number}}_complete"
+            update: ".memory/features/{feature-name}/progress.md"
+            content: "Step {{step_number}} completed, deliverables, next step ready"
+          
+        milestone_tracking:
+          - trigger: "major_milestone_reached"
+            update: ".memory/features/{feature-name}/active-context.md"
+            content: "Milestone status, accumulated deliverables, remaining work"
+      ```
+
+  # QUALITY GATES WITH ENGINEERING RULES COMPLIANCE
+  quality_gates_integration:
+    format: |
+      ### Quality Gate: Engineering Rules Compliance
+
+      **Compliance Assessment Framework:**
+
+      ```yaml
+      compliance_assessment:
+        {{#each rule_categories}}
+        {{category_id}}:
+          rules_source: {{rule_file}}
+          criteria: {{compliance_criteria}}
+          evidence_required: {{evidence_types}}
+          assessment_method: {{assessment_approach}}
+          pass_threshold: {{pass_criteria}}
+        {{/each}}
+      ```
+
+      **Detailed Compliance Check:**
+
+      {{#each rule_categories}}
+      #### {{category_name}} Compliance
+
+      **Criteria from {{rule_source}}:**
+      {{#each criteria}}
+      - {{criterion_description}}
+      {{/each}}
+
+      **Evidence Collection:**
+      - [ ] {{evidence_item_1}}
+      - [ ] {{evidence_item_2}}
+      - [ ] {{evidence_item_3}}
+
+      **Assessment**: {PASS/CONCERNS/FAIL/WAIVED}
+      **Evidence Summary**: {evidence_documentation}
+      **Compliance Notes**: {specific_compliance_details}
+
+      {{/each}}
+
+      **Engineering Rules Quality Decision** 🔴
+
+      Based on compliance assessment, select overall status:
+
+      1. **FULL COMPLIANCE** - All engineering rules met, proceed
+      2. **COMPLIANT with Documentation** - Rules met, document any minor deviations
+      3. **PARTIAL COMPLIANCE** - Core rules met, mitigation plan for others
+      4. **NON-COMPLIANT with Justification** - Rules not met but business justified
+      5. **WAIVED by Stakeholder** - Rules waived with documented approval  
+      6. **DEFER COMPLIANCE** - Will address compliance in future iteration
+      7. **RULE MODIFICATION REQUEST** - Request engineering rule updates
+      8. **ESCALATION REQUIRED** - Need architectural review for rule conflicts
+      9. **CUSTOM COMPLIANCE APPROACH** - Define specific compliance strategy
+
+      **If non-compliant selected, MANDATORY documentation:**
+      - **Specific Violations**: {list_rule_violations}
+      - **Business Justification**: {business_or_technical_reasoning}
+      - **Risk Assessment**: {risk_level_and_impact}
+      - **Mitigation Strategy**: {how_risks_will_be_addressed}
+      - **Stakeholder Approval**: {approval_status_and_documentation}
+      - **Future Remediation**: {plan_for_future_compliance}
+
+      **Context Update After Quality Gate:**
+      ```yaml
+      post_quality_gate_context_update:
+        location: ".memory/features/{feature-name}/test-results.md"
+        content: |
+          ## Quality Gate: Engineering Rules Compliance - {timestamp}
+          **Gate Status**: {PASS/CONCERNS/FAIL/WAIVED}
+          **Engineering Rules Applied**: {rules_list}
+          **Compliance Assessment**: {detailed_compliance_results}
+          **Evidence Collected**: {evidence_summary}
+          **Violations Found**: {violations_list}
+          **Remediation Actions**: {remediation_plan}
+          **Next Quality Gate**: {next_gate_name}
+        
+        additional_updates:
+          - location: ".memory/features/{feature-name}/active-context.md"
+            content: "Quality gate results, context for next steps"
+          - location: ".memory/features/{feature-name}/progress.md"
+            content: "Progress update with quality status"
+      ```
+
+  # OUTPUT SPECIFICATION WITH RULE COMPLIANCE
+  output_specification:
+    format: |
+      ## Task Outputs with Engineering Rules Compliance
+
+      ### Primary Deliverable
+      **Document Type**: {{deliverable_type}}
+      **Location**: {{output_location}}
+      **Format**: {{format_specification}}
+      **Engineering Rules Compliance**: {{compliance_level}}
+
+      **Required Sections (Rule-Driven):**
+      ```yaml
+      document_structure:
+        sections:
+          {{#each sections}}
+          - {{section_name}}:
+              required: {{required_status}}
+              rule_source: {{engineering_rule_source}}
+              compliance_criteria: {{section_compliance_requirements}}
+              content_requirements: {{content_specs}}
+          {{/each}}
+      ```
+
+      ### Engineering Rules Compliance Documentation
+      **Compliance Report**:
+      - **Rules Applied**: {{applied_rules_list}}
+      - **Compliance Level**: {{overall_compliance_rating}}
+      - **Deviations**: {{documented_deviations}}
+      - **Justifications**: {{deviation_justifications}}
+      - **Future Actions**: {{compliance_improvement_actions}}
+
+      ### Secondary Deliverables
+      - **Engineering Rules Compliance Report**: Detailed compliance assessment
+      - **Decision Log**: All quality gate decisions with rule references
+      - **Rule Application Documentation**: How rules were interpreted and applied
+      - **{{#each secondary_deliverables}}
+      - **{{deliverable_name}}**: {{deliverable_description}}
+      {{/each}}
+
+      ### Validation Checklist (Rule-Enhanced)
+      - [ ] All required sections present per engineering rules
+      - [ ] {{#each rule_categories}}
+      - [ ] {{category_name}} standards met per {{rule_source}}
+      {{/each}}
+      - [ ] Compliance deviations documented with justification
+      - [ ] Quality gates passed with engineering rules validation
+      - [ ] Integration requirements met per system design rules
+      - [ ] Documentation standards followed per documentation rules
+      - [ ] Next steps align with engineering rule requirements
+
+      ### Context Handoff Preparation
+      **Task Completion Context Updates:**
+      ```yaml
+      task_completion_context_handoff:
+        primary_context_update:
+          location: ".memory/features/{feature-name}/active-context.md"
+          content: |
+            ## Task Completion: {task_name} - {timestamp}
+            **Completed Task**: {task_name}
+            **Final Status**: {completion_status}
+            **Deliverables Created**: {deliverable_list}
+            **Engineering Rules Compliance**: {final_compliance_status}
+            **Context for Next Task/Agent**: {next_context_summary}
+            **Recommended Next Steps**: {next_actions}
+        
+        progress_tracking_update:
+          location: ".memory/features/{feature-name}/progress.md"
+          content: |
+            ## Progress Update: {task_name} Completed - {timestamp}
+            **Task**: {task_name} - COMPLETED
+            **Deliverables**: {artifacts_created}
+            **Quality Status**: {quality_assessment}
+            **Next Task Ready**: {next_task_readiness}
+        
+        repository_context_update:
+          condition: "if repository-specific work performed"
+          location: "{current-repo}/.memory/features/{feature-name}/progress.md"
+          content: "Repository-specific progress and context updates"
+      ```
+
+      ### Context Validation Checklist (Enhanced)
+      - [ ] All required sections present per engineering rules
+      - [ ] Context locations updated with task results
+      - [ ] Handoff context prepared for next task/agent
+      - [ ] Cross-repository context coordinated if applicable
+
+# =============================================================================
+# TASK CATEGORY TEMPLATES WITH RULE INTEGRATION
+# =============================================================================
+
+task_category_templates:
+  # DEVELOPMENT TASKS
+  development_tasks:
+    primary_rules:
+      - coding-rules.md: "Core coding standards and patterns"
+      - testing-rules.md: "Testing frameworks and quality requirements"
+
+    contextual_rules:
+      - condition: "API development required"
+        rule: documentation-rules.md
+        reason: "API documentation standards"
+      - condition: "Database changes involved"
+        rule: system-design-rules.md
+        reason: "Data architecture compliance"
+      - condition: "Cross-repository integration"
+        rule: memory-rules.md
+        reason: "Context coordination requirements"
+
+    repository_specific:
+      - repository: "agent-backend"
+        rules: ["coding-rules.md", "testing-rules.md", "linting-rules.md"]
+        override_behavior: "backend_specific_overrides"
+      - repository: "agent-frontend"
+        rules: ["coding-rules.md", "testing-rules.md", "documentation-rules.md"]
+        override_behavior: "frontend_specific_overrides"
+
+    examples:
+      implement_feature:
+        task_name: "Implement Feature"
+        primary_rules: ["coding-rules.md", "testing-rules.md"]
+        contextual_loading:
+          - condition_name: "if_api_endpoints_needed"
+            condition: "task involves API development"
+            load: ["documentation-rules.md"]
+            apply_to: "API documentation and validation"
+          - condition_name: "if_database_changes"
+            condition: "task involves database modifications"
+            load: ["system-design-rules.md"]
+            apply_to: "data architecture decisions"
+
+  # QUALITY ASSURANCE TASKS
+  quality_assurance_tasks:
+    primary_rules:
+      - testing-rules.md: "Testing frameworks and coverage requirements"
+      - linting-rules.md: "Code quality and formatting standards"
+
+    contextual_rules:
+      - condition: "Code review required"
+        rule: coding-rules.md
+        reason: "Code quality assessment standards"
+      - condition: "Documentation review needed"
+        rule: documentation-rules.md
+        reason: "Documentation quality standards"
+
+    examples:
+      create_test_plan:
+        task_name: "Create Test Plan"
+        primary_rules: ["testing-rules.md"]
+        contextual_loading:
+          - condition_name: "if_integration_testing"
+            condition: "task involves integration testing"
+            load: ["system-design-rules.md"]
+            apply_to: "integration point validation"
+
+  # ARCHITECTURE TASKS
+  architecture_tasks:
+    primary_rules:
+      - system-design-rules.md: "Architecture principles and patterns"
+      - prd-writing-rules.md: "Requirements documentation standards"
+
+    contextual_rules:
+      - condition: "Technical documentation required"
+        rule: documentation-rules.md
+        reason: "Architecture documentation standards"
+      - condition: "Cross-repository coordination needed"
+        rule: memory-rules.md
+        reason: "Context management requirements"
+
+    examples:
+      system_design:
+        task_name: "System Design"
+        primary_rules: ["system-design-rules.md", "prd-writing-rules.md"]
+        contextual_loading:
+          - condition_name: "if_technical_docs_needed"
+            condition: "task requires technical documentation"
+            load: ["documentation-rules.md"]
+            apply_to: "architecture documentation standards"
+
+# =============================================================================
+# RULE INHERITANCE & CONFLICT RESOLUTION
+# =============================================================================
+
+rule_inheritance_system:
+  hierarchy_precedence:
+    1: "Repository-specific engineering rules (highest priority)"
+    2: "Top-level engineering rules (base standards)"
+    3: "Task-specific rule customizations (user-defined)"
+    4: "Default Nexus quality patterns (fallback)"
+
+  conflict_resolution:
+    rule_conflicts:
+      detection: "Compare rule requirements during loading phase"
+      resolution_strategy: "Repository-specific overrides top-level"
+      user_override: "User can waive conflicting rules with documentation"
+      escalation: "Complex conflicts escalated to architectural review"
+
+    quality_standard_conflicts:
+      approach: "Use highest standard unless user waives"
+      documentation: "All conflicts and resolutions documented"
+      validation: "Conflicting standards create additional quality gates"
+
+  merge_patterns:
+    additive_merge:
+      description: "Repository rules add to top-level rules"
+      example: "Top-level coding standards + repository-specific linting rules"
+
+    override_merge:
+      description: "Repository rules replace top-level rules"
+      example: "Repository-specific testing framework overrides top-level"
+
+    conditional_merge:
+      description: "Repository rules apply only in specific contexts"
+      example: "Frontend-specific rules only for UI components"
+
+# =============================================================================
+# USAGE INSTRUCTIONS
+# =============================================================================
+
+usage_instructions:
+  creating_new_task:
+    steps:
+      1: "Choose task category (development/qa/architecture/documentation/pm)"
+      2: "Identify required engineering rules based on task nature"
+      3: "Define contextual rule loading conditions"
+      4: "Specify repository-specific rule requirements"
+      5: "Create task using template with rule integration"
+      6: "Test rule loading and compliance validation"
+      7: "Validate task execution with actual engineering rules"
+
+  integrating_existing_task:
+    steps:
+      1: "Analyze existing task requirements and outputs"
+      2: "Identify which engineering rules should apply"
+      3: "Add engineering rules integration section"
+      4: "Enhance quality gates with rule compliance"
+      5: "Update output specifications with compliance requirements"
+      6: "Test integration with actual rule files"
+
+  rule_management:
+    best_practices:
+      - "Keep engineering rules focused and specific"
+      - "Document rule conflicts and resolutions"
+      - "Test task execution with various rule combinations"
+      - "Maintain clear hierarchy precedence"
+      - "Provide user override mechanisms for flexibility"
+      - "Document all compliance deviations with justification"

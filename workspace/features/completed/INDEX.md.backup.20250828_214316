@@ -1,0 +1,486 @@
+# Workspace Features Index
+# Central registry for all features
+
+<!-- REORGANIZATION-TRIGGER: AUTO-CHECK ON LOAD
+     Thresholds: 20 items/folder, 5 depth, 100 total
+     Execute: framework/tasks/organization/structured-folder-cleanup.md
+     Check features/active/ folder health -->
+
+<!-- ROADMAP-UPDATE-TRIGGER: AUTO-CHECK ON LOAD
+     Last Generated: 2025-08-28T12:35:00Z
+     Conditions:
+       - INDEX modified since last generation
+       - Any feature progress changed >25%
+       - New feature added or completed
+       - Weekly update due (every Monday)
+     Execute: framework/tasks/features/generate-roadmap.md
+     Status: EXECUTED -->
+
+<!-- REORGANIZATION-CHECK
+  Status: 🟡 WARNING
+  Items: 7/20 active features (35% of threshold)
+  Depth: 3/5 levels (features/active/feature/)
+  Total: ~62 files in active features (added learn-platform: 2025-08-27T03:35Z)
+  Score: 1.9 (Slight increase from new feature addition)
+  Action: MONITOR - New feature learn-platform added with 5 implementation files
+  Result: System complexity increased slightly but still in warning range
+-->
+
+```yaml
+metadata:
+  name: "workspace-features-index"
+  type: "index-document"
+  scope: "workspace"
+  description: "Central feature registry and status tracking"
+  last_updated: "2025-08-27T23:59:00Z"
+  auto_scan: true
+
+directories:
+  # Directory structure
+  active: active/         # Currently being worked on
+  completed: completed/   # Successfully completed features
+  patterns: patterns/     # Extracted reusable patterns
+  archive: archive/       # Old features for reference
+  templates: templates/   # Feature templates
+  proposed: proposed/     # Proposed features from analysis
+
+feature_registry:
+  proposed:
+    # 12 Features Generated from Learning Analysis Pipeline (2025-08-28)
+    - feature_id: "agent-3-amp-001"
+      name: "AGENT 3.0 Self-Amplifying Architecture"
+      priority: "CRITICAL"
+      status: "proposed"
+      impact: "1000x capability expansion"
+      path: "proposed/agent-3-self-amplifying-architecture.yaml"
+      description: "Self-amplifying intelligence with exponential growth - REQUIRES SAFETY PROTOCOLS"
+      
+    - feature_id: "bootstrap-mech-001"
+      name: "Bootstrap Mechanism Framework"
+      priority: "CRITICAL"
+      status: "proposed"
+      path: "proposed/bootstrap-mechanism-framework.yaml"
+      description: "Enable self-transcendent systems through incremental self-surgery"
+      
+    - feature_id: "script-first-001"
+      name: "Script-First Automation Layer"
+      priority: "CRITICAL"
+      status: "proposed"
+      path: "proposed/script-first-automation-layer.yaml"
+      description: "10x reliability through script automation vs manual operations"
+      
+    - feature_id: "resurrection-v3-001"
+      name: "Resurrection Protocol V3.0"
+      priority: "HIGH"
+      status: "proposed"
+      path: "proposed/resurrection-protocol-v3.yaml"
+      description: "Weaponize LLM amnesia as learning accelerator"
+      
+    - feature_id: "evidence-prog-001"
+      name: "Evidence-Based Progress System"
+      priority: "HIGH"
+      status: "proposed"
+      path: "proposed/evidence-based-progress-system.yaml"
+      description: "100% claim verification to eliminate progress inflation"
+      
+    - feature_id: "selective-reg-001"
+      name: "Selective Registry Architecture"
+      priority: "HIGH"
+      status: "proposed"
+      path: "proposed/selective-registry-architecture.yaml"
+      description: "Hybrid approach - registries for discovery, files for content"
+      
+    - feature_id: "ultrathink-eng-001"
+      name: "ULTRATHINK Integration Engine"
+      priority: "MEDIUM"
+      status: "proposed"
+      path: "proposed/ultrathink-integration-engine.yaml"
+      description: "6x better analysis through comprehensive discovery"
+      
+    - feature_id: "dist-behavioral-001"
+      name: "Distributed Behavioral Conditioning"
+      priority: "MEDIUM"
+      status: "proposed"
+      path: "proposed/distributed-behavioral-conditioning.yaml"
+      description: "Real-time violation prevention through environmental engineering"
+      
+    - feature_id: "human-loop-001"
+      name: "Human-in-the-Loop Optimizer"
+      priority: "MEDIUM"
+      status: "proposed"
+      path: "proposed/human-in-loop-optimizer.yaml"
+      description: "85% feasibility increase through copilot architecture"
+      
+    - feature_id: "template-evol-001"
+      name: "Template Evolution Engine"
+      priority: "MEDIUM"
+      status: "proposed"
+      path: "proposed/template-evolution-engine.yaml"
+      description: "Auto-generate templates from mature systems"
+      
+    - feature_id: "quality-gate-001"
+      name: "Quality Gate Enforcement"
+      priority: "MEDIUM"
+      status: "proposed"
+      path: "proposed/quality-gate-enforcement.yaml"
+      description: "Prevent false completions with evidence-based gates"
+      
+    - feature_id: "knowledge-cons-001"
+      name: "Knowledge Consolidation Pipeline"
+      priority: "MEDIUM"
+      status: "proposed"
+      path: "proposed/knowledge-consolidation-pipeline.yaml"
+      description: "Preserve and deploy learning insights automatically"
+
+  active:
+    
+    - feature_id: "interactive-engine-001"
+      name: "interactive-engine-architecture"
+      priority: "critical"
+      status: "active"
+      progress: 40
+      owner: "System Architecture Team"
+      path: "active/interactive-engine-architecture/"
+      description: "PARADIGM SHIFT: Templates + Indices + Engines pattern creates complete executable systems from declarative components - Phase 1 COMPLETE: 80% memory reduction, 70% performance achieved"
+      
+    - feature_id: "template-system-cons-001"
+      name: "template-system-architectural-consolidation"
+      priority: "critical"
+      status: "active"
+      progress: 60
+      owner: "Framework Team"
+      path: "active/template-system-architectural-consolidation/"
+      description: "Template system architectural consolidation with central registry and category organization - Phase 1 COMPLETE: Central Registry (INDEX.md), Category Organization, Documentation Updates - Phases 2-4 pending"
+      
+    - feature_id: "mem-learn-cons-001"
+      name: "memory-learnings-consolidation"
+      priority: "medium"
+      status: "active"
+      progress: 90
+      owner: "Framework Team"
+      path: "active/[planned]memory-learnings-consolidation/"
+      description: "Consolidate scattered system learnings into unified knowledge management - automation system operational"
+      
+    - feature_id: "nexus-template-001"
+      name: "nexus-template"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/nexus-template/"
+      description: "Template generation system - COMPLETE: Published to GitHub at https://github.com/dorianbeam/nexus-template"
+      completion_date: "2025-01-27"
+      
+      
+    - feature_id: "learning-pipeline-001"
+      name: "learning-analysis-pipeline"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/learning-analysis-pipeline/"
+      description: "Automated pipeline to analyze learnings from template executions and generate feature plans - COMPLETE: Analyzed 56 learnings, detected 7 meta-patterns, generated 12 feature proposals"
+      completion_date: "2025-08-28T10:35:00Z"
+      
+      
+    - feature_id: "evidence-tracking-001"
+      name: "evidence-based-progress-tracking"
+      priority: "critical"
+      status: "active"
+      progress: 15
+      owner: "System Architecture Team"
+      path: "active/evidence-based-progress-tracking/"
+      description: "Automated evidence-based progress tracking to eliminate 42% discrepancy between claimed and actual progress - Planning complete"
+      
+    - feature_id: "paradigm-alignment-001"
+      name: "paradigm-alignment-system-recalibration"
+      priority: "critical"
+      status: "active"
+      progress: 25
+      owner: "System Architecture Team"
+      path: "active/paradigm-alignment-system-recalibration/"
+      description: "Paradigm shift recognition and system recalibration - Planning complete, Implementation starting"
+      
+    - feature_id: "template-simplify-001"
+      name: "template-simplification-system"
+      priority: "critical"
+      status: "active"
+      progress: 15
+      owner: "Framework Team"
+      path: "active/template-simplification-system/"
+      description: "3-tier template system to increase compliance from 42% to 70%+ through simplification - Planning complete, Implementation starting"
+      
+      
+    - feature_id: "smart-arch-transform-001"
+      name: "smart-layered-architecture-transformation"
+      priority: "critical"
+      status: "active"
+      progress: 20
+      owner: "Framework Team"
+      path: "active/smart-layered-architecture-transformation/"
+      description: "REVOLUTIONARY: Transform 703-directory chaos into smart 3-layer architecture (system/user/hidden) - ULTRATHINK breakthrough enables template generation and user-friendly structure"
+      
+  
+  completed:
+    - feature_id: "mental-model-001"
+      name: "mental-model-framework"
+      priority: "critical"
+      status: "completed"
+      progress: 100
+      owner: "System Architecture Team"
+      path: "completed/mental-model-framework/"
+      description: "Evidence-based behavioral pattern correction framework - PARADIGM SHIFT: From theoretical cognitive enhancement to specific behavioral correction targeting 5 meta-patterns causing 91% of AI failures with implementation guidelines"
+      completion_date: "2025-08-28T01:45:00Z"
+      
+    - feature_id: "agent-activation-001"
+      name: "centralized-agent-activation-system"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/centralized-agent-activation-system/"
+      description: "Centralize activation sequences from agents/templates into hybrid static/dynamic framework - COMPLETED: All 12 agents migrated to hybrid activation pattern"
+      completion_date: "2025-08-27T16:45:00Z"
+      
+    - feature_id: "learn-platform-001"
+      name: "learn-platform"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/learn-platform/"
+      description: "Interactive beginner learning platform with 4-phase guided experience, badge system, and orchestrator integration - COMPLETED with 5/5 quality gates PASS"
+      completion_date: "2025-08-27T04:15:00Z"
+      
+    - feature_id: "workflow-scope-enforcement-001"
+      name: "workflow-scope-enforcement"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/workflow-scope-enforcement/"
+      description: "Evidence-based behavioral control framework preventing LLM scope creep - COMPLETED with 5/5 quality gates PASS, 3-layer enforcement proven in production"
+      completion_date: "2025-08-27T02:45:00Z"
+      
+    - feature_id: "agent-template-001"
+      name: "agent-template-orchestrator-enhancement"
+      priority: "medium"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/agent-template-orchestrator-enhancement/"
+      description: "Template enhancement with orchestrator-grade core architecture, intelligence features, and system integration - COMPLETED with 3/5 quality gates PASS"
+      completion_date: "2025-08-27T02:35:00Z"
+      
+    - feature_id: "explainer-alignment-001"
+      name: "explainer-agent-nexus-alignment"
+      priority: "medium"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/explainer-agent-nexus-alignment/"
+      description: "Update explainer agent to align with current Nexus system architecture - COMPLETED with 4/4 quality gates passed"
+      completion_date: "2025-08-26T21:00:00Z"
+      
+    - feature_id: "workflow-enhancement-001"
+      name: "design-new-feature-workflow-enhancement"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/design-new-feature-workflow-enhancement/"
+      description: "Enhanced design-new-feature workflow with dynamic engineering rules loading and PASS/CONCERNS/FAIL/WAIVED compliance framework - COMPLETED with <25KB memory optimization"
+      completion_date: "2025-08-26T15:45:00Z"
+      
+    - feature_id: "close-chat-001"
+      name: "close-chat-workflow"
+      priority: "critical"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/close-chat-workflow/"
+      description: "Automate session closure tasks including INDEX updates, feature archival, and memory management - COMPLETED with 5-engine architecture"
+      completion_date: "2025-08-26T15:32:55Z"
+      
+    - feature_id: "core-primitives-001"
+      name: "core-primitives-learning"
+      priority: "medium"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/core-primitives-learning/"
+      description: "Capture and learn from LLM behavioral patterns - COMPLETED with 20 learnings and 3 patterns"
+      completion_date: "2025-08-26T17:35:00Z"
+      
+    - feature_id: "genesis-sys-builder-001"
+      name: "genesis-intelligent-system-builder"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "System Architecture Team"
+      path: "completed/genesis-intelligent-system-builder/"
+      description: "Advanced system builder with intelligent elicitation and PRD generation - Core implementation complete"
+      completion_date: "2025-08-26T17:35:00Z"
+      
+    - feature_id: "template-pattern-001"
+      name: "template-pattern-analysis"
+      priority: "medium"
+      status: "completed"
+      progress: 100
+      owner: "Framework Team"
+      path: "completed/template-pattern-analysis/"
+      description: "Multi-layer pattern analysis for template optimization - realistic scope achieved"
+      completion_date: "2025-08-26T13:20:00Z"
+      
+    - feature_id: "idx-ctx-update-001"
+      name: "index-context-updater"
+      priority: "high"
+      status: "completed"
+      progress: 100
+      owner: "System Operations Team"
+      path: "completed/index-context-updater/"
+      description: "Comprehensive task for updating all index and context files"
+      completion_date: "2025-08-25T22:20:00Z"
+      
+    - feature_id: "clean-dev-001"
+      name: "clean-feature-development"
+      priority: "medium"
+      status: "completed"
+      progress: 100
+      owner: "Development Team"
+      path: "completed/clean-feature-development/"
+      description: "Clean guided feature development workflow system - All quality gates PASSED"
+      completion_date: "2025-08-25T23:43:45Z"
+    
+  archived:
+    - feature_id: "arch-mig-2025-08-25"
+      name: "nexus-consolidation-migration"
+      priority: "critical"
+      status: "archived"
+      progress: 100
+      owner: "System Team"
+      path: "archive/2025-08/nexus-consolidation-migration/"
+      description: "Critical system consolidation and migration"
+      completion_date: "2025-08-25T23:00:00Z"
+      archived_date: "2025-08-27T00:15:00Z"
+      
+    - feature_id: "proj-mem-track-001"
+      name: "project-level-memory-tracking"
+      priority: "medium"
+      status: "archived"
+      progress: 100
+      owner: "System Team"
+      path: "archive/2025-08/project-level-memory-tracking/"
+      description: "Enhanced project-level memory tracking system"
+      completion_date: "2025-08-25T23:00:00Z"
+      archived_date: "2025-08-27T00:15:00Z"
+      
+    - feature_id: "bi-dep-valid-001"
+      name: "bidirectional-dependency-validation"
+      priority: "high"
+      status: "archived"
+      progress: 100
+      owner: "System Architecture Team"
+      path: "archive/2025-08/bidirectional-dependency-validation/"
+      description: "Ensure every dependency relationship is bidirectional and validated"
+      completion_date: "2025-08-26T13:20:00Z"
+      archived_date: "2025-08-27T02:55:00Z"
+      
+    - feature_id: "mem-sys-upgrade-001"
+      name: "memory-system-upgrade"
+      priority: "critical"
+      status: "archived"
+      progress: 100
+      owner: "System Architecture Team"
+      path: "archive/2025-08/memory-system-upgrade/"
+      description: "Upgrade memory system with pattern learning and error handling - COMPLETED via radical simplification"
+      completion_date: "2025-08-26T12:15:00Z"
+      archived_date: "2025-08-27T02:55:00Z"
+      
+    - feature_id: "workflow-split-001"
+      name: "workflow-splitting"
+      priority: "high"
+      status: "archived"
+      progress: 100
+      owner: "Framework Team"
+      path: "archive/2025-08/workflow-splitting/"
+      description: "Split design-new-feature workflow into plan-feature and implement-feature workflows"
+      completion_date: "2025-08-26T12:30:00Z"
+      archived_date: "2025-08-27T02:55:00Z"
+    
+  patterns:
+    # Extracted patterns from multiple features
+    # - pattern_id: "pattern-001"
+    #   name: "common-validation-pattern"
+    #   extracted_from: ["feature-1", "feature-2", "feature-3"]
+    #   path: "patterns/common-validation/"
+
+statistics:
+  total_proposed: 12
+  total_active: 4
+  total_completed: 16
+  total_archived: 7
+  total_patterns: 0
+  
+  by_priority:
+    critical: 8  # (3 proposed + 5 active)
+    high: 11     # (3 proposed + 8 completed/active)
+    medium: 13   # (6 proposed + 7 existing)
+    low: 0       # (none)
+  
+  by_status:
+    proposed: 12    # (12 new features from learning analysis)
+    active: 4       # (template-system-architectural-consolidation, evidence-based-progress-tracking, smart-layered-architecture-transformation, paradigm-alignment-system-recalibration)  
+    planned: 0      # (none)
+    completed: 16   # (mental-model-framework, centralized-agent-activation-system, learn-platform, workflow-scope-enforcement, agent-template-orchestrator-enhancement, explainer-agent-nexus-alignment, design-new-feature-workflow-enhancement, close-chat-workflow, core-primitives, genesis, template-pattern-analysis, index-context, clean-dev, orchestrator-template-synchronization, nexus-template, learning-analysis-pipeline)
+    archived: 7     # (nexus-consolidation-migration, project-level-memory-tracking, bidirectional-dependency-validation, memory-system-upgrade, workflow-splitting, system-benchmark-gap-analysis, v3-migration-system-transformation)
+    blocked: 0
+    pending: 0
+
+orchestrator_config:
+  scan_interval: "on_activation"
+  auto_index: true
+  parallel_load: true
+  max_concurrent: 5
+  
+  loading_sequence:
+    1: "Load INDEX.md"
+    2: "Scan active/*/index.yaml"
+    3: "Generate missing feature-index.md"
+    4: "Cache for session"
+  
+  file_detection:
+    required:
+      - "prd.md"
+      - "active-context.md"
+      - "progress.md"
+      - "quality-gates.md"
+    
+    optional:
+      - "index.yaml"
+      - "feature-index.md"
+    
+    ignore:
+      - "*.tmp"
+      - "*.bak"
+      - ".DS_Store"
+
+growth_triggers:
+  pattern_extraction:
+    trigger: "3+ features with similar structure"
+    action: "Extract to patterns/"
+    
+  feature_archival:
+    trigger: "Feature completed + 30 days"
+    action: "Move to archived/"
+    
+  index_update:
+    trigger: "New feature created"
+    action: "Update INDEX.md"
+
+quick_stats:
+  average_progress: 45   # Active features average progress (60+15+90+25+20+15)/6 = 37.5% (updated with template-system-architectural-consolidation)
+  blocked_features: 0
+  at_risk_features: 0
+  completion_rate: "80%"  # 16 completed + 7 archived = 23 finished / 29 total features
+```

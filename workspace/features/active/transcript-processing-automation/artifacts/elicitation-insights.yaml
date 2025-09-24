@@ -1,0 +1,57 @@
+# Elicitation Insights: transcript-processing-automation
+# Generated: 2025-09-17T17:58:00Z
+# Workflow: plan-feature (Step 2)
+
+# KEY DISCOVERY: Workflow Trigger Clarification
+trigger_discovery:
+  primary_trigger: "new_company"
+  description: "The starting trigger is a new company - whenever user has a new company, system creates folder structure"
+  example_execution: "User identifies ICS as new company → System creates Companies/ICS/ structure"
+
+system_dependencies:
+  - "Local filesystem access for folder creation"
+  - "Company naming standardization system"
+  - "Folder structure template consistency"
+
+integration_points:
+  - "Companies folder as central repository"
+  - "Transcript input mechanism (copy/paste initially)"
+  - "Email generation system"
+  - "File naming convention system"
+
+hidden_complexities:
+  - "Company name normalization (spaces, special characters, case sensitivity)"
+  - "Duplicate company detection and handling"
+  - "Folder structure consistency across different users/systems"
+  - "File naming collision prevention within company folders"
+
+risk_factors:
+  - "Manual folder creation could lead to inconsistent naming"
+  - "No validation for company name uniqueness"
+  - "Folder structure could become disorganized without clear conventions"
+  - "Manual process may not scale with high company volume"
+
+coordination_needs:
+  - "Clear company naming convention agreement"
+  - "Standardized folder structure template"
+  - "Process for handling edge cases (mergers, name changes)"
+
+workflow_requirements:
+  - "Automated company folder creation on new company trigger"
+  - "Consistent folder structure: transcripts/emails/documents"
+  - "Company name validation and normalization"
+
+discovered_pattern:
+  name: "Company-Centric Organization Pattern"
+  description: "Simple, scalable pattern where each company gets standardized folder structure"
+  structure: |
+    Companies/
+    └── {Company-Name}/
+        ├── transcripts/
+        ├── emails/
+        └── documents/
+        
+validation_evidence:
+  - "ICS folder structure successfully created as proof of concept"
+  - "Simple three-folder pattern confirmed as user preference"
+  - "Company-level organization validated over deal-level complexity"

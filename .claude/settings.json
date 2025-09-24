@@ -1,0 +1,6 @@
+{
+  "agents": {
+    "enabled": true,
+    "directory": "agents"
+  }
+}

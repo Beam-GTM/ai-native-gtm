@@ -1,0 +1,360 @@
+{
+  "metadata": {
+    "processed_at": "2025-09-18T08:48:33.538209",
+    "transcript_source": "/Users/quentindisilvestro/Desktop/nexus-template/Companies/ICS/transcripts/RFI Presentation Workshop",
+    "line_count": 900,
+    "processing_version": "1.0.0"
+  },
+  "participants": [
+    {
+      "name": "Participant_1",
+      "engagement_level": 100,
+      "role": "engineer",
+      "department": "data",
+      "company": "Beam",
+      "speech_statistics": {
+        "total_contributions": 181,
+        "average_words_per_contribution": 46
+      }
+    },
+    {
+      "name": "Participant_2",
+      "engagement_level": 100,
+      "role": "analyst",
+      "department": "data",
+      "company": "Beam",
+      "speech_statistics": {
+        "total_contributions": 48,
+        "average_words_per_contribution": 27
+      }
+    },
+    {
+      "name": "Dorian Schlede",
+      "engagement_level": 100,
+      "role": "engineer",
+      "department": "data",
+      "company": "Beam",
+      "speech_statistics": {
+        "total_contributions": 404,
+        "average_words_per_contribution": 25
+      }
+    },
+    {
+      "name": "Participant_4",
+      "engagement_level": 100,
+      "role": "developer",
+      "department": "business",
+      "company": "Accenture",
+      "speech_statistics": {
+        "total_contributions": 41,
+        "average_words_per_contribution": 17
+      }
+    },
+    {
+      "name": "Participant_5",
+      "engagement_level": 100,
+      "role": "analyst",
+      "department": "data",
+      "company": "Client",
+      "speech_statistics": {
+        "total_contributions": 43,
+        "average_words_per_contribution": 36
+      }
+    },
+    {
+      "name": "Participant_6",
+      "engagement_level": 100,
+      "role": "Unknown",
+      "department": "data",
+      "company": "Client",
+      "speech_statistics": {
+        "total_contributions": 183,
+        "average_words_per_contribution": 1
+      }
+    }
+  ],
+  "business_context": {
+    "meeting_type": "RFI",
+    "pain_points": [
+      "efficiency",
+      "automation",
+      "manual",
+      "cost",
+      "accuracy"
+    ],
+    "competitive_context": [
+      "supplier",
+      "vendor",
+      "assessment",
+      "evaluation"
+    ],
+    "technical_focus": [
+      "integration",
+      "platform",
+      "agent",
+      "accuracy"
+    ],
+    "commercial_aspects": [
+      "pricing",
+      "cost",
+      "budget",
+      "payback",
+      "value"
+    ]
+  },
+  "technical_requirements": {
+    "integrations": [
+      "API",
+      "integration",
+      "integration",
+      "integration",
+      "API",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "API",
+      "integration",
+      "API",
+      "API",
+      "API",
+      "API",
+      "API",
+      "integration",
+      "API",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "API",
+      "API",
+      "API",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "API",
+      "API",
+      "API",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "integration",
+      "Integration",
+      "API",
+      "API",
+      "API",
+      "integration",
+      "integration",
+      "API",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "Azure",
+      "platform",
+      "platform",
+      "AWS",
+      "Azure",
+      "platform",
+      "platform",
+      "platform",
+      "AWS",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "platform",
+      "cloud",
+      "cloud",
+      "platform",
+      "platform",
+      "cloud",
+      "platform",
+      "platform",
+      "Azure",
+      "cloud",
+      "Azure",
+      "platform",
+      "platform",
+      "aws",
+      "lake",
+      "database",
+      "lake",
+      "lake",
+      "warehouse",
+      "warehouse",
+      "warehouse",
+      "warehouse",
+      "warehouse",
+      "warehouse",
+      "warehouse",
+      "database"
+    ],
+    "performance_needs": [
+      "120 million transactions",
+      "performance",
+      "performance",
+      "performance",
+      "volume",
+      "volume",
+      "volume"
+    ],
+    "security_requirements": [],
+    "data_volumes": []
+  },
+  "objections_concerns": [
+    {
+      "line_number": 5,
+      "concern_text": "Speaker 2: So we have an image, but we do not have any sounds yet.",
+      "severity": "Low"
+    },
+    {
+      "line_number": 8,
+      "concern_text": "Speaker 1: Okay. Coming up. Okay. Some tech related issues first, but I think this is working now.",
+      "severity": "Medium"
+    },
+    {
+      "line_number": 8,
+      "concern_text": "Speaker 1: Okay. Coming up. Okay. Some tech related issues first, but I think this is working now.",
+      "severity": "Medium"
+    },
+    {
+      "line_number": 10,
+      "concern_text": "Speaker 1: Quick question. Is it fine for everybody record the session? Yeah, also for. Okay, cool. Because.",
+      "severity": "Low"
+    },
+    {
+      "line_number": 14,
+      "concern_text": "Speaker 2: But just make it.",
+      "severity": "Low"
+    },
+    {
+      "line_number": 16,
+      "concern_text": "Dorian Schlede: Yeah, but we have I think five or four people from up.",
+      "severity": "Low"
+    },
+    {
+      "line_number": 17,
+      "concern_text": "Speaker 1: Okay, cool. All right everybody. Everybody. Thanks for having us. Thanks for having us. Beautiful demon. Beautiful demon. We will have everything prepared. We went through the bullet points that you sent us to have a rough agenda. So we have roughly like 40 slides today. We're also going to show you something again again. Ask any questions that you might have. Jump in. This is not a lecture, but interactive. I think it's cool. We also have plenty enough time before we introduce ourselves. I think the most easiest part is we do a quick round robin or per department. And if you would want us favor also expl. Where are your organization? What is your main view on things? What are you responsible? Just quick orientation so we know what kind of people we have here. People that have met yet. So do you want to go presentation?",
+      "severity": "Low"
+    },
+    {
+      "line_number": 17,
+      "concern_text": "Speaker 1: Okay, cool. All right everybody. Everybody. Thanks for having us. Thanks for having us. Beautiful demon. Beautiful demon. We will have everything prepared. We went through the bullet points that you sent us to have a rough agenda. So we have roughly like 40 slides today. We're also going to show you something again again. Ask any questions that you might have. Jump in. This is not a lecture, but interactive. I think it's cool. We also have plenty enough time before we introduce ourselves. I think the most easiest part is we do a quick round robin or per department. And if you would want us favor also expl. Where are your organization? What is your main view on things? What are you responsible? Just quick orientation so we know what kind of people we have here. People that have met yet. So do you want to go presentation?",
+      "severity": "Low"
+    },
+    {
+      "line_number": 23,
+      "concern_text": "Speaker 1: That will be my perspective during these workshops. Very important questions regarding this topic. What they come later. Okay. Thank you.",
+      "severity": "High"
+    },
+    {
+      "line_number": 27,
+      "concern_text": "Speaker 4: New things but I background from Accenture.",
+      "severity": "Low"
+    }
+  ],
+  "competitive_intelligence": {
+    "competitive_mentions": 5,
+    "evaluation_stage": "Active RFI Process",
+    "decision_timeline": "This week",
+    "key_differentiators": [
+      "Mentions unique capabilities",
+      "Mentions different capabilities",
+      "Mentions advantage capabilities",
+      "Mentions better capabilities"
+    ],
+    "competitive_threats": [
+      "Active evaluation of other suppliers",
+      "Active evaluation of comparing"
+    ]
+  },
+  "sentiment_analysis": {
+    "sentiment_score": 0.09,
+    "sentiment_label": "Neutral",
+    "engagement_level": 0,
+    "positive_indicators": 6,
+    "negative_indicators": 5,
+    "question_count": 6
+  },
+  "follow_up_actions": [
+    {
+      "action_type": "next_steps",
+      "priority": 100,
+      "description": "Schedule follow-up meeting to advance opportunity",
+      "timeline": "24 hours"
+    },
+    {
+      "action_type": "commercial_discussion",
+      "priority": 90,
+      "description": "Prepare detailed pricing proposal",
+      "timeline": "48 hours"
+    },
+    {
+      "action_type": "technical_deep_dive",
+      "priority": 80,
+      "description": "Schedule technical integration workshop",
+      "timeline": "1 week"
+    },
+    {
+      "action_type": "demo_request",
+      "priority": 70,
+      "description": "Set up product demonstration session",
+      "timeline": "3-5 days"
+    },
+    {
+      "action_type": "information_request",
+      "priority": 60,
+      "description": "Send requested documentation and case studies",
+      "timeline": "24 hours"
+    }
+  ],
+  "summary": {
+    "participant_count": 6,
+    "key_stakeholders": [
+      "Participant_1",
+      "Participant_2",
+      "Dorian Schlede"
+    ],
+    "meeting_type": "RFI",
+    "overall_sentiment": "Neutral",
+    "engagement_level": 0,
+    "competitive_context": true,
+    "technical_discussion": true,
+    "commercial_readiness": true,
+    "recommendation": "URGENT: Competitive evaluation in progress. Accelerate follow-up."
+  }
+}

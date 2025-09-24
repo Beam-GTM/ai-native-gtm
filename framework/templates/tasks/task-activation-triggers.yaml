@@ -1,0 +1,286 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.455559Z
+migration_path: auto-generated
+---
+
+# Task Activation Triggers Framework Template
+# Purpose: Intelligent task activation based on system state and patterns
+# Version: 1.0.0
+# Last Updated: 2025-08-26
+
+## Template Structure for Task Files
+
+Every task file should include an `activation_triggers` section following this structure:
+
+```yaml
+activation_triggers:
+  # Required metadata
+  version: "1.0.0"
+  priority: "high|medium|low"
+  confidence_threshold: 85  # Percentage confidence required for auto-suggestion
+  
+  # Trigger categories (at least one required)
+  threshold_triggers:
+    - name: "memory_capacity_overflow"
+      condition: "project-memory.md > 28/30 entries"
+      description: "Memory approaching capacity limit"
+      check_method: "entry_count_analysis"
+      auto_suggest: true
+      
+  state_change_triggers:
+    - name: "feature_completion_detected"
+      condition: "feature moved from active/ to completed/"
+      description: "Feature lifecycle change requiring system update"
+      check_method: "filesystem_diff_analysis"
+      auto_suggest: false
+      user_confirm: true
+      
+  pattern_triggers:
+    - name: "documentation_drift_pattern"
+      condition: "INDEX.md updates without file moves"
+      description: "Documentation-filesystem mismatch detected"
+      check_method: "pattern_recognition"
+      auto_suggest: true
+      severity: "critical"
+      
+  time_based_triggers:
+    - name: "daily_system_maintenance"
+      condition: "24 hours since last validation"
+      description: "Regular system integrity check"
+      check_method: "timestamp_comparison"
+      auto_suggest: false
+      
+  # Integration points
+  orchestrator_integration:
+    menu_priority: 1  # Higher numbers = higher priority in dynamic menu
+    context_aware: true
+    confirmation_required: true
+    
+  # Execution controls
+  execution_controls:
+    max_auto_triggers: 3  # Maximum per session
+    cooldown_period: "1 hour"
+    dependency_checks: true
+```
+
+## Activation Trigger Types
+
+### 1. Threshold Triggers
+Monitor system metrics and activate when limits are approached:
+- Memory file capacity (entries/size)
+- Feature count in active directory
+- Validation score drops
+- Error accumulation
+
+### 2. State Change Triggers  
+React to filesystem or system state changes:
+- File/directory moves
+- Git status changes
+- Feature lifecycle transitions
+- Configuration updates
+
+### 3. Pattern Triggers
+Detect behavioral patterns that indicate need for action:
+- Documentation drift (Learning #24)
+- Trust-but-verify failures
+- Workflow substitution patterns
+- Quality gate bypassing
+
+### 4. Time-Based Triggers
+Schedule regular maintenance and checks:
+- Daily system validation
+- Weekly memory rotation
+- Monthly pattern analysis
+- Session closure reminders
+
+## Check Methods
+
+### entry_count_analysis
+```yaml
+implementation:
+  - Read target memory file
+  - Parse entry count from header
+  - Compare against threshold
+  - Calculate percentage utilization
+```
+
+### filesystem_diff_analysis  
+```yaml
+implementation:
+  - Compare current filesystem state
+  - Detect moves between directories
+  - Identify new/deleted files
+  - Match against trigger patterns
+```
+
+### pattern_recognition
+```yaml
+implementation:
+  - Load core-learnings.md patterns
+  - Scan recent project-memory.md entries
+  - Apply pattern matching algorithms
+  - Calculate confidence score
+```
+
+### timestamp_comparison
+```yaml
+implementation:
+  - Read last execution timestamps
+  - Calculate time differences
+  - Compare against trigger intervals
+  - Account for system downtime
+```
+
+## Orchestrator Integration
+
+### Step 11 Enhancement: Dynamic Menu with Triggers
+```yaml
+# Addition to orchestrator.md Step 11
+trigger_aware_menu_generation:
+  process:
+    1. Load all task activation_triggers
+    2. Execute trigger check_methods
+    3. Sort by priority and confidence
+    4. Generate contextual menu options
+    5. Include trigger reasoning in display
+    
+  example_output: |
+    **SYSTEM RECOMMENDATIONS** (Trigger-Based):
+    🚨 **1. Rotate Project Memory** - Memory at 93% capacity (28/30 entries)
+    ⚠️  **2. Validate System Integrity** - Documentation drift pattern detected
+    📊 **3. Update Feature Registry** - 2 features moved to completed/ today
+    
+    **STANDARD OPTIONS**:
+    4. Design new feature
+    5. Implement existing feature
+    ...
+```
+
+## Example Implementation: Memory Rotation Task
+
+```yaml
+# In framework/tasks/memory/rotate-project-memory.md
+activation_triggers:
+  version: "1.0.0"
+  priority: "high"
+  confidence_threshold: 95
+  
+  threshold_triggers:
+    - name: "memory_approaching_capacity"
+      condition: "project-memory.md > 25/30 entries"
+      description: "Memory utilization exceeding 83%"
+      check_method: "entry_count_analysis"
+      auto_suggest: true
+      
+    - name: "memory_at_capacity"  
+      condition: "project-memory.md >= 30/30 entries"
+      description: "Memory at maximum capacity"
+      check_method: "entry_count_analysis"
+      auto_suggest: true
+      severity: "critical"
+      
+  pattern_triggers:
+    - name: "high_activity_session"
+      condition: "3+ entries added in single session"
+      description: "Unusually high development velocity"
+      check_method: "session_activity_analysis"
+      auto_suggest: false
+      user_confirm: true
+      
+  orchestrator_integration:
+    menu_priority: 10  # Highest priority
+    context_aware: true
+    confirmation_required: false  # High confidence triggers
+    
+  execution_controls:
+    max_auto_triggers: 1
+    cooldown_period: "4 hours"
+    dependency_checks: false  # Memory rotation is always safe
+```
+
+## Example Implementation: System Validation Task
+
+```yaml
+# In framework/tasks/validation/validate-system-integrity.md
+activation_triggers:
+  version: "1.0.0"
+  priority: "medium"
+  confidence_threshold: 80
+  
+  state_change_triggers:
+    - name: "feature_lifecycle_changes"
+      condition: "files moved between active/completed directories"
+      description: "Feature status changes requiring index updates"
+      check_method: "filesystem_diff_analysis"
+      auto_suggest: true
+      
+  pattern_triggers:
+    - name: "documentation_drift_detected"
+      condition: "INDEX.md updates without corresponding file moves"
+      description: "Documentation-filesystem synchronization issues"
+      check_method: "documentation_drift_analysis"
+      auto_suggest: true
+      severity: "high"
+      
+  time_based_triggers:
+    - name: "daily_integrity_check"
+      condition: "24 hours since last validation"
+      description: "Regular system health verification"
+      check_method: "timestamp_comparison"
+      auto_suggest: false
+      
+  orchestrator_integration:
+    menu_priority: 7
+    context_aware: true
+    confirmation_required: true
+    
+  execution_controls:
+    max_auto_triggers: 2
+    cooldown_period: "2 hours"
+    dependency_checks: true
+```
+
+## Implementation Strategy
+
+### Phase 1: Core Framework
+1. Add activation_triggers template to all critical tasks
+2. Implement basic trigger checking in orchestrator
+3. Test with memory rotation and system validation
+
+### Phase 2: Intelligence Enhancement  
+1. Add pattern recognition algorithms
+2. Implement confidence scoring
+3. Create trigger history tracking
+
+### Phase 3: Full Integration
+1. Dynamic menu generation
+2. Auto-suggestion system
+3. Trigger learning and adaptation
+
+## Quality Gates
+
+### PASS Criteria
+- All critical tasks have activation_triggers defined
+- Trigger checks execute successfully
+- Orchestrator menu shows contextual recommendations  
+- False positive rate < 20%
+
+### CONCERNS Criteria
+- Some tasks missing trigger definitions
+- Trigger confidence scores inconsistent
+- Menu occasionally shows irrelevant suggestions
+- False positive rate 20-40%
+
+### FAIL Criteria
+- No trigger framework implementation
+- Trigger checks fail or error
+- Menu generation broken
+- False positive rate > 40%
+
+## Success Metrics
+- Reduced manual task discovery time by 60%
+- Increased proactive maintenance execution by 80%  
+- System integrity issues caught 90% faster
+- User satisfaction with contextual recommendations > 85%

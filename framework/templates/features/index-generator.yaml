@@ -1,0 +1,148 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.448531Z
+migration_path: auto-generated
+---
+
+# Feature Index Generator Configuration
+# This YAML drives the generation of feature-index.md files
+
+generator:
+  version: "1.0.0"
+  output_file: "feature-index.md"
+  template_engine: "yaml-to-markdown"
+
+markdown_template: |
+  # Feature Index: {metadata.name}
+  
+  **ID**: {metadata.id}  
+  **Status**: {metadata.status}  
+  **Priority**: {metadata.priority}  
+  **Updated**: {metadata.updated}  
+  **Owner**: {metadata.owner}  
+  **Tags**: {metadata.tags}
+  
+  ## Summary
+  
+  **Description**: {summary.description}
+  
+  **Problem**: {summary.problem}
+  
+  **Solution**: {summary.solution}
+  
+  **Value**: {summary.value}
+  
+  ## Progress
+  
+  ### Overall: {metrics.progress}%
+  ▓▓▓▓▓▓▓▓▓▓░░░░░░░░░░ {metrics.progress}%
+  
+  ### Quality Gates: {metrics.quality_gates.passed}/{metrics.quality_gates.total}
+  - Blockers: {metrics.blockers}
+  - Risks: {metrics.risks}
+  
+  ## Files
+  
+  ### Required Files
+  | File | Purpose | Status |
+  |------|---------|--------|
+  {#files.required}
+  | {name} | {purpose} | {status} |
+  {/files.required}
+  
+  ### Custom Files
+  {#files.custom}
+  - {name}: {purpose}
+  {/files.custom}
+  
+  ## Dependencies
+  
+  ### Features
+  {#dependencies.features}
+  - {.}
+  {/dependencies.features}
+  
+  ### Agents Required
+  {#dependencies.agents}
+  - {.}
+  {/dependencies.agents}
+  
+  ### Workflows Used
+  {#dependencies.workflows}
+  - {.}
+  {/dependencies.workflows}
+  
+  ## Timeline
+  
+  | Phase | Status | Start | End |
+  |-------|--------|-------|-----|
+  {#timeline.phases}
+  | {name} | {status} | {start} | {end} |
+  {/timeline.phases}
+  
+  ## Quick Links
+  
+  ### Documentation
+  {#quicklinks.documentation}
+  - [{name}]({url})
+  {/quicklinks.documentation}
+  
+  ### References
+  {#quicklinks.references}
+  - [{name}]({url})
+  {/quicklinks.references}
+  
+  ## Current State
+  
+  **Focus**: {notes.current_focus}
+  
+  ### Next Steps
+  {#notes.next_steps}
+  - {.}
+  {/notes.next_steps}
+  
+  ### Key Decisions
+  {#notes.decisions}
+  - {.}
+  {/notes.decisions}
+  
+  ### Lessons Learned
+  {#notes.lessons_learned}
+  - {.}
+  {/notes.lessons_learned}
+  
+  ---
+  *Auto-generated from feature-index.yaml*
+
+automation:
+  auto_update: true
+  update_triggers:
+    - "file_change"
+    - "progress_update"
+    - "status_change"
+  
+  file_detection:
+    scan_patterns:
+      - "*.md"
+      - "*.yaml"
+      - "*.txt"
+    exclude_patterns:
+      - "*.bak"
+      - "*.tmp"
+  
+  status_mapping:
+    file_exists: "✅"
+    file_missing: "❌"
+    file_outdated: "⚠️"
+
+loading:
+  orchestrator_integration:
+    load_on_activation: true
+    cache_duration: "session"
+    refresh_trigger: "feature_switch"
+  
+  batch_loading:
+    enabled: true
+    parallel: true
+    max_concurrent: 5

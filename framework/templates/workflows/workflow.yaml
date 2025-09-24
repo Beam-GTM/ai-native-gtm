@@ -1,0 +1,784 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.462609Z
+migration_path: auto-generated
+---
+
+<!-- version: b2c3d4e5-f678-90ab-cdef-234567890abc -->
+<!-- last-updated: 2025-01-20T14:30:00Z -->
+<!-- document-type: structure-definition -->
+
+metadata:
+  name: "workflow-blueprint"
+  type: "structure-definition"
+  scope: "universal"
+  purpose: "Template for creating sophisticated multi-agent workflows with quality gates and engineering rules integration"
+  version: "1.0.0"
+
+# 🔴 TEMPLATE DIRECTIVE ENFORCEMENT: All workflows generated from this template will include enforcement
+directive_enforcement_template: |
+  <!-- 🔴 DIRECTIVE #1 ENFORCEMENT: ALWAYS READ COMPLETE FILES -->
+  <!-- CRITICAL: This workflow reads multiple files - never use limit parameter -->
+  <!-- This directive OVERRIDES token conservation - read files completely -->
+  <!-- VIOLATION = Missing critical workflow steps and validation processes -->
+
+  ## 🔴 PRE-WORKFLOW DIRECTIVE CHECK + BEHAVIORAL CORRECTION
+  **MANDATORY**: Before executing this workflow, verify:
+  - [ ] All file reads will use complete files (no limit parameter)
+  - [ ] Agent file reads will capture complete operational instructions
+  - [ ] Task file reads will be comprehensive for proper execution
+  - [ ] Context file reads will provide complete workflow state
+  
+  ## 🧠 BEHAVIORAL CORRECTION PROTOCOL (Mental Model Framework)
+  **MANDATORY FIRST**: Apply behavioral pattern prevention before workflow execution:
+  {{load_behavioral_patterns: workflow_patterns}}
+  <!-- Loads: execution_documentation_paradox, false_completion_syndrome, basic_operations_failure -->
+  Nexus_patterns_integrated:
+    - "multi-agent-orchestration"
+    - "quality-gate-integration"
+    - "conditional-routing"
+    - "context-handoffs"
+    - "mermaid-flow-diagrams"
+    - "decision-guidance"
+    - "artifact-management"
+    - "optional-step-handling"
+  nexus_enhancements:
+    - "hierarchical-engineering-rules"
+    - "dynamic-rule-loading"
+    - "cross-repository-coordination"
+    - "memory-system-integration"
+    - "structure-compliance-validation"
+    - "ai-optimized-execution"
+
+workflow_structure:
+  # SMART DEPENDENCY BLOCK (Auto-Generated from Workflow Content)
+  dependency_block:
+    description: "Auto-generated dependency block based on workflow analysis"
+    format: |
+      <!-- dependencies
+      upstream:
+        # AUTO-DETECTED Agents (from sequence steps):
+        {{#each agents_in_sequence}}
+        - operations/agents/{{category}}/{{agent_id}}.md  # Step: {{step_name}}
+        {{/each}}
+        
+        # AUTO-DETECTED Tasks (from uses/executes):
+        {{#each tasks_executed}}
+        - framework/tasks/{{task_id}}.md  # {{usage_context}}
+        {{/each}}
+        
+        # AUTO-DETECTED Templates (from creates/uses):
+        {{#each templates_used}}
+        - framework/templates/{{template_path}}  # Creates: {{creates_what}}
+        {{/each}}
+        
+        # AUTO-DETECTED Engineering Rules:
+        {{#each engineering_rules}}
+        - framework/engineeringrules/{{rule_path}}  # Applied in: {{application_context}}
+        {{/each}}
+        
+      downstream:
+        # AUTO-DETECTED callers:
+        {{#each entities_calling_this}}
+        - {{entity_path}}  # {{how_it_calls}}
+        {{/each}}
+        
+      validated: {{current_timestamp}}
+      health: {{health_percentage}}%
+      generator: framework/templates/workflow.yaml
+      -->
+      
+    auto_detection_patterns:
+      # Extract UPSTREAM dependencies from workflow content
+      upstream_extraction:
+        agents:
+          patterns:
+            - 'agent:\s*([\w-]+)'  # sequence step agent
+            - 'agent:\s*([\w/-]+\.md)'  # direct file reference
+            - '\*agent ([\w-]+)'  # transformation command
+          context: "sequence step, handoff, or transformation"
+          
+        tasks:
+          patterns:
+            - 'uses:\s*([\w/-]+\.md)'
+            - 'task:\s*([\w/-]+\.md)'
+            - 'executes:\s*([\w/-]+\.md)'
+            - 'integrated_task[s]?:\s*([\w/-]+\.md)'
+          context: "executed during workflow"
+          
+        templates:
+          patterns:
+            - 'uses:\s*framework/templates/([\w/-]+\.yaml)'
+            - 'creates:\s*(.+using.+template)'
+            - 'template:\s*([\w/-]+\.yaml)'
+          context: "document/artifact generation"
+          
+        engineering_rules:
+          patterns:
+            - 'engineering_rules[_\s]*integration[^:]*:\s*([\w/-]+\.md)'
+            - 'framework/engineeringrules/([\w/-]+\.md)'
+          context: "rule compliance and validation"
+          
+      # Find DOWNSTREAM dependencies (who calls this workflow)
+      downstream_detection:
+        search_patterns:
+          - 'workflow[s]?:\s*{{workflow_id}}'
+          - 'workflow[s]?:\s*{{workflow_name}}'
+          - '\*workflow {{workflow_id}}'
+          - 'execute[s]?.*{{workflow_name}}'
+        search_locations:
+          - 'operations/agents/**/*.md'
+          - 'framework/tasks/**/*.md'
+          - 'operations/workflows/**/*.md'
+    
+    requirements:
+      - "MUST be at top of file before metadata"
+      - "Auto-generated from sequence analysis"
+      - "Agents extracted from sequence steps"
+      - "Tasks extracted from uses/executes patterns"
+      - "Reverse dependencies detected via search"
+      
+  metadata_section:
+    workflow:
+      id: "{{workflow-kebab-case-name}}"
+      name: "{{Workflow Display Name}}"
+      description: >-
+        {{Multi-line workflow description explaining purpose, scope, and outcomes.
+        Should clearly indicate what type of project this workflow serves.}}
+      type: "{{greenfield|brownfield|specialized|meta}}"
+      project_types:
+        - "{{project-type-1}}"
+        - "{{project-type-2}}"
+        - "{{project-type-n}}"
+      complexity: "{{low|medium|high}}"
+      target_system: "{{fullstack|service|ui|mobile|data|ai|security|meta}}"
+
+    context:
+      situation: "{{Description of when to use this workflow}}"
+      assumptions:
+        - "{{Assumption about project state}}"
+        - "{{Assumption about resources}}"
+        - "{{Assumption about team capabilities}}"
+      success_criteria:
+        - "{{Measurable outcome 1}}"
+        - "{{Measurable outcome 2}}"
+        - "{{Measurable outcome n}}"
+
+  # WORKFLOW CONTEXT ORCHESTRATION (Based on context-map.md)
+  workflow_context_orchestration:
+    # Workflow Initialization Context Setup
+    workflow_startup_context:
+      context_initialization:
+        location: ".memory/features/{feature-name}/active-context.md"
+        content: |
+          ## Workflow Started: {workflow_name} - {timestamp}
+          **Workflow Type**: {workflow_type}
+          **Target System**: {target_system}
+          **Complexity**: {complexity_level}
+          **Success Criteria**: {success_criteria_list}
+          **Agents Involved**: {agent_list}
+          **Engineering Rules**: {applicable_rules}
+          **Expected Duration**: AI-optimized execution
+
+      cross_repository_setup:
+        condition: "if workflow affects multiple repositories"
+        locations:
+          - ".memory/features/{feature-name}/active-context.md"
+          - "{repo1}/.memory/features/{feature-name}/active-context.md"
+          - "{repo2}/.memory/features/{feature-name}/active-context.md"
+        content: "Cross-repository coordination initialization"
+
+    # Context Management Per Workflow Step
+    step_context_management:
+      pre_step_context_loading:
+        - location: ".memory/features/{feature-name}/active-context.md"
+          purpose: "Understand current workflow state and decisions"
+        - location: ".memory/features/{feature-name}/progress.md"
+          purpose: "Review completed steps and dependencies"
+        - location: "{applicable_engineering_rules}"
+          purpose: "Ensure rule compliance for upcoming step"
+
+      during_step_context_updates:
+        - trigger: "step_progress_milestones"
+          location: ".memory/features/{feature-name}/active-context.md"
+          content: "Step progress, decisions made, blockers encountered"
+        - trigger: "quality_gate_decisions"
+          location: ".memory/features/{feature-name}/test-results.md"
+          content: "Gate status, evidence collected, compliance assessment"
+
+      post_step_context_preparation:
+        - location: ".memory/features/{feature-name}/progress.md"
+          content: "Step completion status, deliverables, next step readiness"
+        - location: ".memory/features/{feature-name}/active-context.md"
+          content: "Context preparation for next step/agent"
+
+  engineering_rules_integration:
+    rules_loading_logic:
+      primary_rules:
+        - "memory-rules.md"
+        - "system-design-rules.md"
+        - "coding-rules.md"
+        - "testing-rules.md"
+        - "documentation-rules.md"
+      contextual_rules:
+        - "{{workflow-specific-rule-1}}.md"
+        - "{{workflow-specific-rule-2}}.md"
+      repository_context_detection:
+        detect_from:
+          - ".engineeringrules/"
+          - "package.json"
+          - "requirements.txt"
+          - "Cargo.toml"
+          - "pom.xml"
+        load_repository_rules: "auto"
+
+    rule_application_points:
+      - step: "{{step-name}}"
+        applicable_rules:
+          - "{{rule-category-1}}"
+          - "{{rule-category-2}}"
+        compliance_check: "integrated_into_quality_gate"
+        validation_method: "PASS/CONCERNS/FAIL/WAIVED"
+
+  sequence_definition:
+    - step: "{{step-identifier}}"
+      agent: "{{agent-name}}"
+      action: "{{clear-action-description}}"
+      creates: "{{output-artifact-name}}"
+      requires:
+        - "{{prerequisite-artifact-1}}"
+        - "{{prerequisite-artifact-2}}"
+      uses: "{{task-name-or-template}}"
+      condition: "{{when-to-execute-this-step}}"
+      optional_steps:
+        - "{{optional-sub-step-1}}"
+        - "{{optional-sub-step-2}}"
+      notes: |
+        {{Implementation guidance, tips, and context.
+        Include any specific instructions for the agent.
+        Reference engineering rules where applicable.}}
+      
+      # 🧠 Behavioral Correction Checkpoint (Mental Model Framework)
+      behavioral_validation:
+        pattern_validation: "{{load_behavioral_pattern_validation: workflow_patterns}}"
+        <!-- Loads post-step validation for workflow behavioral patterns -->
+
+    - step: "{{another-step}}"
+      agent: "{{different-agent}}"
+      action: "{{action-description}}"
+      creates: "{{output-artifacts}}"
+      requires: ["{{dependencies}}"]
+      condition: "{{conditional-execution}}"
+      notes: |
+        {{Step-specific guidance}}
+
+  quality_gates:
+    - gate: "{{gate-identifier}}"
+      trigger: "after {{step-name}}"
+      criteria:
+        - "{{validation-criterion-1}}"
+        - "{{validation-criterion-2}}"
+        - "{{validation-criterion-n}}"
+      validation_method: "PASS/CONCERNS/FAIL/WAIVED framework"
+      required_evidence:
+        - "{{evidence-artifact-1}}"
+        - "{{evidence-artifact-2}}"
+      engineering_rules_compliance:
+        rules_to_validate:
+          - "{{applicable-rule-1}}"
+          - "{{applicable-rule-2}}"
+        compliance_assessment: "automated_with_manual_review"
+        failure_handling: "return_to_previous_step_with_guidance"
+      learning_capture: "execute framework/tasks/memory/capture-primitive-learning.md on FAIL/CONCERNS"
+
+    - gate: "{{another-gate}}"
+      trigger: "{{trigger-condition}}"
+      criteria: ["{{criteria-list}}"]
+      validation_method: "{{validation-approach}}"
+      required_evidence: ["{{evidence-list}}"]
+
+  decision_points:
+    - decision: "{{decision-identifier}}"
+      trigger: "{{when-to-make-decision}}"
+      decision_criteria:
+        - "{{criterion-1}}"
+        - "{{criterion-2}}"
+      options:
+        "{{option-1-name}}":
+          condition: "{{when-this-option-applies}}"
+          description: "{{what-this-path-does}}"
+          next_steps:
+            - "{{subsequent-step-1}}"
+            - "{{subsequent-step-2}}"
+          agents:
+            - "{{required-agent-1}}"
+            - "{{required-agent-2}}"
+          complexity: "{{reduced|moderate|full}}"
+          risk_level: "{{low|medium|high}}"
+
+        "{{option-2-name}}":
+          condition: "{{when-this-option-applies}}"
+          description: "{{what-this-path-does}}"
+          next_steps: ["{{steps}}"]
+          agents: ["{{agents}}"]
+          complexity: "{{complexity-level}}"
+          risk_level: "{{risk-level}}"
+
+      selection_guidance: |
+        {{Guidance for choosing between options.
+        Include decision criteria, risk factors, and recommendations.}}
+
+  # VALIDATION ORCHESTRATION (Nexus-Style Quality Gates)
+  validation_orchestration:
+    workflow_quality_gates:
+      - step: "requirements_validation"
+        agent: "product-owner" 
+        uses: "product-owner-master-checklist"
+        trigger: "after_requirements_phase"
+        
+      - step: "architecture_validation"
+        agent: "architect"
+        uses: "architect-checklist" 
+        trigger: "after_architecture_phase"
+        
+      - step: "story_validation"
+        agent: "scrum-master"
+        uses: "story-draft-checklist"
+        trigger: "before_development_phase"
+        
+      - step: "completion_validation"
+        agent: "developer"
+        uses: "story-definition-of-done-checklist"
+        trigger: "after_implementation"
+
+    validation_handoff_integration:
+      handoff_with_validation: |
+        **🔍 VALIDATION STATUS HANDOFF:**
+        - **Last Validation**: {checklist-used} - {PASS/CONCERNS/FAIL/WAIVED}
+        - **Quality Evidence**: {evidence-location}
+        - **Critical Issues**: {issues-identified}
+        - **Next Validation Required**: {next-checklist-needed}
+
+  # ENHANCED HANDOFF PROMPTS WITH EXPLICIT CONTEXT LOCATIONS
+  handoff_prompts:
+    "{{transition-name}}":
+      from_agent: "{{source-agent}}"
+      to_agent: "{{target-agent}}"
+      context_transfer_protocol:
+        pre_handoff_context_preparation:
+          - action: "consolidate_current_context"
+            location: ".memory/features/{feature-name}/active-context.md"
+            content: "Complete current agent context, decisions, and state"
+          - action: "prepare_next_agent_context"
+            location: ".memory/features/{feature-name}/active-context.md"
+            content: "Specific context and objectives for next agent"
+
+        handoff_message_with_context_locations:
+          format: |
+            **🔄 WORKFLOW AGENT HANDOFF: {{source-agent}} → {{target-agent}}**
+
+            **📍 EXPLICIT CONTEXT LOCATIONS FOR {{target-agent}}:**
+            - **Workflow State**: .memory/features/{feature-name}/active-context.md
+            - **Step Progress**: .memory/features/{feature-name}/progress.md
+            - **Quality Status**: .memory/features/{feature-name}/test-results.md
+            - **Repository Context**: {current-repo}/.memory/repository-context.md
+            - **Engineering Rules**: .engineeringrules/context-map.md + {applicable-rules}
+
+            **🎯 YOUR WORKFLOW CONTEXT:**
+            - **Workflow**: {{workflow-name}} at step {{current-step}}
+            - **Your Role**: {{agent-specific-objective}}
+            - **Previous Results**: {{previous-agent-deliverables}}
+            - **Your Deliverables**: {{expected-outputs}}
+            - **Next Quality Gate**: {{next-quality-gate}}
+
+            **⚡ REQUIRED ACTIONS:**
+            1. **Load Context**: Review all files at locations above
+            2. **Execute Step**: {{step-name}} per workflow definition
+            3. **Update Context**: Maintain progress in active-context.md
+            4. **Quality Gates**: Apply validation per {{target-agent}} responsibilities
+            5. **Prepare Handoff**: Set context for next workflow step
+
+            **✅ CONTEXT VALIDATION CHECKLIST:**
+            - [ ] All context locations accessible and current
+            - [ ] Workflow state understood and validated
+            - [ ] Previous step results reviewed and accepted
+            - [ ] Engineering rules loaded and compliance confirmed
+            - [ ] Ready to execute {{target-agent}} workflow responsibilities
+
+    "{{another-transition}}":
+      from_agent: "{{agent-1}}"
+      to_agent: "{{agent-2}}"
+      context_transfer_protocol:
+        pre_handoff_context_preparation:
+          - action: "finalize_agent_context"
+            location: ".memory/features/{feature-name}/active-context.md"
+          - action: "setup_next_agent_context"
+            location: ".memory/features/{feature-name}/active-context.md"
+        handoff_message_with_context_locations:
+          format: |
+            **🔄 WORKFLOW TRANSITION: {{agent-1}} → {{agent-2}}**
+
+            **📍 CONTEXT LOCATIONS:**
+            - **Active Context**: .memory/features/{feature-name}/active-context.md
+            - **Progress Tracking**: .memory/features/{feature-name}/progress.md
+            - **Quality Gates**: .memory/features/{feature-name}/test-results.md
+
+            **🎯 HANDOFF SUMMARY:**
+            - **Completed**: {{completed-work}}
+            - **Next Phase**: {{next-phase-description}}
+            - **Context Ready**: All locations updated for {{agent-2}}
+
+  conditional_routing:
+    complexity_assessment:
+      simple_path:
+        condition: "{{when-simple-approach-sufficient}}"
+        description: "{{simple-path-description}}"
+        agents: ["{{minimal-agent-set}}"]
+        quality_gates: ["{{essential-gates-only}}"]
+
+      standard_path:
+        condition: "{{when-standard-approach-needed}}"
+        description: "{{standard-path-description}}"
+        agents: ["{{full-agent-set}}"]
+        quality_gates: ["{{all-standard-gates}}"]
+
+      complex_path:
+        condition: "{{when-complex-approach-required}}"
+        description: "{{complex-path-description}}"
+        agents: ["{{extended-agent-set}}"]
+        quality_gates: ["{{comprehensive-gates}}"]
+        additional_steps: ["{{extra-validation-steps}}"]
+
+  flow_diagram: |
+    ```mermaid
+    graph TD
+        A[Start: {{Workflow-Name}}] --> B[{{first-step}}]
+        B --> C{{{first-decision}}}
+        
+        C -->|{{option-1}}| D[{{path-1-step}}]
+        C -->|{{option-2}}| E[{{path-2-step}}]
+        C -->|{{option-3}}| F[{{path-3-step}}]
+        
+        D --> G[{{quality-gate-1}}]
+        E --> G
+        F --> G
+        
+        G --> H{{{quality-check}}}
+        H -->|PASS| I[{{next-step}}]
+        H -->|FAIL| J[{{remediation-step}}]
+        J --> G
+        
+        I --> K{{{another-decision}}}
+        K -->|{{condition}}| L[{{final-step}}]
+        K -->|{{other-condition}}| M[{{alternative-step}}]
+        
+        L --> N[Complete]
+        M --> N
+        
+        style N fill:#90EE90
+        style A fill:#FFE4B5
+        style G fill:#ADD8E6
+        style I fill:#ADD8E6
+        style H fill:#F0E68C
+    ```
+
+  resource_management:
+    required_inputs:
+      - "{{input-resource-1}}": "{{description-of-what-is-needed}}"
+      - "{{input-resource-2}}": "{{description-of-what-is-needed}}"
+
+    generated_artifacts:
+      - "{{artifact-1}}": "{{description-of-what-is-created}}"
+      - "{{artifact-2}}": "{{description-of-what-is-created}}"
+
+    dependency_chain:
+      - "{{dependency-rule-1}}"
+      - "{{dependency-rule-2}}"
+      - "{{dependency-rule-n}}"
+
+  orchestration_engine:
+    execution_mode: "{{sequential_with_validation|interactive_with_elicitation|automatic}}"
+
+    automation_rules:
+      - "Automatically load next agent when current step completes successfully"
+      - "Pause workflow at quality gates for validation"
+      - "Preserve all context and decisions in structured handoff prompts"
+      - "Enable workflow rollback to any previous quality gate"
+      - "Apply engineering rules validation at designated checkpoints"
+      - "Update memory system with workflow progress and decisions"
+      - "Enable advanced elicitation for deep system integration discovery"
+
+    user_interaction_points:
+      - quality_gate_decisions: "User must approve PASS/CONCERNS/FAIL/WAIVED at each gate"
+      - decision_point_selections: "User chooses path at complexity and routing decisions"
+      - engineering_rules_waivers: "User can waive specific rule violations with justification"
+      - artifact_approvals: "User confirms completion and quality of major deliverables"
+      - advanced_elicitation_sessions: "User engages elicitation methods for deeper insight discovery"
+
+    interaction_modes:
+      planning:
+        description: "Standard workflow execution with defined steps"
+        user_input: "Basic requirements and decisions at defined points"
+        ai_assistance: "Guided execution following workflow sequence"
+        
+      interactive:
+        description: "Enhanced workflow with advanced elicitation methods"
+        user_input: "Deep exploration through structured elicitation techniques"
+        ai_assistance: "Multi-perspective analysis and system integration discovery"
+        elicitation_integration:
+          trigger_points:
+            - "After initial artifact creation"
+            - "Before major decisions"
+            - "During system integration planning"
+            - "At complexity assessment points"
+          method_categories:
+            - "Core Reflective Methods"
+            - "Structural Analysis Methods" 
+            - "Risk and Challenge Methods"
+            - "Creative Exploration Methods"
+            - "Multi-Persona Collaboration Methods"
+            - "Advanced 2025 Techniques"
+          
+      automatic:
+        description: "AI-driven execution with minimal user intervention"
+        user_input: "Initial requirements only"
+        ai_assistance: "Full autonomous execution with periodic checkpoints"
+
+    error_handling:
+      - agent_failure: "Retry with same agent or escalate to orchestrator"
+      - quality_gate_failure: "Return to previous step with specific guidance and rule references + capture learning"
+      - engineering_rules_violation: "Provide remediation guidance based on violated rules + document pattern"
+      - user_rejection: "Provide alternative paths or abort workflow with state preservation"
+      - resource_unavailability: "Pause workflow until resources available, preserve context"
+      - learning_opportunity: "Execute capture-primitive-learning.md when patterns detected"
+
+  # ADVANCED ELICITATION FRAMEWORK (Interactive Mode Enhancement)
+  advanced_elicitation_system:
+    purpose: "Address the critical gap where humans and AI miss important system integration points during feature creation"
+    
+    core_problem_solving:
+      target_issues:
+        - "Missing system integration dependencies"
+        - "Overlooked existing system connections" 
+        - "Incomplete understanding of system impact"
+        - "Insufficient exploration of edge cases"
+        - "Lack of multi-perspective analysis"
+    
+    elicitation_methods:
+      core_reflective_methods:
+        - name: "Expand or Contract for Audience"
+          purpose: "Adjust detail level and complexity for specific stakeholders"
+        - name: "Explain Reasoning (CoT Step-by-Step)"
+          purpose: "Reveal underlying assumptions and decision processes"
+        - name: "Critique and Refine" 
+          purpose: "Identify flaws and improvement opportunities from domain expertise"
+          
+      structural_analysis_methods:
+        - name: "Analyze Logical Flow and Dependencies"
+          purpose: "Examine structure for consistency and validate dependencies"
+        - name: "Assess Alignment with Overall Goals"
+          purpose: "Evaluate contribution to objectives and identify misalignments"
+          
+      risk_and_challenge_methods:
+        - name: "Identify Potential Risks and Unforeseen Issues"
+          purpose: "Brainstorm risks and anticipate unintended consequences"
+        - name: "Challenge from Critical Perspective"
+          purpose: "Apply critical analysis and YAGNI principles"
+          
+      creative_exploration_methods:
+        - name: "Tree of Thoughts Deep Dive"
+          purpose: "Explore multiple reasoning paths simultaneously"
+        - name: "Hindsight is 20/20 Reflection"
+          purpose: "Extract actionable insights from retrospective scenarios"
+          
+      multi_persona_collaboration_methods:
+        - name: "Agile Team Perspective Shift"
+          purpose: "Rotate through different team member viewpoints"
+        - name: "Stakeholder Round Table"
+          purpose: "Synthesize insights from multiple persona perspectives"
+        - name: "Meta-Prompting Analysis"
+          purpose: "Optimize the elicitation process itself"
+          
+      advanced_2025_techniques:
+        - name: "Self-Consistency Validation"
+          purpose: "Compare consistency across different reasoning approaches"
+        - name: "ReWOO (Reasoning Without Observation)"
+          purpose: "Optimize efficiency through pure parametric reasoning"
+        - name: "Persona-Pattern Hybrid"
+          purpose: "Combine role expertise with elicitation patterns"
+        - name: "Emergent Collaboration Discovery"
+          purpose: "Capture serendipitous insights from multi-agent thinking"
+    
+    elicitation_execution_framework:
+      intelligent_method_selection:
+        context_analysis:
+          - "Content Type: Technical specs, requirements, architecture"
+          - "Complexity Level: Simple, moderate, complex"
+          - "Stakeholder Needs: Who will use this information"
+          - "Risk Level: High-impact vs routine decisions"
+          - "Creative Potential: Innovation opportunities"
+          
+        selection_strategy:
+          always_include_core: "3-4 core methods for foundational analysis"
+          context_specific: "4-5 methods tailored to content type"
+          proceed_option: "Always include 'Proceed / No Further Actions'"
+          
+      presentation_format: |
+        **Advanced Elicitation Options**
+        Choose a number (0-8) or 9 to proceed:
+        
+        0. [Method Name]
+        1. [Method Name]
+        2. [Method Name]
+        3. [Method Name]
+        4. [Method Name]
+        5. [Method Name]
+        6. [Method Name]
+        7. [Method Name]
+        8. [Method Name]
+        9. Proceed / No Further Actions
+        
+      execution_process:
+        - "Retrieve specific elicitation method"
+        - "Apply context from current role's perspective"
+        - "Provide actionable insights relevant to content"
+        - "Re-offer choice until user proceeds or gives direct feedback"
+
+  adaptive_behavior:
+    context_awareness:
+      - "Workflow adapts based on initial analysis results"
+      - "Agent selection changes based on complexity assessment"
+      - "Quality gate rigor adjusts based on risk level and project criticality"
+      - "Engineering rules application scales with project type and requirements"
+      - "Elicitation method selection adapts to content type and complexity"
+
+    learning_integration:
+      - "Previous workflow outcomes influence current execution paths"
+      - "Failed quality gates create additional validation steps for similar future workflows"
+      - "Successful patterns are reinforced and recommended for similar project types"
+      - "Engineering rule violations are tracked to improve future compliance"
+      - "Elicitation session insights improve system integration discovery"
+
+  # WORKFLOW STATE PERSISTENCE & MANAGEMENT
+  workflow_state_management:
+    state_persistence_points:
+      - trigger: "workflow_initialization"
+        location: ".memory/features/{feature-name}/active-context.md"
+        content: "Workflow startup context, agents, success criteria"
+      - trigger: "quality_gate_passage"
+        locations:
+          - ".memory/features/{feature-name}/progress.md"
+          - ".memory/features/{feature-name}/test-results.md"
+        content: "Gate passage results, validation status, next phase readiness"
+      - trigger: "agent_handoff_completion"
+        location: ".memory/features/{feature-name}/active-context.md"
+        content: "Handoff results, context transfer validation, next agent readiness"
+      - trigger: "workflow_completion"
+        locations:
+          - ".memory/features/{feature-name}/progress.md"
+          - ".memory/features/{feature-name}/active-context.md"
+          - ".memory/key-learnings.md"
+        content: "Workflow completion summary, lessons learned, recommendations"
+        learning_capture: "Prompt for capture-primitive-learning.md execution"
+      - trigger: "workflow_pause_or_interruption"
+        location: ".memory/features/{feature-name}/active-context.md"
+        content: "Complete state preservation for workflow resumption"
+
+    workflow_resumption_context:
+      resumption_protocol:
+        - step: "load_workflow_state"
+          location: ".memory/features/{feature-name}/active-context.md"
+          validation: "Complete workflow state and context available"
+        - step: "validate_context_consistency"
+          locations: "All workflow-related context files"
+          validation: "No context conflicts or missing information"
+        - step: "resume_at_appropriate_step"
+          method: "Based on progress.md and active-context.md analysis"
+          handoff: "To appropriate agent with full context restoration"
+
+  nexus_integration:
+    memory_context:
+      update_points:
+        - "After each quality gate passage"
+        - "At major decision points"
+        - "Upon workflow completion"
+        - "When engineering rule waivers are granted"
+        - "During agent handoffs"
+        - "At workflow state persistence points"
+      memory_structure:
+        - active_context: "Current workflow state and decisions"
+        - features: "Capabilities being developed or enhanced"
+        - progress: "Milestone completion and quality metrics"
+        - lessons_learned: "Insights for future workflow improvements"
+        - core_learnings: "Aggregated LLM patterns and limitations"
+      
+      memory_management:
+        - trigger: "capture-primitive-learning execution"
+          check: "If learnings.md > 20 entries"
+          action: "Execute aggregate-core-learnings.md task"
+        - trigger: "workflow completion with learnings"
+          check: "Memory usage percentage"
+          action: "Aggregate if > 95% full"
+
+    structure_compliance:
+      validation_points:
+        - "All artifacts follow Nexus document structure patterns"
+        - "Agent definitions comply with .structure/agent.yaml blueprint"
+        - "Task integration follows .structure/task.yaml blueprint"
+        - "Quality gates align with Nexus quality framework"
+        - "Context locations follow context-map.md navigation paths"
+
+    cross_repo_coordination:
+      detection_logic: "Identify when changes affect multiple repositories"
+      coordination_method: "Update relevant repository memory and context files"
+      dependency_tracking: "Maintain cross-repository dependency maps"
+      sync_requirements: "Ensure consistent engineering rule application across repositories"
+      context_synchronization: "Coordinate context updates across repository boundaries"
+
+decision_guidance:
+  when_to_use_this_template:
+    - "Building complex multi-step processes requiring multiple agents"
+    - "Need quality validation at multiple checkpoints"
+    - "Engineering rules compliance is critical"
+    - "Multiple execution paths based on complexity or risk"
+    - "Cross-repository coordination may be required"
+    - "Long-term maintenance and repeatability needed"
+
+  when_not_to_use:
+    - "Simple single-agent tasks (use .tasks/ instead)"
+    - "Ad-hoc or one-time processes"
+    - "Processes with no quality requirements"
+    - "Linear workflows with no decision points"
+
+usage_instructions:
+  workflow_creation:
+    1. "Copy this template to .workflows/{{category}}/{{workflow-name}}.md"
+    2. "Replace all {{template-variables}} with actual values"
+    3. "Customize engineering rules integration for your domain"
+    4. "Create or reference appropriate agent definitions"
+    5. "Test workflow with a pilot project"
+    6. "Refine based on execution results"
+
+  workflow_execution: 1. "Ensure all prerequisite agents are available"
+    2. "Load required engineering rules into context"
+    3. "Initialize workflow with clear success criteria"
+    4. "Execute steps in sequence, respecting quality gates"
+    5. "Document decisions and context at handoff points"
+    6. "Update memory system throughout execution"
+    7. "Conduct retrospective and capture lessons learned"
+
+validation_requirements:
+  template_completeness:
+    - "All {{template-variables}} replaced with actual content"
+    - "Engineering rules integration properly configured"
+    - "Quality gates have clear validation criteria"
+    - "Handoff prompts include necessary context transfer"
+    - "Mermaid diagram accurately reflects workflow logic"
+
+  nexus_compliance:
+    - "Follows Nexus document structure patterns"
+    - "Integrates with existing engineering rules hierarchy"
+    - "Compatible with memory system organization"
+    - "Supports cross-repository coordination requirements"
+    - "AI-optimized with no human time constraints"

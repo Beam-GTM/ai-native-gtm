@@ -1,0 +1,92 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.447421Z
+migration_path: auto-generated
+---
+
+
+# Feature Index Template
+# This template defines the structure for feature-index.md generation
+
+metadata:
+  name: "{feature_name}"
+  id: "{feature_id}"
+  status: "{active|completed|archived}"
+  priority: "{critical|high|medium|low}"
+  created: "{ISO-8601-date}"
+  updated: "{ISO-8601-date}"
+  owner: "{owner_name}"
+  tags: []
+
+summary:
+  description: "{brief_description}"
+  problem: "{problem_statement}"
+  solution: "{solution_approach}"
+  value: "{business_value}"
+
+files:
+  required:
+    - name: "prd.md"
+      purpose: "Product requirements document"
+      status: "{exists|missing}"
+    - name: "active-context.md"
+      purpose: "Current working context"
+      status: "{exists|missing}"
+    - name: "progress.md"
+      purpose: "Progress tracking"
+      status: "{exists|missing}"
+    - name: "quality-gates.md"
+      purpose: "Quality validation"
+      status: "{exists|missing}"
+  
+  optional:
+    - name: "feature-index.md"
+      purpose: "This index file"
+      status: "{exists|missing}"
+  
+  custom: []  # Additional feature-specific files
+
+metrics:
+  progress: 0  # 0-100
+  quality_gates:
+    passed: 0
+    total: 0
+  blockers: 0
+  risks: 0
+
+dependencies:
+  features: []  # Other features this depends on
+  agents: []    # Agents required
+  workflows: [] # Workflows used
+  rules: []     # Engineering rules applied
+
+timeline:
+  phases:
+    - name: "Planning"
+      status: "{pending|in_progress|completed}"
+      start: "{date}"
+      end: "{date}"
+    - name: "Implementation"
+      status: "{pending|in_progress|completed}"
+      start: "{date}"
+      end: "{date}"
+    - name: "Testing"
+      status: "{pending|in_progress|completed}"
+      start: "{date}"
+      end: "{date}"
+    - name: "Deployment"
+      status: "{pending|in_progress|completed}"
+      start: "{date}"
+      end: "{date}"
+
+quicklinks:
+  documentation: []  # Links to related docs
+  references: []     # External references
+  repositories: []   # Code repositories
+
+notes:
+  current_focus: "{what_is_being_worked_on}"
+  next_steps: []
+  decisions: []
+  lessons_learned: []

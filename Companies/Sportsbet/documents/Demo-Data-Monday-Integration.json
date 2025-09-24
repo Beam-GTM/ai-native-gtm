@@ -1,0 +1,209 @@
+{
+  "demo_campaign_data": {
+    "campaign_name": "Spring Racing Carnival 2024",
+    "campaign_id": "SRC2024-001",
+    "created_by": "Sarah Chen - Brand Marketing",
+    "department": "Brand Marketing",
+    "status": "Pending Material Instructions",
+    "priority": "High",
+    "
+": {
+      "target_audience": "Male 25-54, Racing enthusiasts, High-value bettors",
+      "budget_allocation": 120000,
+      "currency": "AUD",
+      "placement_channels": [
+        "TV - Prime Time",
+        "Digital Display - Racing websites", 
+        "Social Media - Facebook/Instagram"
+      ],
+      "timing_requirements": {
+        "campaign_launch": "2024-10-15",
+        "campaign_end": "2024-11-05", 
+        "material_deadline": "2024-10-01",
+        "approval_deadline": "2024-09-25"
+      },
+      "creative_assets": [
+        "30sec TV spot - completed",
+        "Digital banners - in review",
+        "Social media assets - pending"
+      ]
+    },
+    "monday_com_fields": {
+      "board_id": "marketing_campaigns_2024",
+      "item_id": "SRC2024_001",
+      "columns": {
+        "campaign_name": "Spring Racing Carnival 2024",
+        "budget": "$120,000",
+        "status": "Material Instructions Needed",
+        "owner": "Sarah Chen",
+        "timeline": "Launch Oct 15",
+        "channels": "TV, Digital, Social",
+        "audience": "Male 25-54, Racing",
+        "priority": "High"
+      }
+    }
+  },
+  
+  "agent_processing_simulation": {
+    "step_1_data_extraction": {
+      "extracted_fields": {
+        "campaign_name": "Spring Racing Carnival 2024",
+        "budget": 120000,
+        "channels": ["TV", "Digital Display", "Social Media"],
+        "audience": "Male 25-54, Racing enthusiasts",
+        "timeline": "15 days to launch"
+      },
+      "decision_triggers": {
+        "high_budget_detected": true,
+        "tv_channel_detected": true,
+        "digital_channel_detected": true,
+        "executive_approval_required": true
+      }
+    },
+    
+    "step_2_template_selection": {
+      "selected_templates": [
+        "tv_broadcast_instructions",
+        "digital_display_instructions", 
+        "social_media_instructions"
+      ],
+      "compliance_requirements": [
+        "responsible_gambling_notice",
+        "broadcast_specifications",
+        "gdpr_compliance",
+        "australian_gambling_regulations"
+      ]
+    },
+    
+    "step_3_form_generation": {
+      "processing_time": "0.8 seconds",
+      "confidence_score": "98%",
+      "validation_checks": "All passed"
+    }
+  },
+  
+  "generated_material_instruction": {
+    "header": {
+      "campaign": "Spring Racing Carnival 2024",
+      "reference": "MI-SRC2024-001",
+      "created": "2024-09-18T11:45:00Z",
+      "department": "Brand Marketing",
+      "budget": "$120,000 AUD"
+    },
+    
+    "channel_specifications": {
+      "tv_requirements": {
+        "format": "30-second spot",
+        "placement": "Prime time during racing coverage",
+        "compliance": {
+          "responsible_gambling_notice": {
+            "duration": "minimum 3 seconds",
+            "text": "Gamble Responsibly. Crisis helpline: 1800 858 858",
+            "font_size": "minimum 14pt",
+            "placement": "end of commercial"
+          },
+          "broadcast_standards": "Australian Commercial Television Code compliance",
+          "clearance_required": "Free TV Australia approval"
+        }
+      },
+      
+      "digital_display_requirements": {
+        "formats": ["728x90 leaderboard", "300x250 rectangle", "160x600 skyscraper"],
+        "placement": "Racing Australia, Sky Racing, Punters.com.au",
+        "compliance": {
+          "responsible_gambling_notice": {
+            "text": "Gamble Responsibly. 18+",
+            "font_size": "minimum 12pt",
+            "placement": "prominent on creative"
+          },
+          "gdpr_compliance": "Cookie consent integration required",
+          "pixel_tracking": "Facebook Pixel, Google Analytics 4"
+        }
+      },
+      
+      "social_media_requirements": {
+        "platforms": ["Facebook", "Instagram"],
+        "formats": ["1080x1080 square", "1080x1920 story"],
+        "compliance": {
+          "responsible_gambling_notice": "Integrated in creative design",
+          "age_targeting": "minimum 18 years",
+          "platform_guidelines": "Meta gambling advertising policy compliance"
+        }
+      }
+    },
+    
+    "approval_workflow": {
+      "routing": "Executive Approval Chain (Budget >$50K)",
+      "sequence": [
+        {
+          "level": 1,
+          "approver": "Sarah Chen - Campaign Creator",
+          "role": "Initial review and sign-off",
+          "deadline": "2024-09-19"
+        },
+        {
+          "level": 2, 
+          "approver": "Marcus Thompson - Brand Marketing Manager",
+          "role": "Department head approval",
+          "deadline": "2024-09-20"
+        },
+        {
+          "level": 3,
+          "approver": "Migs - CMO",
+          "role": "Executive approval",
+          "deadline": "2024-09-22"
+        }
+      ],
+      "escalation": "Auto-escalate if not approved within 24 hours per level"
+    },
+    
+    "compliance_checklist": {
+      "responsible_gambling": "✅ Included in all materials",
+      "age_restrictions": "✅ 18+ targeting only",
+      "regulatory_compliance": "✅ Australian Gambling Regulations",
+      "brand_guidelines": "✅ Sportsbet brand manual adherence",
+      "legal_review": "⏳ Pending final approval"
+    },
+    
+    "success_metrics": {
+      "brand_awareness": "Target +15% unaided awareness",
+      "acquisition": "2,500 new customer registrations",
+      "engagement": "Click-through rate >1.2%",
+      "compliance": "Zero regulatory violations"
+    }
+  },
+  
+  "demo_comparison": {
+    "manual_process": {
+      "time_required": "45 minutes",
+      "steps": [
+        "Extract data from Monday.com manually (10 min)",
+        "Find appropriate templates (5 min)",
+        "Fill out forms manually (20 min)", 
+        "Cross-check compliance requirements (8 min)",
+        "Route to approvers manually (2 min)"
+      ],
+      "error_risk": "High - manual compliance checking",
+      "consistency": "Varies by creator experience"
+    },
+    
+    "beam_agent_process": {
+      "time_required": "30 seconds",
+      "steps": [
+        "Automatic data extraction (0.1 sec)",
+        "Template selection via AI (0.2 sec)",
+        "Form population with compliance (0.5 sec)",
+        "Validation and routing (0.2 sec)"
+      ],
+      "error_risk": "Minimal - automated compliance",
+      "consistency": "100% standardized across departments"
+    },
+    
+    "value_proposition": {
+      "time_savings": "98.9% reduction",
+      "error_reduction": "90% fewer compliance violations",
+      "scalability": "Works across all 16 marketing departments",
+      "ROI": "1.5 FTE capacity returned to strategic work"
+    }
+  }
+}

@@ -1,0 +1,404 @@
+<!-- version: d4e5f6g7-8901-bcde-f234-567890123456 -->
+<!-- last-updated: 2025-08-31T15:30:00Z -->
+<!-- document-type: structure-definition -->
+
+# Structure Map Blueprint - Visual Navigation & Dependency Analysis
+# Transform complex Nexus architecture into navigable visual maps
+
+metadata:
+  name: "structure-map-blueprint"
+  type: "visualization-and-navigation"
+  scope: "system-wide"
+  purpose: "Generate visual maps and dependency analysis for Nexus system navigation"
+  version: "1.0.0"
+  architech_patterns_integrated:
+    - "dependency-analysis"
+    - "visual-navigation"
+    - "cross-reference-validation"
+    - "impact-analysis"
+    - "circular-dependency-detection"
+  dependencies:
+    - "All structure blueprints for analysis"
+    - "Memory system for context"
+    - "Engineering rules for validation"
+
+# =============================================================================
+# MAP TYPES - Visual Representations of System Architecture
+# =============================================================================
+
+map_types:
+  # COMPONENT DEPENDENCY MAP (Like your diagram)
+  component_dependency_map:
+    purpose: "Visualize system-wide component dependencies and relationships"
+    format: "mermaid"
+    visualization_layers:
+      agent_system:
+        components:
+          - orchestrator: "Central coordination hub"
+          - specialists: ["developer", "architect", "qa-engineer", "product-manager"]
+          - coordinators: ["scrum-master", "product-owner", "analyst"]
+        relationships:
+          - "orchestrator -> all agents (coordination)"
+          - "agents -> agents (handoffs)"
+          - "agents -> memory (context updates)"
+      
+      rules_system:
+        hierarchy:
+          - top_level: ".engineeringrules/*.md"
+          - repository: "{repo}/.engineeringrules/*.md"
+          - language_specific: "{repo}/.engineeringrules/{language}/*.md"
+        inheritance_pattern: "top -> repo -> language (override precedence)"
+      
+      memory_system:
+        flow_pattern:
+          - core: ".memory/project-brief.md, system-architecture.md"
+          - features: ".memory/features/{feature}/*"
+          - repository: "{repo}/.memory/*"
+        data_flow: "core -> features -> repository (progressive context)"
+      
+      framework_core:
+        bidirectional_dependencies:
+          - "framework-map.md <-> CLAUDE.md"
+          - "context-map.md <-> memory-rules.md"
+          - "agents <-> workflows <-> tasks"
+    
+    mermaid_template: |
+      graph TB
+        subgraph "Agent System"
+          O[Orchestrator] --> D[Developer]
+          O --> A[Architect]
+          O --> Q[QA Engineer]
+          O --> P[Product Manager]
+        end
+        
+        subgraph "Rules System"
+          TR[Top-Level Rules] --> RR[Repo Rules]
+          RR --> LR[Language Rules]
+        end
+        
+        subgraph "Memory System"
+          CM[Core Memory] --> FM[Feature Memory]
+          FM --> RM[Repository Memory]
+        end
+        
+        subgraph "Core Framework"
+          FW[framework-map.md] <--> CL[CLAUDE.md]
+        end
+        
+        O --> TR
+        O --> CM
+        O --> FW
+        
+        style O fill:#90EE90
+        style FW fill:#FFE4B5
+
+  # BLUEPRINT RELATIONSHIP MAP
+  blueprint_relationship_map:
+    purpose: "Show how blueprints reference and depend on each other"
+    format: "hierarchical_graph"
+    
+    dependency_extraction:
+      agent_blueprint:
+        dependencies: ["context-map.md", "memory-rules.md"]
+        references: ["workflows", "tasks", "checklists"]
+        generates: [".claude/agents/*.md"]
+      
+      workflow_blueprint:
+        dependencies: ["agent.blueprint", "engineering-rules"]
+        references: ["tasks", "quality-gates", "handoff-templates"]
+        generates: ["framework/workflows/*.md"]
+      
+      task_blueprint:
+        dependencies: ["interactive-execution", "elicitation-methods"]
+        references: ["engineering-rules", "memory-hierarchy"]
+        generates: ["framework/tasks/*.md"]
+      
+      checklist_blueprint:
+        dependencies: ["quality-framework", "validation-criteria"]
+        references: ["agent-handoffs", "context-updates"]
+        generates: [".checklists/*.md"]
+    
+    visualization_pattern: |
+      agent.blueprint
+      ├── Depends On:
+      │   ├── context-map.md
+      │   └── memory-rules.md
+      ├── References:
+      │   ├── workflows/*
+      │   ├── tasks/*
+      │   └── checklists/*
+      └── Generates:
+          └── .claude/agents/*.md
+
+  # NAVIGATION MAP - Interactive System Explorer
+  navigation_map:
+    purpose: "Interactive navigation through Nexus file system"
+    format: "interactive_tree"
+    
+    navigation_features:
+      context_aware_suggestions:
+        - "Based on current location, suggest related files"
+        - "Show dependency chain for current file"
+        - "Highlight circular dependencies"
+      
+      quick_jumps:
+        - "Jump to agent definitions"
+        - "Jump to workflows"
+        - "Jump to engineering rules"
+        - "Jump to memory context"
+      
+      search_and_filter:
+        - "Filter by blueprint type"
+        - "Search by dependency"
+        - "Find by pattern match"
+    
+    navigation_template: |
+      📁 Nexus System Navigator
+      ├── 🏗️ Structure [YOU ARE HERE]
+      │   ├── core/
+      │   │   ├── agent.blueprint.yaml (818 lines)
+      │   │   ├── workflow.blueprint.yaml (562 lines)
+      │   │   └── [7 more blueprints]
+      │   └── domains/
+      ├── 🤖 Agents (17 total)
+      │   ├── core/ (3 agents)
+      │   ├── specialists/ (6 agents)
+      │   └── coordinators/ (3 agents)
+      ├── 🔄 Workflows (9 active)
+      ├── 📋 Tasks (43 defined)
+      └── 📚 Memory (39 entries)
+
+  # IMPACT ANALYSIS MAP
+  impact_analysis_map:
+    purpose: "Visualize change impact across system"
+    format: "ripple_diagram"
+    
+    analysis_patterns:
+      file_change_impact:
+        - "What files depend on this?"
+        - "What will break if this changes?"
+        - "What needs updating together?"
+      
+      cross_repository_impact:
+        - "Which repos are affected?"
+        - "What coordination is needed?"
+        - "What are the integration points?"
+      
+      agent_handoff_impact:
+        - "Which agents are involved?"
+        - "What context needs transfer?"
+        - "What quality gates apply?"
+
+# =============================================================================
+# DEPENDENCY ANALYZER - Extract and Validate Dependencies
+# =============================================================================
+
+dependency_analyzer:
+  extraction_engine:
+    yaml_parsing:
+      targets:
+        - "dependencies: []"
+        - "references: []"
+        - "uses: ''"
+        - "requires: []"
+      extraction_method: "recursive_yaml_parse"
+    
+    path_extraction:
+      patterns:
+        - ".memory/**/*.md"
+        - ".engineeringrules/**/*.md"
+        - ".claude/agents/*.md"
+        - "framework/**/*.md"
+      extraction_method: "regex_path_match"
+    
+    reference_extraction:
+      patterns:
+        - "agent handoffs"
+        - "workflow steps"
+        - "task dependencies"
+        - "checklist validations"
+      extraction_method: "semantic_analysis"
+  
+  validation_engine:
+    circular_dependency_detection:
+      algorithm: "depth_first_search"
+      handling: "flag_and_suggest_resolution"
+      
+    missing_dependency_detection:
+      method: "verify_file_existence"
+      handling: "report_broken_references"
+      
+    version_compatibility:
+      method: "check_blueprint_versions"
+      handling: "warn_on_incompatibility"
+  
+  analysis_output:
+    dependency_graph:
+      format: "adjacency_list"
+      visualization: "force_directed_graph"
+      
+    dependency_report:
+      sections:
+        - "Total dependencies by type"
+        - "Circular dependencies found"
+        - "Missing dependencies"
+        - "Cross-repository dependencies"
+        - "Agent handoff chains"
+
+# =============================================================================
+# VISUALIZATION ENGINE - Generate Visual Maps
+# =============================================================================
+
+visualization_engine:
+  mermaid_generator:
+    capabilities:
+      - "Auto-generate from dependency analysis"
+      - "Layer-based organization"
+      - "Interactive SVG output"
+      - "Custom styling per component type"
+    
+    generation_template: |
+      ```mermaid
+      graph TB
+        %% Generated by Structure Map Blueprint
+        %% Timestamp: {timestamp}
+        %% Total Components: {component_count}
+        
+        {generated_graph_content}
+        
+        %% Styling
+        classDef agent fill:#90EE90
+        classDef rule fill:#FFE4B5
+        classDef memory fill:#ADD8E6
+        classDef critical fill:#FF6B6B
+      ```
+  
+  ascii_visualization:
+    capabilities:
+      - "Terminal-friendly output"
+      - "Hierarchical tree structure"
+      - "Dependency arrows with symbols"
+    
+    symbol_legend:
+      - "→ : depends on"
+      - "← : referenced by"
+      - "↔ : bidirectional"
+      - "⚠ : circular dependency"
+      - "✗ : missing dependency"
+  
+  interactive_html:
+    features:
+      - "Clickable nodes"
+      - "Hover for details"
+      - "Zoom and pan"
+      - "Filter by type"
+      - "Search functionality"
+
+# =============================================================================
+# INTEGRATION WITH NEXUS SYSTEM
+# =============================================================================
+
+nexus_integration:
+  # Task for generating maps
+  map_generation_task:
+    location: "framework/tasks/analysis/generate-structure-maps.md"
+    execution_steps:
+      - "Scan all blueprints"
+      - "Extract dependencies"
+      - "Build relationship graph"
+      - "Generate visualizations"
+      - "Validate completeness"
+    
+  # Workflow for complex analysis
+  structure_analysis_workflow:
+    location: "framework/workflows/analysis/structure-analysis.md"
+    agents_involved:
+      - architect: "Analyze structure patterns"
+      - developer: "Generate visualizations"
+      - qa: "Validate dependencies"
+    
+  # Agent for navigation assistance
+  structure_navigator_agent:
+    location: "operations/agents/specialists/structure-navigator.md"
+    capabilities:
+      - "Guide through dependencies"
+      - "Explain relationships"
+      - "Suggest navigation paths"
+      - "Identify impact zones"
+    
+  # Memory integration
+  memory_updates:
+    structure_maps_location: ".memory/structure-maps/"
+    update_triggers:
+      - "New blueprint added"
+      - "Dependency changed"
+      - "Structure refactored"
+    stored_artifacts:
+      - "dependency-graph.json"
+      - "navigation-index.yaml"
+      - "impact-analysis.md"
+
+# =============================================================================
+# USAGE PATTERNS
+# =============================================================================
+
+usage_patterns:
+  # For understanding system structure
+  system_exploration:
+    command: "*generate structure-map --type=component"
+    output: "Visual map of all system components and dependencies"
+    use_case: "New developer onboarding, architecture review"
+  
+  # For impact analysis
+  change_impact_analysis:
+    command: "*analyze impact --file=agent.blueprint.yaml"
+    output: "List of affected files and required updates"
+    use_case: "Before making structural changes"
+  
+  # For navigation
+  interactive_navigation:
+    command: "*navigate structure --from=current --to=target"
+    output: "Optimal path with dependency awareness"
+    use_case: "Finding related components quickly"
+  
+  # For validation
+  dependency_validation:
+    command: "*validate dependencies --scope=all"
+    output: "Report of circular, missing, and broken dependencies"
+    use_case: "System health check, quality assurance"
+
+# =============================================================================
+# IMPLEMENTATION CHECKLIST
+# =============================================================================
+
+implementation_checklist:
+  - "[ ] Create structure-map.blueprint.yaml (THIS FILE)"
+  - "[ ] Create generate-structure-maps.md task"
+  - "[ ] Create structure-analysis.md workflow"
+  - "[ ] Create structure-navigator.md agent"
+  - "[ ] Test dependency extraction on existing blueprints"
+  - "[ ] Generate first component dependency map"
+  - "[ ] Create navigation index"
+  - "[ ] Validate circular dependency detection"
+  - "[ ] Document usage patterns"
+  - "[ ] Integrate with existing workflows"
+
+# =============================================================================
+# SUCCESS METRICS
+# =============================================================================
+
+success_metrics:
+  usability:
+    - "Time to understand system structure: <5 minutes"
+    - "Time to find dependencies: <30 seconds"
+    - "Time to assess change impact: <2 minutes"
+  
+  quality:
+    - "Dependency detection accuracy: >95%"
+    - "Circular dependency detection: 100%"
+    - "Missing reference detection: 100%"
+  
+  adoption:
+    - "Used in >80% of structure changes"
+    - "Referenced in architecture reviews"
+    - "Part of onboarding process"

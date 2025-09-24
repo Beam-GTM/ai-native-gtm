@@ -1,0 +1,283 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.453919Z
+migration_path: auto-generated
+---
+
+<!-- version: c3d4e5f6-7890-abcd-ef12-345678901234 -->
+<!-- last-updated: 2025-01-20T14:30:00Z -->
+<!-- document-type: structure-definition -->
+
+# Nexus Checklist Template Blueprint
+
+<!-- dependencies
+upstream:
+  # Workflows that use this checklist
+  - operations/workflows/{{workflow}}.md
+  
+  # Tasks that execute this checklist
+  - framework/tasks/validation/validate-dependencies.md
+  
+  # Agents that run this checklist
+  - operations/agents/{{agent}}.md
+  
+downstream:
+  # Quality gates that depend on this
+  - workspace/features/active/*/quality-gates.md
+  
+  # Validation tasks using this
+  - framework/tasks/system/system-sync.md
+  
+validated: {{timestamp}}
+health: 100%
+-->
+
+metadata:
+  name: "{checklist-name}"
+  version: "1.0.0"
+  purpose: "{checklist-purpose-description}"
+  target_persona: "{primary-agent-persona}" # architect, developer, product-manager, quality-assurance, etc.
+  project_types: ["{project-type}"] # greenfield, brownfield, enhancement, validation
+  complexity: "{complexity-level}" # simple, medium, complex, comprehensive
+  estimated_duration: "AI-optimized execution" # No human time estimates
+
+# NEXUS CONTEXT INTEGRATION (Based on context-map.md)
+context_integration:
+  # Required context loading before checklist execution
+  context_loading_sequence:
+    step_1_hierarchical_context:
+      location: ".memory/"
+      files: ["project-brief.md", "system-architecture.md", "key-learnings.md"]
+      validation: "Top-level project context accessible for checklist execution"
+
+    step_2_feature_context:
+      location: ".memory/features/{feature-name}/"
+      files: ["prd.md", "progress.md", "active-context.md"]
+      validation: "Feature-specific context available for focused validation"
+      condition: "when_feature_specific"
+
+    step_3_repository_context:
+      location: "{current-repo}/.memory/"
+      files: ["repository-context.md", "key-learnings.md"]
+      validation: "Repository-specific patterns and standards accessible"
+      condition: "when_repository_specific"
+
+  # Real-time context updates during checklist execution
+  context_update_triggers:
+    during_checklist_execution:
+      - trigger: "validation_findings"
+        location: ".memory/features/{feature-name}/test-results.md"
+        content: "Checklist validation results, quality assessment, compliance status"
+      - trigger: "quality_gate_decisions"
+        location: ".memory/features/{feature-name}/active-context.md"
+        content: "Checklist execution progress, critical findings, decision points"
+
+    post_checklist_completion:
+      - trigger: "validation_completion"
+        location: ".memory/features/{feature-name}/progress.md"
+        content: "Checklist completion status, validation outcomes, next actions"
+      - trigger: "lessons_learned"
+        location: ".memory/key-learnings.md"
+        content: "Checklist insights, process improvements, pattern recognition"
+
+# ENGINEERING RULES INTEGRATION (Nexus Hierarchical System)
+engineering_rules_integration:
+  rules_loading_logic:
+    primary_rules:
+      - "memory-rules.md"
+      - "documentation-rules.md"
+      - "{persona-specific-rules}.md" # e.g., system-design-rules.md for architect
+
+    repository_rules:
+      - "{current-repo}/.engineeringrules/memory-rules.md"
+      - "{current-repo}/.engineeringrules/coding-rules.md"
+      - "{current-repo}/.engineeringrules/testing-rules.md"
+      - "{current-repo}/.engineeringrules/documentation-rules.md"
+
+    rule_application_context:
+      load_timing: "Before checklist initialization"
+      scope: "Apply throughout validation process"
+      inheritance: "Top-level rules + repository-specific overrides"
+      validation: "All checklist items must align with loaded rules"
+      conflict_resolution: "Repository-specific overrides top-level, escalate conflicts"
+
+# CHECKLIST STRUCTURE DEFINITION
+checklist_structure:
+  # LLM initialization instructions (Nexus pattern)
+  llm_instructions:
+    initialization: |
+      [[LLM: INITIALIZATION INSTRUCTIONS - {CHECKLIST-NAME}
+
+      {initialization-specific-instructions}
+
+      Required context access:
+      {list-required-documents-and-context}
+
+      VALIDATION APPROACH:
+      {validation-methodology-and-principles}
+
+      EXECUTION MODE:
+      Ask the user if they want to work through the checklist:
+      - Section by section (interactive mode) - Review each section, present findings, get confirmation before proceeding
+      - All at once (comprehensive mode) - Complete full analysis and present comprehensive report at end]]
+
+  # Main checklist sections
+  sections:
+    - section_id: "{section-1-id}"
+      section_name: "{Section 1 Name}"
+      section_description: "Purpose and scope of this validation section"
+      llm_guidance: |
+        [[LLM: {section-specific-guidance-for-llm}]]
+
+      validation_items:
+        - item_id: "{item-1-1}"
+          description: "{validation-item-description}"
+          validation_type: "boolean" # boolean, evidence_based, assessment, measurement
+          required: true
+          evidence_requirements: "{what-evidence-is-needed}"
+
+        - item_id: "{item-1-2}"
+          description: "{validation-item-description}"
+          validation_type: "evidence_based"
+          required: true
+          evidence_requirements: "{specific-evidence-or-documentation-needed}"
+
+# Nexus-STYLE EXECUTION MODES
+execution_modes:
+  interactive_mode:
+    description: "Section by section validation with user confirmation"
+    approach: "Present findings for each section, get user confirmation before proceeding"
+    use_case: "When thorough discussion and validation is needed"
+
+  comprehensive_mode:
+    description: "Complete validation with final comprehensive report"
+    approach: "Complete full analysis and present comprehensive report at end"
+    use_case: "When efficient validation with detailed final report is preferred"
+
+# QUALITY GATES AND ASSESSMENT
+quality_assessment:
+  # Nexus-style PASS/CONCERNS/FAIL/WAIVED assessment
+  assessment_framework:
+    criteria_types:
+      - "PASS": "All requirements met, no concerns identified"
+      - "CONCERNS": "Requirements mostly met, minor issues noted"
+      - "FAIL": "Critical requirements not met, blocking issues identified"
+      - "WAIVED": "Requirements waived by stakeholder decision"
+
+    evidence_requirements:
+      - "Specific documentation references"
+      - "Code/implementation examples"
+      - "Test results or validation outputs"
+      - "Stakeholder confirmations"
+
+# REPORTING AND HANDOFF STRUCTURE
+reporting_structure:
+  final_report_template:
+    executive_summary:
+      - "Overall validation status"
+      - "Critical findings and risks"
+      - "Readiness assessment"
+      - "Key recommendations"
+
+    section_analysis:
+      - "Pass rate for each section"
+      - "Critical failures or gaps"
+      - "Areas requiring immediate attention"
+
+    risk_assessment:
+      - "Top risks by severity"
+      - "Mitigation recommendations"
+      - "Timeline impact analysis"
+
+    recommendations:
+      - "Must-fix items before proceeding"
+      - "Should-fix items for quality improvement"
+      - "Nice-to-have enhancements"
+
+    next_steps:
+      - "Immediate actions required"
+      - "Agent handoffs needed"
+      - "Follow-up validation requirements"
+
+# AGENT HANDOFF INTEGRATION
+agent_handoff_orchestration:
+  handoff_triggers:
+    - trigger: "validation_failure"
+      target_agent: "{responsible-agent-for-fixes}"
+      context_transfer: "Checklist results, specific failures, remediation requirements"
+
+    - trigger: "validation_success"
+      target_agent: "{next-phase-agent}"
+      context_transfer: "Validation approval, quality confirmation, readiness status"
+
+  handoff_message_template: |
+    ## Checklist Validation Handoff: {checklist-name}
+
+    **From**: {current-agent}
+    **To**: {target-agent}
+    **Status**: {validation-status}
+    **Timestamp**: {handoff-timestamp}
+
+    ### Validation Results
+    - **Overall Status**: {PASS/CONCERNS/FAIL/WAIVED}
+    - **Critical Issues**: {list-critical-issues}
+    - **Recommendations**: {key-recommendations}
+
+    ### Context Locations
+    - **Validation Results**: `.memory/features/{feature-name}/test-results.md`
+    - **Current Progress**: `.memory/features/{feature-name}/progress.md`
+    - **Active Context**: `.memory/features/{feature-name}/active-context.md`
+    - **Project Context**: `.memory/project-brief.md`
+
+    ### Next Actions Required
+    {specific-actions-for-target-agent}
+
+    ### Context Validation Checklist
+    - [ ] All context files accessible and up-to-date
+    - [ ] Validation results properly documented
+    - [ ] Engineering rules compliance verified
+    - [ ] Handoff requirements met
+
+# TEMPLATE USAGE INSTRUCTIONS
+usage_instructions:
+  creation_process: 1. "Copy this template to .checklists/{checklist-name}.md"
+    2. "Replace all {placeholder} values with specific content"
+    3. "Customize sections and validation items for specific checklist purpose"
+    4. "Integrate with appropriate engineering rules and context requirements"
+    5. "Test checklist execution with sample scenarios"
+
+  integration_requirements:
+    - "Must integrate with Nexus's hierarchical memory system"
+    - "Must load appropriate engineering rules based on context"
+    - "Must update context files during and after execution"
+    - "Must provide clear agent handoff protocols"
+    - "Must maintain Nexus-style validation rigor"
+
+  customization_guidelines:
+    - "Adapt LLM instructions for specific validation domain"
+    - "Define clear evidence requirements for each validation item"
+    - "Specify appropriate context loading for checklist domain"
+    - "Integrate with relevant engineering rules and standards"
+    - "Maintain consistency with Nexus's quality framework"
+
+# CLAUDE-SPECIFIC TRANSPOSE INSTRUCTIONS
+claude_instructions:
+  agent_setup: |
+    To use this checklist as a Claude agent:
+    1. Load the checklist content into Claude's context
+    2. Follow the LLM initialization instructions
+    3. Load required context files from Nexus memory system
+    4. Apply appropriate engineering rules for validation domain
+    5. Execute in chosen mode (interactive or comprehensive)
+    6. Generate structured validation report
+    7. Update context files with results
+    8. Prepare handoff message if agent transition required
+
+  context_management: |
+    Claude should:
+    - Load hierarchical context before starting validation
+    - Update context files during validation process
+    - Reference engineering rules for validation criteria
+    - Maintain context continuity for agent handoffs
+    - Document validation insights for future reference

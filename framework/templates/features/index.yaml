@@ -1,0 +1,218 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.449648Z
+migration_path: auto-generated
+---
+
+
+# Feature Index Structure Definition
+# Based on memory features structure pattern
+
+metadata:
+  name: "feature-index"
+  type: "feature-document"
+  scope: "workspace"
+  description: "Feature index tracking and navigation"
+  purpose: "Track feature status, files, dependencies and progress"
+  dependencies: ["prd.md", "progress.md", "active-context.md", "quality-gates.md"]
+  last_updated: "2025-08-25"
+
+document_structure:
+  title: "Feature Index: {feature_name}"
+  
+  sections:
+    - header:
+        heading: "📋 **FEATURE METADATA**"
+        format: "metadata_block"
+        content:
+          - "**ID**: {feature_id}"
+          - "**Status**: {status}"
+          - "**Priority**: {priority}"
+          - "**Created**: {created_date}"
+          - "**Updated**: {updated_date}"
+          - "**Owner**: {owner}"
+          - "**Tags**: {tags}"
+    
+    - summary:
+        heading: "📝 **SUMMARY**"
+        subsections:
+          - description:
+              heading: "Description"
+              format: "paragraph"
+              content: "{feature_description}"
+          - problem_solution:
+              heading: "Problem & Solution"
+              format: "structured_text"
+              content:
+                - "**Problem**: {problem_statement}"
+                - "**Solution**: {solution_approach}"
+                - "**Value**: {business_value}"
+    
+    - progress:
+        heading: "📊 **PROGRESS**"
+        subsections:
+          - overall_progress:
+              heading: "Overall Progress"
+              format: "progress_bar"
+              content:
+                - "Progress: {progress_percentage}%"
+                - "Bar: {progress_bar}"
+          - quality_gates:
+              heading: "Quality Gates"
+              format: "metrics"
+              content:
+                - "Passed: {gates_passed}/{gates_total}"
+                - "Blockers: {blockers_count}"
+                - "Risks: {risks_count}"
+    
+    - files:
+        heading: "📁 **FILES**"
+        subsections:
+          - required_files:
+              heading: "Required Files"
+              format: "file_table"
+              structure:
+                - "File name"
+                - "Purpose"
+                - "Status"
+          - custom_files:
+              heading: "Custom Files"
+              format: "file_list"
+              structure:
+                - "File name"
+                - "Purpose"
+    
+    - dependencies:
+        heading: "🔗 **DEPENDENCIES**"
+        subsections:
+          - feature_dependencies:
+              heading: "Features"
+              format: "dependency_list"
+              content: "{feature_dependencies}"
+          - agent_dependencies:
+              heading: "Agents Required"
+              format: "dependency_list"
+              content: "{agent_list}"
+          - workflow_dependencies:
+              heading: "Workflows Used"
+              format: "dependency_list"
+              content: "{workflow_list}"
+          - rule_dependencies:
+              heading: "Engineering Rules Applied"
+              format: "dependency_list"
+              content: "{rule_list}"
+    
+    - timeline:
+        heading: "📅 **TIMELINE**"
+        format: "timeline_table"
+        subsections:
+          - phases:
+              heading: "Development Phases"
+              format: "phase_table"
+              structure:
+                - "Phase name"
+                - "Status"
+                - "Start date"
+                - "End date"
+    
+    - quicklinks:
+        heading: "🔗 **QUICK LINKS**"
+        subsections:
+          - documentation:
+              heading: "Documentation"
+              format: "link_list"
+              content: "{documentation_links}"
+          - references:
+              heading: "References"
+              format: "link_list"
+              content: "{reference_links}"
+          - repositories:
+              heading: "Repositories"
+              format: "link_list"
+              content: "{repository_links}"
+    
+    - current_state:
+        heading: "🎯 **CURRENT STATE**"
+        subsections:
+          - current_focus:
+              heading: "Current Focus"
+              format: "status_text"
+              content: "{current_focus}"
+          - next_steps:
+              heading: "Next Steps"
+              format: "numbered_list"
+              priority: "high"
+              content: "{next_steps}"
+          - decisions:
+              heading: "Key Decisions"
+              format: "bullet_list"
+              content: "{decisions}"
+          - lessons_learned:
+              heading: "Lessons Learned"
+              format: "bullet_list"
+              content: "{lessons}"
+
+content_patterns:
+  metadata_block:
+    format: |
+      **{field}**: {value}
+  
+  progress_bar:
+    format: |
+      {percentage}%
+      {bar_visual}
+  
+  file_table:
+    format: |
+      | File | Purpose | Status |
+      |------|---------|--------|
+      | {file_name} | {purpose} | {status_icon} |
+  
+  dependency_list:
+    format: |
+      - {item_name}
+  
+  phase_table:
+    format: |
+      | Phase | Status | Start | End |
+      |-------|--------|-------|-----|
+      | {phase_name} | {status_badge} | {start} | {end} |
+  
+  link_list:
+    format: |
+      - [{link_text}]({link_url})
+
+status_mappings:
+  file_status:
+    exists: "✅"
+    missing: "❌"
+    outdated: "⚠️"
+    pending: "⏳"
+  
+  phase_status:
+    pending: "⏳ Pending"
+    in_progress: "🔄 In Progress"
+    completed: "✅ Completed"
+    blocked: "🔴 Blocked"
+  
+  feature_status:
+    active: "🟢 Active"
+    completed: "✅ Completed"
+    archived: "📦 Archived"
+    blocked: "🔴 Blocked"
+    pending: "⏳ Pending"
+
+progress_bars:
+  0-20: "▓▓░░░░░░░░░░░░░░░░░░"
+  21-40: "▓▓▓▓▓▓▓▓░░░░░░░░░░░░"
+  41-60: "▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░░░"
+  61-80: "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░"
+  81-100: "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+
+orchestrator_loading:
+  load_pattern: "workspace/features/active/*/index.yaml"
+  batch_loading: true
+  parallel: true
+  cache_duration: "session"
+  auto_generate_md: true

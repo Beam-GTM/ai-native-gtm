@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:context7.com)",
+      "Bash(mcp list:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(for cmd in \"help\" \"agent\" \"workflow\" \"task\" \"status\" \"generate-system\" \"menu-agents\" \"menu-workflows\")",
+      "Bash(do echo -n \"$cmd: \")",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(dir:*)",
+      "Bash(python:*)",
+      "Bash(mkdir:*)",
+      "Bash(touch:*)",
+      "Bash(cp:*)",
+      "Read(/C:\\mnt\\c\\Users\\dsber\\Code\\Nexus-v2/**)",
+      "Bash(powershell:*)",
+      "Bash(find:*)",
+      "Bash(rm:*)",
+      "Bash(test:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git mv:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "C:\\Users\\dsber\\Code\\nexus-v2"
+    ]
+  }
+}

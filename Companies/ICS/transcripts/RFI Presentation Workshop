@@ -1,0 +1,900 @@
+Speaker 1: Okay. Chapter team Slink. So.
+Speaker 2: If you also do the scale.
+Dorian Schlede: You can also do the sound. Oh yeah.
+Speaker 1: The Epic needs an awesome Mac user. Kapalina. No, I only have hdmi, honestly. Yeah, the sound that is good. Sorry. Yeah.
+Speaker 2: So we have an image, but we do not have any sounds yet.
+Dorian Schlede: All group is on mute.
+Speaker 2: Just so you know.
+Speaker 1: Okay. Coming up. Okay. Some tech related issues first, but I think this is working now.
+Dorian Schlede: Yeah, it was good as well.
+Speaker 1: Quick question. Is it fine for everybody record the session? Yeah, also for. Okay, cool. Because.
+Dorian Schlede: Yeah.
+Speaker 1: Okay. Okay. Everybody there? Cool. Okay. Okay.
+Dorian Schlede: There might be some people joining later.
+Speaker 2: But just make it.
+Speaker 1: Yeah, I don't see them, so you need to tell me.
+Dorian Schlede: Yeah, but we have I think five or four people from up.
+Speaker 1: Okay, cool. All right everybody. Everybody. Thanks for having us. Thanks for having us. Beautiful demon. Beautiful demon. We will have everything prepared. We went through the bullet points that you sent us to have a rough agenda. So we have roughly like 40 slides today. We're also going to show you something again again. Ask any questions that you might have. Jump in. This is not a lecture, but interactive. I think it's cool. We also have plenty enough time before we introduce ourselves. I think the most easiest part is we do a quick round robin or per department. And if you would want us favor also expl. Where are your organization? What is your main view on things? What are you responsible? Just quick orientation so we know what kind of people we have here. People that have met yet. So do you want to go presentation?
+Dorian Schlede: Yeah, let's do that.
+Speaker 1: Cool.
+Dorian Schlede: My name is Mitch. I'm an analytical engineer from the Data Hub. Specifically is data modeling. Making sure the data comes together is.
+Speaker 1: Fit for reporting between it and the reporting piece. Nice.
+Dorian Schlede: So yeah.
+Speaker 1: That will be my perspective during these workshops. Very important questions regarding this topic. What they come later. Okay. Thank you.
+Speaker 2: Thank you.
+Speaker 4: My name is. My name is Jessica. I'm a business developer since.
+Speaker 1: Nice. Welcome.
+Speaker 4: New things but I background from Accenture.
+Dorian Schlede: So cool.
+Speaker 4: Yeah yeah. And yeah. Together with yours mainly look into what.
+Speaker 1: Cool.
+Speaker 5: Okay.
+Dorian Schlede: Okay. Yeah. Developer looking at it from the KYC perspective. Dean is in the call.
+Speaker 1: Yes.
+Dorian Schlede: KVC operations.
+Speaker 1: So he's also pressing. Nice.
+Dorian Schlede: Nice. Joining this called Cool.
+Speaker 1: He's wa.
+Dorian Schlede: He's waving.
+Speaker 1: Okay.
+Dorian Schlede: Yeah. I work for procurement and my role in this RFI is basically just focus on the commercial side of.
+Speaker 1: Nice.
+Dorian Schlede: Nice. I work in team strategy as a business developer.
+Speaker 1: His team try to make PM.
+Dorian Schlede: Better.
+Speaker 1: Make sure that the data is analyzed, etc.
+Dorian Schlede: And my role in this is to.
+Speaker 1: Make this an R5 process a success.
+Speaker 4: I'm working as an acknowledged expert for TM transaction monitoring operations. Mostly couriers for the end user operation side.
+Speaker 1: Cool, cool.
+Speaker 4: My name is Rina. I'm responsible for the operations department. So also. Also from my perspective I will be focusing on the operational side and the end user experience.
+Speaker 2: My name is Eric.
+Speaker 1: Currently I'm still working as a transaction monitoring analyst but for the first October I'm starting off as well as a knowledge expert doing the transaction management analyst. Before that I worked at a fintech startup. Nice. I know a bit about you know our world as well.
+Speaker 5: It's nice.
+Speaker 1: Okay, so you also know the workflows and how everything works in the TM flow. I suppose. I mean everybody knows it but you did it hands on. Okay, got it, Got it. Okay cool. Okay cool. Then we have some couple as well, right?
+Dorian Schlede: Yeah, yeah. Maybe. Manuel, would you like to continue?
+Speaker 5: Oh, not necessarily, but I can do it. Apologies for not being there. I do not like labels so I'll just state some part of it and yeah, I can talk technology, full stack technology if you guys want. And quite keen on understanding how you guys are going to use FIG for representations. The first time I'm seeing this.
+Speaker 1: Cool.
+Dorian Schlede: Awesome.
+Speaker 6: All right.
+Speaker 2: Manager of TM strategy. So where sabrinat is responsible for the end users when it comes to TM operations. I'm responsible for the functional working of the TM landscape and it will always also include the scope of.
+Dorian Schlede: Donna. Yes.
+Speaker 4: Hi all, I'm Dona.
+Speaker 6: I'm part of the 10 strategy team.
+Speaker 4: Esprina and boss as a business developer and. Yeah well for now I will focus on the operational side in this meeting.
+Dorian Schlede: Thanks. Cool. I think we have Dean also.
+Speaker 1: Yes, yes, also me. I'm Dean, one of the managers within KYC CBD operations. So I will also look at the end user side and Cool.
+Speaker 2: Okay.
+Dorian Schlede: And lastly he's there.
+Speaker 1: Okay, okay. Okay cool. And we also have joining him later and he is. Okay cool. Maybe when I speak here and you microphone. Can somebody hear me?
+Dorian Schlede: They can hear you.
+Speaker 1: Okay, nice. Great then thanks for this big round of introductions to know everything falling into the thesis. I would say let's take it over. It's funny each other in this round. Some people don't know each other yet.
+Dorian Schlede: Or started first of April. You started like two weeks ago so we don't yet.
+Speaker 1: Okay. Okay.
+Speaker 4: A lot of us don't see each other every single day in this setting.
+Speaker 1: So it's funny. It's funny.
+Speaker 4: Good setting for us online.
+Speaker 1: Yeah. Okay. Okay. So. So we have we have three hours I think let's not make it too extensive but topics we want to cover today quick round of introduction Second introduce ourselves and give a highlux introduction to the company we are where we're coming from and why we're sitting here today based on the point that you sent me. So then after that we're going to do a bit of a deep dive into the core AI capabilities that our platform and our team has to offer and then and then jumping how would envision what we're building for you? The core AI KP can be a bit techy. We hope to keep it on a higher level than send part and then we can share some stories stories from our clients. So we're helping them broadcast case studies with you which I think very closely towards what you guys are doing so you should resonate and then we have a bunch of questions but I probably assume you also have a question so let's leave enough for that for that now as I'm already speaking my face on the left hand side from our Beautiful Pictures Day 3 weeks ago I'm Quentin. I am one of the the first commercial commercial employees actually the first commercial employee I think we checked my number as number three. Quite funny I always say my whole role within this company is to build the gentic journeys which means taking exactly these meetings and the hands of our clients. Where are we right now? How are we set up? We run an organization based on humans and where and where can we start putting in these AI agents Agents form the vision of building these AI native companies. Back in the day everybody's racing getting into the web and was building a digital native company and now we're seeing the same inflection point again where it's building an AI native company. But enough said about me and you're the new joiner and this team feel free to. Feel free to take it away introduce you and the team.
+Dorian Schlede: Yeah sure. Pleasure. Pleasure to meet everybody. I am here at last year over a year A year so when I joined we did have people but did not go as well as it should. Right but right also very early days opportunities and then essentially built our client client base there expanding customers from leading the biggest enterprise right now essentially laying out the foundation of agents that's for the team. I've also developed framework which essentially allows us to produce high accuracy that we deliver delivering clients and yeah yeah that's that's about me I think for the introduction.
+Speaker 1: Cool cool. And we obviously obviously also have not only engage in a partnership partnership Together we come always with a forward delivery team which also consists of our AI engineers. Maybe we. Because I think.
+Dorian Schlede: Sure, sure. So essentially we're a product company.
+Speaker 6: Right.
+Dorian Schlede: So we're building platforms and the solutions are of our company.
+Speaker 6: Right.
+Dorian Schlede: So we are. Because often we do see that a lot of companies lack the capability of actually implementing automation. So we usually start together, build the first autom and then then kind of slowly, slowly move it over to them once they understand process. So yeah, that's essentially core onboarding, client, client platform building, first stage.
+Speaker 1: Cool, cool. Let's give a rough introduction to the company.
+Dorian Schlede: In there.
+Speaker 1: So we speak this point at high level. A couple words about who actually started this. I see this number on the top left corner is actually wrong. We're live right now about a bit more than. More than 50. 50 people started. Started from Jonas and Akib, which you see on the left hand side. Why do I say this? Basically just to bring a bit of the authority to the table that we actually, actually can do. We're telling you to do that we can do. One of the few GE unicorns which made it to dollar valuation. Usually just magic unicorn status. They raised a lot of money and bought Amazon companies very successful scaling. I think they are now 500 million in revenues and also 500 people working there actually Officer magic together.
+Dorian Schlede: Yeah, sure, sure.
+Speaker 6: Yeah.
+Dorian Schlede: Business Munich. And that's where they met AI startups especially before.
+Speaker 1: Cool, good. Then the company, as I just told you in the beginning. Sorry in our coffee chat. Born and raised in Berlin. That's where most of our team members are right now. If we are in the office next 20 people in Germany. The other 50 are spread around our satellite office as I would call it New York and where we expand for North American expansion. Plus also most of our tech. Not because actually. So he's born and raised the team. Yes, yes. I think one number is always quite nice. We always say eat your own dog food or drink your own champagne. We have roughly 200 agents in a company that are doing other stuff which makes us very productive. At just 5050 I would say. I think it's actually a very big company. Where is this all coming from? I was sharing words about this vision from building AI and AI native companies and essentially what we're calling are human like workers. Think of an agent as a little intern that you get into your organization and you tell your little intern what it needs to do. So if I know.
+Dorian Schlede: This is your.
+Speaker 1: SOP and execute it and based on tell me I'm going to take an appropriate trigger which can be learned about it. I answer my questions and ultimately I generate a report for example. And these very standardized processes we are currently able to translate into something which is called an AI agent. Essentially very deterministic entity that follows SOP or decision tree. If this then that and and strongly strongly believe that you are currently I think fully run on human beings will slowly slowly evolve into this future vision picture that we have on the right hand side. We're not people are people are working under people for people. But people as subject matter experts work hand in hand together should be making strategic decisions and doing meaningful work. There's no sense behind earning employees on low level coming from so basically the best people are wasting at least 25 of the time orchestrating stuff, copy pasting stuff or doing or doing repetitive low level work which can follow and follow on to the doctor of course the errors say I do wrong, I do a wrong triage or report and then faulty, faulty transaction follows through. I think that can be a big problem. Or on the other hand I am think of Ben, your little intern in your team. I'm getting a getting a certain fatigue if I'm looking at 200 alerts a day out of which maybe what was the percentage? I think only a small percentage ultimately then turns into turns into an actual real suspicious security report. So so with these buckets inconsistency executions humans and they need mainly the reason why we are here and why we're doing what we're doing. I I think why also a lot of the AI fail. I think we shared a report recently that most of the AI projects big companies fail is because these are just nice demos that very deterministic systems that work on enterprise grade and at scale with the accuracy. They're usually complex systems that need constant support. Talking about RPA solutions for example Robotic process automation. Most of them need bigger RPA department in the end as a cost center that they wanted to replace with the automation. And then, and then these smart mistakes. Some people probably started playing around agents or these free float systems out there or also with agents. They they have non non deterministic flows. They can choose their own tools and they can do their own decision to achieve their goal. This then, this then is very fuzzy. If you have like thousands of alerts coming at coming at them. So ultimately, ultimately this is the direction where we're coming from and why we building building. Now now before I come to us and the product product, maybe we should pause you for a second if there are already any questions that we can answer. Cool, cool. That's nice. Okay, Cool, cool. I think now the real AI magic starts. Starts. I think I can hand over the slides to you again. Again. Get it to get techy, ask questions. We are talking too much tech stuff for us. It's just very important that lay the guys foundation of what we and how everything works and then we jump to the actual solution. How this would work for you, for you. I think this is your, this is your buzzword.
+Speaker 6: All right, all right.
+Dorian Schlede: My password. Okay. Okay. So let me start on a very, very high level introduction to this. So so essentially we're building a generic automation platform that allows the user to automate any kind of process.
+Speaker 6: Right.
+Dorian Schlede: On a very high level. So think of it in terms of function. Something similar to Microsoft Automates API. All these tools, I'm not sure if you know them, but yeah, that's like a bunch of automation tools. Right to that in a second. So essentially here on here on the right hand side you can see our stack. I'm just going to go through this. So at the bottom.
+Speaker 1: Yeah, let me sure.
+Dorian Schlede: Zoom in a little bit.
+Speaker 1: I don't know actually let me check. Check and do it. I can.
+Dorian Schlede: So at the bottom we have foundation, the AI AI automation. Here we are completely agnostic. Scroll down a bit more. Down a bit more. Yeah.
+Speaker 1: Go back to presentation.
+Dorian Schlede: Whenever a new model comes out and we can use the best model available. That also means that we like when we build an agent we don't always use everything right. Because depending on the task there will be as the best model that we pick based on data. Then on this we have a unit which allows enables this ability to integrate any LLM at any time. Then we have agent framework. So framework is the agent itself which is essentially the entity that is automating job. And. And this agent. Agent is using a flow which is essentially. Yeah like kind of graph. Graph. Then the agent following.
+Speaker 6: Right, right.
+Dorian Schlede: As he said.
+Speaker 6: Right.
+Dorian Schlede: A lot of agents where dynamically what it is doing.
+Speaker 6: Right.
+Dorian Schlede: But we do not do this because the moment you cannot achieve the accuracy the agents make a lot of decisions themselves. So this is why we building these flows. So essentially dynamic decision we are constraining the decision the AI AI can take and this way we are increasing the accuracy. So the solo is a combination of nodes or statistics steps that the AI is kind of going through when it's automating it. Then there's also branches in there that allows intelligent decision making. More on that, More on that we can show you in a sec. And then in this flow we have nodes and they use tools. These tools, these are usually either prompts, right. Where we are using the AI to transform some data, take decisions, extract information, whatever requirements and then integrations.
+Speaker 6: Right.
+Dorian Schlede: So these tools, we have 500 different integrations that allow us to drag and drop and integrate with any software. Here we also have integration building so we can essentially integrate any software in like five minutes. Of course, if you have the API available on your end.
+Speaker 1: Zero port, I guess.
+Dorian Schlede: Sure. Yes, yes, yes. Thank you.
+Speaker 5: I was seeing if I was on mute. You mentioned how many integrations.
+Speaker 1: 8,500.
+Dorian Schlede: That's the amount of actions that we have. We have 1500 integrations and 8500 different actions to take with these integrations.
+Speaker 5: But in, in specific, in regards to the financial sector, because I read in your, in the RFI answer document that you talk about confluence and. Yeah, a bunch of them as well. But you know, specific to. To financial services. What do you guys have? And you've seen our. The application that we use in our rfi. I'm assuming that out of the ones we present, there is nothing there.
+Speaker 1: Exactly.
+Speaker 5: So the.
+Speaker 1: So the integrations that we have in the platform are usually the most common common enterprise platform. We don't really work with only a financial services industry because we're horizontal. We also serve for example orchestration companies from the previous historic knowledge also makes sense because these customer integrations with explaining we will get to that. Show me the platform and walk you through the actual flow how we build your agent so far in a second part, this question for now, the high level, high level answers for your specific tools based on the endpoint can give us. But we also talked about that you can use. You can probably send payload with all necessary information alerts if possible from the data lake or in this case databricks.
+Dorian Schlede: Right.
+Speaker 1: Or the Azure data factory that you have. You have modern data platform. So in the end, the end the infrastructure structure orchestration can highly depend on the client. The long list of integration shiny little object that we can present you with. We have a lot of APIs, we have a lot of actions. But an enterprise project, very custom and individual custom integration or configuration that we build with our clients.
+Dorian Schlede: The good thing is, right, APIs are usually defined in API schema. The tech people will know and essentially you can just put in the API API definition and then you have the action. So it's as simple as dropping definition of the API and setting up the authentication and then you're integrated. So it's. So it's a matter of five minutes essentially to add a new integration as well. Okay, okay, cool, cool.
+Speaker 6: Right, right.
+Dorian Schlede: On the tools. Now we also have a prompt module which we call autotuner, essentially automating based on the feedback that we gather from the live execution. So essentially when the agent is. You will have some kind of approval interface where you validate information.
+Speaker 6: Right.
+Dorian Schlede: Then you then correct the AI, or you might change the transition that the AI has taken, which is what we say. And then we feed this feedback back into the AI.
+Speaker 1: The prompts.
+Dorian Schlede: Right. But I will get into more detail later on this. And then the last piece is test and evaluations, which framework that we have built, which essentially allows us track the accuracy or AI AI agents down the variable level. So we are measuring every single variable that we are extracting or giving you guys to approve.
+Speaker 6: Right.
+Dorian Schlede: Measuring all of them. And then we are able to essentially optimize our prompts because we know exactly which part of the agent is not working. But again, more on evaluation and a bit more detail coming later then on the beam. On the beam thread. How can this be used? There's different ways. So the most common way that we do with most Master Master is SAS SaaS platform.
+Speaker 6: Right.
+Dorian Schlede: So we're hosting it on AWS. You guys have an account and can log in. But we also offer example Azure managed service. So that allows customers to also host the platform. And yeah, on top of this we have a video which is our local code interface builder, which he's also going to show in a second. But then we are also currently building our development which essentially allows everybody to programmatically also build agents on top of our platform, which is really interesting because it makes us much faster with all these AI coding systems that are out there. So you can essentially an agent in one hour. One hour once we have Studio. But yeah, we won't get the A and K in a few weeks. So that means interaction. No code agent building. But you can also do code agent building very soon. Yeah, I think that's, that's on a very, on a very high level. Do you think, you think showing it inside the platform.
+Speaker 1: Let's try to make the literature making it feasible.
+Dorian Schlede: I think my role has another question.
+Speaker 1: Go for it.
+Dorian Schlede: Sorry, sorry.
+Speaker 5: You guys don't hear me? I'm sorry to interrupt, but I think the. You don't hear me, but two questions then. Your SaaS on AWS, is it multi tenant or single tenant?
+Dorian Schlede: It's multi tenant. Okay, excellent.
+Speaker 5: And then the SDK, which technologies does it offer or does it come in.
+Dorian Schlede: Technology as in programming language? Yes, I mean, I mean at the beginning and Typescript, but essentially, I mean there's meta programming language. I know. So we can essentially probably operate in any language you would like. So I don't think there's any constraint. We'll probably take like a day or two, convert the whole thing to another language.
+Speaker 5: Okay, I get it. So you're using LLMs then to do the conversion?
+Dorian Schlede: Yes, yes. We define everything in the meta language and then transposing to different languages. Okay.
+Speaker 5: And the meta language, is it kind of, you know, high level programming or a very human. Very organic. Organically written, you know.
+Dorian Schlede: I'm not sure what it's called. It was just Burak telling me that there is this meta programming language language kind of defining the model and we can be trans into any language. I don't know the name of it. Be honest.
+Speaker 5: Okay, no worries.
+Dorian Schlede: But if you're interested, I can get some information.
+Speaker 5: No, no, but I have enough information for now, thank you.
+Speaker 1: Cool.
+Dorian Schlede: So the Beam Studio is the essentially the node encode. Right. Which you guys will probably interact with. But then we then we have program essentially generate. Generate agent agents and then they will be visible also no code users. So you will, you will get the best world, essentially.
+Speaker 1: Cool. Speaking of like I think unlike unlike the session sessions that we. Okay, this is great. We can see our platform. Like we said before, we are now, we are now working in an ICE workspace. I'll make this a bit bigger as you see on the left hand side. So this would be a environment that you're working in. I think one thing which is really important to mention, the actual end user coming to your point, doesn't necessarily work in our platform. We can work with different interfaces where we can transport. For example, the show you. Show you in a second where the end user can see, let's say question the answers they can give feedback, this can change. They can approve, disapprove and also query information from there. So working with our AI body, let me call it that way, does not necessarily work into. I'm not showing you in a second. For me as a non tech user, this would be an interface for the actual person. It would be working in the cockpit that I'm going to show you in.
+Dorian Schlede: A second maybe to add on this.
+Speaker 6: Right.
+Dorian Schlede: So we always try to maximize the efficiency of the company working with.
+Speaker 6: Right.
+Dorian Schlede: And most of the time it's just keeping the people in the interface where they have worked before.
+Speaker 6: Right.
+Dorian Schlede: So you don't. So you don't want to change how the people are working. You essentially just pre fill their work and enable them to take a quick decision.
+Speaker 6: Right.
+Dorian Schlede: So that's why we either put the information in the software where they were working or we build optimize dedicated interfaces for our customers which essentially as fast as possible. Sorry I'm late. No worries, no worries.
+Speaker 1: Good to meet you. Okay. Okay. Speaking of firm, I will do the high level business view and then we'll chip in to also explain some techie stuff. So what you're hearing here As I said we sent our new studio. We are here. We are here in the ICS workspace on the left hand side. We've already some agents resonate with with you the whole presentation. And what we're going to talk about today is highly focused on the transaction monitoring agent which we've provided in the in the RFI. And this is again again this is just demo. And from what we've learned and understood so far in the conversations put into an agent where we think it should resonate in a in a high level way we then encourage next project project. This would obviously be much more much more detailed and tailored to your needs. On the left hand side agents like just like human beings work on top. So what you see here are a bunch of tasks that I created in this agent days ago. And as you see the agent got triggered with cases last time 9.9 in this case trigger word alert where we talk first step an alert suggestion. So it comes from somewhere. This can be your modern day modern data platform that sends payloads with all of the necessary information that process in an action something else just something that we improvise for call and then what the agent is going to fetch all information from this. So input unstructured information which can be in this case somebody transaction with an alert reference details again but I think you should be able to understand it already transfer and the agent did now extract all of the relevant information from the payload. It got on the right hand side you see the actual agent reasoning what he does why he ultimately takes out disparate information. And then next the next step he's going to take this output to ultimately create. For example let's say he's now doing an investigation. He's creating a report based on an SOP as I understood you work in technical question framework plus the package from previous transaction server. And it's then going to start. This is what agents and especially in this point AI magic reasoning part and think about it just like a human would think about it. So in this case the agency thinks about the transaction, comes to a question level and what we then do you see? Stage, we take all of this information and we push it somewhere else. This could be now scenario one, scenario one. This could also be also be a custom cockpit that I'm going to show you in a second. And then the agent basically going to follow a decision tree. These are the exact same steps that you saw. He's going to take the input and then go follow through these nodes and steps here. One thing is really important to understand. We're either playing around with APIs or integration based tools or we're doing typical prompt based, which is, which is the typical LLM stuff. Analyze, think about something or we do answer, get or post request if you want chip in please. Okay, good. Then the agent is going to follow his decision here in the first case, he's going to wait for the decision of the human being. So if the human being sees the cockpit and says okay, I approve what the agent does decision to follow flow, flow and approve it and send the information back, this might very, very easy. And there's just one decision again visualized as how we would do it. Now at this point, let me change my screen real quick. I need to see if I can show you.
+Dorian Schlede: There was a question from Manuel.
+Speaker 1: Manuel, go ahead, go ahead.
+Speaker 5: Yes, always me. Sorry guys, can you open again the configuration please?
+Speaker 1: Yeah, I was, I want, I want.
+Speaker 5: To propose a paradigm shift.
+Speaker 1: A paradigm shift. Okay.
+Speaker 5: So let's start with our 12 use cases. Because you guys, in your response, you're quite good at explaining how the thing then comes together. How are you going to solve our 12 use cases? But let's say that we then have these 12 use cases. How do these 12 use cases appear in the configuration? Is it just one single agent solving the 12 that we can then having in mind that we might always want to add more use cases.
+Speaker 1: Use cases.
+Speaker 5: So that kind of configurator experience, how does that look? Establishing the initial foundational, you know, agent or set of agents and then moving on to additional use cases beyond the 12.
+Dorian Schlede: Yeah, yeah. So you can build as many agents as you want, Right. And I guess how you structure it depends on, on your use case.
+Speaker 6: Right?
+Dorian Schlede: An agent is always triggered with some data, right?
+Speaker 6: Right.
+Dorian Schlede: So I guess kind of constrained by the data input that you're giving and that's how you slice up your agents. But you can build as many as you want and you can also interlink them. Right. So you can also from one agent to another. So you can, you can also extract certain pieces of your workflow that might be duplicated. Different use cases. Right. So that's also possible. Did that answer.
+Speaker 5: More or less. How would you guys then suggest. Because once again, we do have 12, 12 distinct use cases. Some of them quite simple, like summarize what are we talking about, you know, in terms of this. But then others are a bit more, more complicated, more annoying, like spending patterns or transaction patterns or call it whatever you want. How would this look then in terms of configuration, once again, is there a flow per use case, is there an agent per use case? And then each agent hands over to the next one. Or they can even work independently because the use cases can be independent as well.
+Dorian Schlede: Yep. So we can tailor this as we like. Right. So if they can run in parallel, that's really interesting. Right, because then whenever something happens on your end and you want, you want trigger the agents, you can send the payload that you want to process to multiple agents. Right. They can work independently and then once they have processed, they can also aggregate the data again. Right. So it's also possible to do stuff in parallel. How it will in the end and how we slice, slice up and up into multiple agents will depend on goes how it makes sense to slice this up.
+Speaker 5: Okay, fair enough, thank you.
+Dorian Schlede: But in general as well, that would also be possible. Then you, then you would lose your parallel process.
+Speaker 6: Right.
+Dorian Schlede: So you might also send the data parallel or maybe 12, 12.
+Speaker 6: Right.
+Dorian Schlede: And then aggregate the data at the F. So that's also.
+Speaker 5: Sorry, I'm going to ask a really detailed question now that might annoy some of the people in the room. How then this translated to costs? Because what I saw in your, your, your response document, it's all about tokens.
+Dorian Schlede: Yes.
+Speaker 5: So If I have 20 agents, 20 simple agents versus one very complex agent, in the end, the token consumption should be more or less the same.
+Dorian Schlede: That is correct. Because it depends on the amount of nodes and not on the amount of agents.
+Speaker 5: Okay, perfect.
+Dorian Schlede: Thank you. Welcome. Welcome.
+Speaker 4: Would this also support edge cases?
+Dorian Schlede: Yes. Yes. So maybe you can scroll down quickly.
+Speaker 2: Yeah.
+Speaker 6: Right. Right.
+Dorian Schlede: So we have these branch. Maybe maybe you can click on, click on approved. Yeah, yeah. So branch points anywhere in the flow.
+Speaker 6: Right? Right.
+Dorian Schlede: So every node or action can have a decision point where the AI is intelligent analyzing which which node to go next to. Essentially.
+Speaker 6: Right.
+Dorian Schlede: And as you. And as you can see here, there's branch condition. So there's also no more logical operator.
+Speaker 6: Right? Right.
+Dorian Schlede: It is also based on, purely on language and context, which will allow you to essentially move any kind of decision making into this at any point.
+Speaker 6: Right.
+Dorian Schlede: So for example, if you would like to exit here, right. So you're in the you take a decision depending on what you do. Then the agents can also do to go anywhere. Go anywhere.
+Speaker 6: Right.
+Dorian Schlede: We could also sometimes for example we do is. I don't know. For example, when we processing we have an email address from. From the person who submitted and then we look up system trying to find the custom id.
+Speaker 6: Right? Right.
+Dorian Schlede: Sometimes the person might not exist in the database of the company. So there will something coming back.
+Speaker 6: Right? Right.
+Dorian Schlede: And then after this we're gonna have a branch where we take a decision takes a decision on what to do next. And if there is there is no custom ID in that page, then we would essentially exit early and escalate to a human, for example telling them hey, this email email address does not have an associated ID to it.
+Speaker 6: Right? Right.
+Dorian Schlede: So you can implement as much as case handling as you would like.
+Speaker 4: Is that also included one example in the. Or do you just do?
+Dorian Schlede: No, of course. How we do we can also look at.
+Speaker 1: Maybe on that note for the proof of value. Because you already also asked about cost. I think, I think again and again we bring to the table as a partner. We consider ourselves not platform. We consider consider ourselves a partner that advises you on building the flow, building the decision logic and ultimately giving you the best possible value in the 3 months period. So. So to answer your question, yes, it will also include edge cases to a certain extent. Extent. I would say now every branch, two hundreds, three months. Three months might not be enough.
+Dorian Schlede: I would say. Right. And usually the value value does not lie in like 1%. You want to see how we would do this then we can certainly also do an do an edge case.
+Speaker 1: Cool. What I want to show because this is something that I'm most proud. It's very cool to show at this point. You do see the cockpit suggestion based on the conversation that we had a couple weeks ago in the Q and A we provided you with two options. Also opinion I think it's going to be much more limited. But in the end, in the end you're the right person. We could also provide you with a custom interface. And this is exactly what we want to do here where we say hey, we're going to push the information somewhere.
+Dorian Schlede: Else.
+Speaker 1: In our same environment. This is our slash sandboxing environment can quickly iterate new features and play around. And what you see here on the left side, I've added something which is you don't see it here because now the actual production environment and then the TM cockpit if we go here you do see a nice summary alerts which are active high risk and this is basically the cockpit that I as a transaction analyst would look into. So you see a couple of cases that are flying in risk amounts, information and if I don't go details, details. You do see what we've talked about proposal and already the most important information type where is it all coming from? And much importantly the question time you see in this case engage.
+Dorian Schlede: And then.
+Speaker 1: Ultimately this human being can either prove this or it can or it can give feedback here again again this is not live but this is for you to show how we would build a custom interface. I think one thing that was also very important for you guys is that the agent have a nice little chat interface on the right hand side when I could now query questions. So this is custom interface solution which would build the very transparent answer is three months. Might be a bit focus on building the agent but this is definitely, definitely something that could stages. So this is just how far we could obviously power BI which you already use. The question is how customizable how much value would it give you And I don't think, I don't think they can query with power bi. Yeah, go for it. May I may I take your case.
+Speaker 4: That set the part that might not be feasible within three months.
+Speaker 1: The general cockpit view that you see it depends. The very hard answer is you're going to hear a lot of depends from us today because in the end it really depends because we need to beginning of the project really go deep into the trenches, scope out all of the flow and actually see okay what's feasible to deliver you guys and also be wrong to tell you. Yeah we can't make every magic work in three months because in the end it's not true. It's not true. So this is how envision a cockpit for you along the journey. Yeah.
+Dorian Schlede: But honestly speaking, if you have the data well aggregated.
+Speaker 6: Right.
+Dorian Schlede: Building a UI on top these days is not very, very hard anymore. So it's definitely something that could be possible if you guys are interested in this. We've also done this for other customers.
+Speaker 6: Right.
+Dorian Schlede: Because sometimes you just aggregate.
+Speaker 6: Right.
+Dorian Schlede: And then I mean, I mean it's easier to information in one in one optimized interface.
+Speaker 6: Right.
+Dorian Schlede: So that they can take the decisions very fast.
+Speaker 1: Again yes.
+Speaker 5: So a lot of questions I'll start with.
+Speaker 1: That's good.
+Speaker 5: How did it take you guys? So you guys did mention that of course, building something like this in real life would take some time. Could go beyond the POV timelines also, you know, depending on capacity and whatnot. But how long did it take you to assemble this?
+Speaker 1: So in this case, I, the non tech user did this again. There's this new trend around type coding where you code like me, which have no idea about code, can actually make nice test and code stuff. So to be honest, I think this took me eight hours. Eight hours Max.
+Dorian Schlede: Max.
+Speaker 1: Really max. And this is. And this is in our environment, but it doesn't work. Doesn't work. So if I know go, if I know, if I don't go to the chat and I query stuff, it won't be able to query. This is just a nice mockup to show you how to look like the guy that makes it makes it worse to my left.
+Dorian Schlede: Yeah, yeah. What you now type in will also not work.
+Speaker 1: No, it will not work. I obviously didn't show you that part that it will just end up in an infinite.
+Dorian Schlede: So these days if you have your data model clear and you give the data model to the AI and then you want to display some information, it's literally as simple as drawing a little sketch on paper and they say hey. And then you just essentially, essentially you measure it made the data UI field and. Yeah, yeah, that's almost already it these days. I mean obviously then you need to make sure it's pure and all these things right. Which then takes a little bit of time. But building interfaces incredibly fast these days maybe.
+Speaker 1: On that note, I saw we also have other questions.
+Dorian Schlede: I have more.
+Speaker 1: Oh, sorry.
+Dorian Schlede: Go for it for you. And when we go the text deep dive, but you can.
+Speaker 5: But my question was still kind of high level. So you didn't talk about Power bi. I do understand, you know, vibe coding and whatnot. It allows for certain efficiency in terms of production, in terms of production of tools like this. But we do have a very strong capability in terms of Power bi and we have invested a lot of money on it. So the dashboards that are there would not necessarily be something that we would like to replicate in a tool like this. So we would potentially need to talk about the hybrid model where the working console could be something like this, but always somehow integrating with some Power BI dashboards, if that makes sense. But like you said, we can talk about that later. And also I have an additional question which is when I next comment, which is about rpo, for us, the pov, it should go live and we should have at least a subset of users Using it. So we would always need a means for our agents to interact with the console. You know, with a console we always need to have a tool in place for agencies we want to derive immediate value from. The POV can be a subset of users, but we want immediate values.
+Dorian Schlede: Yes, yes, yes. So there definitely needs to be some kind of approval interface.
+Speaker 6: Right.
+Dorian Schlede: Wherever it may live. But we will need to create some custom fields.
+Speaker 6: Right.
+Dorian Schlede: And we will need to optimize for human usage and make it an approval interface. I guess it depends on the flexibility we have information.
+Speaker 1: We also haven't seen your power sidelines on that point.
+Dorian Schlede: Thank you.
+Speaker 1: I think the only thing I wanted to say is that maybe they show them the dashboard that we built for the other clients where they can actually make it work. Maybe not now, but I saw there was another question somebody. Oh, go for it, go for it.
+Speaker 2: So I also have two questions.
+Speaker 5: So one.
+Dorian Schlede: So basically you.
+Speaker 1: What you just already said is you.
+Speaker 2: Have it in Power BI way of.
+Dorian Schlede: Working for another client, which you might be able to.
+Speaker 1: We have the custom interface built with another client where we build the dashboard that they can work in and have this approval flow.
+Dorian Schlede: But did you ever do it in Power BI for a client?
+Speaker 1: I think we have never integrated Power bi, but there is definitely a possibility we do have the Power BI integration can make and make it work by.
+Dorian Schlede: And this where we are talking about. It's just interface for the people, people.
+Speaker 1: Who are working with the program.
+Dorian Schlede: And this is not for the reporting part. No, it would be the one place.
+Speaker 6: Right?
+Dorian Schlede: Yeah. Yeah. So because reporting is via Power BI on our site, which means that we have to have a feedback loop of your data.
+Speaker 1: Okay. Okay. That is needed for a report so.
+Dorian Schlede: That we can run the Power BI report on top of.
+Speaker 1: But in the end you just need to tell us the input fields. If you need a read, you can push the information to your data lake.
+Dorian Schlede: Yeah, yeah.
+Speaker 1: So.
+Dorian Schlede: But it needs to be that they are too distinct. Take that out of the documentation that was sent.
+Speaker 1: Good point.
+Dorian Schlede: My question up front and to also answer one of the things from Mano. That's why I'm asking, did you ever do it? Because our Power BI is limited to access data from the data lake or the data warehouse. Which means that if we want to do this, we should feed the data warehouse first with the data you guys have, but then it will never be up to date. So there's a Kent 22 from our side how to work with that.
+Speaker 2: So.
+Dorian Schlede: So what I was thinking the interface right there, we Just send back data warehouse. Yeah, but we have a traditional data warehouse and not a ods. Okay, okay. So. So we have, we have an ods but not for this purpose. I just want to make the distinction between reporting side and usage and then we can talk about how it can work. And most important thing is of course for the people here actually have to work with, but we need to take into account that report side different streams.
+Speaker 1: Let's take this on the agenda for the end of the meeting today so we can have discussions. Question. So the interface can be completely in Dutch. You can also query from. From Dutch if you want. Maybe this question goes more towards you.
+Dorian Schlede: I mean you're talking about the approval interface.
+Speaker 4: Yeah, let's say now this puppet. Would there be a button that you can switch?
+Dorian Schlede: It's custom. We can, we can do whatever, whatever you like.
+Speaker 1: This is just the idea I had on Monday night how this would look like. You could obviously make it based on your requirements list however you want to have it. If you want the button on the left, top left, we can do that also in Dutch or English.
+Speaker 4: And then so let's say in the future we want something then I assume from what you're telling, we also able.
+Speaker 1: This front end.
+Dorian Schlede: Front end. So I mean, I mean so we would, we would build this using AI, right. We would generate. I mean we can give you guys the code so you can host it. But we don't have like generic. Generic. So I guess. And then you guys own it, right? So you can also own the code and then you guys can also make modification. It would just be part of the.
+Speaker 4: But let's say you have it and I would like to have an additional or something. Yeah, then it would go to you. To you.
+Dorian Schlede: I mean, I mean so we can give you guys the code right. So we can give you the code for the interface. So so can also stay within your organization to maintain it. Change it. But as a no code user. Yes and yes.
+Speaker 1: Or you want them permanently change to the cockpit.
+Speaker 4: Well that's, well that's also. Yeah, yeah. So it's not individually customized. But then if you, if you want permanently an additional table for some reason then. And yeah, yeah, we have to align with you.
+Speaker 1: Yeah. So either you have capable work in the code base code with it or you can also chunk of service dedicated forward deployed engineer that stayed with you in the beginning. In the beginning and also go throughout the first year can help you on all of these change requests. We have a budgeted depot of time and material, several hours of Our, our engine engineers for you. And if after 10 years you want to change, that's a different conversation. But especially in the first year, we help. We help a lot. Yeah, exactly. Yeah, exactly. That's the one that I budgeted.
+Dorian Schlede: Yes.
+Speaker 4: Yeah.
+Dorian Schlede: But for us, making these changes will be very essentially, Essentially it's. You tell us, I mean it's not data. Sometimes we might need more agent. The agent.
+Speaker 6: Right.
+Dorian Schlede: But in general, in general this will be definitely, definitely possible. I will. Very fast. Yeah.
+Speaker 1: And I think because, I think because you just said it's not necessarily bad thing because at us, at us at BIM, I said 50 people doing a lot of work. At ours, we always say if we want to sell building AI native companies, we also have AI native. So for example, if the employee at BIM is not utilizing AI capabilities, they're in the wrong, wrong place. So that's why we obviously use these new coding techniques to also make us much more efficient and faster for you. Okay. We think. But I'll quickly sum up the presentation of the platform and then we can go into the tech deep dive.
+Speaker 4: I do have question about the integration plan because you also asked about one fte what is included in there.
+Dorian Schlede: Yeah, yeah, of course.
+Speaker 4: I have soon, hopefully soon a lot of animations analyst that has to be trained on this news either hits the cockpit or running a power BI report.
+Dorian Schlede: That.
+Speaker 4: What is the plan there? Because I couldn't see that.
+Dorian Schlede: Yeah, yeah.
+Speaker 4: In the document in terms of integration, training, adoption, like how are we going to ensure that that will be as smoothly as possible?
+Speaker 1: Maybe you want to take that.
+Dorian Schlede: Yeah, yeah. I mean usually the doctor part is done by our customers.
+Speaker 1: Right.
+Dorian Schlede: But obviously we do support.
+Speaker 6: Right.
+Dorian Schlede: So I mean there's generally best practices. You only roll it up to a few people, you get that feedback and so on.
+Speaker 6: Right.
+Dorian Schlede: So we can definitely support how this can be done. But we are not educating your staff.
+Speaker 6: Right.
+Dorian Schlede: So that would be up to you guys.
+Speaker 4: We need to develop like a training plan for these analysts, etc. So that is something that we have to take into consideration.
+Dorian Schlede: Of course. Yeah. Right. So we will design and optimize if we go this route and then. Yeah, you guys. So it will be optimized for your workflow. So we will be designing in a way that ideally seamlessly integrates and ideally, ideally is self explanatory.
+Speaker 6: Right.
+Dorian Schlede: That should be the goal. And that's also the advantage of having these because you can arrange information in any way you like. So you can, you can really optimize the presentation, presentation of information here and guide and guide the user.
+Speaker 4: And if you want to start maybe with a small group, I can imagine that we have some additions, some questions. Is it possible to then add this small period of time?
+Dorian Schlede: Yeah. We used to list our other client and also constantly give us some change requests when we design a process. They give us examples. They can't think of all the edge cases.
+Speaker 6: Right.
+Dorian Schlede: So it's very common that change requests throughout the project and we are able to accommodate those.
+Speaker 1: And on your note. On your note, I think which is important to say after we deliver the project, it's not that we leave have fun with it. We are there. And that's why we also budget has a capacity of one full time equivalent to be with you. To be with you at the beginning it's going to be and actually being in the code platform and giving you the solution and the product. But after, after that in the end then priority shift A lot, a lot about knowledge transfer and also the small group transferring. How do I work with the cockpit? So I think, I think we don't do the full internal implementation but obviously let's try to handle open to a small peer group. We can then take it from there. And we're not, we're not gone gone. So we're always, we're always there for support and questions. Cool. Okay. Okay. In respect of time, you guys need to tell me if you need coffee.
+Dorian Schlede: Or bio breaks if you are changing to a different subject now.
+Speaker 1: We are now I think it's. I think it's a. In like in like five minutes. Let's do it now.
+Dorian Schlede: Let's do it now.
+Speaker 1: I think because you're going to doing the tech stuff and I think everybody has coffee.
+Dorian Schlede: That would be good.
+Speaker 1: If you want.
+Dorian Schlede: All right, let's do a break.
+Speaker 1: Everybody in the call. Please don't leave. Oh all right. Okay then let's switch to actual presentation. Presentation again and then we can do some coffee.
+Dorian Schlede: Coffee. Perfect. We'll be back in 10.
+Speaker 1: 10 minutes. So we start 250 again.
+Dorian Schlede: Perfect.
+Speaker 1: Cool.
+Speaker 2: All right, great.
+Speaker 1: Then I'll get a coffee.
+Dorian Schlede: Okay. The coffee bar and then on the right first.
+Speaker 1: Yeah.
+Dorian Schlede: I for meeting Hill died with this point. So we can do exactly the. Yeah, yeah.
+Speaker 4: This one. A new base measurement system.
+Speaker 1: Ah, cool. Clean and nice this year. Oh, nice.
+Dorian Schlede: Yeah, that's nice.
+Speaker 1: I cannot take the money.
+Dorian Schlede: The KYC use case.
+Speaker 1: The Hammond rich part because I start in the scope for the answer again. The answer is it depends and the source of wealth. What experience and from my perspective. Perspective.
+Dorian Schlede: Group. Okay.
+Speaker 1: Yeah. My in procep is itself what. What the transaction monitoring is this itself the pr. You have a flow. You remove the mapper. You have a dashboard vegetarian. You can data in a dashboard stopper. This procep. I name it under loa.
+Dorian Schlede: Under data.
+Speaker 1: Yeah, under data process is. Is itself.
+Speaker 6: Development.
+Dorian Schlede: Yeah.
+Speaker 1: And who Snell was partnership and topics main name and case studies.
+Dorian Schlede: Yep. And after this presentation it's back to Berlin for me.
+Speaker 1: Not for you. Yes, you.
+Dorian Schlede: When do you.
+Speaker 1: When do you arrive? Like 1am yeah. Terrible, right? Yeah. Started at 5 and you're back at 1. Is that that thing? When did you start?
+Dorian Schlede: 4:30.
+Speaker 1: 4:30 and you're back at 1.
+Dorian Schlede: Yeah.
+Speaker 1: Everything for beautiful Netherlands.
+Dorian Schlede: Yes.
+Speaker 1: He wanted to come so bad. If you come from Hamburg, it's like five hours. But I was staying with my parents in Osnaburg so it's like three hour train ride. So it's close to the Dutch border.
+Dorian Schlede: So.
+Speaker 1: So for me it's. And the ice starts in Berlin and it crosses Osnabruck. So he was already in the train and jumped on and then we came together. So for me it's fairly chill but for him it's a bit sporty today.
+Dorian Schlede: 12 hours straight. It's okay.
+Speaker 1: You can work more without.
+Dorian Schlede: Yeah, if I work at home or in the train, doesn't matter.
+Speaker 1: Okay, is everybody back? I know we said, we said 250. Okay, let's give them another second before they're back.
+Dorian Schlede: Okay.
+Speaker 1: Okay, we can start. Everybody's here.
+Dorian Schlede: Okay. Okay.
+Speaker 6: All right.
+Dorian Schlede: I hope everybody. Everybody get a cop. And I hope know I'll try to high level. So essentially, essentially I want to now explain to you guys why we are different and why we are evolution of all these RPA systems and so on.
+Speaker 6: Right.
+Dorian Schlede: And kind of already possible. So on the right on the right hand side in this image you see the fundamental layer layers of the platform. The core piece of it is in the middle. It's the execution.
+Speaker 6: Right.
+Dorian Schlede: So the flow builder that you've seen happening.
+Speaker 6: Right.
+Dorian Schlede: So that's the core piece. That's also what has been there.
+Speaker 6: Right.
+Dorian Schlede: You would drag and drop from step.
+Speaker 6: Right.
+Dorian Schlede: Data, so on.
+Speaker 6: Right.
+Dorian Schlede: So that's how all these systems work. So you have some kind of integrations in that execution layer. You have. You always have conditional rights, Right. So essentially baseline. But we're adding on top of this essentially kind of from the, from the beginning and then also the optimization. But yeah, let's maybe look at the planning layer.
+Speaker 6: Right.
+Dorian Schlede: So how it has been is people are Going to, they are designing their flow.
+Speaker 6: Right.
+Dorian Schlede: So that's how it has been now. Now we're getting a very, very close abstracting the need to understand all this.
+Speaker 6: Right? Right.
+Dorian Schlede: So you don't understand and how to map all these things. Right? You don't need to understand how to build node build by node anymore. So this being abstract in the, in the industry to a level where you can essentially use the planet layer, your complete system and your complete flow. So that, so that means what we have here, here is a guide agent setup process where you, where you essentially put in your process description and some high level business logic.
+Speaker 6: Right.
+Dorian Schlede: You could also put it on the chart.
+Speaker 6: Right, right.
+Dorian Schlede: And then, and then we will have a guided process that essentially actually yeah agent and then, and then we will generate from your process. So that means we will automatically generate all the nodes in your graph that you've seen. We also, and interestingly we also generate generate all the process for you. For you. So that means don't need to know prompt engineering anymore to get to work. An agent, that's the agent set up that's essentially for the execution layer. Now on most platforms you can build something in that automation but then most of the time you don't have a feedback mechanism, right. Or you to don't have or you have to build and build it.
+Speaker 6: Right.
+Dorian Schlede: So that's also where a lot of these competitors break. And that's also one of the reasons why a lot of people cannot actually build these production grade systems because they do not have a proper mechanism implemented that allows to improve the engine itself or the execution layer. So we do have this as well. We have multiple different ways of providing feedback which I will also you show you in a second. And then, and then what we do here, and that's another interesting. We automatically see the feedback that human, humans get and they are essentially approving tasks.
+Speaker 6: Right.
+Dorian Schlede: In an interface like the one we have seen, we are, we are storing this, feeding it back the AI into our agents which, which has made. So we have prompt optimization by the AI as well. So that means essentially where we are going at the moment is abstracting all the knowledge of AI itself prompt engineering, right? So you essentially plan what you want. We generate, generate everything for you. Then you start running tasks. Then you will feedback the output, right. You will correct, correct the AI. I'm wrong. And then we automatically improve the Pro U and automatically improve the performance. So this is, this is essentially where the market kind of working, working on nicer interface to make an even easier drag and Drag and drop stuff. But the world kind of moving to this layer. Layer, it's being essentially completely extracted to a point where you just need to describe what you want to get right. You need to plan out your process that you want really, really well. You need to define the specification of what you want. And once you. Once you find it very well, the whole execution essentially because we give up the process and then it's able to auto generate the whole thing. So that was. Now we will dive into the different layers quickly and give you a little bit of a dive into them to them.
+Speaker 1: There's a question.
+Dorian Schlede: Oh yeah. Oh yeah.
+Speaker 5: Can I play back to you what you told me? So I have an understanding that I understood it. So using natural language, we program the agents, so we tell what the agents needs to do. So basically we can have very nice text detailed on standard operating procedures that describes what is the aim, what we want to achieve, even contain formal requirements, steps, all of this stuff. And then based on that, your platform generates a bunch of stuff, including the workflow steps that you showed us, that kind of graph. So it creates all the these steps there or tasks, we can call it whatever we want. Also placeholders for integrations.
+Dorian Schlede: So no placeholders actually selecting the integration.
+Speaker 6: Right.
+Dorian Schlede: So what's necessary? Yes. So you would need the actions beforehand. Then we will automatically select the correction to take.
+Speaker 6: Right, understood.
+Dorian Schlede: And then that makes sense if you think about it. Essentially all the AI stuff, process data, give it back to some kind of integration. We only process data in a way that we can send it back to your tools. So this way, this way we know all the integrations that are in the flow. We can also perfectly generate the prompt to fit into the system to distribute the data to your integrations.
+Speaker 5: Got it. But then the prompts themselves, they do that. They do the kind of the communication with the, with the integrations, but also the data digestion. And this part, you know, the work around the integrations is what then based on the. The feedback loop you can optimize or the system optimizes itself.
+Dorian Schlede: Yeah. So I think let's start this because I will explain all that in detail. Slides. Second, second. So let's just hop over to the agent setup maybe.
+Speaker 1: Exactly. Just asked.
+Dorian Schlede: Yes, yes.
+Speaker 1: Okay, let's see. We have a video playing in the background. You can also show it in the platform later. But thought this might.
+Dorian Schlede: Yeah. So essentially, essentially, sidebar chat. You have an empty flow. The first step would be that you would describe your. Or you would upload some kind of chart that visually explains what your process does, then the AI will take what you gave it and will transform it into a. As you see like a natural language process description. Goal of the step is this. Then you have some kind of, kind of decision logic. Right. So and so on.
+Speaker 6: Right.
+Dorian Schlede: Agent should do. Now that's, now that's what we now see now here. And then what you do is generate the flow. So that's, so that's what we now see in the flow builder. So it's essentially generating all the promise. Now it's generating, generating the conceptual level of the flow.
+Speaker 6: Right?
+Dorian Schlede: Because you have to have. Obviously the AI doesn't do everything perfect in one shot. That's why we allow feedback at every stage.
+Speaker 6: Right.
+Dorian Schlede: So now, so now you see on the left hand side you see a concept of the graph. Now you could get feedback on it. For example, you want additional steps or you want branching at this step. And then the AI will edit on a conceptual level. Then step number four is matching the integration.
+Speaker 6: Right? Right.
+Dorian Schlede: As I said before, the AI part of it, part of it, your IT systems.
+Speaker 6: Right.
+Dorian Schlede: So we know the output of the integration integration that we need to serve.
+Speaker 6: Right.
+Dorian Schlede: We know all the data that they play with and this will allow us perfectly map the data essentially directly. So that's why we always get integrations and then we generate the prompt into those integrations. Now we have generated the prompt already in this example. Now again you can review the flow, you can make changes on high level and then you would connect the integration that you have connected, which is what we now on the right hand side. And the less the lesson would then run your first class. So.
+Speaker 2: Can I ask a question?
+Dorian Schlede: Yeah. Yes. Yes.
+Speaker 2: So how often do you do this? Do you only do this for the implementation or do you do this?
+Dorian Schlede: Do you keep on going?
+Speaker 2: This is basically the design of how to assess and implement the agent at ICS as a once off or is it continuously ongoing? How do I see this process?
+Dorian Schlede: Yes. Yes. So at the moment, this is the one on. Off at the beginning.
+Speaker 6: Beginning, Right, Right.
+Dorian Schlede: So at the moment we do not have the ability to modify the graph afterwards in natural language in the interface, but with our development kit.
+Speaker 6: Right, Right.
+Dorian Schlede: So once we have this ready, we cannot wait for it because then you can do anything.
+Speaker 6: Right.
+Dorian Schlede: So you can, in your code base, you can also then add the RAM graphs, sorry, new nodes, new step and also the prompts.
+Speaker 6: Right.
+Dorian Schlede: So once we have this SDK, you can programmatically do this at any point when you are building the graph. The graph. But as of yet in the interface we only have the one off thing in the beginning. And what is the estimation? You said I can't wait four to six weeks. At the moment we're planning for the SDK. So this year. Yeah, yeah, definitely, definitely. So, yeah, because essentially this is an open. You have to put in the information, right? It becomes much more interesting when the AI, all the information of what you're building. What's the project plan? Right, so that's, so that's in these coding, AI coding environments, right? So you level AI that knows exactly how the whole platform is working. So that's why, that's why the SDK and the coding side of things will be much, much, much, much more powerful. So that's why I cannot wait for this. But yeah, yeah, okay. Okay. So that's the agent setup. Now let's go to the layer. So what a task execution looks like now, one piece of this mapping the data between the nodes, right? So there we have two options. The traditional solutions only have linking, right? So you essentially dragging data from one step to another step, right? Which is PDF and some annoying, annoying language playing with a lot of product data. That's why, that's why we also. Language allows, allows you. Number one. Number one, we have a question. Another, another question.
+Speaker 5: No, no, I give up. You're. You're answering it now.
+Speaker 1: Thank you.
+Speaker 5: Please, please carry on.
+Dorian Schlede: Okay. Okay, sure. Memory lookup. So we, we also have a great integration rack system essentially, or dynamic knowledge recovery, whatever you want to call it. So you can also upload some kind of policies and so on and the AI will then intelligently retrieve data from its memory memory as it's needed. So we do have this, we do have this option. Then, then we have structure, we have structured outputs, right?
+Speaker 6: Right.
+Dorian Schlede: So we never output plain, we always output JSON data str. So essentially, essentially we always define what data it is. How do I explain this? It's like structured data, right? So we never work. Everything in the platform is always data because it makes it easier to work with it. And then as we have seen before, we have this branching logic. So here we have a generic decision making because like is like a generalized prompt prompt that does classification, right? So you select the three options, right, with branches and then intelligently, intelligently based on the available content, your branching criteria where it is going, right? So here we are, here we also moving past logical operators, allowing more complex and more dynamic branches branching as well as well. Then one really interesting thing that we have, which little bit of secret to increasing the accuracy is built in self healing. So essentially even if you run the same thing 10 times, maybe 10% time, it just fails.
+Speaker 6: Right?
+Dorian Schlede: You run everything exactly the same. So that's just the industry problem thing that we have now. What can you do? What can you do about it? You can, you can just itself. So that's exactly what we are doing. So whenever you put the prompt into our system in one of these nodes, right. You have a logic, logic and everything you want AI to do defined in that.
+Speaker 6: Right?
+Dorian Schlede: That's your, that's your definition of what you want the AI to do. Now what we do, what we do is we take your prompt which has your logic logic and we turn it into validation checklist. So we have AI AI turn it into validation checklist. So after every, every step that the AI takes, it's essentially, essentially checking itself based on these criteria. Criteria. And this is something like a yes, no, Right?
+Speaker 6: Right.
+Dorian Schlede: So did you, did you do this? Did you do this? Did you adhere to this, did you to this rule?
+Speaker 6: Right.
+Dorian Schlede: And then you have seven different points. Right?
+Speaker 6: Right.
+Dorian Schlede: And then you would be below threshold and that would mean that if we feed the feet of the AI that checks the AI back into the node automatically again with the feedback that I provided. So if you're, if you're now works, it works, right?
+Speaker 6: Right.
+Dorian Schlede: And then nine out of works, then you would catch nine out of 10 times. You would also catch the issue that the AI then you, then you improve the accuracy from 90%, 99%.
+Speaker 6: Right? Right.
+Dorian Schlede: Because the AI is able to catch errors. This is essentially interesting if you're handling a lot of context, a lot of information. Even if the data is available, if the rule is explicitly written, the AI still makes mistakes.
+Speaker 6: Right.
+Dorian Schlede: And this happens why we have this self healing healing mechanism to support us and at run time bump up the accuracy for free. Essentially. Yeah. Do you guys have any questions on this?
+Speaker 1: If it's too techy us know.
+Dorian Schlede: Okay, questions. I think you're not sure. I'm not sure you're thinking, well, it's a rerun.
+Speaker 1: Is it locked or somewhere? Is it the, the system system that.
+Dorian Schlede: You just explained is locked on somehow? The, the. The learning of the AI is because at a certain point in time I think about supervisors who want to know how this, how the system works and how it learns.
+Speaker 1: Explain.
+Dorian Schlede: Yeah. So the learning will come in a. That would not be the learning learning that is essentially just like a self validation.
+Speaker 2: Yeah.
+Dorian Schlede: Okay. But that's.
+Speaker 1: Is it also the validation stuff?
+Dorian Schlede: Is it also then somehow stored when A supervisor comes in and certificate. Yeah. So it is stored.
+Speaker 6: Right.
+Dorian Schlede: And it gives you a percentage which is. And we can also display it in an interface we would like. That would also. Yeah. So the self learning is already always traceable by audit. What has been done by the AI itself. Self learning. We are. We didn't get.
+Speaker 2: What you were explaining.
+Dorian Schlede: That it was self learning. So when it's a zero and it changes or it's a one. What you just said is that in a lock. See what he does exactly how he treats himself. How do we. How do. How do we check. Check this on the business side end. So once that he does his thing as you explain. So how do we know that it is doing the correct things and not giving us new bias or whatever? Because it's self learning or self healing. What you said.
+Speaker 1: How do we need to see that.
+Dorian Schlede: And how can we control that? So. So first off. So we also read the reasoning, show the reasoning why AI has taken the decision. Why was this check true? Why was this check.
+Speaker 6: Right.
+Dorian Schlede: We do. We do have. And also. Yeah we store all the details. But then in terms of your decision making, I don't think you think actually that relevant to you guys to understand. Actually understand this piece. We will present the process the human agents with the relevant information anyways.
+Speaker 6: Right? Right.
+Dorian Schlede: So let's assume the AI doesn't stick.
+Speaker 6: Right.
+Dorian Schlede: And right. Also doesn't work.
+Speaker 6: Right. Right.
+Dorian Schlede: Then there. Then there's some kind of value in there. In there.
+Speaker 6: Right.
+Dorian Schlede: That the AI produces. That value will then be human interface.
+Speaker 6: Right? Right.
+Dorian Schlede: And then the human is the value and then we will store the correction the human and then again use that correction to improve. That's then the self learning that we get. What I've just shown is more like mechanism something that it just happens. We just do this based on the logic in the prompt. Something you guys would interact with would then get the final of the data at the end of the flow.
+Speaker 1: I think from a governance perspective that's where the question was coming from. Expose these. We can.
+Dorian Schlede: Yes, yes. Yeah.
+Speaker 1: So to answer your question, if I may rephrase.
+Dorian Schlede: Yes.
+Speaker 1: You can see the exact. And also thinking behind the locks. We have the locks. We can also expose.
+Dorian Schlede: Yeah, yeah.
+Speaker 4: What does that process look like? Because I can imagine also from other perspectives and also mentioned in Reg to be able to actually get that from somewhere and expose.
+Speaker 1: Which you can.
+Speaker 4: But what does that process looks like?
+Speaker 1: I mean in the end you can answer that in the dashboard where you can see the logs and facial tracing.
+Dorian Schlede: Right? Yeah. So we are platform and we do expose all the reasons in the. In the interface. But that's not everything that happened happening, Right?
+Speaker 6: Right.
+Dorian Schlede: Because also we have logic inside the observability inside length use our observability platform. So we do expose portions of it which explains particular things. But we're not exposing all logic essentially.
+Speaker 1: Which for an audit, I mean, if they're custom.
+Dorian Schlede: Expose them. So we do store everything. We track every API thing that we do is stored.
+Speaker 1: Now we come to the learning.
+Dorian Schlede: Yes, yes. Actually pretty impressed with of the.
+Speaker 6: Left. Right, Right.
+Dorian Schlede: So now, now to get. To get to now the part in a second, right. Which is essentially where the magic AI is able to improve itself. So to, so to do this we need some kind of mechanism, right? We need to learn and understand. Because, because if we start start with process, we might take to fix the example case, right?
+Speaker 6: Right.
+Dorian Schlede: To essentially train the AI at the beginning, right?
+Speaker 6: Right.
+Dorian Schlede: Then you will never logic and so on.
+Speaker 6: Right?
+Dorian Schlede: So these things will naturally emerge over time while you're just executing particular case.
+Speaker 6: Right? Right.
+Dorian Schlede: So we need some kind of mechanism continuously update the logic of AI AI.
+Speaker 6: Right, right.
+Dorian Schlede: So I mean there's some cases where there's rules, right. But the AI doesn't follow them. That's one problem. But another, another problem. So there is no definition on how the AI should act in particular situations.
+Speaker 6: Right.
+Dorian Schlede: So to get this, we funnel every client, every. Every agent through a feedback interface on some kind of approval interface.
+Speaker 6: Right?
+Dorian Schlede: Because also clients, clients don't want to take critical decisions sending orders from A to B. Right. Just based on AI. So therefore, therefore we have. The interesting part is here we show the variables. So we show you guys all the information I need approve in order to be able, in order to approve the thing, all the information. And that's the exact information that we're showing to the user. And then what the user is doing is they are.
+Speaker 6: Right? Right.
+Dorian Schlede: So if I extracted the wrong email address, the human agent would then put in the correct email. Save it, save it, Approve, Approve. And then we would save the information. And here we have one option is the feedback API. So this, so this allows us integrate with any system, which is also the favorite because this means if you're, if you're working in your system, the people. People are working in a particular system, they keep on working, right? The only thing that.
+Speaker 6: Data, Right, right.
+Dorian Schlede: And when the human changes a value, store this and you would send it back to us through the feedback API.
+Speaker 6: Right? Right.
+Dorian Schlede: So this allows us just to just. Yeah, for the people to keep working method providing, providing feedback which could be in the interface.
+Speaker 1: Interface.
+Speaker 2: Can I ask a question because.
+Dorian Schlede: Sure.
+Speaker 2: I'm a bit swimming here now.
+Dorian Schlede: Okay. Okay.
+Speaker 2: So when we talk about the scope of how we see applying AI for TM analysts, I see this only going one way. So basically we rely on multiple data points and multiple data sources which are in a TM data warehouse. They the data sources are being accessed are transactional data, profile data, customer data, account data, card data, etc. And obviously case data at a certain point. But I don't see a feedback loop or a two way mechanism included or nor I don't see a use case for that on this term and also would not in order to honesty trust an AI to make changes in the golden source accordingly, with all due respect, I would say there are very stringent processes in place once we need to adhere to that. But are we still talking about the process in performance providing TM analyst data based on their own data? Because I feel that we are doing talking about lots of continuously molding processes to make sure that they get the right data. Or I don't really understand how this fits into the picture where basically we set up an AI some sort of way on top of our data and provide us into more intelligence than we typically can with power BI or querying on the raw data. Are we over engineering or am I mistaken here?
+Dorian Schlede: So maybe let me explain why this is necessary.
+Speaker 6: Right.
+Dorian Schlede: So at the beginning you start with some kind of prompt or some kind of logic logic that automates your process.
+Speaker 6: Right? Right.
+Dorian Schlede: It will not be perfect, it will not give you the accuracy that you would like to have.
+Speaker 6: Right? Right.
+Dorian Schlede: So we need some kind of mechanism.
+Speaker 2: How do I know? How do I know? So let's say so these analysts, they are working so based on the data they see. So they have risk shield which is their transaction monitoring system. They see the truth, they see transactions and data from the golden source as in that is black and white, it's not gray, it's a transaction. It has an amount it has from an A party, a B party. And the same goes for the transaction, the account data. So that we provide additional insights in behavior of that customer to that analyst is something basically needs to be set in stone. It's not that we will or the thingium analysts will use basically a feedback to say yeah, I do not trust this. No, it's the other way around. They should have insights which they should trust and use in their investigation for. For the usage of the TIM analysis. So.
+Dorian Schlede: What process.
+Speaker 2: Are we talking about the learning mechanism here? Are we talking about training here? Or are we in business operations? But we still provide feedback to the model because if that is the case, I don't see that happening as in that the CM analyst, the entire user is saying hey AI, you're wrong or I don't trust this or that should be one way.
+Dorian Schlede: Okay, okay. So maybe my understanding of what we building. Right, so we're aggregating data sources or data from different sources and then we will take decisions on that data. We will propose a decision second.
+Speaker 6: Correct?
+Dorian Schlede: Correct.
+Speaker 2: No, not the decision. Not a decision. So we will provide insights and a recommendation. But it's an and, or, and, or a recommendation. I think even a recommendation at the end would be a stretch, but at least at first we would say we will make the life. The objective would be to make the goal and the goal for the table analysts to work faster to provide more insights in what the customer is doing than the current TM system is capable of and provide that with a, with a prompt so that they can access more data and have this consume that data and use it for their case handling. It's not the other way around. It's not that an AI analyst or an AI agent needs to make a decision if this case is a false positive, yes or no.
+Dorian Schlede: But it's making recommendations, right? Is that correct?
+Speaker 2: That will be, that will be very, very nice to have, I would say.
+Dorian Schlede: Yeah, but is that, is that, are you guys looking for recommendations by the AI or is it essentially aggregating. Aggregating data and enabling interaction with the data?
+Speaker 5: It's so going back to the 12 use cases, I think we can talk about that and we can provide clarity looking into that. So basically there are a bunch of, let's call them questions initially. I like to call them questions.
+Dorian Schlede: Right.
+Speaker 5: That the analysts need to take care of themselves. And these questions are addressed or answered. Answered by looking at data. What we want is for the AI agents to do this analysis itself. Right. And provide feedback or provide answers to the TM analysts. Now I understand. Now let me also start talking a bit to the gap in your conversation with bas. So bas, what I think that this feature that we're now talking about is whatever recommendations, whatever answers called whatever we want that the AI agent distills and provides to the analyst, the analyst can state, oh, I think this part could potentially be incorrect. Let me change it. It doesn't mean that we need to do it, but it can be done right. And then if the analyst does that Then we enter this human correction flow. But that is the idea. You know, the agent gives all these insights, these answers, call whatever you want. And then the human on the other side, if he is willing not to accept them, if he realizes that this is incorrect because it's an edge case or whatever, he can correct the AI with sound signature. Am I correct already?
+Dorian Schlede: Yes. Yes. Thank you. Thank you. Yeah, so that's what it's for.
+Speaker 6: Right.
+Dorian Schlede: So the AI is providing some kind of analysis recommendation which can contain reasoning.
+Speaker 6: Right? Right.
+Dorian Schlede: So while we are training, learning, provide the ability to feedback on the foundation analysis which we will then feed back into our optimization system which will be on the next slide. So this allows essentially automatic optimization optimization, which means whenever the human, the human agents use the system, they can always provide the feedback. The feedback will be feedback.
+Speaker 6: Right.
+Dorian Schlede: And then they will probably, probably some kind of bi weekly meeting where you would then look at all the feedback that we have gathered on the AI.
+Speaker 6: Right.
+Dorian Schlede: And then you would make the decision how you want to change the logic, for example, based on this, the unit.
+Speaker 5: So, so basically this gives us the opportunity to improve further and further the answers that the AI gave us. It doesn't mean that we need to, to use it, but it allows us to fine tune it by using real life scenarios.
+Speaker 2: Okay, now then I understand, but it's more of what do we, what do we do in the proof of value versus what do we do in the, in the end step. And I would say if we, if we have a scope of trying to achieve recommendations or based on that, at the proof value, I would say that's, that's a stretched goal. But I don't know.
+Dorian Schlede: I'm.
+Speaker 5: With you on this one. It's just defending a little bit beam or positioning the beam slides. I think they're presenting this to us as an additional piece capability that exists within the platform that could be leveraged by ics. But to be honest, they also told us that in terms of going live and having a usable tool in the three months might be difficult to achieve. So yeah, if putting these two things together, that would mean that something like this further into the future. Am I making sense again, Dorian? Am I stating the reality or the message? Am I interpreting the message. Message correctly?
+Dorian Schlede: So I mean this is obviously up to you, but I think it's very important to measure also how well the AI forming. Right. So you guys kind of indication, was it good or was it not? Right? You don't want to I guess have a. Guys. Right, so this is so this is also a mechanism just to see how often the analysts were satisfied without the output of the AI.
+Speaker 6: Right.
+Dorian Schlede: So it's not. It's not only for the improvement. It's also for the tracking and the measurement of the performance of the system itself.
+Speaker 5: Okay, that makes sense. What you're saying makes sense.
+Dorian Schlede: Yeah.
+Speaker 1: If I may add time because we do have a couple SL. In order to achieve this aggressive 40% efficiency gains on these a day we need to be very sure very sure that we build enterprise grade systems intelligence.
+Dorian Schlede: Or accurate.
+Speaker 5: Or even better.
+Speaker 1: And in order in order to do so that the AI is actually able to gain human level intelligence better we need to feedback and enable self learning else else you will just have. Just have a nice little proposal. You never know if it's right or not. I think your goal is to enhance gains realize realizable. You want to have. Have to have production outcome where the human being over. Yes, yes, yes, yes and go. This is a. This is an ideal. Ideal state. I know this is a bit. Okay, okay. Maybe in respect of time faster.
+Speaker 6: Right, right.
+Dorian Schlede: Optimization. And this is exactly the reason why we are able to bring so many systems to production. Whereas because we are tracking every down to the variable which in your case might. Might be what you're looking right for.
+Speaker 6: Right.
+Dorian Schlede: Because it's not like it's like like a recommendation.
+Speaker 6: Right.
+Dorian Schlede: It's a bit more nuanced.
+Speaker 6: Right.
+Dorian Schlede: But essentially, essentially we break down everything.
+Speaker 6: Right? Right.
+Dorian Schlede: Where where we for other customers we are tracking tracking for each of the things each of the Varia the actual accuracy. So we can. So we can tell the client the deepest level how well the AI is performing now for this use case might be. Yeah not relevant because we're not working variable level. But we can also work on like just a contextual logical level. Let's just move on to the next slide to our auto tuner. So essentially, essentially this is one of the four reasons why we can build these systems.
+Speaker 6: Right.
+Dorian Schlede: Because we have this continuous optimization loop most of most time. A year, a year ago we had all this manual.
+Speaker 6: Right.
+Dorian Schlede: So there was AI producing some output. There was humans and then there was me who had to read all that all the issues really understand what they are doing.
+Speaker 6: Right? Right.
+Dorian Schlede: So I have a manual prompt optimization essentially.
+Speaker 6: Right.
+Dorian Schlede: Which is. But it's already tiny kind of being because writing these prompts than humans are. So this removing the need for the skill of knowing how transition to AI because the AI is doing it for itself.
+Speaker 6: Right, right.
+Dorian Schlede: This also allows optimization at scale because if we Run in a month like we, like we do some then I cannot go through this no way of reading through everything that the AI has done. So again what we do here we have the option to either. Either correct variable or to provide written feedback.
+Speaker 6: Right? Right.
+Dorian Schlede: So you can just say hey, you mixed up.
+Speaker 6: Right.
+Dorian Schlede: So that's kind of the feedback provide. And then AI takes the feedback. It takes its own reasoning that it produces and it checks why it was correct. And it also proposes logic to add. To add the prompt.
+Speaker 6: Right, Right.
+Dorian Schlede: And this, this would not be possible without kind of prompt optimization system.
+Speaker 6: Right, Right.
+Dorian Schlede: So that's why that. And this is also giving us the edge to, to improve the systems to the max.
+Speaker 4: Question about that earlier.
+Dorian Schlede: Right.
+Speaker 4: But think in terms of having a successful adoption by the TM team. Listening to what you guys mentioned, like the importance of giving proper feedback in a forum that works for the system but also asking the right questions. There should be some. Some extent like guidance for these people. How do you do that from et cetera. So I'm also understand what is your experience in getting the NPS researchers up and running to actually be able to use this? Like what, how much time does this take on average?
+Dorian Schlede: Yeah. So usually it goes very fast.
+Speaker 6: Right.
+Dorian Schlede: So most of the time the people just keep working where they just. Everything is pre filled.
+Speaker 6: Right.
+Dorian Schlede: So that's the most common case. So there's much to explain. The only thing we need to explain is hey, if the value is correct, change it now. Explain explain me why why you changed the value. Don't tell me, tell me you changed. Explain why you have changed this value.
+Speaker 6: Right, Right.
+Speaker 4: It's just all narrative in specific form or whatever.
+Dorian Schlede: What do you mean? What do you mean specific format to.
+Speaker 4: Actually give the feedback or feed the feedback back into the.
+Dorian Schlede: No, I mean, I mean we care about the logic Intuitive chat, anything so the user can also put anything. But the only the user really needs to understand is give us the why. What's the logic the logic why you change this.
+Speaker 6: Right.
+Dorian Schlede: What's the reasoning behind changing this? And then, and then there's right or wrong.
+Speaker 6: Right? Right.
+Dorian Schlede: So even if so there's no need to perfectly write this. It's just by the AI and interpret it in context of what it was doing.
+Speaker 1: In an operational use case it would either be AI human fill and, and you do the human fill and give it in the text box or you just change directly and repeat this back. So the actual. The actual user flow would not change from the current state. Could even be risk we have Another field we operate in the field that human is being right now.
+Dorian Schlede: Yeah, yeah. And now what we do with automatically implement. So you cannot change the logic process Handle handle. So we do is we take two weeks. Two weeks. We have the AI AI analyzer. Contradictions between different logic and logical strange decision making. Decision making or process where the response person for the process itself would take a decision on how the AI should now be improved.
+Speaker 6: Right.
+Dorian Schlede: So this is always a guided process when you're implementing.
+Speaker 1: Implementing logic in respect of time.
+Dorian Schlede: Yes. Okay.
+Speaker 1: Okay, I'll take the governance slides. No, actually sure, sure.
+Dorian Schlede: So yeah, depending on the complex use case and so on general use case I would say so we always start with scoping session. Then we define the ancient scope in detail. If you would to go into this we would go every of these processes in detail. Usually we know the actual process. How are they working right now? What is the thinking, what's the they're interacting with as well. So we do these really understand each of these processes. These in detail. Obviously we recorded essentially across the proscription right out of it almost. Yeah. Then we. Then we would final integrations.
+Speaker 6: Right.
+Dorian Schlede: So we would be with the IT people. How do we integrate with the systems? What's all the integrations there is? What's the inputs and outputs actions have? And then, and then we would set up the agent and gather test cases. So usually here we start with a small sample, 30 to 50 cases and depending on the complexity.
+Speaker 6: Right.
+Dorian Schlede: Test cases would consist common cases. So we have like a wide variety. And then we would go to go test the test training. So that means now time.
+Speaker 6: Right. So Right.
+Dorian Schlede: So you see the initial output and then. And then you would give feedback one time on what would be the correct answer for this particular case.
+Speaker 6: Right, right.
+Dorian Schlede: And then we're going to optimize again. So then we take the test data set, let's say 50 cases. Then we're going to optimize the AI to reach a certain accuracy score that we align which is the AI basically 85% and the human and the book. Now here we have 80%. Once we have this we going continuous improvement. That means. That means we're going to roll it out where we usually work with expert users.
+Speaker 6: Right, right.
+Dorian Schlede: So who really really understand issues so that we can get high quality quality feedback initially and do not, do not lower quality feedback. And yeah, then yeah, then we essentially move into this reviewing already processing life tests here this is then where we take last two weeks. We look at what we have, we look at the feedback we aggregate to the Then we take a decision how to improve and change the agent from here. And yeah then there will be another gate which is kind of again dependent on client what kind of score is important to them. Right. So we define the stage and then once this level accuracy met then we move up to the next stage where you would open roll it out to the entire company essentially right on team. Some companies also go team by team.
+Speaker 6: Right.
+Dorian Schlede: I guess how you want this and yeah that's also when we are live data we also which we did not have in the test data set. So there we are also continuously implementing and then edge case handling.
+Speaker 2: Yeah.
+Speaker 1: This is basically the same.
+Dorian Schlede: Yeah yeah this is basically the same that I talked about. Right now you again have these decision points. Yeah, I don't think we need to go into this.
+Speaker 1: Yeah speaking of governance I think we talked about I think in two or three dimensions A is the certification buckets. So we have the right certification services enterprise. Great. We do operate Germany are fully certified as well. So in for German German clients. For example we're working with German Neo bank which is usually sufficient we could look into the details under Dutch governing law. But this is the whole bucket one certifications. I think the next bucket is deployment. Where will this be hosted and where is the data stored Your leads, your instances, your cloud infrastructure. So no data needs your instance.
+Dorian Schlede: May I ask the German bank you.
+Speaker 1: Work on what area? KYC kyc. We're doing KYC KYC flows and sorts of health checks. So whenever I the short form is whenever I apply to open up a no the depot with Republic I say I live street ABCs certifications they also do identify verifications plus what I what I this is what we do with them and I think thousands of thousands of cases currently currently on on what was the accuracy accuracy rate 9096 96% accuracy. So there's human being agents our agency, our AI is doing correcting it. We're then having these accuracy jumps from the actual feedback coming back coming back to security regulation as I said. So we just deploy within your cloud for instance. So as we mentioned earlier there are locks of what the agent is doing. All of the reasoning and decision making is stored and exposed to you for audit reasons. I think this point I'll keep it short because we talked about it a lot in the RSI response. You also saw this one FTP that we budgeted. This is usually one of our basically agent development engineer which will be dedicated so you will have one actual person the agents are necessarily following These stage gates that described engineer that sits with.
+Dorian Schlede: You so with our other enterprise clients go there, sit with the people so that we really understand the process that's happening.
+Speaker 6: Right.
+Dorian Schlede: So we try really to be close to our customers and really understand in depth what they're. What they're doing. Obviously we'll hear regularly. Right?
+Speaker 2: Yeah yeah.
+Speaker 1: Which includes learning and teach them teach them anything is needed. I mean it's not that far. That far will be here.
+Speaker 4: Just one question. So this one.
+Speaker 1: It'S more of a question for you?
+Dorian Schlede: Yeah. I mean. I mean we have a on dev team background.
+Speaker 6: Right.
+Dorian Schlede: So whenever there is something related we have them but usually the team who can do the whole thing most of the stuff of the time. So they have. So they have a really good process standing process mapping, statement management and also of course usually one person does does the whole thing.
+Speaker 4: But are they able to do the whole thing time wise?
+Speaker 1: I think, I think our understanding and experience science.
+Dorian Schlede: Yes.
+Speaker 1: And if there's an extra mile we need to go this extra mile and this considered this more from a commercial perspective. Budget budget this time and material dedicating to you. So this can consist of integration engineers that help you do integration or you're full deployed engineer with just a project management and stakeholder management. From our experience one is for example and I think at this project for us obviously also strategic incentive where we can stop more people or stuff more and then the transfer sit down what the actual scope of the bigger transportation is going to look like. And then there might be some readjustment needed but then it's fully transparent in the past.
+Dorian Schlede: So for me to fully understand we would need to actually actually dive into these 12 SOPs.
+Speaker 6: Right.
+Dorian Schlede: Otherwise I have a high level high level standing but I would be more granular understanding of this.
+Speaker 6: Right, right.
+Dorian Schlede: To give you definite answer answer on.
+Speaker 1: This and what I was. I was trying more than what we budgeted our clients as a young company. We know that this is. So this is just a commercial block that we budgeted for you.
+Speaker 4: Maybe if possible some customer references. So walk through the proposal of course where I went through the credentials but I couldn't see anything related to transaction. Do you like. Did you already create something or develop something in this?
+Speaker 1: We started.
+Speaker 4: No no no, go for it.
+Speaker 1: We started started banking and financial services for them. We are currently still onboarding station to expand towards journey but transaction monitoring no.
+Dorian Schlede: As you said. Right. We've done address verification things.
+Speaker 1: For example.
+Speaker 4: The reason I was specifically interested in this part is because in the proposal you Mentioned a end state of 90% decrease in increased efficiency. So I was wondering what was that based on? Share anything related to practical examples or.
+Speaker 1: We do have a couple of cases coming up and we will also share the presentation so you can read and we are also happy to do the cases and the yeah, yeah I think.
+Speaker 4: From a user experience that would be high.
+Speaker 2: Yeah sure, sure.
+Speaker 1: We're happy to do a deep dive after this.
+Dorian Schlede: I think this is one of many.
+Speaker 1: Conversations now coming back to the actual solution. We're done. We're done with the tech deep dives which is the relieving part I think. Let's talk about the actual solution. Here is what basically showed beginning so we're talking about this agent we're also talking about KYC CPG agent in the RFI there it was mentioned as showcase a bit but obviously we're also happy to talk about that diving the actual solution. So I think I've shown all of this.
+Dorian Schlede: All of this.
+Speaker 1: Maybe it makes sense to jump back to that. We're essentially going to build this flow which is the workflow or the mimicking of the human process that you're doing and translating this into the platform and giving you these drafts, drafts or responses recommendations on each of these 12 SOPs state in the beginning of the POV and this is also exactly exactly what the POV is for each other but also validate each other as a partner but also really deep into the actual actual nitty gritty decision making cases and process endpoints. Then map this out for the rest of the MVP phase. Then we showed you this monitoring dashboard Dashboard again fully customized. We can also adjust it to your needs. We can also work in power BI preference. We need to explore the capabilities. This would either be a different shopping session or in the beginning of the POV and we could also build such dashboard for the KYC division division which was to do this a subsegment of it's very very customizable commercial pricing pricing just on a higher level. I don't know how deep you discussed this topic today or another deep dive on the pricing department but just a higher level level of understanding how price and how do we work at Dean so pricing at us at our company works on two pillars. One pillar is the time and materials the FDE the actual engineer that works with you the time dedicate and the other bucket is platform fee plus the consumption consumption the consumption consumption you might know from other commercial LLMs Token based usage what we do transfer or translate all of the third party costs that we have internally from LLMs, cloud services or other APIs that we need to call into a beam token margin. This is what we sell to the end clients now in such an enterprise collaboration as we have it here talking about which price at €12,000amonth which includes you with the tokens, all tokens included in the POV and then, and then you have to full suite unlimited agents, unlimited workflows. Only thing that we really measure on is the actual token consumption. Usually in a enterprise plan with 100,000 tokens that you consume monthly. Think of this, think of this as being your that you can serve on. They renew every month. So let's say transaction monitoring flow takes seven tokens. You can divide these 100,000 seven. You know how many executions you can run. We also offer volume based discounts because for us the transaction transaction monitoring case one out of many many in the potential partnership that we do there's kyc. There might also be other use cases that you have internally. We also do a lot of in house back office flows that we could look into because we don't want one case. Ideally we grow into more multiple cases into the company and start a wi start a wider adoption. So the more tokens you consume obviously the token price consumption discounts on volume. Then then we have an overview of.
+Dorian Schlede: Those prices for the tokens.
+Speaker 1: We will provide you with that after today. Then you have the agent development services team. As we said fully we price based on a 200 hour.
+Dorian Schlede: Price.
+Speaker 1: So one FTE equals. Equals. We budgeted for the pure 1ft FTP that we think we need. I think the scope is quite extensive extensive. In order to deliver the scope and also deliver your aggressive efficiency. This is what we need. There's obviously, there's obviously room to talk to talk about. This response is that we credit 25% of the POC price towards the MVP expansion plan. So in the end it's 75 of the actual cost if you continue continue with us. So ultimately three months POV your forward deployment engineer ideally your company after the POV looks like this where you have one little agent that works the other analysts and we start expanding into multiple of these. How do you want, do you want to go into the extra of pricing? I think in. I don't need to take you this exactly. We estimate the payback period if you continue with us after a year until you start achieving. I think this is. Take this with a grain of salt because think about is this a cost cutting case? Do you actually, actually want to replace 40% of the FD or do you want to just give them. Give them more work on other top line case. Then the calculation obviously is different. So everything go into assumptions assumed on a broad salary of 30k per analyst which I think is sort of conservative side. Then you can take.
+Speaker 4: I do have one question which maybe is not clear to me only but you're gradually going into automation.
+Dorian Schlede: So.
+Speaker 1: Yeah.
+Dorian Schlede: Yeah.
+Speaker 4: And then what are you exactly like why not? Why not all in one.
+Speaker 1: This is. This is actually back exactly to the conversation. Learning tuning. Please chip in. So the transparent answer is in an enterprise setting like this, if we're talking about financial services processes, you will probably not. Probably not have anything run on auto flow from day one coverage. Human needs to look over it and regulatory.
+Dorian Schlede: Regulatory.
+Speaker 1: We don't really know if you're actually able to have an autopilot. So. So my. My conservative estimation is that we gradually wrap up the estimation based on how good the actual agent is. Because we might start with an accuracy where you. Where you would not feel comfortable to actually start the agent letting. Letting to run it. So we ramp up and this is just an assumption. If you are obviously just start following all of the cases agent's agent and start reducing ad accounts. This is a business decision that you want. This is just an assumption from our end.
+Dorian Schlede: Yeah. I think it depends on you.
+Speaker 6: Right.
+Dorian Schlede: How you want to do it.
+Speaker 6: Right.
+Dorian Schlede: Because as I said.
+Speaker 6: Right.
+Dorian Schlede: We are not introducing the software to your employees.
+Speaker 6: Right.
+Dorian Schlede: So it's up to you on how you want to introduce this.
+Speaker 6: Right.
+Dorian Schlede: So some customers want to have expert users. Users to learn. They don't want to break the process for the whole company immediately.
+Speaker 6: Right. Right.
+Dorian Schlede: But some other customers just put it out there, then it runs.
+Speaker 6: Right. Right.
+Dorian Schlede: So how you want it out is up to you.
+Speaker 1: So you're. So you're basically in the driver's seat to steer roi.
+Dorian Schlede: Yeah.
+Speaker 1: And how. And how good the system works. And I think the POV will. POV will give you a great fundamental view on how good agents are they also over time and what they can hit. And after the pov I think you reassess deploy this and how aggressive. How aggressive you want to either cut costs or redeploy the FD equivalence. We usually.
+Dorian Schlede: Yeah. So what we have done in the beginning we started collecting new and then we optimize 95% something. But then you realize the reality also it kind of.
+Speaker 6: Creation. Right.
+Dorian Schlede: Because you optimize more in like a setting. Right. Where you know where you don't produce any value. So what we Learned and how we change now is that we. We move into production tasks, real tasks and then we keep on improving learning there.
+Speaker 6: Right, right.
+Dorian Schlede: So that's why we can move much faster and we get more realistic cases as well. So we kind of changed our approach here. Yeah. That's also why we only optimize to 85% because if you go to 95 then you get new cases. Waste time test data set.
+Speaker 4: Thanks.
+Speaker 1: Do you want discuss this or do you want. Okay, okay cool. Then then I think for the sake. For the sake of this let's also dive into case studies and what we've actually actually actually do so so Beam is not it's not the best player for financial service automation. We essentially are a horizontal platform and we serve multiple verticals. In the end we do a lot of work for typical manual repetitive boring back. And you're going to find these across the board in different types of companies. Obviously one of the. One of the operating is fine. We do this either in typical in house finance operate in order to cash flow. So you have an order order and you have an invoice that you want to have paid. So it's financing counting or we do this, we do this banking financial service and insurance. In banking usually these typical KYC onboarding flows. If you're now card issuer payment solution, online checkout or a NEO bank onboarding flow. And then and then we. It's more so sophisticated show which are investigations, reporter creations and all of this compliance. I would say then we do a lot of. So we also work with companies that create. It's actually quite funny because it's also Dutch company but in the end always boring low level with the focus of finance but as a startup startup young company also tap in different markets markets and different ICPs. Now now speaking of case studies I think we were talking about this case a lot. I will I will introduce the business view again and then jump into the technical and also explaining explaining what we started we started doing. I think we touched on this a couple times growing very aggressively the last couple of months where we facing a lot of new onboarding. They also introduced this kids kids kids account kids account kids account recently. So they a lot of onboarding of new clients that they need to have verified ultimately and they were working in an internal team but also with a big BPO. So they had like 600 people offshore which were doing this. So they were gaining gaining looking for a solution which can either replace internally and then basically started working together and building this KYC solution which I think, I think sounds fairly easy because it's comparing a B. But you're going to explain why it's not. And public also started co developing this on future feature and you can also explain why this is important what we gains.
+Dorian Schlede: Gains. What do you mean? What do you mean why. Sure, sure. So really interested in our manual manual engineering because it's not really scalable. They don't have the people who can build these systems.
+Speaker 6: Right.
+Dorian Schlede: So the only thing they were really really interested in was the learning.
+Speaker 6: Right.
+Dorian Schlede: So this, so this is what we have essentially piloted and co developed with them. So there we didn't have any test data set so they just, they just the process. So I built this. I had no clue how. Well that's what they want. They wanted and. And then we started by shadowing the human principle where one human would check, validate, validate document and then another human and then the AI is operating essentially in the background shadowing and comparing carrying the human decision to the AI decision.
+Speaker 6: Right.
+Dorian Schlede: And then after the human.
+Speaker 6: Right.
+Dorian Schlede: They mention why this document was. There was reasons why a document could be invalid and yeah they were giving. They were giving a nationwide essentially essentially started year round 7% accuracy with the blank product without knowing what's happening. And then with our functionality essentially putting it into a rhythm, letting it run 15 minutes on the first run we were able to increase the by 8.3% and eventually we were able to get it up to 96% essentially just feeding back what the humans were doing. Automatically tuned the prompt. There was not even any manual interventions. Said hey, we don't want to validate the logic at the prompt. Just do it. Just do it it Right, right. Which is interesting because the human who's.
+Speaker 6: Off mistakes right.
+Dorian Schlede: Now checking and what you've been checking it. Is this an ID check? Is it a passport check? Verification be all sorts of different documents.
+Speaker 6: Right.
+Dorian Schlede: So they have different accept types of docs.
+Speaker 6: Right, right.
+Dorian Schlede: Which then contain name valid date and it's the fourth one. Fourth one, yeah. The address. The address needs to match. Yeah. So that's for checks would be very different. Very different. Very, very, very diverse documents. Some would even have a contractual thing.
+Speaker 6: Right.
+Dorian Schlede: So yeah, so yeah that's what, that's what we're doing.
+Speaker 1: So it can also be utility bills or whatever.
+Dorian Schlede: Essentially taking a generalize mechanism and same you just put different logic inside the mechanism validating something will be the same.
+Speaker 1: Cool. Then second case we're also happy to dive into working with actually our largest client which is eid. It's it's one of top five largest debt collectors in Germany and they process multiple tens of thousands of debt collections a month. And what we were doing with them is essentially rebuilding the human decision making in the data extraction of. Hey, do I need hard to translate this English plant. Do you know the English word like that?
+Dorian Schlede: Cleaning up, cleaning up your plan.
+Speaker 1: Yeah. With them unlike, unlike Trade Republic this was more of a cost cutting case because they don't wanted to handle the BPOs. This is more of a top line case because they take all of the depth files from big telco and insurance company Germany and they whenever they have clients sales department they onboarding new clients. They get tens of thousands at once. And every month, every month, every month I want to have you as my new debt Collector. Here are 80,000 files for you to process. Have fun. And they have and they have 300 people working on site now. Now obviously this is nice because like top line case they want money, more money but they need to, they need to have the people that actually do it. So they were set in front of decision. Do I now hire. I think it was almost 90, 80 people train them, educate building next door and nine months later, later I will be able to serve the client or do I hire AI agents for these processes and replace the human being. They double, double down our first project and they expand it up until I think it's 69 agents that we're building with them across, across the board on each different function. Let's say I'm a collection back office worker and I'm Germany actually you have to be very, very specialized on your industry. So one back office worker only works for telco and for one client because the reason why they take it a as very, very specific to this industry. So they had a BR of cases and a BR agent cases. We are still building agents with them. We're halfway project which is roughly sketched on 16 months and Dorian is also doing a project so feel free to also chip in and share some more details if you haven't.
+Dorian Schlede: Yeah, yeah. It's really interesting. At the end of the day we always do the same thing, classify documents. They have essentially replied everything.
+Speaker 6: Right, right.
+Dorian Schlede: And these refine templates based on combination of information in the document.
+Speaker 6: Right.
+Dorian Schlede: So they have like over 200 different. Essentially what we do here is we just extract explicit information in the document. Right. So we all parties that are mentioned in this document we extract certain decision points which then point towards classification and yeah, that's essentially also already it. So it's Just mass classification over and over and over again. And really now optimize they don't have the yet the decision variable. They didn't even know. So there's also a lot of implicit knowledge they had. And they also had very very different interpretations sometimes of which classification which classification disk for them. And now we are essentially the data and then they're double checking if the data correct and just approving. And yeah now here we have achieved 90% patient accuracy and 94% overall where we extracting about 70 variables per document. So yeah that's what we. That's what we do here. Wherever it is there will be the same kind of logic you apply to the problem. So it's really around figuring out how do you. How do you identifier to classify in a way right. All these we have now optimized and automated with AI throughout the project so that we can now essentially also do a new classification case is extremely fast because we've done them so often over and over again.
+Speaker 1: I think what's also interesting here is highly regulated market just like before. So we also operate under strict regulations plus the German market collectors served by a monopoly on their system. And this is and this is a super old legacy hard on prem system which we needed to integrate also quite cool. Not only with companies like Digital Native. Digital Native everything API exposed, exaggerated exaggerated. But also on the other side legacy systems sometimes challenge to integrate. And also feeds data back which I think is used sometimes. Also the case build a middle web.
+Dorian Schlede: For this because they don't have API software. The whole. The whole dev collection industry runs with.
+Speaker 1: It's crazy. I won't go into the details of all of these cases. Just a couple of snippets from our client base. What I like to say is it's a spectrum they have everything exposed and they're run by engineers that can do all of themselves. On the other side for example like which have like nothing one IT guy which everything it's a part of solution. And within this spectrum we have a wide variety of customers from small UP or insurance for example which are tens of thousands of thousands of employee companies. Where we are. Where we are mostly finance and accounting flows. Happy to do that on each of these flows overall.
+Dorian Schlede: And how do those clients work with.
+Speaker 1: It like we want to do with.
+Dorian Schlede: IT space and get it in. So how many people are really working with that decision decision making on day to day basis of your large client in exam?
+Speaker 1: I think it depends. So with the large client that we're talking about after full Rollouts some of the staff most of them are going to use As I said project agents look at it. They just work in their own operating system. Let's say you work in your outlook. Do you classify this working with AI.
+Dorian Schlede: We are going to use from day to day. Yeah. From a dashboard which we work etc. So it will be a main system. Some of the people in here how many clients do you have where it's really a main system that they want to use for their day to day work. Are you talking about building it? Yeah. So this does not happen time dashboard and the dashboard is used we feed the data feed the data data system they were already using. So there's some people who are the data that we are sending to them. Yeah yeah. A cockpit like you designed. No no. Most time it's really where there has been used. We always try to keep keep the people working the same way they have been working before.
+Speaker 1: Having a custom interface is not the optimal flow because they to train people on something new. Most of our clients haven't they work in. We do have a couple of clients where we build custom interfaces. We can do the research how many people actually if you want relevant to.
+Dorian Schlede: You to the people actually using the system.
+Speaker 6: Right.
+Dorian Schlede: Don't. Don't know if it's a difference. Suddenly that data is pre filled.
+Speaker 6: Right.
+Dorian Schlede: So that's. So that's how it.
+Speaker 1: I think this. I think this is very very important to understand in this group in an operational operational way as analysis. Think of having previously pre filled text boxes AI prefills. This is essentially so you have questions accept, accept, decline these brave start just replacing people and replacing low level low hanging low hanging alerts. For example. If you trust AI to a certain degree cool. I think there are this. This is a high level high level slide and what you can see across the board our clients is roughly 80% time saved because sometimes apartments I know European don't want to hear this the American American clients actually like that then then most of most of the project project you work with if they're question free to ask them accuracy Sometimes there are accuracy rates where it's where we can't even hit the bar because human being is not even that good. And then usually you see a decrease decrease in human error. Now now I think we do have minutes left for questions questions. That's good.
+Dorian Schlede: Do we have any questions from here? I was still wondering about the feedback loop you were talking about. Only does promization or it also does process optimization like the notes and the decision making that's up next. So first we mask the optimization a single prompt.
+Speaker 6: Right.
+Dorian Schlede: And then it will be all be rearranged across the processes.
+Speaker 6: Right.
+Dorian Schlede: So that actually we will do this with. I think so yeah. They going to file this with them because they are interested in this agent this whole workflow unique because I can imagine that the process might not be perfect optimization but you also want to optimize the other part that's much more complicated. Rearrange rearranging.
+Speaker 6: Right, right.
+Dorian Schlede: So that's something you're developing now in.
+Speaker 1: House to automatically fat feedback to. But I think there's. There's also one critical decision point which we understand actually going live live continuous of improving what we've built which is the auto tuner and auto feedback on the flow. And there's also the setup where most most the clients are to go into them. We start digging digging into the flow. We ask the nasty question and they recognize why are we actually doing this so.
+Dorian Schlede: Process.
+Speaker 1: Trying to understand them. We ask a lot of questions and then. And then we're going to form a best practice then we're going to translate it.
+Dorian Schlede: It's often the project also combining process process optimization. That was not your question.
+Speaker 1: Sorry, I expanded.
+Dorian Schlede: I was wondering about. It's more like an operational question. You eventually have to file like these reports and stuff.
+Speaker 6: Right.
+Dorian Schlede: And you want them to be completely compiled and just because from the meeting that we had when I was explaining your process there's also like where a lot of line goes. You. You type all this stuff up and so.
+Speaker 4: Regular investigations.
+Dorian Schlede: Yeah just all the information that he analyzed into a document and going to the next step basically.
+Speaker 1: So it's also a function that if in the end. The end we can do whatever you want to do with the decision obviously we can create a report based on. Again again you can look over it over it when you trust trust it. So the money reports.
+Dorian Schlede: Now. Now what was exactly your question? Because I think it was also in the. In the R5 thing that like some requirement or being asked is this pre.
+Speaker 1: Pre generated report basically text text or.
+Dorian Schlede: Dashboard text report just to filing one hand. It's like analyzing information that's coming from different systems taking decisions. So it's those two things.
+Speaker 1: Of course.
+Dorian Schlede: Yeah combining the data. That's what we talked about. But also the reports generation generation.
+Speaker 1: In the pre filled template that you have. And I think one thing which also important to mention mention. We operate discussion we operate based and you have more time budgeted from your agents. We can also start expanding new flows and if you for example really interested in how the platform start building yourself, you can do that. The scope of the RFI helping you are the techie guy. It's fun.
+Dorian Schlede: It's fun.
+Speaker 1: And once in one you can do so because you have to.
+Dorian Schlede: So we also, we also do with you approaches.
+Speaker 6: Right?
+Dorian Schlede: So depending on how the client refers or we just do it for them.
+Speaker 1: This is also also business decision that you guys need to take if you want in house competent center of techie people. We are able to build agents and maintain internally. We can obviously start helping you build competence of building AI agents. For example example question. Oh, sorry, we missed you boss.
+Speaker 2: Two questions. So one of the first one is would be so concerning integration. Still do not envision on how or what will the integration look like for this full value? Does it run on our Azure cloud?
+Dorian Schlede: Do we.
+Speaker 2: Integrate within our integrated data warehouse? It might also be a bit of a context question to manual, but how can you provide us a little bit of glimpse of how such an integration would look like? Second, let's say we agreed and we run with Beam for three years and then we say yeah, we found another player who's way better at this game than Beam is. How do we export our ip? Can we export all those on them? What do we own at the end? What do you.
+Dorian Schlede: Sure, sure.
+Speaker 2: These kind of questions are still not.
+Dorian Schlede: Yep, yep. So theoretical, but still. Yeah, yeah. So number one, number one, can you just go back. So here we are on the global integration. You will see all the integrations that we natively have, right? Which you can just. Yeah, just add them. Add them. And then at the top, right we have some integrations. Integration builder. So this would be one. So this would be one system.
+Speaker 6: Right, right.
+Dorian Schlede: And then, and then you would then do the authentication.
+Speaker 6: Right.
+Dorian Schlede: And then at the bottom you could have different tools which intersect the different API calls.
+Speaker 6: Right.
+Dorian Schlede: From URL. Yeah, yeah. And here. So essentially you just turn your API specification in a default standardized open API schema which you can also generate and then you just drop file here. Then your integration is ready so you can use it in the flow. So that would be okay.
+Speaker 2: What about multiple other ways of authentication verification. So SSH tunnel verification on our sense, bypassing firewalls, whitelisting.
+Dorian Schlede: I mean we.
+Speaker 2: It's not your average Azure data warehouse, I would presume. And also think about volume.
+Dorian Schlede: It is Great.
+Speaker 2: We run 120 million transactions per year, so it's probably a query which will time out if you don't have chumped up or something. Like that. Do we have any tools in there?
+Dorian Schlede: Yeah. So now we have like three questions open. Let me go back to your question which was the. Let's finish that one up. So essentially each agent. Agent is essentially just a JSON object.
+Speaker 6: Right? Right.
+Dorian Schlede: Which contains all the logic.
+Speaker 6: Right.
+Dorian Schlede: So that you can Obvious. But our other enterprise customers also have these as I said on Prem Management Services.
+Speaker 6: Right.
+Dorian Schlede: So they just keep running whatever happens to us. Number one. And other than that the logic here is yours.
+Speaker 6: Right.
+Dorian Schlede: So it belongs to you. That is built inside the platform. It's then not immediately of course executable in another form but if you take the logic can definitely transport logic to another platform in three years after we've had a lot of fun now getting back to the integrations. So we are doing load testing. So at the moment we can take a thousand tasks per minute. But we are also essentially horizontally scaling so we can scale up our system, spin up a new instance whenever it's needed. Docker images. So that should not be a problem. We did work on scaling a lot the year when we were ramping up the usage. And then you had one more question which was related to the authentication methods. Yeah.
+Speaker 2: I'm not the expert here but Timo and O Manuel are. But I think we have some more safeguards than only providing a key and. Go ahead. But I think it is also port security and wall guarded and I don't know what else still safeguards we have in our.
+Dorian Schlede: Sorry, it wasn't hard. A bit hard to understand you but maybe let me add this. So usually we also managed instance connection. That's how we for example.
+Speaker 6: Right.
+Dorian Schlede: So then all of this, you don't. You don't need that much security layer. Like they just put a plain API because. Because we had the BPN tunnel on top as security.
+Speaker 5: This is a practice that we have in place. We establish secure or private connectivity between data centers including SaaS vendors as well.
+Dorian Schlede: So it's okay.
+Speaker 1: Nice.
+Dorian Schlede: Did I now answer all your questions or is there anything left open?
+Speaker 2: I probably have some more, but for now let's. Let's park there.
+Dorian Schlede: Awesome. Awesome.
+Speaker 5: I have one. So building on one of boss's questions. Do you guys have a limit of. On the. The size of the data that each agent can have as a context for the workflow?
+Dorian Schlede: Yeah. So the only limitation is the context window of the LLM itself.
+Speaker 6: Right, Right.
+Dorian Schlede: So the maximum context.
+Speaker 6: Right. So that's.
+Dorian Schlede: So that's our limit that we have.
+Speaker 5: We have how much is that In KBS or MBS?
+Dorian Schlede: Sorry. 700,000 words. I don't know. I don't know how many KB. Let me translate, Let me translate it to pages.
+Speaker 2: Thanks man.
+Dorian Schlede: So it's like a thousand five hundred pages roughly. Models can take at the moment. Okay. Okay.
+Speaker 5: There's a lot of transactions for a single alert. It should be a feasible.
+Dorian Schlede: Yeah, yeah. So it did happen sometimes and just the human door. But there is nothing that we can do about the technical limits. But it's like less than 1.1% of the time, so most of the time.
+Speaker 5: Okay, I see BAS wants the token back. Go ahead.
+Dorian Schlede: Basically.
+Speaker 2: Yeah, thanks. So, concerning the data. So I'm relatively known with the data set. I also own partial data. Can we provide context to data? So it might be very critical. The scenarios might be critical for the profiling, for customers, et cetera. Is it possible and how can we provide context to the agents so that it interprets it correctly, that things are getting translated correctly, etc.
+Dorian Schlede: So cryptic as in hash or as.
+Speaker 2: In very non descriptive disclosed by another vendor. Let's say we have a peer group. I am in the peer group of 45 year olds and 2500 credit limit. But the peer group is called PG0012. So we need to provide the model some sort of translation tables, tables, other things or rules, for example. Well, they might be quite descriptive and not explanatory. So how do we provide context so that the analysis can provide get those translations back into the output of the model.
+Dorian Schlede: Yeah, so that's essentially just a tool called.
+Speaker 6: Right.
+Dorian Schlede: You want to get kind of out of your system. So we would represent these context or whatever in your system or also in our system potentially. And then the AI would just dynamically get the context. In your example, you have G00012.
+Speaker 6: Right, right.
+Dorian Schlede: Then this might be a tool call to one of your systems to get information of how to decode or work with PG0012. So what information we send to your system and we get back the context we need. Yeah.
+Speaker 2: And if it's more than a parameter, if it's only more, can we use it as a linking table or something like that?
+Dorian Schlede: Or you mean like a VLOG level kind of? Yeah.
+Speaker 2: Well, there needs to be some sort of context.
+Speaker 6: Right.
+Speaker 2: For the system to understand what are peer groups? How are peer groups defined?
+Dorian Schlede: Based on what criteria?
+Speaker 2: What is a credit limit? What are the basic laws of nature within ics?
+Dorian Schlede: Yes, yes. Yeah. So this would be probably pre defined by us.
+Speaker 6: Right.
+Dorian Schlede: And then we will put it into the system so that it's aware. So you mean like generic high level contacts, right?
+Speaker 2: Yes, exactly.
+Dorian Schlede: Yeah. So we would work this together.
+Speaker 6: Right?
+Dorian Schlede: Find the contact and then we will give it. Give it to the AI. If you need dynamic context blocks, that's also possible. Right. Do like database lookup, looking up. Looking up for some context you need and then you just get it. So we can have static and dynamic context for the AI, of course.
+Speaker 5: But the generic LLMs, or, sorry, the available LLMs, they know quite well what the peer group is. So I'm going to now paste what Claude is telling me with a very simple question. So there's a lot of context there also in the. In the LLM itself.
+Speaker 1: Bus. All right. Okay.
+Dorian Schlede: Yeah, we will figure out. We will figure out what kind of information we need provide.
+Speaker 2: That is correct.
+Dorian Schlede: Because we're optimizing against the score.
+Speaker 6: Right.
+Dorian Schlede: The score will lead the way. What we need to do, essentially.
+Speaker 6: Right.
+Dorian Schlede: So the AI is the input and the expected. And then we just maximize the in between to reach to the goal where we want to get. Right, Right, but very.
+Speaker 5: And we also leverage the intrinsic knowledge of LLMs.
+Dorian Schlede: Right, yeah, of course.
+Speaker 1: Okay.
+Dorian Schlede: Yeah, yeah, of course, of course. Thank you.
+Speaker 5: You.
+Dorian Schlede: Yeah, yeah, this was Claud. Do we have a final question for.
+Speaker 1: The Beam people? Thanks.
+Dorian Schlede: Thanks.
+Speaker 1: And if something pops up, send us an email or something.
+Dorian Schlede: Yeah, of course. Everybody.
+Speaker 2: Okay, cool.
+Speaker 1: Then. Then my last step. Yeah, of course.
+Dorian Schlede: Yeah.
+Speaker 1: And then we take it from there.
+Dorian Schlede: From there.
+Speaker 2: Yeah.
+Dorian Schlede: Yeah. I should probably know that we have a few other suppliers coming over this week and after that we'll do an assessment and then we'll pick a preferred supplier and with them we'll do the Commercial Depot. Nice mentioned before.
+Speaker 1: Nice.
+Dorian Schlede: Okay.
+Speaker 1: Okay, then from our end, thanks for listening us today. Let's embark on our journey. Journey.
+Dorian Schlede: Yeah. But thank you so much for coming. Of course.
+Speaker 1: It was a pleasure. Thanks, guys. More online as well as well, potentially. See you soon.
+Dorian Schlede: Byebye.
+Speaker 4: Thank you so much.
+Dorian Schlede: Bye.
+Speaker 6: Bye.
+Dorian Schlede: Bye.
+Speaker 1: These sessions get extensive, huh? If you have a couple of them this week. Three hours, I was already sweating. But if you do like. Yeah, Tian.

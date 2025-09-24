@@ -1,0 +1,41 @@
+# Pattern: Feature Planning with Advanced Elicitation
+pattern_id: "workflow_preference_2025-08-25T01:45:00Z"
+metadata:
+  detected: "2025-08-25T01:45:00Z"
+  confidence: 0.8
+  occurrences: 5
+  window_size: 5
+  last_seen: "2025-08-25T01:45:00Z"
+
+pattern:
+  type: "workflow_preference"
+  name: "Comprehensive Feature Implementation"
+  sequence:
+    - action: "plan feature with elicitation"
+    - action: "systematic implementation with todos"
+    - action: "create comprehensive documentation"
+    - action: "update project registries"
+    - action: "pass quality gates"
+  
+  triggers:
+    - "user requests feature planning"
+    - "user says 'implement feature'"
+    - "complex feature detected"
+
+insight:
+  observation: "User follows systematic feature implementation with comprehensive documentation"
+  condition: "When implementing framework-level features"
+  frequency: "5 times in last 5 actions (100%)"
+  suggestion: "Auto-offer design-new-feature workflow with advanced elicitation for feature planning"
+
+recommendation:
+  agent: "orchestrator"
+  action: "When user mentions new feature, immediately offer: 'Would you like to use the design-new-feature workflow with advanced elicitation? You seem to prefer comprehensive planning. (Y/n)'"
+  confidence: "HIGH"
+  
+behaviors_identified:
+  - "Always uses advanced elicitation for planning"
+  - "Tracks progress with todo lists"
+  - "Creates migration guides and documentation"
+  - "Updates all project registries"
+  - "Follows quality gate framework"

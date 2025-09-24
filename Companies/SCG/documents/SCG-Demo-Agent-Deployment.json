@@ -1,0 +1,341 @@
+{
+  "deployment_package": {
+    "metadata": {
+      "agent_name": "SCG Contractor Payment Verification Agent",
+      "version": "1.0.0",
+      "generated": "2025-09-19T11:15:00Z",
+      "framework": "Demo Agent Automation",
+      "company": "SCG (Siam Cement Group)",
+      "industry": "Construction Materials & Projects",
+      "use_case": "Construction Contractor Payment Verification",
+      "language": "Thai/English Bilingual",
+      "deployment_type": "Webhook Integration"
+    },
+    
+    "agent_configuration": {
+      "name": "SCG Contractor Payment Verification Agent",
+      "description": "Automated verification of construction contractor completion certificates and payment processing for SCG projects",
+      "trigger": "Contractor completion certificate submission",
+      "process_type": "Document Verification + Payment Processing",
+      "direction": "Outbound Payments to Contractors",
+      "expected_volume": "100-500 documents per week",
+      "processing_time_target": "< 24 hours end-to-end",
+      "accuracy_target": "> 95% OCR accuracy, > 90% contract compliance"
+    },
+    
+    "workflow_definition": {
+      "steps": [
+        {
+          "step_id": "doc_ingestion",
+          "name": "Document Ingestion",
+          "description": "Receive contractor completion certificate and supporting documents",
+          "input_types": ["Thai PDF", "Thai Image", "Completion Certificate", "Material Receipts"],
+          "validation": "Document format and completeness check",
+          "success_criteria": "Valid document format received",
+          "error_handling": "Request resubmission if format invalid"
+        },
+        {
+          "step_id": "ocr_processing",
+          "name": "Thai OCR Processing",
+          "description": "Extract text from Thai construction documents",
+          "technology": "Multi-language OCR with Thai specialization",
+          "output": "Structured Thai text extraction",
+          "success_criteria": "> 80% OCR accuracy",
+          "error_handling": "Escalate to manual OCR review if accuracy < 80%"
+        },
+        {
+          "step_id": "translation",
+          "name": "Thai to English Translation",
+          "description": "Translate construction terminology to English for processing",
+          "technology": "Construction domain-specific translation",
+          "output": "English construction document data",
+          "success_criteria": "> 90% translation confidence",
+          "error_handling": "Flag for manual review if confidence < 90%"
+        },
+        {
+          "step_id": "contract_verification",
+          "name": "Contract Compliance Check",
+          "description": "Verify work completion against contract specifications",
+          "validation_points": [
+            "Work scope completion",
+            "Material specifications compliance",
+            "Quality standards adherence",
+            "Timeline compliance"
+          ],
+          "success_criteria": "All contract requirements met",
+          "error_handling": "Flag for contract manager review if compliance issues"
+        },
+        {
+          "step_id": "quality_verification",
+          "name": "Quality Standards Verification",
+          "description": "Verify work meets SCG quality standards",
+          "checks": [
+            "Quality certificate validation",
+            "Inspection report review",
+            "Safety compliance check",
+            "Material quality verification"
+          ],
+          "success_criteria": "All quality standards met",
+          "error_handling": "Flag for quality manager review if standards not met"
+        },
+        {
+          "step_id": "approval_workflow",
+          "name": "Project Manager Approval",
+          "description": "Route to appropriate project manager for approval",
+          "routing_logic": {
+            "amount_thresholds": {
+              "< $10,000": "Project Supervisor",
+              "$10,000 - $50,000": "Project Manager",
+              "$50,000 - $100,000": "Senior Project Manager",
+              "> $100,000": "Regional Manager"
+            },
+            "special_routing": {
+              "quality_issues": "Quality Manager",
+              "contract_issues": "Contract Manager",
+              "safety_issues": "Safety Manager"
+            }
+          },
+          "success_criteria": "Approval obtained from appropriate level",
+          "error_handling": "Escalate if approval not obtained within 48 hours"
+        },
+        {
+          "step_id": "payment_processing",
+          "name": "Contractor Payment Processing",
+          "description": "Generate and process contractor payment",
+          "actions": [
+            "Payment calculation",
+            "Tax withholding calculation",
+            "Payment authorization",
+            "Bank transfer initiation"
+          ],
+          "success_criteria": "Payment processed successfully",
+          "error_handling": "Retry up to 3 times, then escalate to finance team"
+        },
+        {
+          "step_id": "audit_trail",
+          "name": "Audit Trail Generation",
+          "description": "Create comprehensive audit trail for compliance",
+          "records": [
+            "Document processing history",
+            "Approval workflow trail",
+            "Payment processing log",
+            "Quality compliance records"
+          ],
+          "success_criteria": "Complete audit trail generated",
+          "error_handling": "Ensure audit trail completeness before completion"
+        }
+      ]
+    },
+    
+    "decision_branches": [
+      {
+        "branch_id": "document_quality_check",
+        "condition": "IF document quality is insufficient",
+        "action": "THEN request resubmission with specific requirements",
+        "escalation": "Notify contractor of document issues"
+      },
+      {
+        "branch_id": "contract_compliance_failure",
+        "condition": "IF work does not meet contract specifications",
+        "action": "THEN flag for project manager review",
+        "escalation": "Route to project manager with detailed compliance report"
+      },
+      {
+        "branch_id": "quality_standards_failure",
+        "condition": "IF quality standards not met",
+        "action": "THEN initiate quality review process",
+        "escalation": "Notify quality assurance team"
+      },
+      {
+        "branch_id": "approval_rejection",
+        "condition": "IF project manager rejects payment",
+        "action": "THEN generate rejection notice with reasons",
+        "escalation": "Notify contractor and accounting team"
+      },
+      {
+        "branch_id": "payment_processing_error",
+        "condition": "IF payment processing fails",
+        "action": "THEN retry with error logging",
+        "escalation": "Notify finance team for manual intervention"
+      }
+    ],
+    
+    "integration_configuration": {
+      "scg_project_management": {
+        "system": "SCG Project Management System",
+        "purpose": "Project status updates and contractor information",
+        "data_flow": "Bidirectional - read project details, update completion status",
+        "api_endpoint": "TBD - SCG to provide",
+        "authentication": "TBD - SCG to provide"
+      },
+      "scg_contract_database": {
+        "system": "SCG Contract Database",
+        "purpose": "Contract specifications and terms validation",
+        "data_flow": "Read-only - retrieve contract details for verification",
+        "api_endpoint": "TBD - SCG to provide",
+        "authentication": "TBD - SCG to provide"
+      },
+      "scg_quality_management": {
+        "system": "SCG Quality Management System",
+        "purpose": "Quality standards and inspection requirements",
+        "data_flow": "Read-only - retrieve quality standards for verification",
+        "api_endpoint": "TBD - SCG to provide",
+        "authentication": "TBD - SCG to provide"
+      },
+      "scg_payment_system": {
+        "system": "SCG Payment System",
+        "purpose": "Payment processing and bank integration",
+        "data_flow": "Write - initiate payments and update payment status",
+        "api_endpoint": "TBD - SCG to provide",
+        "authentication": "TBD - SCG to provide"
+      },
+      "scg_audit_system": {
+        "system": "SCG Audit System",
+        "purpose": "Compliance tracking and audit trail",
+        "data_flow": "Write - create audit records and compliance reports",
+        "api_endpoint": "TBD - SCG to provide",
+        "authentication": "TBD - SCG to provide"
+      }
+    },
+    
+    "performance_metrics": {
+      "document_processing_time": {
+        "target": "< 5 minutes per document",
+        "measurement": "Average time from ingestion to approval decision"
+      },
+      "thai_ocr_accuracy": {
+        "target": "> 95% accuracy",
+        "measurement": "Text extraction accuracy on Thai construction documents"
+      },
+      "contract_compliance_rate": {
+        "target": "> 90% first-pass compliance",
+        "measurement": "Percentage of submissions meeting contract requirements"
+      },
+      "payment_processing_speed": {
+        "target": "< 24 hours from approval to payment",
+        "measurement": "Time from approval to bank transfer completion"
+      },
+      "error_rate": {
+        "target": "< 2% processing errors",
+        "measurement": "Percentage of payments requiring manual intervention"
+      }
+    },
+    
+    "success_criteria": [
+      "Reduce manual verification from 80% to 20%",
+      "Process Thai construction documents with 95%+ accuracy",
+      "Complete contractor payments within 24 hours of approval",
+      "Maintain 100% audit trail compliance",
+      "Achieve 90%+ contractor satisfaction with payment speed"
+    ],
+    
+    "test_scenarios": [
+      {
+        "test_id": "TC1",
+        "name": "Successful Electrical Work Completion",
+        "description": "Standard electrical work completion with full compliance",
+        "expected_outcome": "APPROVED - Payment processed within 24 hours"
+      },
+      {
+        "test_id": "TC2",
+        "name": "Thai OCR Accuracy Challenge",
+        "description": "Poor quality Thai document requiring OCR fallback",
+        "expected_outcome": "MANUAL REVIEW REQUIRED - OCR escalation triggered"
+      },
+      {
+        "test_id": "TC3",
+        "name": "Contract Compliance Failure",
+        "description": "Work scope exceeds contract specifications",
+        "expected_outcome": "CONTRACT COMPLIANCE FAILURE - Route to Contract Manager"
+      },
+      {
+        "test_id": "TC4",
+        "name": "Quality Standards Failure",
+        "description": "Missing quality certificate and failed inspection",
+        "expected_outcome": "QUALITY STANDARDS FAILURE - Route to Quality Manager"
+      },
+      {
+        "test_id": "TC5",
+        "name": "High-Value Payment Routing",
+        "description": "Large payment requiring senior management approval",
+        "expected_outcome": "SENIOR APPROVAL REQUIRED - Route to Regional Manager"
+      },
+      {
+        "test_id": "TC6",
+        "name": "Payment Processing Failure",
+        "description": "Bank transfer failure requiring retry logic",
+        "expected_outcome": "PAYMENT PROCESSING FAILURE - Escalate to finance team"
+      },
+      {
+        "test_id": "TC7",
+        "name": "Translation Confidence Challenge",
+        "description": "Complex Thai construction terminology requiring manual review",
+        "expected_outcome": "MANUAL TRANSLATION REQUIRED - Flag for translation team"
+      },
+      {
+        "test_id": "TC8",
+        "name": "End-to-End Performance Validation",
+        "description": "Complete processing performance measurement",
+        "expected_outcome": "COMPLETED SUCCESSFULLY - < 24 hour processing time"
+      }
+    ],
+    
+    "deployment_requirements": {
+      "webhook_endpoint": "TBD - SCG to provide webhook URL",
+      "authentication": "TBD - SCG to provide authentication method",
+      "payload_format": "JSON with workflow + prompts + test cases",
+      "error_handling": "Retry logic, failure notifications, deployment status tracking",
+      "monitoring": "Deployment status tracking and performance metrics",
+      "logging": "Detailed operation logging for audit and debugging"
+    },
+    
+    "risk_mitigation": {
+      "thai_ocr_accuracy_issues": {
+        "risk": "Thai OCR accuracy issues",
+        "mitigation": "Multi-OCR engine fallback and manual review triggers"
+      },
+      "contract_specification_misinterpretation": {
+        "risk": "Contract specification misinterpretation",
+        "mitigation": "Clear decision trees and project manager validation"
+      },
+      "payment_processing_failures": {
+        "risk": "Payment processing failures",
+        "mitigation": "Retry logic and manual intervention alerts"
+      },
+      "quality_compliance_gaps": {
+        "risk": "Quality compliance gaps",
+        "mitigation": "Automated quality checklists and escalation procedures"
+      }
+    },
+    
+    "implementation_phases": {
+      "phase_1": {
+        "name": "Core Engine Implementation",
+        "duration": "2-3 weeks",
+        "deliverables": [
+          "Template-based workflow creation",
+          "Prompt generation with clarity guidelines",
+          "Simple test case creation aligned with prompts"
+        ]
+      },
+      "phase_2": {
+        "name": "Optimization Layer",
+        "duration": "2-3 weeks",
+        "deliverables": [
+          "Prompt ambiguity detection algorithms",
+          "Test case synchronization validation",
+          "Template library expansion and optimization"
+        ]
+      },
+      "phase_3": {
+        "name": "Integration & Deployment",
+        "duration": "1-2 weeks",
+        "deliverables": [
+          "Webhook integration implementation",
+          "Live deployment testing and validation",
+          "Error handling and monitoring systems"
+        ]
+      }
+    }
+  }
+}

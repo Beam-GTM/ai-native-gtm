@@ -1,0 +1,362 @@
+
+
+0:00 - Jack Li (beam.ai)
+  Set up before the time is spent on cloud. At the end, it's automatically generate the content, refine the content.  There's a quite big text block. It sounds very, it's a pretty precise text block, right? What now? What are you talking about now exactly?  The, the, the, the, when I asked cloud to change my prompt with TCFO. Yeah. So the relevant, quite a lot of text block editing.  Is it good or not? It's pretty good. I think with Cursor before, it's not that smooth, like whole document, the whole paragraph, just in, insert there and keep the whole structure, the data formatting and everything.  Looks very good. I still use some autocomplete, like editing something. So I think these two combinations is really, really good one.
+
+0:46 - Dorian Schlede (beam.ai)
+  Do you have your template? So did you abstract a generalized template for your template?
+
+0:52 - Jack Li (beam.ai)
+  tried at one time, but then I realized maybe a little bit dangerous because I have to check all this, this small detail, which will,  Already discussed with speed, even like the very small like day and month, if they switch up the place, it's really hard for me to recognize this.  So I decided to completely use the same text block. That's why I'm using auto-complete for a while. I think it's also really good combination practices, right?  So you're editing by yourself, then clear the structure, make sure everything discussed with client are 100% still correct. Ask Cloud to do the thinking, discussion, changing the graphic, find all the variables, design the strategy, not have three groups instead of eight classification.  Classify them together, group them together, find the balance, like three groups, one has 11 variables, another has 4 and 3.  variety is quite okay right now. Okay. anyway, okay, now.
+
+2:00 - Dorian Schlede (beam.ai)
+  Okay, I got it. I was just thinking, no, I think for human interpretation and human editing also in the platform later on, right, I think it's important that we have some kind of unified structure that's kind of also easy to read and to interpret for humans, you know.  So I think we need to somehow constrain or build some kind of prompt template that's, you know, if everybody has the same prompt, it's just easier to, you know, to understand or to read what's going on.  But maybe also it doesn't matter anymore. Maybe prompt engineering is already abstracted away and you don't even need to know.  I don't know. I think we're actually, it's alignment.
+
+2:48 - Jack Li (beam.ai)
+  I think so far the, the, the, the problem when I didn't, it's, it's, an alignment. Some of the points, I think the variable table somewhere, like the business connection.  And the expected output with the business owner is getting more and more important than writing a product. We need to 100% make sure when they ask for the date, should be the data format, the URL format.  This is something, I can do anyway, whatever we like, but we need to precisely align with the clients.
+
+3:21 - Dorian Schlede (beam.ai)
+  You don't need to write the prompt anymore. You only need to collect the requirements.
+
+3:26 - Jack Li (beam.ai)
+  Yes, and make sure this requirement is 100% precisely executed during the whole workflow. So that's something, that's something I manually do this.  copy the whole formatting block.
+
+3:37 - Dorian Schlede (beam.ai)
+  This the AI will do for you. It will make sure that it always does the correct thing.
+
+3:43 - Jack Li (beam.ai)
+  but we don't put too much attention on the validation on this interaction part. still focus on the prompt. But still, anyway, I think it's somewhere next, when we build the human interface.  In the loop interface, not just expect the output. Define the requirement, how we define it together, like yesterday we discussed this, right, so which variables are more important, which variable, how we, actually the current variable table is coming from Christian, some of variables are make sense, some of the variables are not, for example, some classification happens, is this a Hueshten or not, is a variable something like this, actually it makes no sense because this variable is precisely the same as classification, right, when you have this answer, that means that you're already processing everything, I think you start the date and the, some, something, something like this, right, or some variables coming from the letter state, it's pretty precisely opposite, it's an explet in the letter, or something like, is this a Fathom, so this is really, have to read the content, to make some, some decision, so this is, all the variables are different, I think we can, later on, we need to think about the requirement there, to make all the product.  Or generic. Really, that's something magical feeling, right? When the human process owner come to us, discuss the requirements, so we can precisely give a template or some query for them.  You just answer some questions. I have a document here. This is our document. I want you to process. And that's just the letter.  This is what we need. This is the content. This is something we can give some survey to them. What do you want?  You want to get the intention? You want to get the date? So some generic thing we already Ah, that's an interesting idea.
+
+5:33 - Dorian Schlede (beam.ai)
+  Maybe we can also generate a list of questions.
+
+5:39 - Jack Li (beam.ai)
+  Yes. So this is... No, I don't like questions. Don't ask me questions. Give me some options. Give me some suggestions.  Right? better. Yeah, something like this. Yes. Yes.
+
+5:48 - Dorian Schlede (beam.ai)
+  So maybe we can even prepare this for Thursday. You know, what is the gaps that the AI sees? Or where is like open things to talk about or to discuss?  is the that So we don't even have to think about all that stuff ourselves. I mean, for the AI, it's always hard to know what it doesn't know, but I think it's still good at generating ideas or suggestions on what could be improved.
+
+6:15 - Jack Li (beam.ai)
+  How we help AI learn the business logic. Something like this. Also relevant to self-learning. Learn the logic. There's document here.  We definitely need to get the date, send the receiver, the relevant entity, the insight. This is a standard process.  We always get this. And the second level will be the intention, the classification questions. Then we group them together, ask them which classification are easy to confuse, some sub-classification, something like this.
+
+6:45 - Dorian Schlede (beam.ai)
+  And all the learnings derive from the first agent and put into a centralized file that the second agent and third agent can just use when it's building itself.  Yeah, kind of like this.
+
+6:57 - Jack Li (beam.ai)
+  We can also ask some test data before or inside. After Click-Off, it's not really precise like test data we see expected output.  They can just give us some random data with some folder. So this folder, this is what we know. This is coming from Schumer.  This is coming from something we know. But we haven't looked into this. We do the feature engineering with them together.  We generate the survey, the template, with some test data. that's what we do. Oh, You do this whole life with them.
+
+7:25 - Dorian Schlede (beam.ai)
+  So you just, oh, that would be beautiful.
+
+7:28 - Jack Li (beam.ai)
+  But we start from analyze the requirement of this system together. So we find out the data formatting, something like this.  help them to finish what we go through with the user together. Like at least maybe 60% we can do.
+
+7:44 - Dorian Schlede (beam.ai)
+  Yeah, that's going to be really interesting. Yeah. I mean, how we interact with humans.
+
+7:50 - Jack Li (beam.ai)
+  I mean, that could be something.
+
+7:52 - Dorian Schlede (beam.ai)
+  Yeah, we just need to get better at the requirements. As you see, right? um The AI is now almost perfect at implementing.  It's so, so good at implementing.
+
+8:07 - Jack Li (beam.ai)
+  Yeah, but when I try to feature engineering write a prompt, it has a description. looks very good. I find the signature.  I didn't write anything, actually. I just realized, actually. Then I find signatures. they first find the document procession, always at the end of the document.  And something like this, with some name, with some titles. The testing is not completely enough. But still, the prompt writing, the variable description, already much more better.  Of course. Of course it is.
+
+8:39 - Dorian Schlede (beam.ai)
+  Oh, yeah. The implications are so big, Jack. I don't even know, man. Like, what do we have our hands on, you know?  Like, I can't even believe this. Yeah, I think so.
+
+8:51 - Jack Li (beam.ai)
+  I need to finish the evaluation first. Yes, please do this. That's very, very important, Jack. That's really important for everybody.  Yeah, and the next step for you... Maybe we can hand over to machine learning or someone, so we need to combine the machine learning evaluation together.  Why do you want to hand over? No, not hand over. We finished this. So our evaluation framework focuses on the business impact, right?  Discuss the expectable. But for machine learning, they also analyze the generated content, the validation, content, whether the JSON or other model follow the request, follow the prompt or not.  So this is also a very important component there, even with the token usage, right? So whether you measure which one has more productivity, what goes wrong with something that's wrong with long field.  So this is a bigger part too. So if you can put these two together, that's really comprehensive evaluation framework to understand.  So I think that will be the next step to combine this together. So evaluation framework finished. Then last time I discussed with you about the context engineering, the chat.  I think it's not that important anymore. It could be a very easy one. I think so too. Yeah, but anyway, we need to push it.  I think it's something we can talk to Burak, just make it work, but we can make it more like the enhancement.  It's a smaller project right now.
+
+10:14 - Dorian Schlede (beam.ai)
+  Once Burak is still building his meta system, wait until Burak is done building his meta system. Once he has it, he will go  nuts on actually implementing stuff.  So it's going to be crazy what he can build and how fast he will be able to build.
+
+10:30 - Jack Li (beam.ai)
+  Yeah, yeah, the, mm-hmm. Yeah, so. also needs an interface. Ah, I see how a combination of all this together.  I think next, my next big project will be the human part, the human interaction. Yes, it's really interesting. From the request, collect the meeting notes, requirements, chat with the agent, using the chat.  The chat will be a part of this and then provide the expected output. Not precisely the human, the purpose.  The, Provide Dispatch the Auto-Bot, part of this. Chat with the agent is part of this. Dispatch the requirements is also part of this.  How we combine all this together, update what agent is changing, whether we have this node version, agent version, how we communicate, like the git, push, commit, discuss with the business owner, problem engineer, what's changing the agent, what new patterns, like the auto-tuner.  The other thing that we have, but how we communicate this, the communication from us through with AI and humans, so this part across whole life circle.
+  ACTION ITEM: Prepare discussion points re: "magical feeling" UX for meeting with German UX designer next week
+ - WATCH: https://fathom.video/share/xc2nySNvrR3hTc-5fiypZjvFzshvyZzy?timestamp=693.9999  Yeah, that's really interesting part.
+
+11:39 - Dorian Schlede (beam.ai)
+  Yeah, I think we have a UX designer in Germany next week that we talk to. Oh, perfect. So maybe interesting to talk about the magical feeling a little bit.
+
+11:50 - Jack Li (beam.ai)
+  Yeah, I think the magical feeling could happen in the human connection with AI, right? When I discuss something, we generate something there.  It's not just remitting those, it's generally something perspective. us.
+
+12:02 - Dorian Schlede (beam.ai)
+  Yeah, and we can even put it on the platform, right? Yeah, the chat. Yeah, exactly. You can just put all of it on the platform.  Can we also have the meeting notes?
+
+12:14 - Jack Li (beam.ai)
+  We can use some API.
+
+12:17 - Dorian Schlede (beam.ai)
+  Yeah, bro, we can do anything.
+
+12:23 - Jack Li (beam.ai)
+  Yeah, it's too much. If we have our meeting board, invite him to hear, like, fireflies in the meeting notes and click the meeting notes, then it's too much.
+
+12:34 - Dorian Schlede (beam.ai)
+  So I'm going to get the API for Fathom now. I didn't know they had one, but he just told me.  So I can access all transcripts. I can do everything. We can do the same.
+
+12:46 - Jack Li (beam.ai)
+  can connect this into the chat. And then, like I say, we have our hour meeting notes, maybe what you want to discuss with an agent together, like we three with this agent together.
+
+12:56 - Dorian Schlede (beam.ai)
+  Yeah, that would be, oh, that would be sick. We just talked to the AI. It just automatically fills it in.  No, it's too much.
+
+13:04 - Jack Li (beam.ai)
+  But I think the collecting requirements, there will be several layers, right? Yeah. The last layer will be the agent running its part.  The second layer will be the middle layer, how we really transfer or communicate. Okay. Like, human have requirements. We need to translate into the description to the agent, like the PRD, and the agent do something.  also need to, yeah, then we also need to try, like, for example, the template that we want to ask from the test data, the agent do some analyze.  We also need to generate some human ease, like you said, easy, human, easy to read, to understand the format, the content, deliver the best setup questions for the human.  Maybe we need to think about open questions. Exactly.
+
+13:56 - Dorian Schlede (beam.ai)
+  That's the point. The thing is, you don't need the... Perfect. You don't need to double check the PRD. What you need to do is elicit, you need to elicit all the knowledge.  You need to, I mean, maybe of course you should check the PRD, but the core piece is eliciting the existing knowledge.  So the person has all the knowledge. How do you get all the knowledge out of the person? How do you ask the right question?  How do you get the human to think about what they need?
+
+14:25 - Jack Li (beam.ai)
+  Yes, the input and output. The input and output. Humans don't need to read, don't need to read the entire document, but you can give me some instruction or questions or some summarize to make sure the human to know you understand the whole problem.  Something like this. How we interact, this will be the middle layer. The last layer will be the human part.  The precisely human UX, how we talk, do we have the chatbot, or we type in our agent chat, or do different things, click some button.  There. So that's purely human UX at the top layer. But we're not worried about that, I think. We need to focus on the middleware, which we can build in the cloud, right?  Yeah.
+
+15:07 - Dorian Schlede (beam.ai)
+  I think very importantly also, so I think in general, you need to, we all need to take some time to think about what should be done next, right?
+
+15:18 - Jack Li (beam.ai)
+  So what does this all mean? What does it mean?
+
+15:22 - Dorian Schlede (beam.ai)
+  Because if you probably, once we hook all this up to code as well, you know, we can also generate interfaces out of the box like nothing.  So if I would give this to the dev team, currently the dev team, oh, we still need to code so much ourselves.  But I'm pretty sure if you one time abstract the code base very well, and then you, you can very easily also generate new features in this engine on our platform directly.  But I guess that Burak will do. So, yeah, but you know what, what does it mean?
+
+15:57 - Jack Li (beam.ai)
+  Yeah.
+
+15:57 - Dorian Schlede (beam.ai)
+  You we can build a new interface in no time. We can build a... We front, and we can build a completely new product in two weeks.
+
+16:04 - Jack Li (beam.ai)
+  Yeah, let's come back to the final question. Everyone can do this. We can just through this PRD to Borak and do it better already using cloud code.  I think execution right now is like, what do we do? Discuss with cloud code, right? The execution is not a problem right now, and we need to think about this human framework, human in the loop.  I don't want to call it in the loop, because I mean, loop already in the execution part. It's really the interaction from the very beginning.  How does human interact with AI? So this middleware in between.
+
+16:41 - Dorian Schlede (beam.ai)
+  Yeah, I mean, we can put the whole cloud code thing into an interface and make it nice to use, right?  So there's Kiro, for example.
+
+16:48 - Jack Li (beam.ai)
+  So we don't need to worry about, let's, I think the PRD, the document, the framework of how we, how the human should interact with AI, something descriptive.  Something more descriptive, then we can make it into our platform. The interface is only one part of this. So we have three layers, the human layer.  The deeper layer is the agent, include the agent setup, how our beam agent is doing, or whatever Burak is doing, the execution layer, the design agent.  The middle layer, that's where we should focus on. We don't need to have some code. We can have some code.  We have the document. Middleware define how these two parties are interacting. We should get the meeting node. Then AI should analyze the meeting node, grab what insight, grab the variable description, then check the test, like the feature engineering feature is part of the middleware.  Something like this, some feature engineering, prompt engineering, understand the document, classify, group the classification, how we define the graphic, the thinking, then throw out some instruction.  And the question. What do you design with the cloud framework you do, right? The operational team, the workspace, this thinking inside the middleware, how we, what kind of question we should ask, like you design the one, three, four, the steps, what steps we should ask to human to make it working better?  What business question we should ask from testing, some middleware design, what do we do there? It's most important. We define this part.  We can use some cloud code, we can use document, whatever the I've already done step changes. so we do this, yeah, we do this, and then the last part, the least important part is the interaction, interface.  It could be some feature in our platform, could be chat, could be a meeting board, could be anything, like we can discuss this later, but the most important we can deliver, it's a middleware, just from the business.
+
+18:52 - Dorian Schlede (beam.ai)
+  Yeah, actually, the most important is first making sure that it doesn't make critical mistakes anymore. Because sometimes it only reads 100 lines, and then you think it got everything, but then , it says, you know, I'll implement the PRD, but then it only reads 100 lines of the PRD.  So that's a critical issue, right? So I think there is some system-level things that I need to How about this?
+
+19:20 - Jack Li (beam.ai)
+  You can supply the text chunk in less than 100 code. You're trying to limit the red document in less than 100 lines.  Something has not happened, but something.
+
+19:35 - Dorian Schlede (beam.ai)
+  Right now I'm working on implementing a database to do the indexing. So at the moment it's all file writing, but I'm now thinking about how I can move things to proper databases.
+
+19:47 - Jack Li (beam.ai)
+  I found the GitHub library this morning. Maybe that can turn entire code base into a LM-friendly index, but I'm not sure it's working very fine.  It could be some solution, but I'm not quite sure it's working really good enough, the same as indexing it.
+
+20:09 - Dorian Schlede (beam.ai)
+  Yeah, I will see, but you're right. Yeah, I think building the system itself that builds the systems is going to be the core task.
+
+20:22 - Jack Li (beam.ai)
+  Yeah, you should think of the middleware, the middleware between human and AI. So precisely what are you doing here?  You're doing this framework also at Interact, right? But it's more focused on building things. So this framework is a little bit like Copilot, a little bit like Copilot.  We define the working, then we discuss in the meeting, we get the prompt description and design the graphic. Not precisely generate the graphic, but as a middleware, we discuss the graphic.  Like what I do yesterday, I ask the TCFO, this is all the variables I have.
+
+20:58 - Dorian Schlede (beam.ai)
+  Give me some graphic.
+
+21:00 - Jack Li (beam.ai)
+  Like how I can most efficiently and accurately extract all variables and classify them right.
+
+21:13 - Dorian Schlede (beam.ai)
+  Look at this. That's our platform. That's what Jonas built. The paradigm shift. Thanks, AI Automation Beyond, Developers. This isn't another AI system.  It's a complete operating system. Look at this fancy. Conversation, understanding, execution, evolution. This is also very interesting. I like the idea.
+
+21:48 - Jack Li (beam.ai)
+  yeah.
+
+21:48 - Dorian Schlede (beam.ai)
+  This evolution, Jack. So what I'm also building now is automatic feature generation and automatic roadmap. Planning, and all these things, right?  So, you know, a self-evolving system. And also, how can the system learn from other systems? You know? So that's really what I'm looking for.  So everybody will use it. Everybody will do this ultra-think analysis where the AI sees its own biases and analyzes everything it did in the chat for these biases to understand if it has done any issues.  So essentially, in every chat, we can detect issues. And we can also detect if certain issues have been solved.  So this means aggregating everybody's usage of the system will be extremely powerful because it automatically learns. You know, that's also a really interesting thing.  So... ... ...
+
+23:09 - Jack Li (beam.ai)
+  There's also here.
+
+23:11 - Dorian Schlede (beam.ai)
+  Files are executable thoughts. Your documentation literally runs itself. That's also an interesting thing, right? To think about. Yeah. Sorry.
+
+23:30 - Jack Li (beam.ai)
+  Yeah, Jack, this is big. that's something we can think in between. We can start with that. But this media will be the composition and the standing part.  To then maybe think about the execution, to automate, generate the graphics, run the execution. That's something a little bit more like a discussion.  That's something is the execution part. We need to spend more time to make sure it's executed very well. But the consultant part, we can focus on a little bit right now.  Yeah.
+
+24:00 - Dorian Schlede (beam.ai)
+  So the good thing is, the Ultra thing got also so much better. So now the Ultra thing, it also does a critical risk analysis immediately.  It does an overengineering check. So, you know, it has all these implicit checks already where it's  up. So this is also already getting much, much better.  Like, compared to the template that you currently have, my system is already so much more stable. And that's really nice to see.  I'm not sure how, what's your experience, but probably sometimes loading sequence fails. It doesn't read all files. The cloud?
+
+24:39 - Jack Li (beam.ai)
+  Yeah, yeah, yeah.
+
+24:40 - Dorian Schlede (beam.ai)
+  it messes up a lot still, right?
+
+24:42 - Jack Li (beam.ai)
+  There is also one thinking, like, using someone doing this for called Gemini CLI to check the execution, like the code, right?  You can compare when they read the file, only 100 lines. You can ask Gemini CLI to check whether the document are really 100.  Reliance Only, or More Than One Reliance?
+
+25:03 - Dorian Schlede (beam.ai)
+  Burak already has solutions for this. He has MCP server to get the context. So I will figure something out.  There's also hooks. So I will need to see, I'll probably need to create some scripts to prevent this, but I will need to see how I can, yeah, how I can enforce this even more, but we will see.  Yeah. So I think the most important thing for this system is actually making it more reliable and remove the error rate for users that don't know what's going on, essentially.  Because if you don't catch that it has made an issue, it will be destructive, you know?
+
+25:54 - Jack Li (beam.ai)
+  Yeah, yeah, yes. We need to make sure like it, like you check in there, like how you reveal. It's working.  I do not notice. Or I don't realize it is getting all the files, but we need to have someone to review this.  Critical issue.
+
+26:12 - Dorian Schlede (beam.ai)
+  It's really critical because, you know, the AI reads like everything is perfect and it knows exactly what it's doing and you would never notice, you know?  Yeah.
+
+26:22 - Jack Li (beam.ai)
+  And then you implement the feature.
+
+26:25 - Dorian Schlede (beam.ai)
+  You think it's working, but then nothing is working. But then you don't, maybe don't test the feature and then you come back three hours later and then you're like, what happened here?  And then you're completely lost.
+
+26:34 - Jack Li (beam.ai)
+  You have a bunch of deprecated code.
+
+26:37 - Dorian Schlede (beam.ai)
+  Your feature is already completed.
+
+26:38 - Jack Li (beam.ai)
+  Yeah.
+
+26:40 - Dorian Schlede (beam.ai)
+  So that's, that's a critical issue. So it's not stable, you know, it's, it's really not as stable. That's a really interesting confession that the AI had itself yesterday.  So that it's living in sessions. So now it knows that it's always living in sessions and that it can never get the full context of the.  The system. So that's a really interesting confession. So it needs to build these intelligent indexes so that it can perfectly navigate the context, right?  So that's now a central knowledge piece. But now I lost...
+
+27:18 - Jack Li (beam.ai)
+  Something important, quickly asking. Do you think you still can get some commission or some reward from the bitcase when they pay it?
+
+27:29 - Dorian Schlede (beam.ai)
+  I will...
+
+27:30 - Jack Li (beam.ai)
+  No.
+
+27:31 - Dorian Schlede (beam.ai)
+  We will talk about this.
+
+27:33 - Jack Li (beam.ai)
+  It's not... It's okay, but I want to bring this talk because I really want to buy this cloud code for myself.  Maybe I don't need the real commission. I just need the credit card and limited reasoning a little bit to have this cloud code for myself.  Nah, I will...
+
+27:50 - Dorian Schlede (beam.ai)
+  I mean, yes. So that's... I can definitely do that for you.
+
+27:53 - Jack Li (beam.ai)
+  It's more reasonable, Compared to just directing to give me money than give me some AI native... No, no, no.
+
+28:01 - Dorian Schlede (beam.ai)
+  I do think that we should do this properly, because you deserve a bonus for this, in my opinion.
+
+28:08 - Jack Li (beam.ai)
+  No, problem is if you give me a bonus, I will save this, I will not spend this easy 200 euro there.  It's different feeling, you know? But you already have the $200 thing.
+
+28:21 - Dorian Schlede (beam.ai)
+  I mean, it runs out from time to time, but we will just get another one. So if we hit the limit more often, we will just get a second one.
+
+28:28 - Jack Li (beam.ai)
+  I don't want to use this for my movie website.
+
+28:32 - Dorian Schlede (beam.ai)
+  But you can.
+
+28:33 - Jack Li (beam.ai)
+  Yeah, and the mid-sell is also, maybe I will try it, but I think it's also, no.
+
+28:38 - Dorian Schlede (beam.ai)
+  If I'm not working on it for the company, you can use it for your, but I'm essentially always using it at the moment.
+
+28:45 - Jack Li (beam.ai)
+  Yeah, so we are reaching a limit very soon. But yeah, no, no, just a small thing. Maybe I will think about it.  No, no, no. I have you in mind. Don't worry.
+
+28:56 - Dorian Schlede (beam.ai)
+  I have this thing in mind anyways, because I also don't get anything at the moment.
+
+29:00 - Jack Li (beam.ai)
+  maybe mind. you.
+
+29:00 - Dorian Schlede (beam.ai)
+  And I think we both deserve a bonus for this.
+
+29:05 - Jack Li (beam.ai)
+  For me, just this $200 limited will be good enough. So I can really spend this on the cloud. Otherwise, I will not spend it on the cloud.
+
+29:14 - Dorian Schlede (beam.ai)
+  But then, doesn't that tell you maybe you shouldn't spend it on the cloud?
+
+29:19 - Jack Li (beam.ai)
+  Yeah, it has a feeling, right? A feeling to have money or the feeling to force you to have users feature.  No, just kidding.
+
+29:31 - Dorian Schlede (beam.ai)
+  You don't have, don't force yourself to use the feature.
+
+29:34 - Jack Li (beam.ai)
+  But I really want to. No, anyway, I will use it. I think I will definitely buy it for one or two months to try.  Someone says like $100 is not enough for a personal project.
+
+29:50 - Dorian Schlede (beam.ai)
+  I think it is. $200 is enough. can do like...
+
+29:54 - Jack Li (beam.ai)
+  $100.
+
+29:55 - Dorian Schlede (beam.ai)
+  So with the $300, I can do like three to five chats at the same time. And then I will not.  hit the limit. I think it's right before the limit. So yesterday night at 4 a.m., I reached the limit, like at 3.30, and then it would reset at 4, so that forced me to go to bed.
+
+30:14 - Jack Li (beam.ai)
+  I think it's also a good one, right? Go to bed, dude. Stop.
+
+30:19 - Dorian Schlede (beam.ai)
+  But I think you get quite far.
+  ACTION ITEM: Focus on finishing TCFO, deliver pages for workshop
+ - WATCH: https://fathom.video/share/xc2nySNvrR3hTc-5fiypZjvFzshvyZzy?timestamp=1821.9999
+
+30:26 - Jack Li (beam.ai)
+  Okay. Okay. I think next week. Okay. So this week, I'll focus on TCFO finish that you try to make a better TCFO, get, deliver the pages to get ready for the workshop, and that helps one to finalize the evaluation frame.  And also Kenya needs it. this is critical.
+
+30:47 - Dorian Schlede (beam.ai)
+  Don't disregard the eval framework. We're in the office next week. So, I mean, also going today, man, that's, I mean, that's just progress here, you know, because we need to finish this.
+
+31:00 - Jack Li (beam.ai)
+  I think I will. We'll come back a little bit early today, but still, I'll be there.
+
+31:04 - Dorian Schlede (beam.ai)
+  So, are you planning on coming to the office then after the weekly? Yes.
+
+31:11 - Jack Li (beam.ai)
+  Okay, then I'll come too. Okay, so, oh, no, one quick question. I'm so excited, Jack.
+
+31:20 - Dorian Schlede (beam.ai)
+  This is so insane. We're literally back in front, bro.
+
+31:23 - Jack Li (beam.ai)
+  Yeah, for today. For today, I should more focus on evaluation or keep working on the TJ for next Thursday.
+  ACTION ITEM: Set up meeting with Sven to discuss evaluation framework interface requirements
+ - WATCH: https://fathom.video/share/xc2nySNvrR3hTc-5fiypZjvFzshvyZzy?timestamp=1895.9999  I mean, so, TJ's file obviously needs to be there. No, I will check the evaluation. I will check it.  I will clean it a little bit more. If it's been there, I will discuss with Sven. Yeah, okay. will check this.  is in the office already.
+  ACTION ITEM: Clean up evaluation framework before meeting with Sven
+ - WATCH: https://fathom.video/share/xc2nySNvrR3hTc-5fiypZjvFzshvyZzy?timestamp=1906.9999
+
+31:46 - Dorian Schlede (beam.ai)
+  Let's do a meeting with Sven and just maybe, I mean, we had the requirements yesterday already. So, I actually think we had most of the things we need.  I will clean it a little bit.
+
+31:57 - Jack Li (beam.ai)
+  For my part, before our meeting, will clean the evaluation. And then we can work here to explain just when.  The interface we need to now thin.
+
+32:10 - Dorian Schlede (beam.ai)
+  We need to now make sure what's the interface pages we actually want.
+
+32:13 - Jack Li (beam.ai)
+  Yeah. I clean a little bit already, but I think it should be better.
+
+32:18 - Dorian Schlede (beam.ai)
+  Yeah, you clean it and then I add random new stuff with the forms. I thought maybe the forms are easier, but I'm actually not so sure.  Yeah, because for us, we don't need a form.
+
+32:31 - Jack Li (beam.ai)
+  We can directly operate in the data table even. But again, it's okay. Let's take a look. Let's take a look.
+
+32:39 - Dorian Schlede (beam.ai)
+  Yeah. Okay.
+
+32:41 - Jack Li (beam.ai)
+  Okay. I will talk to you in the weekly, then I will come to office later.
+
+32:46 - Dorian Schlede (beam.ai)
+  Okay. See you in 10 minutes, Jack.
+
+32:48 - Jack Li (beam.ai)
+  I'll see you later. Bye. Bye. Bye. Bye. Bye.
+ChatGPT:
+Nachgedacht für 53s

@@ -1,0 +1,43 @@
+# Resource Plan: transcript-processing-automation
+# Generated: 2025-09-17T18:46:00Z
+# Workflow: plan-feature (Step 4 - Streamlined)
+
+# SKILLS REQUIRED
+skills_required:
+  - "LLM integration and prompt engineering"
+  - "File processing and text analysis"
+  - "CRM API integration (HubSpot)"
+  - "Email automation systems"
+  - "YAML/JSON data processing"
+
+# TIME ESTIMATE
+time_estimate:
+  phase_1_core: "2-3 weeks (transcript processing + basic follow-up)"
+  phase_2_intelligence: "2-3 weeks (business intelligence + CRM integration)"
+  total_estimate: "4-6 weeks for full implementation"
+
+# RISKS & MITIGATIONS
+risks_mitigations:
+  - risk: "Transcript quality variations"
+    mitigation: "Manual review step for critical transcripts"
+  - risk: "API rate limits"
+    mitigation: "Batch processing with proper throttling"
+
+# QUALITY GATES
+quality_gates:
+  - "Successfully process ICS transcript (900 lines)"
+  - "Generate 6 role-specific follow-ups"
+  - "Extract 12 use cases mentioned"
+  - "Create proper Companies/ICS/ folder structure"
+
+# TESTING STRATEGY
+testing_strategy:
+  unit_tests: "Individual component processing"
+  integration_tests: "End-to-end transcript → follow-up flow"
+  user_acceptance: "Sales team review of generated outputs"
+
+# EXTERNAL DEPENDENCIES
+external_dependencies:
+  - "HubSpot API access and authentication"
+  - "Gmail API for email generation"
+  - "LLM API (OpenAI/Claude) for processing"

@@ -1,0 +1,28 @@
+# Apollo API Integration Requirements
+# Based on Apollo API Documentation: https://docs.apollo.io/
+
+# Core dependencies
+requests>=2.31.0
+python-dotenv>=1.0.0
+pandas>=2.0.0
+
+# Data processing
+numpy>=1.24.0
+json5>=0.9.0
+
+# Optional: For enhanced data analysis
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Optional: For database integration
+sqlite3  # Built-in Python module
+sqlalchemy>=2.0.0
+
+# Optional: For email integration
+smtplib  # Built-in Python module
+email-validator>=2.0.0
+
+# Development dependencies
+pytest>=7.0.0
+black>=23.0.0
+flake8>=6.0.0

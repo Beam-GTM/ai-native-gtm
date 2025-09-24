@@ -1,0 +1,394 @@
+# Engineering Rules Registry
+# Central registry for all engineering rules - reference-based architecture
+# Replaces 39+ individual rule files with centralized management
+
+metadata:
+  name: "engineering-rules-registry"
+  description: "Centralized registry for all Nexus engineering rules and standards"
+  version: "1.0"
+  last_updated: "2025-08-28"
+  total_rules: 39
+  categories: 4
+
+# =============================================================================
+# CORE FOUNDATION RULES (10 rules)
+# =============================================================================
+
+core_foundation:
+  code_documentation:
+    id: "code-doc"
+    name: "Code Documentation Standards"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Standards for documenting code and system components"
+    enforcement: "All code must include comprehensive documentation"
+    reference: "{{load_rule: code_documentation}}"
+    
+  compliance_enforcement:
+    id: "compliance"
+    name: "Compliance and Enforcement"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Enforcement mechanisms for rule compliance"
+    enforcement: "Automatic validation and reporting"
+    
+  data_output_standards:
+    id: "data-output"
+    name: "Data Output Standards"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Standards for data formatting and output"
+    enforcement: "All outputs must follow defined formats"
+    
+  documentation_standards:
+    id: "doc-standards"
+    name: "Documentation Standards"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Requirements for system documentation"
+    enforcement: "Documentation required for all components"
+    
+  file_management:
+    id: "file-mgmt"
+    name: "File Management Rules"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "File organization and management standards"
+    enforcement: "File placement must follow defined structure"
+    
+  memory_system:
+    id: "memory-sys"
+    name: "Memory System Rules"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Memory management and persistence rules"
+    enforcement: "Memory operations must follow patterns"
+    
+  placement_standards:
+    id: "placement"
+    name: "File Placement Standards"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Standards for where files should be placed"
+    enforcement: "Automatic placement validation"
+    
+  quality_assurance:
+    id: "qa"
+    name: "Quality Assurance Rules"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Quality validation and assurance requirements"
+    enforcement: "Quality gates must pass"
+    
+  quick_reference:
+    id: "quick-ref"
+    name: "Quick Reference Guide"
+    category: "core-foundation"
+    severity: "informational"
+    description: "Quick reference for common patterns"
+    
+  system_design_principles:
+    id: "design-principles"
+    name: "System Design Principles"
+    category: "core-foundation"
+    severity: "mandatory"
+    description: "Core design principles for system architecture"
+    enforcement: "All designs must align with principles"
+
+# =============================================================================
+# DEVELOPMENT STANDARDS (10 rules)
+# =============================================================================
+
+development:
+  code_review:
+    id: "code-review"
+    name: "Code Review Process"
+    category: "development"
+    severity: "mandatory"
+    description: "Code review requirements and process"
+    enforcement: "All code must be reviewed"
+    
+  coding_standards:
+    id: "coding-standards"
+    name: "Coding Standards"
+    category: "development"
+    severity: "mandatory"
+    description: "Coding conventions and patterns"
+    enforcement: "Code must follow standards"
+    
+  continuous_improvement:
+    id: "ci-cd"
+    name: "Continuous Improvement"
+    category: "development"
+    severity: "recommended"
+    description: "CI/CD practices and automation"
+    
+  deployment:
+    id: "deployment"
+    name: "Deployment Procedures"
+    category: "development"
+    severity: "mandatory"
+    description: "Deployment process and requirements"
+    
+  linting_formatting:
+    id: "linting"
+    name: "Linting and Formatting"
+    category: "development"
+    severity: "mandatory"
+    description: "Code linting and formatting standards"
+    
+  llm_development:
+    id: "llm-dev"
+    name: "LLM Development Patterns"
+    category: "development"
+    severity: "mandatory"
+    description: "Patterns specific to LLM development"
+    
+  mcp_tools:
+    id: "mcp-tools"
+    name: "MCP Tool Standards"
+    category: "development"
+    severity: "recommended"
+    description: "Standards for MCP tool usage"
+    
+  python_standards:
+    id: "python"
+    name: "Python Standards"
+    category: "development"
+    severity: "mandatory"
+    description: "Python-specific coding standards"
+    
+  quality_metrics:
+    id: "metrics"
+    name: "Quality Metrics"
+    category: "development"
+    severity: "recommended"
+    description: "Metrics for measuring quality"
+    
+  testing_standards:
+    id: "testing"
+    name: "Testing Standards"
+    category: "development"
+    severity: "mandatory"
+    description: "Testing requirements and patterns"
+
+# =============================================================================
+# PRODUCT MANAGEMENT (9 rules)
+# =============================================================================
+
+product_management:
+  agile_sprint:
+    id: "sprint"
+    name: "Agile Sprint Management"
+    category: "product-management"
+    severity: "recommended"
+    description: "Sprint planning and execution"
+    
+  backlog_management:
+    id: "backlog"
+    name: "Backlog Management"
+    category: "product-management"
+    severity: "recommended"
+    description: "Product backlog organization"
+    
+  compliance_governance:
+    id: "governance"
+    name: "Compliance and Governance"
+    category: "product-management"
+    severity: "mandatory"
+    description: "Governance requirements"
+    
+  metrics_reporting:
+    id: "reporting"
+    name: "Metrics and Reporting"
+    category: "product-management"
+    severity: "recommended"
+    description: "Reporting requirements"
+    
+  prd_writing:
+    id: "prd"
+    name: "PRD Writing Standards"
+    category: "product-management"
+    severity: "mandatory"
+    description: "Product requirements documentation"
+    
+  product_quality:
+    id: "product-quality"
+    name: "Product Quality Gates"
+    category: "product-management"
+    severity: "mandatory"
+    description: "Product quality requirements"
+    
+  release_management:
+    id: "release"
+    name: "Release Management"
+    category: "product-management"
+    severity: "mandatory"
+    description: "Release procedures and requirements"
+    
+  retrospectives:
+    id: "retro"
+    name: "Retrospectives"
+    category: "product-management"
+    severity: "recommended"
+    description: "Sprint retrospective process"
+    
+  stakeholder_management:
+    id: "stakeholder"
+    name: "Stakeholder Management"
+    category: "product-management"
+    severity: "recommended"
+    description: "Stakeholder communication"
+
+# =============================================================================
+# SYSTEM OPERATIONS (10 rules)
+# =============================================================================
+
+system_operations:
+  architecture_operations:
+    id: "arch-ops"
+    name: "Architecture Operations"
+    category: "system-operations"
+    severity: "mandatory"
+    description: "System architecture operations"
+    
+  emergency_procedures:
+    id: "emergency"
+    name: "Emergency Procedures"
+    category: "system-operations"
+    severity: "critical"
+    description: "Emergency response procedures"
+    
+  file_operations:
+    id: "file-ops"
+    name: "File Operations"
+    category: "system-operations"
+    severity: "mandatory"
+    description: "File operation standards"
+    
+  operations_governance:
+    id: "ops-governance"
+    name: "Operations Governance"
+    category: "system-operations"
+    severity: "mandatory"
+    description: "Operational governance requirements"
+    
+  performance_optimization:
+    id: "performance"
+    name: "Performance Optimization"
+    category: "system-operations"
+    severity: "recommended"
+    description: "Performance optimization guidelines"
+    
+  security_operations:
+    id: "security"
+    name: "Security Operations"
+    category: "system-operations"
+    severity: "critical"
+    description: "Security requirements and procedures"
+    
+  system_generation:
+    id: "sys-gen"
+    name: "System Generation"
+    category: "system-operations"
+    severity: "mandatory"
+    description: "System generation procedures"
+    
+  system_update_protocol:
+    id: "update-protocol"
+    name: "System Update Protocol"
+    category: "system-operations"
+    severity: "mandatory"
+    description: "Protocol for system updates"
+    
+  template_management:
+    id: "template-mgmt"
+    name: "Template Management"
+    category: "system-operations"
+    severity: "mandatory"
+    description: "Template management standards"
+
+# =============================================================================
+# RULE SETS FOR LOADING
+# =============================================================================
+
+rule_sets:
+  # Minimal rules for quick operations
+  critical_rules:
+    - code_documentation
+    - file_management
+    - compliance_enforcement
+    - security_operations
+    - emergency_procedures
+    
+  # Standard rules for feature development
+  standard_rules:
+    - code_documentation
+    - file_management
+    - compliance_enforcement
+    - coding_standards
+    - testing_standards
+    - quality_assurance
+    - documentation_standards
+    
+  # Comprehensive rules for critical work
+  comprehensive_rules:
+    - code_documentation
+    - file_management
+    - compliance_enforcement
+    - coding_standards
+    - testing_standards
+    - quality_assurance
+    - documentation_standards
+    - code_review
+    - deployment
+    - prd_writing
+    - product_quality
+    - release_management
+    
+  # All rules (for system operations)
+  all_rules:
+    - "*"  # Special syntax to load all rules
+
+# =============================================================================
+# LOADING REFERENCES
+# =============================================================================
+
+loading_references:
+  # For different contexts
+  task_rules:
+    simple: "critical_rules"
+    standard: "standard_rules"
+    comprehensive: "comprehensive_rules"
+    
+  agent_rules:
+    developer: "standard_rules"
+    architect: "comprehensive_rules"
+    orchestrator: "all_rules"
+    
+  workflow_rules:
+    feature: "standard_rules"
+    system: "comprehensive_rules"
+    session: "critical_rules"
+
+# =============================================================================
+# TEMPLATE INTEGRATION
+# =============================================================================
+
+template_integration:
+  reference_syntax:
+    load_rules: "{{load_engineering_rules: rule_set_name}}"
+    load_rule: "{{load_engineering_rule: rule_id}}"
+    
+  example_usage:
+    task: "{{load_engineering_rules: standard_rules}}"
+    agent: "{{load_engineering_rules: comprehensive_rules}}"
+    workflow: "{{load_engineering_rules: critical_rules}}"
+    
+  compliance_checking:
+    format: |
+      {{#check_compliance rule_set}}
+      {{#each rules}}
+      - [ ] {{name}}: {{enforcement}}
+      {{/each}}
+      {{/check_compliance}}

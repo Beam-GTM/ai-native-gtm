@@ -1,0 +1,38 @@
+# Elicitation Insights: Demo Agent Automation
+# Created: 2025-09-18T09:01:25Z
+# Focus: Practical automation requirements
+
+core_insights:
+  clarity_principle: "Intern-level clarity - explicit enough for someone with minimal context"
+  decision_branches: "Clear, unambiguous paths with explicit 'if X then Y' logic"
+  test_alignment: "Test cases must exactly match prompt decision paths"
+  scope: "General-purpose across different demo types (not domain-specific)"
+
+system_integration_points:
+  webhook_deployment:
+    - "Standard POST endpoint for agent triggering"
+    - "User will provide specific format and authentication details"
+    - "Payload includes: process flow, prompts, test cases"
+  
+  prompt_optimization:
+    - "Avoid stiff decision branches that confuse AI"
+    - "Provide explicit instructions for each decision point"
+    - "Structure like intern training manual - step by step"
+
+hidden_complexities_discovered:
+  - "Balancing explicit clarity vs. prompt length"
+  - "Maintaining test case synchronization with prompt changes"
+  - "Creating reusable templates across diverse demo types"
+
+risk_factors:
+  - "Over-specification leading to rigid prompts"
+  - "Test case drift from prompt logic"
+  - "Webhook integration failure during live demos"
+
+coordination_needs:
+  minimal: "User provides webhook example when ready for integration"
+
+# ULTRATHINK SIMPLIFICATION
+simplification_applied: true
+complexity_addiction_prevented: true
+focus_redirected_to: "practical automation tool creation"

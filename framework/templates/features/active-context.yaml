@@ -1,0 +1,56 @@
+---
+version: 3.2.0
+system_version: 3.2.0
+last_modified: 2025-08-28T02:17:11.446619Z
+migration_path: auto-generated
+---
+
+<!-- dependencies
+upstream:
+  - framework/workflows/design-new-feature.md
+  - framework/tasks/memory/update-project-memory.md
+downstream:
+  - workspace/features/active/*/active-context.md
+validated: 2025-08-26T16:00:00Z
+health: 100%
+-->
+
+<!-- version: 9ed0a3ea-85d7-40e0-bee6-6e8195736033 -->
+<!-- last-updated: 2025-01-20T14:30:00Z -->
+<!-- document-type: memory-document -->
+
+# Repository Feature Active Context Structure Definition
+# Repository-level active context (inherits from top-level)
+
+metadata:
+  name: "repository-feature-active-context"
+  type: "feature-document"
+  scope: "repository-level"
+  description: "Repository feature active context (follows top-level format)"
+  purpose: "Repository-specific implementation context"
+  inherits_from: "top-level/memory/features/active-context.yaml"
+  repository_types: ["backend", "frontend", "framework"]
+  last_updated: "2025-08-20"
+
+inheritance:
+  base: "top-level/memory/features/active-context.yaml"
+  modifications: "none"
+  note: "Repository-level active-context MUST follow the exact same format as top-level for consistency"
+
+document_structure:
+  note: "Identical to top-level active-context structure"
+  reference: "../../top-level/memory/features/active-context.yaml"
+
+repository_specific_notes:
+  backend:
+    - "Track current API endpoint work"
+    - "Database transaction context"
+    - "Service call chains"
+  frontend:
+    - "Track current component work"
+    - "State management context"
+    - "UI interaction flows"
+  framework:
+    - "Track cross-language context"
+    - "Plugin development state"
+    - "Integration points"
