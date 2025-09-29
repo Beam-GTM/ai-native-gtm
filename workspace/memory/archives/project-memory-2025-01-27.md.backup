@@ -3,18 +3,18 @@
 <!-- PATTERNS: Extracted to patterns/extracted/ -->
 
 ## Entry 16 | 2025-01-27T21:45:00Z
-- **ACTION**: Example-Company comprehensive proposal development using Proposal Development framework
-- **PROJECT**: Personal Sales GTM Operating System - Example-Company Partnership Development
+- **ACTION**: Rivertrace comprehensive proposal development using Proposal Development framework
+- **PROJECT**: Personal Sales GTM Operating System - Rivertrace Partnership Development
 - **TASK**: Complete proposal package creation including executive presentation, detailed proposal, and pricing breakdown
 - **WORKFLOW**: proposal-development-framework, close-chat
 - **SESSION**: session-2025-01-27-rivertrace-proposal-development
-- **CONTEXT**: Applied Proposal Development framework to create comprehensive proposal package for Example-Company AI automation partnership, developed executive presentation, detailed proposal document, and pricing breakdown based on discovery insights and partnership analysis, structured proposal following framework methodology with problem statement, technical solution, implementation plan, commercial terms, and success metrics
+- **CONTEXT**: Applied Proposal Development framework to create comprehensive proposal package for Rivertrace AI automation partnership, developed executive presentation, detailed proposal document, and pricing breakdown based on discovery insights and partnership analysis, structured proposal following framework methodology with problem statement, technical solution, implementation plan, commercial terms, and success metrics
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Proposal Development framework provides systematic approach to custom proposal creation with comprehensive coverage of all stakeholder needs and commercial requirements
 - **LEARNING**: Learning #097 captured - Proposal Development framework enables systematic custom proposal creation with comprehensive stakeholder coverage, discovery insights integration creates compelling value propositions, pricing breakdown with ROI analysis provides clear commercial justification
-- **USER_REQUEST**: "@Example-Company/ @Proposal-Development.md" - request for proposal development using framework
-- **FILES**: `Companies/Example-Company/documents/Example-Company-AI-Automation-Proposal.md` (comprehensive proposal), `Companies/Example-Company/documents/Example-Company-Pricing-Breakdown.md` (detailed pricing analysis), `Companies/Example-Company/documents/Example-Company-Executive-Presentation.md` (presentation-ready summary), `workspace/memory/core-primitives/learnings.md` (learning #097), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "@Rivertrace/ @Proposal-Development.md" - request for proposal development using framework
+- **FILES**: `Companies/Rivertrace/documents/Rivertrace-AI-Automation-Proposal.md` (comprehensive proposal), `Companies/Rivertrace/documents/Rivertrace-Pricing-Breakdown.md` (detailed pricing analysis), `Companies/Rivertrace/documents/Rivertrace-Executive-Presentation.md` (presentation-ready summary), `workspace/memory/core-primitives/learnings.md` (learning #097), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 17 | 2025-01-27T21:30:00Z
 - **ACTION**: Allied Global payroll automation with HR & Recruiting vertical integration
@@ -28,7 +28,7 @@
 - **PATTERN**: Notion MCP integration provides comprehensive vertical research that significantly enhances process documentation with market context and industry-specific insights
 - **LEARNING**: Learning #096 captured - HR & Recruiting vertical integration success through Notion MCP research, market opportunity data provides business justification for automation investments, regional segmentation insights enable tailored solution approaches
 - **USER_REQUEST**: "research the HR & Recruiting notion page via notion MCP & revise the payroll flo with all the information in there" followed by "create me a set of test cases for the payroll automation agent"
-- **FILES**: `Companies/Example-Company/documents/Example-Company-Demo-Workflow.yaml` (45-minute demo flow), `Companies/Example-Company/documents/Example-Company-Demo-Prompts.yaml` (intern-level clarity prompts), `Companies/Example-Company/documents/Example-Company-Demo-Test-Cases.yaml` (comprehensive test validation), `Companies/Example-Company/documents/Example-Company-Demo-Agent-Package.yaml` (deployment package), `Companies/Example-Company/documents/Example-Company-Demo-Deployment-Instructions.md` (deployment guide), `Companies/Example-Company/documents/Example-Company-Payroll-Automation-Process.yaml` (enhanced with vertical research), `Companies/Example-Company/documents/Example-Company-Payroll-Automation-Test-Cases.yaml` (20 comprehensive test cases), `workspace/memory/core-primitives/learnings.md` (learning #096), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **FILES**: `Companies/Allied-Global/documents/Allied-Global-Demo-Workflow.yaml` (45-minute demo flow), `Companies/Allied-Global/documents/Allied-Global-Demo-Prompts.yaml` (intern-level clarity prompts), `Companies/Allied-Global/documents/Allied-Global-Demo-Test-Cases.yaml` (comprehensive test validation), `Companies/Allied-Global/documents/Allied-Global-Demo-Agent-Package.yaml` (deployment package), `Companies/Allied-Global/documents/Allied-Global-Demo-Deployment-Instructions.md` (deployment guide), `Companies/Allied-Global/documents/Allied-Global-Payroll-Automation-Process.yaml` (enhanced with vertical research), `Companies/Allied-Global/documents/Allied-Global-Payroll-Automation-Test-Cases.yaml` (20 comprehensive test cases), `workspace/memory/core-primitives/learnings.md` (learning #096), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 18 | 2025-01-27T19:20:00Z
 - **ACTION**: LinkedIn outreach message optimization for C-level executives in RPO space
@@ -55,22 +55,22 @@
 - **MILESTONE**: session_closure
 - **PATTERN**: ULTRATHINK analysis reveals partnership understanding inconsistencies requiring alignment before demo
 - **LEARNING**: Learning #095 captured - Partnership follow-up requires ULTRATHINK analysis to identify understanding inconsistencies, internal showcase first approach builds confidence, use case selection should address biggest pain point, 3-part email structure provides clear communication framework
-- **USER_REQUEST**: "we need to rethink what we did for the latest Allief Global follow up in @Example-Company/ . I sensed some inconsistency in the understanding of what a partnership means. can you ULTRATHINK on whats the best CTA for the follow up"
-- **FILES**: `Companies/Example-Company/emails/outbound/Alejandro-Follow-up-Partnership-Vision.md` (updated follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #095), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "we need to rethink what we did for the latest Allief Global follow up in @Allied-Global/ . I sensed some inconsistency in the understanding of what a partnership means. can you ULTRATHINK on whats the best CTA for the follow up"
+- **FILES**: `Companies/Allied-Global/emails/outbound/Alejandro-Follow-up-Partnership-Vision.md` (updated follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #095), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 20 | 2025-01-27T18:45:00Z
-- **ACTION**: Example-Company company creation and transcript processing automation execution
+- **ACTION**: Rivertrace company creation and transcript processing automation execution
 - **PROJECT**: Personal Sales GTM Operating System - Company Onboarding & Business Intelligence
-- **TASK**: Complete company creation workflow followed by transcript processing automation for Example-Company intro call
+- **TASK**: Complete company creation workflow followed by transcript processing automation for Rivertrace intro call
 - **WORKFLOW**: create-company-structure, transcript-processing-automation, close-chat
 - **SESSION**: session-2025-01-27-rivertrace-setup
-- **CONTEXT**: User requested "create new company Example-Company" followed by transcript processing of intro call, generated comprehensive business intelligence including transcript analysis YAML, follow-up email with pricing proposal (€990/month + €1000/month dev services), and partnership opportunity analysis
+- **CONTEXT**: User requested "create new company Rivertrace" followed by transcript processing of intro call, generated comprehensive business intelligence including transcript analysis YAML, follow-up email with pricing proposal (€990/month + €1000/month dev services), and partnership opportunity analysis
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Complete end-to-end sales automation workflow from company setup through business intelligence generation and sales proposal creation
 - **LEARNING**: Learning #094 captured - Complete sales automation requires systematic workflow execution from company setup through business intelligence generation, transcript processing automation effectively extracts actionable business insights, pricing proposal structure with clear tiers provides commercial clarity
-- **USER_REQUEST**: "create new company Example-Company" followed by "@Intro call @transcript-processing-automation/ here in chat"
-- **FILES**: `Companies/Example-Company/` (folder structure created), `Companies/Example-Company/transcripts/processed/transcript-analysis.yaml` (business intelligence), `Companies/Example-Company/emails/outbound/Martin-Songs-Follow-up.md` (follow-up email), `Companies/Example-Company/documents/partnership-opportunity-analysis.md` (strategic analysis), `workspace/memory/core-primitives/learnings.md` (learning #094), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "create new company Rivertrace" followed by "@Intro call @transcript-processing-automation/ here in chat"
+- **FILES**: `Companies/Rivertrace/` (folder structure created), `Companies/Rivertrace/transcripts/processed/transcript-analysis.yaml` (business intelligence), `Companies/Rivertrace/emails/outbound/Martin-Songs-Follow-up.md` (follow-up email), `Companies/Rivertrace/documents/partnership-opportunity-analysis.md` (strategic analysis), `workspace/memory/core-primitives/learnings.md` (learning #094), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 21 | 2025-09-22T12:05:34Z
 - **ACTION**: Allied Global demo call analysis with unsaid concerns identification and strategic follow-up
@@ -84,21 +84,21 @@
 - **PATTERN**: Demo call analysis requires reading between the lines to identify unsaid concerns behind surface questions
 - **LEARNING**: Learning #093 captured - Demo call follow-up success requires identifying unsaid concerns behind surface questions, technical credibility building essential for integration-anxious prospects, document processing capabilities need concrete proof points not claims
 - **USER_REQUEST**: "i think we should send an email in which we in very short explain a couple pointers on their main questions & Concerns and then show that we are eager to move forward"
-- **FILES**: `Companies/Example-Company/transcripts/processed/demo-call-analysis.yaml` (transcript analysis), `Companies/Example-Company/documents/partnership-opportunity-analysis.md` (updated), `workspace/memory/core-primitives/learnings.md` (learning #093), `workspace/memory/core-primitives/chat-sessions/session-2025-09-22.md` (session summary)
+- **FILES**: `Companies/Allied-Global/transcripts/processed/demo-call-analysis.yaml` (transcript analysis), `Companies/Allied-Global/documents/partnership-opportunity-analysis.md` (updated), `workspace/memory/core-primitives/learnings.md` (learning #093), `workspace/memory/core-primitives/chat-sessions/session-2025-09-22.md` (session summary)
 
 ## Entry 22 | 2025-01-27T18:35:00Z
-- **ACTION**: Company structure creation workflow execution for Example-Company
+- **ACTION**: Company structure creation workflow execution for Rivertrace
 - **PROJECT**: Personal Sales GTM Operating System - Company Organization
-- **TASK**: Create-company-structure-workflow execution for Example-Company company
+- **TASK**: Create-company-structure-workflow execution for Rivertrace company
 - **WORKFLOW**: create-company-structure (complete end-to-end execution)
 - **SESSION**: session-2025-01-27-rivertrace-setup
-- **CONTEXT**: User requested creation of company folder structure for "Example-Company", executed complete workflow with validation gates
+- **CONTEXT**: User requested creation of company folder structure for "Rivertrace", executed complete workflow with validation gates
 - **AGENT**: orchestrator
 - **MILESTONE**: workflow_complete
 - **PATTERN**: Direct workflow execution from user command with immediate implementation
-- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Example-Company), validation gates passed successfully
-- **USER_REQUEST**: "create new company Example-Company" - direct company structure creation command
-- **FILES**: `Companies/Example-Company/transcripts/` (created), `Companies/Example-Company/emails/` (created), `Companies/Example-Company/documents/` (created)
+- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Rivertrace), validation gates passed successfully
+- **USER_REQUEST**: "create new company Rivertrace" - direct company structure creation command
+- **FILES**: `Companies/Rivertrace/transcripts/` (created), `Companies/Rivertrace/emails/` (created), `Companies/Rivertrace/documents/` (created)
 
 ## Entry 23 | 2025-01-27T18:30:00Z
 - **ACTION**: AI-Native GTM Framework Development - Complete System Architecture
@@ -115,46 +115,46 @@
 - **FILES**: `workspace/features/active/ai-native-gtm/` (complete framework structure), `workspace/features/active/ai-native-gtm/01-Framework/` (system layer), `workspace/features/active/ai-native-gtm/02-Operations/` (execution layer), `workspace/memory/core-primitives/learnings.md` (learning #092), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 24 | 2025-09-19T11:45:00Z
-- **ACTION**: Example-Company demo agent development session completion with Thai OCR workflow optimization
-- **PROJECT**: Personal Sales GTM Operating System - Example-Company Demo Agent Development
-- **TASK**: Complete Example-Company contractor payment verification demo agent with workflow restructuring
+- **ACTION**: SCG demo agent development session completion with Thai OCR workflow optimization
+- **PROJECT**: Personal Sales GTM Operating System - SCG Demo Agent Development
+- **TASK**: Complete SCG contractor payment verification demo agent with workflow restructuring
 - **WORKFLOW**: transcript-processing-automation, demo-agent-automation, close-chat
-- **SESSION**: Example-Company-Demo-Agent-Development-Session
-- **CONTEXT**: Comprehensive Example-Company demo agent development addressing demo call concerns with Thai contractor payment verification workflow, custom demo space creation, and professional follow-up strategy
+- **SESSION**: SCG-Demo-Agent-Development-Session
+- **CONTEXT**: Comprehensive SCG demo agent development addressing demo call concerns with Thai contractor payment verification workflow, custom demo space creation, and professional follow-up strategy
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Client demo success through addressing specific concerns with targeted solutions rather than generic capabilities
 - **LEARNING**: Learning #090 captured - Process mismatch identification critical before technical implementation, workflow restructuring to match client needs more valuable than impressive demonstrations, custom demo space creation shows commitment and addresses specific requirements
-- **USER_REQUEST**: Complete Example-Company demo agent development with Thai OCR processing as first node
-- **FILES**: `Companies/Example-Company/documents/Example-Company-Contractor-Payment-Verification-Agent.yaml` (workflow config), `Companies/Example-Company/documents/Sample-Thai-Construction-Document.html` (demo document), `Companies/Example-Company/emails/outbound/Example-Company-Follow-up-Demo-Video.md` (follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #090), `workspace/memory/core-primitives/chat-sessions/session-2025-09-19.md` (session summary)
+- **USER_REQUEST**: Complete SCG demo agent development with Thai OCR processing as first node
+- **FILES**: `Companies/SCG/documents/SCG-Contractor-Payment-Verification-Agent.yaml` (workflow config), `Companies/SCG/documents/Sample-Thai-Construction-Document.html` (demo document), `Companies/SCG/emails/outbound/SCG-Follow-up-Demo-Video.md` (follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #090), `workspace/memory/core-primitives/chat-sessions/session-2025-09-19.md` (session summary)
 
 ## Entry 25 | 2025-09-19T10:36:00Z
-- **ACTION**: Company structure creation workflow execution for Example-Company
+- **ACTION**: Company structure creation workflow execution for SCG
 - **PROJECT**: Personal Sales GTM Operating System - Company Organization
-- **TASK**: Create-company-structure-workflow execution for Example-Company company
+- **TASK**: Create-company-structure-workflow execution for SCG company
 - **WORKFLOW**: create-company-structure (complete end-to-end execution)
 - **SESSION**: session-2025-09-19-scg-setup
-- **CONTEXT**: User requested creation of company folder structure for "Example-Company", executed complete workflow with validation gates
+- **CONTEXT**: User requested creation of company folder structure for "SCG", executed complete workflow with validation gates
 - **AGENT**: orchestrator
 - **MILESTONE**: workflow_complete
 - **PATTERN**: Direct workflow execution from user command with immediate implementation
-- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Example-Company), validation gates passed successfully
-- **USER_REQUEST**: "create new company Example-Company" - direct company structure creation command
-- **FILES**: `Companies/Example-Company/transcripts/` (created), `Companies/Example-Company/emails/` (created), `Companies/Example-Company/documents/` (created)
+- **LEARNING**: Workflow executed flawlessly with proper naming conventions (SCG), validation gates passed successfully
+- **USER_REQUEST**: "create new company SCG" - direct company structure creation command
+- **FILES**: `Companies/SCG/transcripts/` (created), `Companies/SCG/emails/` (created), `Companies/SCG/documents/` (created)
 
 ## Entry 26 | 2025-09-18T17:12:28Z
-- **ACTION**: Example-Company enterprise sales follow-up email creation with ULTRATHINK analysis
+- **ACTION**: Maersk enterprise sales follow-up email creation with ULTRATHINK analysis
 - **PROJECT**: Personal Sales GTM Operating System - Enterprise Sales Automation
 - **TASK**: Create targeted follow-up email addressing 3 main stakeholder concerns
 - **WORKFLOW**: close-chat (session closure with learning capture)
 - **SESSION**: session-2025-09-18-maersk-followup
-- **CONTEXT**: Analyzed Example-Company Demo & Tech Call transcript using ULTRATHINK methodology, identified real problems behind surface concerns (Mark's security fears, Craig's ROI needs, Ben's deployment concerns), created targeted enterprise sales response
+- **CONTEXT**: Analyzed Maersk Demo & Tech Call transcript using ULTRATHINK methodology, identified real problems behind surface concerns (Mark's security fears, Craig's ROI needs, Ben's deployment concerns), created targeted enterprise sales response
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: ULTRATHINK problem analysis for enterprise sales success - distinguished stakeholder psychology from technical requirements
 - **LEARNING**: Learning #089 captured - Enterprise sales requires understanding stakeholder psychology and business context, not just technical features. Security concerns often mask reputation/regulatory fears. Targeted positioning more effective than generic capability descriptions
 - **USER_REQUEST**: "write a follow up email draft in the style of @friction-addressing-followup.md based on this context"
-- **FILES**: `Companies/Example-Company/emails/tech-call-followup.md` (polished follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #089 added), `workspace/memory/core-primitives/chat-sessions/session-2025-09-18.md` (session summary created)
+- **FILES**: `Companies/Maersk/emails/tech-call-followup.md` (polished follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #089 added), `workspace/memory/core-primitives/chat-sessions/session-2025-09-18.md` (session summary created)
 
 ## Entry 27 | 2025-09-18T17:03:01Z
 - **ACTION**: Session closure workflow execution
@@ -181,7 +181,7 @@
 - **PATTERN**: Strategic transcript processing with business intelligence extraction and follow-up generation
 - **LEARNING**: Successfully applied transcript-processing-automation to real business call, extracted specific procure-to-pay pain points, generated actionable follow-up materials
 - **USER_REQUEST**: "based on @Booth FNA Call perform @transcript-processing-automation/ with the instructions @Suf & Q Strategy sesh"
-- **FILES**: `Companies/Example-Company/documents/Booth-FNA-Analysis.md` (comprehensive analysis), `Companies/Example-Company/emails/outbound/John-Fong-Follow-up.md` (follow-up email), `Companies/Example-Company/documents/Strategic-Follow-up-Plan.md` (execution strategy), `workspace/features/active/transcript-processing-automation/` (feature workspace)
+- **FILES**: `Companies/Booth-and-Partners/documents/Booth-FNA-Analysis.md` (comprehensive analysis), `Companies/Booth-and-Partners/emails/outbound/John-Fong-Follow-up.md` (follow-up email), `Companies/Booth-and-Partners/documents/Strategic-Follow-up-Plan.md` (execution strategy), `workspace/features/active/transcript-processing-automation/` (feature workspace)
 
 ## Entry 29 | 2025-09-18T16:46:32Z
 - **ACTION**: Company structure creation workflow execution for Booth and Partners
@@ -193,9 +193,9 @@
 - **AGENT**: orchestrator
 - **MILESTONE**: workflow_complete
 - **PATTERN**: Direct workflow execution from user command with immediate implementation
-- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Booth & Partners → Example-Company), validation gates passed successfully
+- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Booth & Partners → Booth-and-Partners), validation gates passed successfully
 - **USER_REQUEST**: "create new company Booth & Partners" - direct company structure creation command
-- **FILES**: `Companies/Example-Company/transcripts/` (created), `Companies/Example-Company/emails/` (created), `Companies/Example-Company/documents/` (created)
+- **FILES**: `Companies/Booth-and-Partners/transcripts/` (created), `Companies/Booth-and-Partners/emails/` (created), `Companies/Booth-and-Partners/documents/` (created)
 
 ## Entry 30 | 2025-09-18T12:15:00Z
 - **ACTION**: Collections Agent demo integration with ULTRATHINK realism analysis

@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Process debt collection for Patricia López (Mexico). Customer ID: CUST_MX_008, Account Type: Personal Loan, Outstanding Amount: $12,000.00 MXN, Days Overdue: 35, Payment History: Mixed payment history, some late payments, Communication Preference: WhatsApp, Market: Mexico, Language: Spanish, Risk Level: Medium, App Activity Status: Active, Customer Response: Negotiation, Payment Agreement: Requests payment plan, Payment Method: Bank Transfer. Analyze customer data and execute collection workflow with negotiation response.",
-    "additionalInfo": "Customer: Patricia López. Customer ID: CUST_MX_008. Email: patricia.lopez@email.com. Phone: +52-55-5555-1234. Amount: $12,000.00 MXN. Days Overdue: 35. Account Type: Personal Loan. Risk Level: Medium. Payment History: Mixed payment history, some late payments. Communication Preference: WhatsApp. Market: Mexico. Language: Spanish. Currency: MXN. Regulatory Compliance: LPDP. Payment Methods: Bank Transfer available. App Activity Status: Active. Customer Response: Negotiation. Payment Agreement: Customer requests 6-month payment plan. Payment Method: Bank Transfer. Expected Outcome: Case closure with extended payment plan."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

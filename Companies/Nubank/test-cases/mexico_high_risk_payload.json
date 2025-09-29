@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Process debt collection for María González (Mexico). Customer ID: CUST_MX_002, Account Type: Personal Loan, Outstanding Amount: $15,000.00 MXN, Days Overdue: 45, Payment History: Inconsistent payments, multiple missed payments, Communication Preference: Email, Market: Mexico, Language: Spanish, Risk Level: High, App Activity Status: Inactive, Customer Response: Difficult, Payment Agreement: Refuses to pay, Payment Method: Bank Transfer. Analyze customer data and execute collection workflow with difficult customer response.",
-    "additionalInfo": "Customer: María González. Customer ID: CUST_MX_002. Email: maria.gonzalez@email.com. Phone: +52-55-1234-5678. Amount: $15,000.00 MXN. Days Overdue: 45. Account Type: Personal Loan. Risk Level: High. Payment History: Inconsistent payments, multiple missed payments. Communication Preference: Email. Market: Mexico. Language: Spanish. Currency: MXN. Regulatory Compliance: LPDP. Payment Methods: Bank Transfer available. App Activity Status: Inactive. Customer Response: Difficult. Payment Agreement: Customer refuses to pay, claims financial hardship. Payment Method: Bank Transfer. Expected Outcome: Escalation to legal team."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

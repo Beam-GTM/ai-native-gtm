@@ -21,7 +21,7 @@ Successful feature planning session for transcript-processing-automation compone
 - **Key Discovery**: New company trigger as primary workflow initiator
 - **Simplification**: User chose simple company-level folder structure over complex deal-based hierarchy
 - **Structure Validated**: Companies/{company-name}/transcripts/emails/documents/
-- **Proof of Concept**: Successfully created Example-Company folder structure
+- **Proof of Concept**: Successfully created ICS folder structure
 
 ### 3. ULTRATHINK Analysis Applied
 - Analyzed file storage vs data relationship patterns
@@ -64,7 +64,7 @@ Successful feature planning session for transcript-processing-automation compone
 
 ## Learning Patterns Captured
 - User preference for simplicity over complexity in initial implementations
-- Importance of concrete proof-of-concept execution (Example-Company folder creation)
+- Importance of concrete proof-of-concept execution (ICS folder creation)
 - Value of ULTRATHINK analysis for revealing architectural alternatives
 - Effectiveness of elicitation techniques for requirement discovery
 

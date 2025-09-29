@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Process debt collection for Roberto Silva (Brazil). Customer ID: CUST_BR_007, Account Type: Credit Card, Outstanding Amount: R$ 1.200,00, Days Overdue: 20, Payment History: Good payment history, occasional late payments, Communication Preference: WhatsApp, Market: Brazil, Language: Portuguese, Risk Level: Medium, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to pay with discount, Payment Method: PIX. Analyze customer data and execute collection workflow with standard customer response.",
-    "additionalInfo": "Customer: Roberto Silva. Customer ID: CUST_BR_007. Email: roberto.silva@email.com. Phone: +55-11-8765-4321. Amount: R$ 1.200,00. Days Overdue: 20. Account Type: Credit Card. Risk Level: Medium. Payment History: Good payment history, occasional late payments. Communication Preference: WhatsApp. Market: Brazil. Language: Portuguese. Currency: BRL. Regulatory Compliance: LGPD. Payment Methods: PIX, Boleto available. App Activity Status: Active. Customer Response: Cooperative. Payment Agreement: Customer agreed to pay with 5% discount. Payment Method: PIX. Expected Outcome: Case closure with discounted payment."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

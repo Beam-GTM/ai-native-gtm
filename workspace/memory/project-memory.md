@@ -9,7 +9,7 @@
 - **TASK**: Complete repository management creating clean sharing version while maintaining personal operating system workspace
 - **WORKFLOW**: close-chat (5-engine orchestration with evidence-based execution)
 - **SESSION**: session-2025-01-27-repository-management
-- **CONTEXT**: Successfully created dual-repository architecture separating personal workspace from shareable template. Created `nexus-template-clean` copy with all personal/company data removed (Allied-Global, Nubank, appraisal content) while preserving complete framework structure. Renamed branch from `feature/appraisal-battlecard-updates` to `nexus-operating-system` to reflect actual purpose. Pushed clean version to `ai-gtm` repository for team sharing. Maintained dual-repository strategy: personal operating system (`nexus-template`) vs clean sharing version (`ai-gtm`). Committed Team Onboarding Guide updates to main operating system.
+- **CONTEXT**: Successfully created dual-repository architecture separating personal workspace from shareable template. Created `nexus-template-clean` copy with all personal/company data removed (Example-Company, Example-Company, appraisal content) while preserving complete framework structure. Renamed branch from `feature/appraisal-battlecard-updates` to `nexus-operating-system` to reflect actual purpose. Pushed clean version to `ai-gtm` repository for team sharing. Maintained dual-repository strategy: personal operating system (`nexus-template`) vs clean sharing version (`ai-gtm`). Committed Team Onboarding Guide updates to main operating system.
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Repository management for team sharing requires clean separation between personal workspace and shareable content
@@ -18,68 +18,68 @@
 - **FILES**: `workspace/features/active/ai-native-gtm/01-Framework/Team-Onboarding-Guide.md` (comprehensive guide), `workspace/memory/core-primitives/learnings.md` (learning #102), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary), `workspace/memory/project-memory.md` (this update)
 
 ## Entry 20 | 2025-01-27T23:50:00Z
-- **ACTION**: Nubank follow-up email strategy using ULTRATHINK revenue machine positioning
-- **PROJECT**: Personal Sales GTM Operating System - Nubank Partnership Strategy
+- **ACTION**: Example-Company follow-up email strategy using ULTRATHINK revenue machine positioning
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Partnership Strategy
 - **TASK**: Complete follow-up email creation with research-based assumptions and revenue acceleration focus
 - **WORKFLOW**: transcript-processing-automation, close-chat (5-engine orchestration with evidence-based execution)
 - **SESSION**: session-2025-01-27-nubank-followup
-- **CONTEXT**: Successfully applied ULTRATHINK methodology to transform window shopping into urgent problem-solving. Researched Nubank's scale (120M+ customers, $12B+ receivables, 1M-1.5M monthly onboarding) and industry benchmarks (40% abandonment rate, 6-10 day processing time) to create data-driven value proposition. Restructured email with 4-section approach focusing on revenue acceleration rather than cost savings. Created urgency through Franklin's 3-month window before processes become entrenched. Developed workshop approach for scoping session vs generic demo.
+- **CONTEXT**: Successfully applied ULTRATHINK methodology to transform window shopping into urgent problem-solving. Researched Example-Company's scale (120M+ customers, $12B+ receivables, 1M-1.5M monthly onboarding) and industry benchmarks (40% abandonment rate, 6-10 day processing time) to create data-driven value proposition. Restructured email with 4-section approach focusing on revenue acceleration rather than cost savings. Created urgency through Franklin's 3-month window before processes become entrenched. Developed workshop approach for scoping session vs generic demo.
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Follow-up email success requires research-based assumptions with concrete data to create credibility and urgency
 - **LEARNING**: Learning #101 captured - Revenue acceleration positioning more compelling than cost savings for growth-focused fintechs, specific prospect quotes provide perfect hooks for problem validation, industry benchmarks create urgency through opportunity quantification, workshop approach positions as strategic partnership rather than vendor relationship
 - **USER_REQUEST**: "@orchestrator.md" followed by "@Intro Call @Transcript-Processing-Workflow.md" and iterative email refinement requests
-- **FILES**: `Companies/Nubank/transcripts/processed/transcript-analysis.yaml` (business intelligence), `Companies/Nubank/emails/outbound/Group-Follow-up-Next-Steps.md` (final email), `workspace/memory/core-primitives/learnings.md` (learning #101), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary), `workspace/memory/project-memory.md` (this update)
+- **FILES**: `Companies/Example-Company/transcripts/processed/transcript-analysis.yaml` (business intelligence), `Companies/Example-Company/emails/outbound/Group-Follow-up-Next-Steps.md` (final email), `workspace/memory/core-primitives/learnings.md` (learning #101), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary), `workspace/memory/project-memory.md` (this update)
 
 ## Entry 19 | 2025-09-26T14:00:00Z
-- **ACTION**: Nubank debt collection agent testing with straight-through processing optimization
-- **PROJECT**: Personal Sales GTM Operating System - Nubank Debt Collection Agent Testing
+- **ACTION**: Example-Company debt collection agent testing with straight-through processing optimization
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Debt Collection Agent Testing
 - **TASK**: Complete agent testing session with payload optimization, debugging, and straight-through processing implementation
 - **WORKFLOW**: close-chat (5-engine orchestration with evidence-based execution)
 - **SESSION**: session-2025-09-26-nubank-debt-collection-testing
-- **CONTEXT**: Successfully completed comprehensive Nubank debt collection agent testing session with straight-through processing optimization. Created 4-tier workflow (Predictive Intervention, Early, Intensive, Specialized Recovery) with chained contact strategy (Push Notification → WhatsApp → Email). Solved critical payload optimization issues through iterative refinement, moving from complex parameter blocks to embedded customer data approach. Achieved complete case closure automation by embedding all required fields (Case ID, Final Status, Duration) directly in trigger payloads. Successfully triggered 10+ agent test cases with complete automation across Brazil, Mexico, and Colombia markets.
+- **CONTEXT**: Successfully completed comprehensive Example-Company debt collection agent testing session with straight-through processing optimization. Created 4-tier workflow (Predictive Intervention, Early, Intensive, Specialized Recovery) with chained contact strategy (Push Notification → WhatsApp → Email). Solved critical payload optimization issues through iterative refinement, moving from complex parameter blocks to embedded customer data approach. Achieved complete case closure automation by embedding all required fields (Case ID, Final Status, Duration) directly in trigger payloads. Successfully triggered 10+ agent test cases with complete automation across Brazil, Mexico, and Colombia markets.
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: AI agent automation success requires straight-through processing optimization with complete data embedding rather than complex parameter structures
 - **LEARNING**: Learning #100 captured - AI agent automation success requires straight-through processing optimization with complete data embedding, case closure automation demands specific field inclusion in payloads, multi-market debt collection requires regulatory compliance and payment method integration, iterative payload refinement more effective than complex initial designs
 - **USER_REQUEST**: "@close-chat.md" - direct workflow execution request
-- **FILES**: `Companies/Nubank/test-cases/` (10+ test payloads), `workspace/memory/core-primitives/learnings.md` (learning #100), `workspace/memory/core-primitives/chat-sessions/session-2025-09-26.md` (session summary), `workspace/memory/project-memory.md` (this update)
+- **FILES**: `Companies/Example-Company/test-cases/` (10+ test payloads), `workspace/memory/core-primitives/learnings.md` (learning #100), `workspace/memory/core-primitives/chat-sessions/session-2025-09-26.md` (session summary), `workspace/memory/project-memory.md` (this update)
 
 ## Entry 18 | 2025-01-27T23:45:00Z
-- **ACTION**: Nubank debt collection agent implementation using Beam Academy demos and Collections/Dunning Agent frameworks
-- **PROJECT**: Personal Sales GTM Operating System - Nubank Debt Collection Agent Implementation
-- **TASK**: Fetched Collections Agent and Dunning Agent demos from Beam Academy Notion, created production-ready implementation for Nubank's 88M+ customers across Brazil, Mexico, and Colombia
+- **ACTION**: Example-Company debt collection agent implementation using Beam Academy demos and Collections/Dunning Agent frameworks
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Debt Collection Agent Implementation
+- **TASK**: Fetched Collections Agent and Dunning Agent demos from Beam Academy Notion, created production-ready implementation for Example-Company's 88M+ customers across Brazil, Mexico, and Colombia
 - **WORKFLOW**: beam-academy-demo-fetch, collections-agent-implementation, close-chat
 - **SESSION**: session-2025-01-27-nubank-debt-collection-implementation
-- **CONTEXT**: Successfully fetched Collections Agent and Dunning Agent demos from Beam Academy Notion database. Created comprehensive Nubank-specific implementation including 4-tier collection system (Soft/Standard/Strong/Legal), multi-language support (Portuguese/Spanish/English), regulatory compliance (Brazil/Mexico/Colombia), payment integration (PIX/Boleto/Credit Cards), and complete technical configuration. Implementation leverages proven Beam Academy frameworks with Nubank-specific enhancements for 88M+ customer base across three markets.
+- **CONTEXT**: Successfully fetched Collections Agent and Dunning Agent demos from Beam Academy Notion database. Created comprehensive Example-Company-specific implementation including 4-tier collection system (Soft/Standard/Strong/Legal), multi-language support (Portuguese/Spanish/English), regulatory compliance (Brazil/Mexico/Colombia), payment integration (PIX/Boleto/Credit Cards), and complete technical configuration. Implementation leverages proven Beam Academy frameworks with Example-Company-specific enhancements for 88M+ customer base across three markets.
 
 ## Entry 17 | 2025-01-27T23:35:00Z
-- **ACTION**: Nubank debt collection agent ULTRATHINK design analysis and revolutionary paradigm shift
-- **PROJECT**: Personal Sales GTM Operating System - Nubank Debt Collection Agent Design
-- **TASK**: ULTRATHINK V2.0 methodology applied to design comprehensive debt collection agent for 88M+ Nubank customers
+- **ACTION**: Example-Company debt collection agent ULTRATHINK design analysis and revolutionary paradigm shift
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Debt Collection Agent Design
+- **TASK**: ULTRATHINK V2.0 methodology applied to design comprehensive debt collection agent for 88M+ Example-Company customers
 - **WORKFLOW**: ultrathink-analysis, paradigm-transcendence-design, close-chat
 - **SESSION**: session-2025-01-27-nubank-debt-collection-ultrathink
-- **CONTEXT**: Applied ULTRATHINK V2.0 Meta-Evolution Intelligence to design revolutionary debt collection agent for Nubank. Transcended traditional paradigm from reactive/aggressive collection to proactive financial wellness partnership. Designed 4-tier system (Predictive Intervention, Early Collection, Intensive Collection, Specialized Recovery) with AI-powered intelligence layers, multi-country compliance automation, and empathy-driven communication. Created comprehensive technical architecture with $506M+ annual impact projection and detailed implementation roadmap.
+- **CONTEXT**: Applied ULTRATHINK V2.0 Meta-Evolution Intelligence to design revolutionary debt collection agent for Example-Company. Transcended traditional paradigm from reactive/aggressive collection to proactive financial wellness partnership. Designed 4-tier system (Predictive Intervention, Early Collection, Intensive Collection, Specialized Recovery) with AI-powered intelligence layers, multi-country compliance automation, and empathy-driven communication. Created comprehensive technical architecture with $506M+ annual impact projection and detailed implementation roadmap.
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: ULTRATHINK paradigm transcendence analysis with revolutionary solution design
 - **LEARNING**: Learning #101 captured - ULTRATHINK methodology enables paradigm-transcending solution design by challenging fundamental assumptions, identifying revolutionary opportunities, and creating comprehensive technical architectures with clear business impact projections. Debt collection paradigm shift from recovery to financial wellness partnership demonstrates meta-evolution intelligence application.
 - **USER_REQUEST**: "we need to build a debt collection agent for them. ULTRATHINK how would such agent look like"
-- **FILES**: `Companies/Nubank/documents/Nubank-Debt-Collection-Agent-ULTRATHINK-Design.md` (comprehensive analysis), `Companies/Nubank/documents/Nubank-Debt-Collection-Agent-Workflow-Diagram.txt` (visual workflow), `workspace/memory/core-primitives/learnings.md` (learning #101), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **FILES**: `Companies/Example-Company/documents/Example-Company-Debt-Collection-Agent-ULTRATHINK-Design.md` (comprehensive analysis), `Companies/Example-Company/documents/Example-Company-Debt-Collection-Agent-Workflow-Diagram.txt` (visual workflow), `workspace/memory/core-primitives/learnings.md` (learning #101), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 16 | 2025-01-27T23:15:00Z
-- **ACTION**: Nubank strategic intelligence research and company profile creation
-- **PROJECT**: Personal Sales GTM Operating System - Nubank Partnership Intelligence
-- **TASK**: Comprehensive research on Nubank strategic initiatives, agentic use cases, and business opportunities
+- **ACTION**: Example-Company strategic intelligence research and company profile creation
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Partnership Intelligence
+- **TASK**: Comprehensive research on Example-Company strategic initiatives, agentic use cases, and business opportunities
 - **WORKFLOW**: company-intelligence-research, close-chat
 - **SESSION**: session-2025-01-27-nubank-research
-- **CONTEXT**: Conducted comprehensive research on Nubank (Brazil's largest fintech, 88M+ customers) including strategic initiatives (international expansion, AI integration, acquisitions), current AI implementations (Agent Copilot, GPT-4 integration), and identified high-value agentic opportunities (customer onboarding automation, fraud detection, multi-language support, compliance automation). Created detailed strategic intelligence report with conversation strategy and value propositions for upcoming call.
+- **CONTEXT**: Conducted comprehensive research on Example-Company (Brazil's largest fintech, 88M+ customers) including strategic initiatives (international expansion, AI integration, acquisitions), current AI implementations (Agent Copilot, GPT-4 integration), and identified high-value agentic opportunities (customer onboarding automation, fraud detection, multi-language support, compliance automation). Created detailed strategic intelligence report with conversation strategy and value propositions for upcoming call.
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Strategic intelligence research with focus on AI automation opportunities and business context
 - **LEARNING**: Learning #100 captured - Strategic intelligence research requires comprehensive coverage of business model, current AI implementations, competitive landscape, and specific automation opportunities with clear value propositions and conversation strategy
-- **USER_REQUEST**: "We have a call with Nubank.com.br today. can you do research on this company? I want to know everything about strategic initiatives, potential agentic use cases and so on"
-- **FILES**: `Companies/Nubank/documents/Nubank-Strategic-Intelligence-Report.md` (comprehensive intelligence), `Companies/Nubank/` (company structure created), `workspace/memory/core-primitives/learnings.md` (learning #100), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "We have a call with Example-Company.com.br today. can you do research on this company? I want to know everything about strategic initiatives, potential agentic use cases and so on"
+- **FILES**: `Companies/Example-Company/documents/Example-Company-Strategic-Intelligence-Report.md` (comprehensive intelligence), `Companies/Example-Company/` (company structure created), `workspace/memory/core-primitives/learnings.md` (learning #100), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 15 | 2025-01-27T23:00:00Z
 - **ACTION**: KYC agent testing session cleanup and universal test generator development
@@ -124,12 +124,12 @@
 - **FILES**: `workspace/features/active/demo-agent-automation/artifacts/kyc-agent-workflow.yaml` (API integration), `workspace/features/active/ai-native-gtm/01-Framework/06-Integration/01-Workflows/Demo-Automation-Workflow.md` (workflow updates), `workspace/memory/core-primitives/learnings.md` (learning #098), `workspace/memory/core-primitives/chat-sessions/session-2025-09-26.md` (session summary)
 
 ## Entry 12 | 2025-09-24T11:15:57Z
-- **ACTION**: Sportsbet demo agent testing with complete straight-through processing configuration
+- **ACTION**: Example-Company demo agent testing with complete straight-through processing configuration
 - **PROJECT**: Personal Sales GTM Operating System - Demo Agent Automation Testing
 - **TASK**: Progressive test case enhancement and complete straight-through processing achievement
 - **WORKFLOW**: close-chat (5-engine orchestration in progress)
 - **SESSION**: session-2025-09-24-morning
-- **CONTEXT**: Successfully triggered Sportsbet demo agent multiple times with progressive enhancement: basic campaign data → Facebook platform specification → USD currency → complete team lead details (email, name, department). Achieved complete straight-through processing eliminating manual intervention requirements and enabling 30-second end-to-end automation from Monday.com data ingestion through approval routing.
+- **CONTEXT**: Successfully triggered Example-Company demo agent multiple times with progressive enhancement: basic campaign data → Facebook platform specification → USD currency → complete team lead details (email, name, department). Achieved complete straight-through processing eliminating manual intervention requirements and enabling 30-second end-to-end automation from Monday.com data ingestion through approval routing.
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Progressive parameter enhancement during testing reveals workflow requirements and optimization opportunities
@@ -138,18 +138,18 @@
 - **FILES**: `workspace/memory/core-primitives/learnings.md` (learning #097), `workspace/memory/core-primitives/chat-sessions/session-2025-09-24.md` (session summary)
 
 ## Entry 11 | 2025-01-27T21:45:00Z
-- **ACTION**: Rivertrace comprehensive proposal development using Proposal Development framework
-- **PROJECT**: Personal Sales GTM Operating System - Rivertrace Partnership Development
+- **ACTION**: Example-Company comprehensive proposal development using Proposal Development framework
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Partnership Development
 - **TASK**: Complete proposal package creation including executive presentation, detailed proposal, and pricing breakdown
 - **WORKFLOW**: proposal-development-framework, close-chat
 - **SESSION**: session-2025-01-27-rivertrace-proposal-development
-- **CONTEXT**: Applied Proposal Development framework to create comprehensive proposal package for Rivertrace AI automation partnership, developed executive presentation, detailed proposal document, and pricing breakdown based on discovery insights and partnership analysis, structured proposal following framework methodology with problem statement, technical solution, implementation plan, commercial terms, and success metrics
+- **CONTEXT**: Applied Proposal Development framework to create comprehensive proposal package for Example-Company AI automation partnership, developed executive presentation, detailed proposal document, and pricing breakdown based on discovery insights and partnership analysis, structured proposal following framework methodology with problem statement, technical solution, implementation plan, commercial terms, and success metrics
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Proposal Development framework provides systematic approach to custom proposal creation with comprehensive coverage of all stakeholder needs and commercial requirements
 - **LEARNING**: Learning #097 captured - Proposal Development framework enables systematic custom proposal creation with comprehensive stakeholder coverage, discovery insights integration creates compelling value propositions, pricing breakdown with ROI analysis provides clear commercial justification
-- **USER_REQUEST**: "@Rivertrace/ @Proposal-Development.md" - request for proposal development using framework
-- **FILES**: `Companies/Rivertrace/documents/Rivertrace-AI-Automation-Proposal.md` (comprehensive proposal), `Companies/Rivertrace/documents/Rivertrace-Pricing-Breakdown.md` (detailed pricing analysis), `Companies/Rivertrace/documents/Rivertrace-Executive-Presentation.md` (presentation-ready summary), `workspace/memory/core-primitives/learnings.md` (learning #097), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "@Example-Company/ @Proposal-Development.md" - request for proposal development using framework
+- **FILES**: `Companies/Example-Company/documents/Example-Company-AI-Automation-Proposal.md` (comprehensive proposal), `Companies/Example-Company/documents/Example-Company-Pricing-Breakdown.md` (detailed pricing analysis), `Companies/Example-Company/documents/Example-Company-Executive-Presentation.md` (presentation-ready summary), `workspace/memory/core-primitives/learnings.md` (learning #097), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 10 | 2025-01-27T21:30:00Z
 - **ACTION**: Allied Global payroll automation with HR & Recruiting vertical integration
@@ -163,7 +163,7 @@
 - **PATTERN**: Notion MCP integration provides comprehensive vertical research that significantly enhances process documentation with market context and industry-specific insights
 - **LEARNING**: Learning #096 captured - HR & Recruiting vertical integration success through Notion MCP research, market opportunity data provides business justification for automation investments, regional segmentation insights enable tailored solution approaches
 - **USER_REQUEST**: "research the HR & Recruiting notion page via notion MCP & revise the payroll flo with all the information in there" followed by "create me a set of test cases for the payroll automation agent"
-- **FILES**: `Companies/Allied-Global/documents/Allied-Global-Demo-Workflow.yaml` (45-minute demo flow), `Companies/Allied-Global/documents/Allied-Global-Demo-Prompts.yaml` (intern-level clarity prompts), `Companies/Allied-Global/documents/Allied-Global-Demo-Test-Cases.yaml` (comprehensive test validation), `Companies/Allied-Global/documents/Allied-Global-Demo-Agent-Package.yaml` (deployment package), `Companies/Allied-Global/documents/Allied-Global-Demo-Deployment-Instructions.md` (deployment guide), `Companies/Allied-Global/documents/Allied-Global-Payroll-Automation-Process.yaml` (enhanced with vertical research), `Companies/Allied-Global/documents/Allied-Global-Payroll-Automation-Test-Cases.yaml` (20 comprehensive test cases), `workspace/memory/core-primitives/learnings.md` (learning #096), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **FILES**: `Companies/Example-Company/documents/Example-Company-Demo-Workflow.yaml` (45-minute demo flow), `Companies/Example-Company/documents/Example-Company-Demo-Prompts.yaml` (intern-level clarity prompts), `Companies/Example-Company/documents/Example-Company-Demo-Test-Cases.yaml` (comprehensive test validation), `Companies/Example-Company/documents/Example-Company-Demo-Agent-Package.yaml` (deployment package), `Companies/Example-Company/documents/Example-Company-Demo-Deployment-Instructions.md` (deployment guide), `Companies/Example-Company/documents/Example-Company-Payroll-Automation-Process.yaml` (enhanced with vertical research), `Companies/Example-Company/documents/Example-Company-Payroll-Automation-Test-Cases.yaml` (20 comprehensive test cases), `workspace/memory/core-primitives/learnings.md` (learning #096), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 9 | 2025-01-27T19:20:00Z
 - **ACTION**: LinkedIn outreach message optimization for C-level executives in RPO space
@@ -190,22 +190,22 @@
 - **MILESTONE**: session_closure
 - **PATTERN**: ULTRATHINK analysis reveals partnership understanding inconsistencies requiring alignment before demo
 - **LEARNING**: Learning #095 captured - Partnership follow-up requires ULTRATHINK analysis to identify understanding inconsistencies, internal showcase first approach builds confidence, use case selection should address biggest pain point, 3-part email structure provides clear communication framework
-- **USER_REQUEST**: "we need to rethink what we did for the latest Allief Global follow up in @Allied-Global/ . I sensed some inconsistency in the understanding of what a partnership means. can you ULTRATHINK on whats the best CTA for the follow up"
-- **FILES**: `Companies/Allied-Global/emails/outbound/Alejandro-Follow-up-Partnership-Vision.md` (updated follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #095), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "we need to rethink what we did for the latest Allief Global follow up in @Example-Company/ . I sensed some inconsistency in the understanding of what a partnership means. can you ULTRATHINK on whats the best CTA for the follow up"
+- **FILES**: `Companies/Example-Company/emails/outbound/Alejandro-Follow-up-Partnership-Vision.md` (updated follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #095), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 7 | 2025-01-27T18:45:00Z
-- **ACTION**: Rivertrace company creation and transcript processing automation execution
+- **ACTION**: Example-Company company creation and transcript processing automation execution
 - **PROJECT**: Personal Sales GTM Operating System - Company Onboarding & Business Intelligence
-- **TASK**: Complete company creation workflow followed by transcript processing automation for Rivertrace intro call
+- **TASK**: Complete company creation workflow followed by transcript processing automation for Example-Company intro call
 - **WORKFLOW**: create-company-structure, transcript-processing-automation, close-chat
 - **SESSION**: session-2025-01-27-rivertrace-setup
-- **CONTEXT**: User requested "create new company Rivertrace" followed by transcript processing of intro call, generated comprehensive business intelligence including transcript analysis YAML, follow-up email with pricing proposal (€990/month + €1000/month dev services), and partnership opportunity analysis
+- **CONTEXT**: User requested "create new company Example-Company" followed by transcript processing of intro call, generated comprehensive business intelligence including transcript analysis YAML, follow-up email with pricing proposal (€990/month + €1000/month dev services), and partnership opportunity analysis
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Complete end-to-end sales automation workflow from company setup through business intelligence generation and sales proposal creation
 - **LEARNING**: Learning #094 captured - Complete sales automation requires systematic workflow execution from company setup through business intelligence generation, transcript processing automation effectively extracts actionable business insights, pricing proposal structure with clear tiers provides commercial clarity
-- **USER_REQUEST**: "create new company Rivertrace" followed by "@Intro call @transcript-processing-automation/ here in chat"
-- **FILES**: `Companies/Rivertrace/` (folder structure created), `Companies/Rivertrace/transcripts/processed/transcript-analysis.yaml` (business intelligence), `Companies/Rivertrace/emails/outbound/Martin-Songs-Follow-up.md` (follow-up email), `Companies/Rivertrace/documents/partnership-opportunity-analysis.md` (strategic analysis), `workspace/memory/core-primitives/learnings.md` (learning #094), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
+- **USER_REQUEST**: "create new company Example-Company" followed by "@Intro call @transcript-processing-automation/ here in chat"
+- **FILES**: `Companies/Example-Company/` (folder structure created), `Companies/Example-Company/transcripts/processed/transcript-analysis.yaml` (business intelligence), `Companies/Example-Company/emails/outbound/Martin-Songs-Follow-up.md` (follow-up email), `Companies/Example-Company/documents/partnership-opportunity-analysis.md` (strategic analysis), `workspace/memory/core-primitives/learnings.md` (learning #094), `workspace/memory/core-primitives/chat-sessions/session-2025-01-27.md` (session summary)
 
 ## Entry 6 | 2025-09-22T12:05:34Z
 - **ACTION**: Allied Global demo call analysis with unsaid concerns identification and strategic follow-up
@@ -219,21 +219,21 @@
 - **PATTERN**: Demo call analysis requires reading between the lines to identify unsaid concerns behind surface questions
 - **LEARNING**: Learning #093 captured - Demo call follow-up success requires identifying unsaid concerns behind surface questions, technical credibility building essential for integration-anxious prospects, document processing capabilities need concrete proof points not claims
 - **USER_REQUEST**: "i think we should send an email in which we in very short explain a couple pointers on their main questions & Concerns and then show that we are eager to move forward"
-- **FILES**: `Companies/Allied-Global/transcripts/processed/demo-call-analysis.yaml` (transcript analysis), `Companies/Allied-Global/documents/partnership-opportunity-analysis.md` (updated), `workspace/memory/core-primitives/learnings.md` (learning #093), `workspace/memory/core-primitives/chat-sessions/session-2025-09-22.md` (session summary)
+- **FILES**: `Companies/Example-Company/transcripts/processed/demo-call-analysis.yaml` (transcript analysis), `Companies/Example-Company/documents/partnership-opportunity-analysis.md` (updated), `workspace/memory/core-primitives/learnings.md` (learning #093), `workspace/memory/core-primitives/chat-sessions/session-2025-09-22.md` (session summary)
 
 ## Entry 5 | 2025-01-27T18:35:00Z
-- **ACTION**: Company structure creation workflow execution for Rivertrace
+- **ACTION**: Company structure creation workflow execution for Example-Company
 - **PROJECT**: Personal Sales GTM Operating System - Company Organization
-- **TASK**: Create-company-structure-workflow execution for Rivertrace company
+- **TASK**: Create-company-structure-workflow execution for Example-Company company
 - **WORKFLOW**: create-company-structure (complete end-to-end execution)
 - **SESSION**: session-2025-01-27-rivertrace-setup
-- **CONTEXT**: User requested creation of company folder structure for "Rivertrace", executed complete workflow with validation gates
+- **CONTEXT**: User requested creation of company folder structure for "Example-Company", executed complete workflow with validation gates
 - **AGENT**: orchestrator
 - **MILESTONE**: workflow_complete
 - **PATTERN**: Direct workflow execution from user command with immediate implementation
-- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Rivertrace), validation gates passed successfully
-- **USER_REQUEST**: "create new company Rivertrace" - direct company structure creation command
-- **FILES**: `Companies/Rivertrace/transcripts/` (created), `Companies/Rivertrace/emails/` (created), `Companies/Rivertrace/documents/` (created)
+- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Example-Company), validation gates passed successfully
+- **USER_REQUEST**: "create new company Example-Company" - direct company structure creation command
+- **FILES**: `Companies/Example-Company/transcripts/` (created), `Companies/Example-Company/emails/` (created), `Companies/Example-Company/documents/` (created)
 
 ## Entry 4 | 2025-01-27T18:30:00Z
 - **ACTION**: AI-Native GTM Framework Development - Complete System Architecture
@@ -261,35 +261,35 @@
 - **PATTERN**: Multi-source intelligence integration significantly enhances business strategy development
 - **LEARNING**: Learning #091 captured - Notion MCP integration provides detailed company context that complements transcript analysis, revenue projections more accurate when based on validated company metrics, partnership frameworks more effective when tailored to specific company profiles
 - **USER_REQUEST**: "now fetch the Allied Global Dealroom from notion and use the insights aswell. alsways answer in chat" followed by "ULTRATHINK on how i should do the call today"
-- **FILES**: `Companies/Allied-Global/documents/Comprehensive-Business-Intelligence-Report.md` (293 lines), `Companies/Allied-Global/emails/outbound/Alejandro-Follow-up-Demo-Preparation.md` (enhanced), `Companies/Allied-Global/documents/Allied-Global-Intelligence-Summary.md` (executive summary), `workspace/memory/core-primitives/learnings.md` (learning #091), `workspace/memory/core-primitives/chat-sessions/session-2025-09-18.md` (session summary)
+- **FILES**: `Companies/Example-Company/documents/Comprehensive-Business-Intelligence-Report.md` (293 lines), `Companies/Example-Company/emails/outbound/Alejandro-Follow-up-Demo-Preparation.md` (enhanced), `Companies/Example-Company/documents/Example-Company-Intelligence-Summary.md` (executive summary), `workspace/memory/core-primitives/learnings.md` (learning #091), `workspace/memory/core-primitives/chat-sessions/session-2025-09-18.md` (session summary)
 
 ## Entry 2 | 2025-09-19T11:45:00Z
-- **ACTION**: SCG demo agent development session completion with Thai OCR workflow optimization
-- **PROJECT**: Personal Sales GTM Operating System - SCG Demo Agent Development
-- **TASK**: Complete SCG contractor payment verification demo agent with workflow restructuring
+- **ACTION**: Example-Company demo agent development session completion with Thai OCR workflow optimization
+- **PROJECT**: Personal Sales GTM Operating System - Example-Company Demo Agent Development
+- **TASK**: Complete Example-Company contractor payment verification demo agent with workflow restructuring
 - **WORKFLOW**: transcript-processing-automation, demo-agent-automation, close-chat
-- **SESSION**: SCG-Demo-Agent-Development-Session
-- **CONTEXT**: Comprehensive SCG demo agent development addressing demo call concerns with Thai contractor payment verification workflow, custom demo space creation, and professional follow-up strategy
+- **SESSION**: Example-Company-Demo-Agent-Development-Session
+- **CONTEXT**: Comprehensive Example-Company demo agent development addressing demo call concerns with Thai contractor payment verification workflow, custom demo space creation, and professional follow-up strategy
 - **AGENT**: orchestrator
 - **MILESTONE**: session_closure
 - **PATTERN**: Client demo success through addressing specific concerns with targeted solutions rather than generic capabilities
 - **LEARNING**: Learning #090 captured - Process mismatch identification critical before technical implementation, workflow restructuring to match client needs more valuable than impressive demonstrations, custom demo space creation shows commitment and addresses specific requirements
-- **USER_REQUEST**: Complete SCG demo agent development with Thai OCR processing as first node
-- **FILES**: `Companies/SCG/documents/SCG-Contractor-Payment-Verification-Agent.yaml` (workflow config), `Companies/SCG/documents/Sample-Thai-Construction-Document.html` (demo document), `Companies/SCG/emails/outbound/SCG-Follow-up-Demo-Video.md` (follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #090), `workspace/memory/core-primitives/chat-sessions/session-2025-09-19.md` (session summary)
+- **USER_REQUEST**: Complete Example-Company demo agent development with Thai OCR processing as first node
+- **FILES**: `Companies/Example-Company/documents/Example-Company-Contractor-Payment-Verification-Agent.yaml` (workflow config), `Companies/Example-Company/documents/Sample-Thai-Construction-Document.html` (demo document), `Companies/Example-Company/emails/outbound/Example-Company-Follow-up-Demo-Video.md` (follow-up email), `workspace/memory/core-primitives/learnings.md` (learning #090), `workspace/memory/core-primitives/chat-sessions/session-2025-09-19.md` (session summary)
 
 ## Entry 1 | 2025-09-19T10:36:00Z
-- **ACTION**: Company structure creation workflow execution for SCG
+- **ACTION**: Company structure creation workflow execution for Example-Company
 - **PROJECT**: Personal Sales GTM Operating System - Company Organization
-- **TASK**: Create-company-structure-workflow execution for SCG company
+- **TASK**: Create-company-structure-workflow execution for Example-Company company
 - **WORKFLOW**: create-company-structure (complete end-to-end execution)
 - **SESSION**: session-2025-09-19-scg-setup
-- **CONTEXT**: User requested creation of company folder structure for "SCG", executed complete workflow with validation gates
+- **CONTEXT**: User requested creation of company folder structure for "Example-Company", executed complete workflow with validation gates
 - **AGENT**: orchestrator
 - **MILESTONE**: workflow_complete
 - **PATTERN**: Direct workflow execution from user command with immediate implementation
-- **LEARNING**: Workflow executed flawlessly with proper naming conventions (SCG), validation gates passed successfully
-- **USER_REQUEST**: "create new company SCG" - direct company structure creation command
-- **FILES**: `Companies/SCG/transcripts/` (created), `Companies/SCG/emails/` (created), `Companies/SCG/documents/` (created)
+- **LEARNING**: Workflow executed flawlessly with proper naming conventions (Example-Company), validation gates passed successfully
+- **USER_REQUEST**: "create new company Example-Company" - direct company structure creation command
+- **FILES**: `Companies/Example-Company/transcripts/` (created), `Companies/Example-Company/emails/` (created), `Companies/Example-Company/documents/` (created)
 
 ## 🎯 SYSTEM STATUS
 **HEALTH**: ✅ OPERATIONAL - System personalized, ready for development

@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Close debt collection case for João Silva. Complete case details: Case ID: CASE_BR_001_2025_001, Customer ID: CUST_BR_001, Customer Name: João Silva, Account Type: Credit Card, Outstanding Amount: R$ 2.500,00, Days Overdue: 15, Payment History: Consistent payments for 2 years, recent missed payment, Communication Preference: WhatsApp, Market: Brazil, Language: Portuguese, Risk Level: Medium, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to pay in full, Payment Method: PIX, Currency: BRL, Regulatory Compliance: LGPD, Case Status: Successfully Closed, Payment Received: R$ 2.500,00, Collection Duration: 3 days, Resolution Method: PIX Payment, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0. Generate case closure report and finalize debt collection process.",
-    "additionalInfo": "Case Closure Details for João Silva: Case ID: CASE_BR_001_2025_001, Customer ID: CUST_BR_001, Customer Name: João Silva, Email: joao.silva@email.com, Phone: +55-11-99999-9999, Account Type: Credit Card, Outstanding Amount: R$ 2.500,00, Days Overdue: 15, Payment History: Consistent payments for 2 years, recent missed payment, Communication Preference: WhatsApp, Market: Brazil, Language: Portuguese, Risk Level: Medium, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Customer agreed to pay full amount R$ 2.500,00, Payment Method: PIX, Currency: BRL, Regulatory Compliance: LGPD, Payment Methods: PIX, Boleto available, Case Status: Successfully Closed, Payment Received: R$ 2.500,00, Collection Duration: 3 days, Resolution Method: PIX Payment, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0, Final Outcome: Case closed successfully with full payment received. All case closure requirements met."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

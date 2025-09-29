@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Process debt collection for Ana Santos (Brazil). Customer ID: CUST_BR_004, Account Type: Credit Card, Outstanding Amount: R$ 8.500,00, Days Overdue: 90, Payment History: Multiple disputes, legal issues, Communication Preference: Email, Market: Brazil, Language: Portuguese, Risk Level: Critical, App Activity Status: Inactive, Customer Response: Legal, Payment Agreement: Disputes charges, Payment Method: PIX. Analyze customer data and execute collection workflow with legal dispute response.",
-    "additionalInfo": "Customer: Ana Santos. Customer ID: CUST_BR_004. Email: ana.santos@email.com. Phone: +55-21-98765-4321. Amount: R$ 8.500,00. Days Overdue: 90. Account Type: Credit Card. Risk Level: Critical. Payment History: Multiple disputes, legal issues. Communication Preference: Email. Market: Brazil. Language: Portuguese. Currency: BRL. Regulatory Compliance: LGPD. Payment Methods: PIX, Boleto available. App Activity Status: Inactive. Customer Response: Legal. Payment Agreement: Customer disputes all charges, claims fraud. Payment Method: PIX. Expected Outcome: Escalation to legal team, potential court proceedings."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Process debt collection for Michael Johnson (Brazil). Customer ID: CUST_BR_010, Account Type: Personal Loan, Outstanding Amount: R$ 4.500,00, Days Overdue: 25, Payment History: Excellent payment history, first missed payment, Communication Preference: Email, Market: Brazil, Language: English, Risk Level: Low, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to full payment, Payment Method: PIX. Analyze customer data and execute collection workflow with international customer response.",
-    "additionalInfo": "Customer: Michael Johnson. Customer ID: CUST_BR_010. Email: michael.johnson@email.com. Phone: +55-11-9999-8888. Amount: R$ 4.500,00. Days Overdue: 25. Account Type: Personal Loan. Risk Level: Low. Payment History: Excellent payment history, first missed payment. Communication Preference: Email. Market: Brazil. Language: English. Currency: BRL. Regulatory Compliance: LGPD. Payment Methods: PIX, Boleto available. App Activity Status: Active. Customer Response: Cooperative. Payment Agreement: Customer agreed to full payment immediately. Payment Method: PIX. Expected Outcome: Case closure with full payment."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

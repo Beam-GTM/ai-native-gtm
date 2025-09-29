@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Close debt collection case for John Smith. Complete case details: Case ID: CASE_MX_005_2025_005, Customer ID: CUST_MX_005, Customer Name: John Smith, Account Type: Personal Loan, Outstanding Amount: $25,000.00 MXN, Days Overdue: 30, Payment History: Consistent payments, recent missed payment, Communication Preference: Phone, Market: Mexico, Language: English, Risk Level: Medium, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to partial payment, Payment Method: Bank Transfer, Currency: MXN, Regulatory Compliance: LPDP, Case Status: CLOSED_PARTIAL, Payment Received: $15,000.00 MXN, Collection Duration: 7 days, Resolution Method: Partial Payment, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0. Generate case closure report and finalize debt collection process.",
-    "additionalInfo": "Case Closure Details for John Smith: Case ID: CASE_MX_005_2025_005, Customer ID: CUST_MX_005, Customer Name: John Smith, Email: john.smith@email.com, Phone: +52-55-9876-5432, Account Type: Personal Loan, Outstanding Amount: $25,000.00 MXN, Days Overdue: 30, Payment History: Consistent payments, recent missed payment, Communication Preference: Phone, Market: Mexico, Language: English, Risk Level: Medium, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Customer agreed to pay 60% now, 40% in 30 days, Payment Method: Bank Transfer, Currency: MXN, Regulatory Compliance: LPDP, Payment Methods: Bank Transfer available, Case Status: CLOSED_PARTIAL, Payment Received: $15,000.00 MXN, Collection Duration: 7 days, Resolution Method: Partial Payment, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0, Final Outcome: Case closed with partial payment agreement. All case closure requirements met."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

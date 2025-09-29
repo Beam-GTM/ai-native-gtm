@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Process debt collection for Luis Martínez (Colombia). Customer ID: CUST_CO_006, Account Type: Credit Card, Outstanding Amount: $5.000.000 COP, Days Overdue: 120, Payment History: Poor payment history, multiple defaults, Communication Preference: Email, Market: Colombia, Language: Spanish, Risk Level: Critical, App Activity Status: Inactive, Customer Response: Bankruptcy, Payment Agreement: Cannot pay, Payment Method: Bank Transfer. Analyze customer data and execute collection workflow with bankruptcy response.",
-    "additionalInfo": "Customer: Luis Martínez. Customer ID: CUST_CO_006. Email: luis.martinez@email.com. Phone: +57-310-987-6543. Amount: $5.000.000 COP. Days Overdue: 120. Account Type: Credit Card. Risk Level: Critical. Payment History: Poor payment history, multiple defaults. Communication Preference: Email. Market: Colombia. Language: Spanish. Currency: COP. Regulatory Compliance: Ley 1581. Payment Methods: Bank Transfer available. App Activity Status: Inactive. Customer Response: Bankruptcy. Payment Agreement: Customer filed for bankruptcy, cannot pay. Payment Method: Bank Transfer. Expected Outcome: Account suspension, legal team notification."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

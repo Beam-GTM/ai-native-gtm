@@ -1,9 +1,0 @@
-{
-  "taskQuery": {
-    "query": "Close debt collection case for Ana Santos. Complete case details: Case ID: CASE_BR_004_2025_004, Customer ID: CUST_BR_004, Customer Name: Ana Santos, Account Type: Credit Card, Outstanding Amount: R$ 8.500,00, Days Overdue: 90, Payment History: Multiple disputes, legal issues, Communication Preference: Email, Market: Brazil, Language: Portuguese, Risk Level: Critical, App Activity Status: Inactive, Customer Response: Legal, Payment Agreement: Disputes charges, Payment Method: PIX, Currency: BRL, Regulatory Compliance: LGPD, Case Status: ESCALATED_LEGAL, Payment Received: R$ 0,00, Collection Duration: 90 days, Resolution Method: Legal Escalation, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0. Generate case closure report and finalize debt collection process.",
-    "additionalInfo": "Case Closure Details for Ana Santos: Case ID: CASE_BR_004_2025_004, Customer ID: CUST_BR_004, Customer Name: Ana Santos, Email: ana.santos@email.com, Phone: +55-21-98765-4321, Account Type: Credit Card, Outstanding Amount: R$ 8.500,00, Days Overdue: 90, Payment History: Multiple disputes, legal issues, Communication Preference: Email, Market: Brazil, Language: Portuguese, Risk Level: Critical, App Activity Status: Inactive, Customer Response: Legal, Payment Agreement: Customer disputes all charges, claims fraud, Payment Method: PIX, Currency: BRL, Regulatory Compliance: LGPD, Payment Methods: PIX, Boleto available, Case Status: ESCALATED_LEGAL, Payment Received: R$ 0,00, Collection Duration: 90 days, Resolution Method: Legal Escalation, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0, Final Outcome: Case escalated to legal team due to disputes. All case closure requirements met."
-  },
-  "parsingUrls": [],
-  "encodedContextFiles": [],
-  "agentId": "nubank-debt-collection-agent"
-}

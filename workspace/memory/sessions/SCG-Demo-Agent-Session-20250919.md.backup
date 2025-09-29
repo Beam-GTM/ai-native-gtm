@@ -1,18 +1,18 @@
-# Example-Company Demo Agent Development Session
+# SCG Demo Agent Development Session
 **Date**: 2025-09-19  
 **Duration**: Extended session  
 **Status**: Completed Successfully  
 
 ## Session Overview
-Comprehensive development of Example-Company construction contractor payment verification demo agent using the demo-agent-automation framework. Addressed key concerns from demo call including process mismatch and Thai document processing requirements.
+Comprehensive development of SCG construction contractor payment verification demo agent using the demo-agent-automation framework. Addressed key concerns from demo call including process mismatch and Thai document processing requirements.
 
 ## Key Accomplishments
 
 ### 1. Workflow Restructuring
-- **Restructured Example-Company workflow** to start with Thai OCR Processing as first node
+- **Restructured SCG workflow** to start with Thai OCR Processing as first node
 - **Defined 19 English output variables** flowing through all subsequent steps
 - **Updated all prompts** to reference specific extracted variables
-- **Eliminated process mismatch** between demo and actual Example-Company needs
+- **Eliminated process mismatch** between demo and actual SCG needs
 
 ### 2. Demo Materials Creation
 - **Sample Thai construction document** with authentic construction terminology
@@ -33,17 +33,17 @@ Comprehensive development of Example-Company construction contractor payment ver
 - **Generated deployment package** ready for webhook deployment
 
 ## Key Files Created
-- `Example-Company-Contractor-Payment-Verification-Agent.yaml` - Complete workflow configuration
+- `SCG-Contractor-Payment-Verification-Agent.yaml` - Complete workflow configuration
 - `Sample-Thai-Construction-Document.html` - Demo document ready for PDF conversion
-- `Example-Company-Follow-up-Demo-Video.md` - Professional follow-up email
-- `Example-Company-Prompt-Engineering.md` - Updated prompts with variable references
-- `Example-Company-Implementation-Guide.md` - Complete implementation documentation
+- `SCG-Follow-up-Demo-Video.md` - Professional follow-up email
+- `SCG-Prompt-Engineering.md` - Updated prompts with variable references
+- `SCG-Implementation-Guide.md` - Complete implementation documentation
 
 ## Critical Insights
-- **Process mismatch identified**: Demo showed reconciliation/booking vs. Example-Company needs contractor payment verification
+- **Process mismatch identified**: Demo showed reconciliation/booking vs. SCG needs contractor payment verification
 - **Thai document processing**: Real OCR and translation capabilities required
 - **Accuracy concerns addressed**: Evaluation framework and auto-tuner mechanism documented
-- **Custom demo space**: Created specifically for Example-Company's construction contractor payment workflow
+- **Custom demo space**: Created specifically for SCG's construction contractor payment workflow
 
 ## Next Steps
 1. Convert HTML document to PDF for demo use
@@ -52,4 +52,4 @@ Comprehensive development of Example-Company construction contractor payment ver
 4. Prepare for POV scoping session
 
 ## Session Outcome
-**SUCCESS**: Complete Example-Company demo agent package ready for deployment with Thai contractor payment verification workflow addressing all demo call concerns.
+**SUCCESS**: Complete SCG demo agent package ready for deployment with Thai contractor payment verification workflow addressing all demo call concerns.
