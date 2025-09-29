@@ -140,7 +140,7 @@ We've built a **two-layer system**:
 ### **Step 0: Receive the Template**
 ```
 1. Clone the Nexus Template repository:
-   git clone [REPO_URL]
+   git clone https://github.com/yourusername/nexus-template.git
    
 2. Navigate to the template directory:
    cd nexus-template
