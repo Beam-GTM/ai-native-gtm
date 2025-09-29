@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Process debt collection for Sofia Herrera (Colombia). Customer ID: CUST_CO_009, Account Type: Credit Card, Outstanding Amount: $3.800.000 COP, Days Overdue: 60, Payment History: Declining payment history, recent missed payments, Communication Preference: Phone, Market: Colombia, Language: Spanish, Risk Level: High, App Activity Status: Inactive, Customer Response: Urgent, Payment Agreement: Agrees to immediate payment, Payment Method: Bank Transfer. Analyze customer data and execute collection workflow with urgent response.",
+    "additionalInfo": "Customer: Sofia Herrera. Customer ID: CUST_CO_009. Email: sofia.herrera@email.com. Phone: +57-320-456-7890. Amount: $3.800.000 COP. Days Overdue: 60. Account Type: Credit Card. Risk Level: High. Payment History: Declining payment history, recent missed payments. Communication Preference: Phone. Market: Colombia. Language: Spanish. Currency: COP. Regulatory Compliance: Ley 1581. Payment Methods: Bank Transfer available. App Activity Status: Inactive. Customer Response: Urgent. Payment Agreement: Customer agrees to immediate payment to avoid further action. Payment Method: Bank Transfer. Expected Outcome: Case closure with immediate payment."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

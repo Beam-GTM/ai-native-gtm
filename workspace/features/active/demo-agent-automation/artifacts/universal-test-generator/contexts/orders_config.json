@@ -1,0 +1,28 @@
+{
+  "document_types": ["order_form", "shipping_label", "delivery_confirmation"],
+  "business_rules": {
+    "validation_rules": ["inventory_availability", "customer_verification", "payment_confirmation", "shipping_address"],
+    "risk_factors": ["order_value", "customer_history", "payment_method", "shipping_zone"],
+    "approval_criteria": ["inventory_available", "payment_confirmed", "address_verified", "within_limits"]
+  },
+  "stp_indicators": {
+    "document_validation": "Todos os pedidos são válidos, estoque disponível e pagamento confirmado",
+    "identity_verification": "Cliente verificado e endereço de entrega válido",
+    "risk_assessment": "Baixo risco - cliente confiável, pagamento seguro, entrega local",
+    "decision": "APROVAÇÃO AUTOMÁTICA - Processar pedido e enviar imediatamente"
+  },
+  "document_templates": {
+    "order_form": {
+      "title": "Formulário de Pedido",
+      "fields": ["order_number", "customer_name", "customer_id", "order_date", "items", "quantities", "unit_prices", "subtotal", "tax", "total", "shipping_address"]
+    },
+    "shipping_label": {
+      "title": "Etiqueta de Envio",
+      "fields": ["tracking_number", "from_address", "to_address", "weight", "dimensions", "service_type", "shipping_date", "expected_delivery"]
+    },
+    "delivery_confirmation": {
+      "title": "Confirmação de Entrega",
+      "fields": ["delivery_number", "delivery_date", "delivery_time", "recipient_name", "signature", "condition", "notes"]
+    }
+  }
+}

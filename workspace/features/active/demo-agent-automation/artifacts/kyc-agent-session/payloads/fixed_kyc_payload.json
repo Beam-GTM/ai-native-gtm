@@ -1,0 +1,66 @@
+{
+  "agent_metadata": {
+    "name": "KYC Processing Agent",
+    "version": "1.0.0",
+    "task_type": "document_processing"
+  },
+  "customer_data": {
+    "customer_full_name": "John Smith",
+    "date_of_birth": "1985-03-15",
+    "customer_address": "123 Main Street, Austin, TX 78701",
+    "id_number": "DL123456789",
+    "occupation": "Software Engineer",
+    "income_range": "$75,000 - $100,000",
+    "customer_location": "United States"
+  },
+  "documents": {
+    "government_id_document": {
+      "type": "drivers_license",
+      "file_format": "base64",
+      "content": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=",
+      "filename": "drivers_license.jpg",
+      "document_data": {
+        "name": "JOHN SMITH",
+        "dob": "03/15/1985",
+        "address": "123 MAIN ST, AUSTIN, TX 78701",
+        "license_number": "DL123456789",
+        "expiration": "03/15/2026",
+        "class": "C",
+        "height": "6-0",
+        "weight": "180",
+        "sex": "M"
+      }
+    },
+    "address_document": {
+      "type": "utility_bill",
+      "file_format": "base64",
+      "content": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDMgMCBSCi9SZXNvdXJjZXMgPDwKL0ZvbnQgPDwKL0YxIDIgMCBSCj4+Cj4+Ci9NZWRpYUJveCBbMCAwIDU5NSA4NDJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoK",
+      "filename": "utility_bill.pdf",
+      "document_data": {
+        "company": "AUSTIN ENERGY",
+        "account_number": "1234567890",
+        "service_address": "123 MAIN ST, AUSTIN, TX 78701",
+        "billing_date": "2024-09-01",
+        "amount_due": "$125.50"
+      }
+    },
+    "additional_documents": {
+      "type": "bank_statement",
+      "file_format": "base64",
+      "content": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDMgMCBSCi9SZXNvdXJjZXMgPDwKL0ZvbnQgPDwKL0YxIDIgMCBSCj4+Cj4+Ci9NZWRpYUJveCBbMCAwIDU5NSA4NDJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoK",
+      "filename": "bank_statement.pdf",
+      "document_data": {
+        "bank_name": "CHASE BANK",
+        "account_holder": "JOHN SMITH",
+        "account_number": "****1234",
+        "statement_date": "2024-08-31",
+        "balance": "$5,250.00"
+      }
+    }
+  },
+  "prompt_templates": {
+    "document_validation_prompt": "**KYC Document Validation - Step 1**\n\nYou are processing a customer's KYC documents. Your task is to validate each document for completeness and authenticity.\n\n**INPUT DOCUMENTS:**\n- Government ID: {documents.government_id_document}\n- Proof of Address: {documents.address_document}\n- Additional Docs: {documents.additional_documents}\n\n**VALIDATION RULES:**\n1. **Document Clarity**: Is the document clearly readable and not blurry?\n2. **Information Completeness**: Are all required fields present and legible?\n3. **Authenticity Indicators**: Does the document show signs of tampering or forgery?\n4. **Date Validity**: Is the document current and not expired?\n\n**DECISION LOGIC:**\n- IF all documents are clear AND complete AND authentic AND current → PROCEED to identity verification\n- IF any document is unclear OR incomplete OR suspicious → FLAG for manual review with specific reason\n- IF documents are expired → REJECT with \"Document expiration\" reason\n\n**OUTPUT FORMAT:**\n```json\n{\n  \"validation_status\": \"approved|flagged|rejected\",\n  \"document_scores\": {\n    \"government_id\": \"pass|fail|flag\",\n    \"proof_of_address\": \"pass|fail|flag\",\n    \"additional_docs\": \"pass|fail|flag\"\n  },\n  \"flags\": [\"specific_issue_1\", \"specific_issue_2\"],\n  \"next_action\": \"proceed|manual_review|reject\"\n}\n```",
+    
+    "identity_verification_prompt": "**KYC Identity Verification - Step 2**\n\nYou are verifying a customer's identity using validated documents and external sources.\n\n**CUSTOMER INFORMATION:**\n- Full Name: {customer_data.customer_full_name}\n- Date of Birth: {customer_data.date_of_birth}\n- Address: {customer_data.customer_address}\n- Government ID Number: {customer_data.id_number}\n\n**DOCUMENT DATA (for verification):**\n- Driver's License Name: {documents.government_id_document.document_data.name}\n- Driver's License DOB: {documents.government_id_document.document_data.dob}\n- Driver's License Address: {documents.government_id_document.document_data.address}\n- Driver's License Number: {documents.government_id_document.document_data.license_number}\n\n**VERIFICATION SOURCES:**\n1. **Government Database**: Check official records\n2. **Credit Bureau**: Verify identity history\n3. **Watchlist Screening**: Check against sanctions/PEP lists\n\n**VERIFICATION RULES:**\n1. **Name Match**: Does the name match across all sources?\n2. **Address Verification**: Does the address match government records?\n3. **ID Validation**: Is the government ID valid and not reported stolen?\n4. **Watchlist Check**: Is the customer on any sanctions or PEP lists?\n5. **Document Data Consistency**: Do the extracted document data match the customer information?\n\n**DECISION LOGIC:**\n- IF all verifications PASS AND no watchlist matches → PROCEED to risk assessment\n- IF any verification FAILS → FLAG for manual review with specific failure reason\n- IF watchlist MATCH found → IMMEDIATE rejection with compliance reason\n- IF document data doesn't match customer info → FLAG for manual review\n\n**OUTPUT FORMAT:**\n```json\n{\n  \"verification_status\": \"verified|flagged|rejected\",\n  \"verification_results\": {\n    \"government_db\": \"pass|fail|error\",\n    \"credit_bureau\": \"pass|fail|error\",\n    \"watchlist_screening\": \"clear|match|error\",\n    \"document_consistency\": \"pass|fail|error\"\n  },\n  \"match_details\": \"specific_watchlist_match_if_any\",\n  \"consistency_issues\": [\"specific_inconsistency_if_any\"],\n  \"next_action\": \"proceed|manual_review|reject\"\n}\n```"
+  }
+}

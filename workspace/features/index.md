@@ -20,18 +20,22 @@ active_features:
     status: "Framework development"
     progress: 15
     description: "Comprehensive AI-native GTM framework with prospecting, lead generation, discovery, and pipeline management"
+    last_updated: "2025-01-27T18:30:00Z"
   demo-agent-automation:
     status: "KYC Agent Implementation Complete"
     progress: 25
     description: "Template-driven automation for high-value client demo agent creation"
+    last_updated: "2025-09-19T06:45:00Z"
   onboarding-experience:
     status: "Foundation complete"
     progress: 25
     description: "Interactive setup wizard for new users"
+    last_updated: "2025-01-27T22:45:00Z"
   transcript-processing-automation:
     status: "Implementation in progress"
     progress: 15
     description: "Automate transcript processing and follow-up generation for sales"
+    last_updated: "2025-09-17T18:48:00Z"
 
 status:
   completion_rate: "25%"

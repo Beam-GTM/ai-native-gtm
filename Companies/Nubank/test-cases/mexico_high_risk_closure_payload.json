@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Close debt collection case for María González. Complete case details: Case ID: CASE_MX_002_2025_002, Customer ID: CUST_MX_002, Customer Name: María González, Account Type: Personal Loan, Outstanding Amount: $15,000.00 MXN, Days Overdue: 45, Payment History: Inconsistent payments, multiple missed payments, Communication Preference: Email, Market: Mexico, Language: Spanish, Risk Level: High, App Activity Status: Inactive, Customer Response: Difficult, Payment Agreement: Refuses to pay, Payment Method: Bank Transfer, Currency: MXN, Regulatory Compliance: LPDP, Case Status: CLOSED_UNPAID, Payment Received: $0.00 MXN, Collection Duration: 60 days, Resolution Method: No Resolution, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0. Generate case closure report and finalize debt collection process.",
+    "additionalInfo": "Case Closure Details for María González: Case ID: CASE_MX_002_2025_002, Customer ID: CUST_MX_002, Customer Name: María González, Email: maria.gonzalez@email.com, Phone: +52-55-1234-5678, Account Type: Personal Loan, Outstanding Amount: $15,000.00 MXN, Days Overdue: 45, Payment History: Inconsistent payments, multiple missed payments, Communication Preference: Email, Market: Mexico, Language: Spanish, Risk Level: High, App Activity Status: Inactive, Customer Response: Difficult, Payment Agreement: Refuses to pay, Payment Method: Bank Transfer, Currency: MXN, Regulatory Compliance: LPDP, Payment Methods: Bank Transfer available, Case Status: CLOSED_UNPAID, Payment Received: $0.00 MXN, Collection Duration: 60 days, Resolution Method: No Resolution, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0, Final Outcome: Case closed unpaid due to customer refusal. All case closure requirements met."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

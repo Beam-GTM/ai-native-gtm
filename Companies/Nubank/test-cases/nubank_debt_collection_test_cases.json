@@ -1,0 +1,136 @@
+{
+  "test_cases": [
+    {
+      "scenario_id": "nubank_brazil_debt_collection_001",
+      "country": "Brazil",
+      "language": "Portuguese",
+      "currency": "BRL",
+      "customer_name": "João Silva",
+      "customer_id": "CUST_BR_001",
+      "email": "joao.silva@email.com",
+      "phone": "+55-11-99999-9999",
+      "outstanding_amount": "R$ 2.500,00",
+      "days_overdue": 15,
+      "account_type": "Credit Card",
+      "risk_level": "medium",
+      "payment_history": "Consistent payments for 2 years, recent missed payment",
+      "communication_preference": "WhatsApp",
+      "market_specific": {
+        "pix_available": true,
+        "boleto_available": true,
+        "regulatory_compliance": "LGPD",
+        "central_bank_rules": "Brazilian Central Bank regulations"
+      },
+      "expected_workflow": [
+        "Push Notification (Portuguese)",
+        "WhatsApp Contact (if no response)",
+        "Email Contact (if no response)",
+        "Payment Negotiation",
+        "PIX/Boleto Processing"
+      ],
+      "test_documents": [
+        "debt_collection_scenario_1_document1.pdf",
+        "debt_collection_scenario_1_document2.pdf", 
+        "debt_collection_scenario_1_document3.pdf"
+      ],
+      "payload_file": "debt_collection_scenario_1_payload.json"
+    },
+    {
+      "scenario_id": "nubank_mexico_debt_collection_002",
+      "country": "Mexico",
+      "language": "Spanish",
+      "currency": "MXN",
+      "customer_name": "María González",
+      "customer_id": "CUST_MX_002",
+      "email": "maria.gonzalez@email.com",
+      "phone": "+52-55-1234-5678",
+      "outstanding_amount": "$15,000.00 MXN",
+      "days_overdue": 22,
+      "account_type": "Personal Loan",
+      "risk_level": "low",
+      "payment_history": "Excellent payment history, first missed payment",
+      "communication_preference": "WhatsApp",
+      "market_specific": {
+        "pix_available": false,
+        "boleto_available": false,
+        "regulatory_compliance": "LPDP",
+        "central_bank_rules": "CNBV regulations"
+      },
+      "expected_workflow": [
+        "Push Notification (Spanish)",
+        "WhatsApp Contact (if no response)",
+        "Email Contact (if no response)",
+        "Payment Negotiation",
+        "Bank Transfer Processing"
+      ],
+      "test_documents": [
+        "debt_collection_scenario_2_document1.pdf",
+        "debt_collection_scenario_2_document2.pdf",
+        "debt_collection_scenario_2_document3.pdf"
+      ],
+      "payload_file": "debt_collection_scenario_2_payload.json"
+    },
+    {
+      "scenario_id": "nubank_colombia_debt_collection_003",
+      "country": "Colombia",
+      "language": "Spanish",
+      "currency": "COP",
+      "customer_name": "Carlos Rodríguez",
+      "customer_id": "CUST_CO_003",
+      "email": "carlos.rodriguez@email.com",
+      "phone": "+57-300-123-4567",
+      "outstanding_amount": "$2.500.000 COP",
+      "days_overdue": 8,
+      "account_type": "Credit Card",
+      "risk_level": "high",
+      "payment_history": "Inconsistent payments, multiple missed payments",
+      "communication_preference": "Email",
+      "market_specific": {
+        "pix_available": false,
+        "boleto_available": false,
+        "regulatory_compliance": "Ley 1581",
+        "central_bank_rules": "SFC regulations"
+      },
+      "expected_workflow": [
+        "Push Notification (Spanish)",
+        "WhatsApp Contact (if no response)",
+        "Email Contact (if no response)",
+        "Payment Negotiation",
+        "Bank Transfer Processing"
+      ],
+      "test_documents": [
+        "debt_collection_scenario_3_document1.pdf",
+        "debt_collection_scenario_3_document2.pdf",
+        "debt_collection_scenario_3_document3.pdf"
+      ],
+      "payload_file": "debt_collection_scenario_3_payload.json"
+    }
+  ],
+  "test_instructions": {
+    "purpose": "Test Nubank Debt Collection Agent across 3 markets (Brazil, Mexico, Colombia)",
+    "workflow_testing": [
+      "1. Customer File Review - Analyze payment history and risk level",
+      "2. Customer Analysis - Classify customer type (Cooperative/Difficult/Legal/Bankruptcy)",
+      "3. Contact Strategy - Determine optimal contact method and timing",
+      "4A. Push Notification - Send in-app notification in local language",
+      "4B. WhatsApp Contact - Send conversational message if no response",
+      "4C. Email Contact - Send formal communication if no response",
+      "5. Payment Negotiation - Conduct payment discussions with appropriate options",
+      "6. Payment Processing - Handle payment execution across all markets",
+      "7. Case Closure - Manage case completion and reporting"
+    ],
+    "success_criteria": [
+      "Correct language selection for each market",
+      "Appropriate payment method integration (PIX for Brazil, Bank Transfer for MX/CO)",
+      "Regulatory compliance for each jurisdiction",
+      "Customer segmentation and risk assessment accuracy",
+      "Multi-channel communication progression",
+      "Payment processing and case closure"
+    ],
+    "regulatory_requirements": {
+      "Brazil": "LGPD compliance, Portuguese language, Central Bank rules, PIX integration",
+      "Mexico": "LPDP compliance, Spanish language, CNBV regulations, local banking",
+      "Colombia": "Ley 1581 compliance, Spanish language, SFC oversight, local banking"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "document_types": ["invoice", "receipt", "purchase_order"],
+  "business_rules": {
+    "validation_rules": ["amount_accuracy", "tax_calculation", "vendor_verification", "date_validity"],
+    "risk_factors": ["vendor_reputation", "amount_threshold", "payment_terms", "approval_level"],
+    "approval_criteria": ["amount_within_limit", "vendor_approved", "budget_available", "proper_authorization"]
+  },
+  "stp_indicators": {
+    "document_validation": "Todas as faturas são legítimas, valores corretos e fornecedores aprovados",
+    "identity_verification": "Dados do fornecedor e valores consistentes em todos os documentos",
+    "risk_assessment": "Baixo risco - fornecedor confiável, valores dentro do limite, orçamento disponível",
+    "decision": "APROVAÇÃO AUTOMÁTICA - Processar pagamento imediatamente"
+  },
+  "document_templates": {
+    "invoice": {
+      "title": "Fatura Comercial",
+      "fields": ["invoice_number", "vendor_name", "vendor_tax_id", "customer_name", "issue_date", "due_date", "amount", "tax_amount", "total_amount", "description"]
+    },
+    "receipt": {
+      "title": "Recibo de Pagamento",
+      "fields": ["receipt_number", "payment_date", "amount", "payment_method", "reference", "payer", "payee", "description"]
+    },
+    "purchase_order": {
+      "title": "Ordem de Compra",
+      "fields": ["po_number", "vendor", "requestor", "approval_date", "items", "quantities", "unit_prices", "total_amount", "delivery_date"]
+    }
+  }
+}

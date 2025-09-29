@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Close debt collection case for Luis Martínez. Complete case details: Case ID: CASE_CO_006_2025_006, Customer ID: CUST_CO_006, Customer Name: Luis Martínez, Account Type: Credit Card, Outstanding Amount: $5.000.000 COP, Days Overdue: 120, Payment History: Poor payment history, multiple defaults, Communication Preference: Email, Market: Colombia, Language: Spanish, Risk Level: Critical, App Activity Status: Inactive, Customer Response: Bankruptcy, Payment Agreement: Cannot pay, Payment Method: Bank Transfer, Currency: COP, Regulatory Compliance: Ley 1581, Case Status: CLOSED_UNPAID, Payment Received: $0 COP, Collection Duration: 120 days, Resolution Method: Bankruptcy Filing, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0. Generate case closure report and finalize debt collection process.",
+    "additionalInfo": "Case Closure Details for Luis Martínez: Case ID: CASE_CO_006_2025_006, Customer ID: CUST_CO_006, Customer Name: Luis Martínez, Email: luis.martinez@email.com, Phone: +57-310-987-6543, Account Type: Credit Card, Outstanding Amount: $5.000.000 COP, Days Overdue: 120, Payment History: Poor payment history, multiple defaults, Communication Preference: Email, Market: Colombia, Language: Spanish, Risk Level: Critical, App Activity Status: Inactive, Customer Response: Bankruptcy, Payment Agreement: Customer filed for bankruptcy, cannot pay, Payment Method: Bank Transfer, Currency: COP, Regulatory Compliance: Ley 1581, Payment Methods: Bank Transfer available, Case Status: CLOSED_UNPAID, Payment Received: $0 COP, Collection Duration: 120 days, Resolution Method: Bankruptcy Filing, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0, Final Outcome: Case closed due to customer bankruptcy. All case closure requirements met."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

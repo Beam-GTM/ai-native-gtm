@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Close debt collection case for Carlos Rodríguez. Complete case details: Case ID: CASE_CO_003_2025_003, Customer ID: CUST_CO_003, Customer Name: Carlos Rodríguez, Account Type: Credit Card, Outstanding Amount: $2.500.000 COP, Days Overdue: 8, Payment History: Excellent payment history, first missed payment, Communication Preference: WhatsApp, Market: Colombia, Language: Spanish, Risk Level: Low, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to payment plan, Payment Method: Bank Transfer, Currency: COP, Regulatory Compliance: Ley 1581, Case Status: CLOSED_PARTIAL, Payment Received: $1.250.000 COP, Collection Duration: 5 days, Resolution Method: Payment Plan, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0. Generate case closure report and finalize debt collection process.",
+    "additionalInfo": "Case Closure Details for Carlos Rodríguez: Case ID: CASE_CO_003_2025_003, Customer ID: CUST_CO_003, Customer Name: Carlos Rodríguez, Email: carlos.rodriguez@email.com, Phone: +57-300-123-4567, Account Type: Credit Card, Outstanding Amount: $2.500.000 COP, Days Overdue: 8, Payment History: Excellent payment history, first missed payment, Communication Preference: WhatsApp, Market: Colombia, Language: Spanish, Risk Level: Low, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Customer agreed to 3-month payment plan, Payment Method: Bank Transfer, Currency: COP, Regulatory Compliance: Ley 1581, Payment Methods: Bank Transfer available, Case Status: CLOSED_PARTIAL, Payment Received: $1.250.000 COP, Collection Duration: 5 days, Resolution Method: Payment Plan, Case Closure Date: 2025-01-27, Collection Agent: AI Agent v2.0, Final Outcome: Case closed with partial payment plan. All case closure requirements met."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

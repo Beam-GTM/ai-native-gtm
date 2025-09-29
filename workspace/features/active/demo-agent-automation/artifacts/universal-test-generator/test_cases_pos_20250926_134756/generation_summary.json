@@ -1,0 +1,23 @@
+{
+  "generation_info": {
+    "context": "pos",
+    "scenarios_generated": 1,
+    "generation_date": "2025-09-26T13:47:56.306376",
+    "output_directory": "test_cases_pos_20250926_134756"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "pos_scenario_1",
+      "customer_name": "Customer 1",
+      "risk_level": "medium",
+      "amount": "$4,843",
+      "status": "processing",
+      "pdf_files": [
+        "pos_scenario_1_transaction_receipt.pdf",
+        "pos_scenario_1_payment_confirmation.pdf",
+        "pos_scenario_1_refund_document.pdf"
+      ],
+      "payload_file": "pos_scenario_1_payload.json"
+    }
+  ]
+}

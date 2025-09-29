@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Process debt collection for John Smith (Mexico). Customer ID: CUST_MX_005, Account Type: Personal Loan, Outstanding Amount: $25,000.00 MXN, Days Overdue: 30, Payment History: Consistent payments, recent missed payment, Communication Preference: Phone, Market: Mexico, Language: English, Risk Level: Medium, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to partial payment, Payment Method: Bank Transfer. Analyze customer data and execute collection workflow with international customer response.",
+    "additionalInfo": "Customer: John Smith. Customer ID: CUST_MX_005. Email: john.smith@email.com. Phone: +52-55-9876-5432. Amount: $25,000.00 MXN. Days Overdue: 30. Account Type: Personal Loan. Risk Level: Medium. Payment History: Consistent payments, recent missed payment. Communication Preference: Phone. Market: Mexico. Language: English. Currency: MXN. Regulatory Compliance: LPDP. Payment Methods: Bank Transfer available. App Activity Status: Active. Customer Response: Cooperative. Payment Agreement: Customer agreed to pay 60% now, 40% in 30 days. Payment Method: Bank Transfer. Expected Outcome: Case closure with partial payment plan."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

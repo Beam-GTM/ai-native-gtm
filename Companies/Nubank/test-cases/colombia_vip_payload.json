@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Process debt collection for Carlos Rodríguez (Colombia). Customer ID: CUST_CO_003, Account Type: Credit Card, Outstanding Amount: $2.500.000 COP, Days Overdue: 8, Payment History: Excellent payment history, first missed payment, Communication Preference: WhatsApp, Market: Colombia, Language: Spanish, Risk Level: Low, App Activity Status: Active, Customer Response: Cooperative, Payment Agreement: Agreed to payment plan, Payment Method: Bank Transfer. Analyze customer data and execute collection workflow with VIP customer response.",
+    "additionalInfo": "Customer: Carlos Rodríguez. Customer ID: CUST_CO_003. Email: carlos.rodriguez@email.com. Phone: +57-300-123-4567. Amount: $2.500.000 COP. Days Overdue: 8. Account Type: Credit Card. Risk Level: Low. Payment History: Excellent payment history, first missed payment. Communication Preference: WhatsApp. Market: Colombia. Language: Spanish. Currency: COP. Regulatory Compliance: Ley 1581. Payment Methods: Bank Transfer available. App Activity Status: Active. Customer Response: Cooperative. Payment Agreement: Customer agreed to 3-month payment plan. Payment Method: Bank Transfer. Expected Outcome: Case closure with payment plan."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

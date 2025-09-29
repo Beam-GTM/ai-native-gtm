@@ -1,0 +1,96 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+/MediaBox [0 0 612 792]
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+/F2 5 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Contents 6 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+6 0 obj
+<<
+/Length 373
+>>
+stream
+BT
+/F1 16 Tf
+50 750 Td
+(TEXAS DRIVER LICENSE) Tj
+0 -30 Td
+/F2 12 Tf
+(TEXAS DRIVER LICENSE) Tj 0 -20 Td
+() Tj 0 -20 Td
+(Name: SMITH, JOHN) Tj 0 -20 Td
+(DOB: 03/15/1985) Tj 0 -20 Td
+(Address: 123 MAIN ST) Tj 0 -20 Td
+(City: AUSTIN, TX 78701) Tj 0 -20 Td
+(License #: 12345678) Tj 0 -20 Td
+(Expires: 03/15/2030) Tj 0 -20 Td
+() Tj 0 -20 Td
+(Photo: [PLACEHOLDER]) Tj 0 -20 Td
+ET
+
+endstream
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000168 00000 n 
+0000000273 00000 n 
+0000000400 00000 n 
+trailer
+<<
+/Size 7
+/Root 1 0 R
+/Info <<
+/Title (TEXAS DRIVER LICENSE)
+/Creator (Beam KYC Agent)
+/Producer (Beam KYC Agent)
+>>
+>>
+startxref
+973
+%%EOF

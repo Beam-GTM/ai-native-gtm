@@ -1,0 +1,9 @@
+{
+  "taskQuery": {
+    "query": "Analyze customer data for João Silva (Brazil) debt collection case. Review payment history, communication preferences, and assess risk level for R$ 2.500,00 overdue amount.",
+    "additionalInfo": "Customer: João Silva. Customer ID: CUST_BR_001. Email: joao.silva@email.com. Phone: +55-11-99999-9999. Amount: R$ 2.500,00. Days Overdue: 15. Account Type: Credit Card. Risk Level: Medium. Payment History: Consistent payments for 2 years, recent missed payment. Communication Preference: WhatsApp. Market: Brazil. Language: Portuguese. Currency: BRL. Regulatory Compliance: LGPD. Payment Methods: PIX, Boleto available."
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [],
+  "agentId": "nubank-debt-collection-agent"
+}

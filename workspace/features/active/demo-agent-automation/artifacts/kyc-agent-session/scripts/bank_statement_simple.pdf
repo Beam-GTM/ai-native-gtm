@@ -1,0 +1,96 @@
+%PDF-1.4
+1 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+/OpenAction [3 0 R /FitH null]
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Pages
+/Kids [3 0 R]
+/Count 1
+/MediaBox [0 0 612 792]
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Page
+/Parent 2 0 R
+/Resources <<
+/Font <<
+/F1 4 0 R
+/F2 5 0 R
+>>
+/ProcSet [/PDF /Text]
+>>
+/Contents 6 0 R
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica-Bold
+>>
+endobj
+
+5 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/BaseFont /Helvetica
+>>
+endobj
+
+6 0 obj
+<<
+/Length 700
+>>
+stream
+BT
+/F1 16 Tf
+50 750 Td
+(CHASE BANK STATEMENT) Tj
+0 -30 Td
+/F2 12 Tf
+(Account Holder: John Smith) Tj 0 -20 Td
+(Account Number: ****1234) Tj 0 -20 Td
+(Statement Date: August 31, 2024) Tj 0 -20 Td
+(Account Type: Checking) Tj 0 -20 Td
+() Tj 0 -20 Td
+(Current Balance: $5,250.00) Tj 0 -20 Td
+(Available Balance: $5,250.00) Tj 0 -20 Td
+() Tj 0 -20 Td
+(This statement covers the period from August 1, 2024 to August 31, 2024) Tj 0 -20 Td
+(For questions, call 1-800-935-9935) Tj 0 -20 Td
+ET
+endstream
+endobj
+
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000168 00000 n 
+0000000273 00000 n 
+0000000400 00000 n 
+trailer
+<<
+/Size 7
+/Root 1 0 R
+/Info <<
+/Title (CHASE BANK STATEMENT)
+/Creator (Beam KYC Agent)
+/Producer (Beam KYC Agent)
+>>
+>>
+startxref
+1100
+%%EOF

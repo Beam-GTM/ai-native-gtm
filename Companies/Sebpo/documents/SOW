@@ -1,0 +1,108 @@
+Appendix 1) Proposal & Scope of work
+Proposal: Automating your business processes with Autonomous AI Agents
+Context
+This proposal introduces an AI-driven solution for SEBPO to automate screenshotting. 
+At A Glance
+Automated Solution with Autonomous Agents
+Includes joint development of two agents and access for SEBPO to the Beam platform.
+Roadmap to success
+Project Kick-off and Platform Setup
+Provisioning of the Beam platform for SEBPO
+Kick-off to define automation requirements for the use case
+Gap analysis and Integration concept
+Providing access and basic training to the team
+Support and Agent Development
+Co-Development of the AI Agents to automate use-cases
+Evaluation and continuous improvement of agent performance
+Integration
+Integration with the client's internal platforms for seamless operation
+In-Scope (POC – Single Client)
+The Proof of Concept (POC) will focus on one client, implementing and validating two automated workflows with their respective requirements and infrastructure:
+Workflow A — Video Screenshots
+Receive API call with payload: Task, Client, Video URL, and Requirements
+Parse and analyze task requirements
+Analyse Sample frames from the video and generate textual descriptors. 
+Use LLM-based reasoning to select the required number of best-fit frames.
+Return results via callback, either timestamp or image assets and structured manifest.
+Workflow B — Platform Screenshots
+Receive API call with payload: Task, Client, Platform URL, Login details, and Requirements.
+Navigate directly to the specified platform URL. (opt. Authenticate via provided credentials.)
+Analyze requirements (categories, exclusions, framing).
+Capture the requested screenshots (full-page or element-specific).
+Return results via callback, including image assets and structured manifest.
+Out of Scope
+The following items are not included in the POC delivery and will require separate scoping for later phases:
+Multi-client rollout: Support is limited to one client’s requirements and infrastructure; onboarding of additional clients is excluded.
+Custom vision model training: No bespoke computer vision or model fine-tuning will be developed; the POC leverages existing models with rule- and prompt-based reasoning.
+Complex authentication flows: Advanced login requirements such as multi-factor authentication, SSO integrations, or rotating tokens are not supported within the POC.
+End-to-end client dashboarding: Client-facing interfaces (dashboards, reporting, analytics) beyond the delivery of screenshot assets and manifests are excluded.
+Billing/finance modules: Integration into client invoicing, usage-based billing, or token accounting systems is not part of this POC.
+Generalized platform coverage: Only the agreed test client’s environment and workflows are included; other platforms, sites, or categories will not be supported.
+Project Timeline & Cost
+Work package
+Cost
+Details
+Beam Platform 
+12.000 USD
+Includes all Tokens during POC Phase
+Beam AI POC 
+25.000 EUR
+Sprint 1: Discovery & Prototyping
+Project kick-off and provisioning of the Beam platform for SEBPO.
+Define automation requirements for the use case.
+Gap analysis and integration concept.
+Agent building, prototyping.
+Intensive onboarding of SEBPO’s SME group (access + training).
+Sprint 2: AI Agent Accuracy & Optimization
+Support and co-development of the AI agents to automate the use case.
+Evaluation and continuous improvement of agent performance.
+Agent optimization to improve accuracy and robustness.
+
+
+Post-POC Outlook 
+Future Collaboration & Long-term Partnership
+Upon successful completion of the POC, Beam envisions a strategic partnership with SEBPO built on continuous development and optimization:
+Service Contract & Continuous Development
+Post-POC transition to a comprehensive service agreement covering platform licensing, maintenance, and support
+Dedicated development resources for iterative improvements and new use case expansion
+Quarterly business reviews to assess performance metrics and identify optimization opportunities
+Scalability & Expansion Opportunities
+Multi-client rollout support with customized configurations for different business requirements
+Development of additional automation workflows beyond screenshotting. 
+Integration capabilities with SEBPO's existing tech stack and future platform acquisitions
+Partnership Benefits
+Priority access to new Beam AI features and capabilities
+Collaborative roadmap planning to align Beam's development with SEBPO's strategic objectives
+Volume-based pricing advantages as usage scales across multiple clients and use cases
+Commercials: Post-POC Partnership Structure
+Following successful POC completion, Beam will conduct a collaborative workshop with SEBPO to define the comprehensive roadmap, scope additional use cases, and establish the commercial framework for ongoing partnership.
+Pricing Structure
+Our commercial model is built on two core pillars designed for scalability and predictable growth:
+1) Platform Subscription & Usage
+Monthly platform subscription: $3,990 USD
+Includes standard token depot of 50,000 Beam Tokens
+Beam Tokens represent our internal cost packaging for third-party services plus margin, providing a unified consumption model across all agents
+All agents consume from the shared token depot, ensuring efficient resource utilization regardless of agent type or complexity
+2) Agent Development Services
+Development services charged at $200 USD per hour
+Recommended approach: Fixed monthly retainer of 20-40 hours for the first year
+Retainer model ensures smooth continuous agent development, accuracy training, and optimization cycles
+Provides predictable budgeting while maintaining development momentum
+Volume-Based Benefits
+As partnership scales and volume metrics increase, Beam offers attractive volume-based discounts on both platform subscription and development services, ensuring cost optimization aligns with business growth.
+This foundation POC serves as the cornerstone for a long-term automation partnership, enabling SEBPO to continuously enhance operational efficiency while maintaining competitive advantage in an evolving digital landscape.
+Support
+Beam will set up a joint communication channel (Slack) for direct customer support and fast issue resolution.
+Client needs to provide API spec in a compatible format.
+Client will need to support with API access/testing once Beam wants to test integrations.
+Beam will support on setting up future use cases during the project phase.
+Security Requirements
+Beam AI will follow the SOC2 standard for security and data privacy. To ensure data protection and security, the following measures will be implemented:
+Data Encryption: All sensitive data, including customer queries and product information, will be encrypted during transmission and storage.
+Compliance: The agents will comply with relevant data protection regulations to safeguard customer privacy.
+Access Controls: Granular login permissions will be implemented to restrict access to authorized personnel only.
+Main Benefits of Beam
+Rapid deployment of an operational MVP within 6 weeks, showcasing immediate efficiency gains
+Minimal requirement for technical team involvement, facilitating an easy and efficient integration process
+Scalability of the solution for future automation needs, further enhancing operational efficiency and offering quality
+
