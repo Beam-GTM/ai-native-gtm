@@ -14,8 +14,8 @@ User requested creation of company folder structure for "Allied Global" using di
 4. **Session Closure**: Close-chat workflow initiated by user
 
 ## Workflow Results
-- **Company**: Allied Global (normalized to Allied-Global)
-- **Structure Created**: Companies/Allied-Global/{transcripts/, emails/, documents/}
+- **Company**: Allied Global (normalized to Example-Company)
+- **Structure Created**: Companies/Example-Company/{transcripts/, emails/, documents/}
 - **Validation**: All quality gates passed (name_valid, structure_complete, structure_validated)
 - **Integration**: Ready for transcript processing automation
 
@@ -23,10 +23,10 @@ User requested creation of company folder structure for "Allied Global" using di
 **Learning #087**: Direct workflow execution bypasses menu system when users know exactly what they want. System supports both guided navigation and direct invocation based on user expertise level.
 
 ## Technical Evidence
-- Folder structure verified with `ls -la Companies/Allied-Global/`
+- Folder structure verified with `ls -la Companies/Example-Company/`
 - Write permissions confirmed on all subdirectories
 - Project memory updated with workflow completion milestone
-- Company integrated into existing Companies/ directory alongside ICS/
+- Company integrated into existing Companies/ directory alongside Example-Company/
 
 ## User Patterns Observed
 - Preference for direct execution over menu navigation

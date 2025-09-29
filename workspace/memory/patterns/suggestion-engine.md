@@ -321,7 +321,7 @@ memory_integration:
     - "PRESERVE user modifications"
 ```
 
-## 📈 METRICS
+## 📈 METRExample-Company
 
 ### Success Metrics
 - Suggestion acceptance: >60%

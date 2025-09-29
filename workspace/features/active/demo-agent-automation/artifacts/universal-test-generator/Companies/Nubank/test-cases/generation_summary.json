@@ -1,0 +1,49 @@
+{
+  "generation_info": {
+    "context": "debt_collection",
+    "scenarios_generated": 3,
+    "generation_date": "2025-09-26T15:25:46.423543",
+    "output_directory": "test_cases_debt_collection_20250926_152546"
+  },
+  "scenarios": [
+    {
+      "scenario_id": "debt_collection_scenario_1",
+      "customer_name": "Customer 1",
+      "risk_level": "low",
+      "amount": "$7,395",
+      "status": "processing",
+      "pdf_files": [
+        "debt_collection_scenario_1_document1.pdf",
+        "debt_collection_scenario_1_document2.pdf",
+        "debt_collection_scenario_1_document3.pdf"
+      ],
+      "payload_file": "debt_collection_scenario_1_payload.json"
+    },
+    {
+      "scenario_id": "debt_collection_scenario_2",
+      "customer_name": "Customer 2",
+      "risk_level": "medium",
+      "amount": "$6,038",
+      "status": "pending",
+      "pdf_files": [
+        "debt_collection_scenario_2_document1.pdf",
+        "debt_collection_scenario_2_document2.pdf",
+        "debt_collection_scenario_2_document3.pdf"
+      ],
+      "payload_file": "debt_collection_scenario_2_payload.json"
+    },
+    {
+      "scenario_id": "debt_collection_scenario_3",
+      "customer_name": "Customer 3",
+      "risk_level": "high",
+      "amount": "$2,102",
+      "status": "approved",
+      "pdf_files": [
+        "debt_collection_scenario_3_document1.pdf",
+        "debt_collection_scenario_3_document2.pdf",
+        "debt_collection_scenario_3_document3.pdf"
+      ],
+      "payload_file": "debt_collection_scenario_3_payload.json"
+    }
+  ]
+}

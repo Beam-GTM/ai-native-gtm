@@ -1,0 +1,61 @@
+{
+  "agent_metadata": {
+    "name": "KYC Processing Agent",
+    "version": "1.0.0",
+    "task_type": "document_processing"
+  },
+  "customer_data": {
+    "customer_full_name": "John Smith",
+    "date_of_birth": "1985-03-15",
+    "customer_address": "123 Main Street, Austin, TX 78701",
+    "id_number": "DL123456789",
+    "occupation": "Software Engineer",
+    "income_range": "$75,000 - $100,000",
+    "customer_location": "United States"
+  },
+  "documents": {
+    "government_id_document": {
+      "type": "drivers_license",
+      "file_format": "base64",
+      "content": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=",
+      "filename": "drivers_license.jpg",
+      "document_data": {
+        "name": "JOHN SMITH",
+        "dob": "03/15/1985",
+        "address": "123 MAIN ST, AUSTIN, TX 78701",
+        "license_number": "DL123456789",
+        "expiration": "03/15/2026",
+        "class": "C",
+        "height": "6-0",
+        "weight": "180",
+        "sex": "M"
+      }
+    },
+    "address_document": {
+      "type": "utility_bill",
+      "file_format": "base64",
+      "content": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDMgMCBSCi9SZXNvdXJjZXMgPDwKL0ZvbnQgPDwKL0YxIDIgMCBSCj4+Cj4+Ci9NZWRpYUJveCBbMCAwIDU5NSA4NDJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoK",
+      "filename": "utility_bill.pdf",
+      "document_data": {
+        "company": "AUSTIN ENERGY",
+        "account_number": "1234567890",
+        "service_address": "123 MAIN ST, AUSTIN, TX 78701",
+        "billing_date": "2024-09-01",
+        "amount_due": "$125.50"
+      }
+    },
+    "additional_documents": {
+      "type": "bank_statement",
+      "file_format": "base64",
+      "content": "data:application/pdf;base64,JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDMgMCBSCi9SZXNvdXJjZXMgPDwKL0ZvbnQgPDwKL0YxIDIgMCBSCj4+Cj4+Ci9NZWRpYUJveCBbMCAwIDU5NSA4NDJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoK",
+      "filename": "bank_statement.pdf",
+      "document_data": {
+        "bank_name": "CHASE BANK",
+        "account_holder": "JOHN SMITH",
+        "account_number": "****1234",
+        "statement_date": "2024-08-31",
+        "balance": "$5,250.00"
+      }
+    }
+  }
+}

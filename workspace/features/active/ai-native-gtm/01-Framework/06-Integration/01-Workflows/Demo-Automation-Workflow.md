@@ -10,7 +10,8 @@ This workflow automates the creation of demo agents by generating step-by-step p
 - [ ] Identify demo type and client context
 - [ ] Gather business objectives and requirements
 - [ ] Prepare client-specific context and data
-- [ ] Verify webhook endpoint availability
+- [ ] Verify Beam Studio API credentials and endpoint availability
+- [ ] Confirm webhook callback URL for async processing
 - [ ] Schedule demo preparation time (30-60 minutes)
 
 ## Workflow Steps
@@ -24,6 +25,8 @@ This workflow automates the creation of demo agents by generating step-by-step p
 - Business objectives (what should the demo achieve?)
 - Technical requirements (APIs, integrations, specific features)
 - Success criteria (what defines a successful demo?)
+- Beam Studio API credentials (Bearer token, client ID)
+- Webhook callback URL for processing completion
 
 **Deliverables:**
 - Context summary document
@@ -75,20 +78,41 @@ This workflow automates the creation of demo agents by generating step-by-step p
 - Test execution guide
 - Validation checklist
 
-### Phase 5: Deployment (10 minutes)
-**Objective**: Package and deploy demo agent via webhook
+### Phase 5: Beam Studio API Integration (10 minutes)
+**Objective**: Package and deploy demo agent using Beam Studio API with correct payload format
 
 **Process:**
-1. **Package Creation** - Bundle workflow, prompts, and test cases
-2. **Payload Preparation** - Format data for webhook integration
-3. **Deployment** - Send package to webhook endpoint
-4. **Validation** - Verify successful deployment
-5. **Testing** - Execute test cases to validate functionality
+1. **API Payload Creation** - Format data according to Beam Studio API specification
+   - Customer information (name, DOB, address, occupation)
+   - Document handling (base64 encoded files with proper MIME types)
+   - Processing options (enhanced verification, risk assessment levels)
+   - Callback configuration (webhook URL, timeout, retry settings)
+
+2. **Authentication Setup** - Configure Beam Studio API credentials
+   - Bearer token authentication
+   - Client identifier for API requests
+   - Request ID generation for tracking
+
+3. **API Deployment** - Send package to Beam Studio API endpoint
+   - Primary endpoint: `https://api.beamstudio.ai/v1/agents/kyc-processor`
+   - Proper headers (Content-Type, Authorization, X-API-Version, X-Client-ID)
+   - Error handling for 400, 401, 429, and 500 responses
+
+4. **Response Processing** - Handle API responses and callbacks
+   - Success response processing
+   - Async processing with webhook callbacks
+   - Error handling and retry logic
+
+5. **Validation** - Verify successful deployment and functionality
+   - API response validation
+   - Test case execution
+   - Webhook callback verification
 
 **Deliverables:**
-- Deployed demo agent
-- Deployment confirmation
-- Test execution results
+- Beam Studio API integrated demo agent
+- API deployment confirmation with request ID
+- Webhook callback verification
+- Test execution results with API integration
 
 ## Post-Workflow Actions
 
@@ -112,30 +136,43 @@ This workflow automates the creation of demo agents by generating step-by-step p
 - **Client Satisfaction**: 90%+ satisfaction with demo quality
 
 ## Integration Points
-- **Webhook Deployment**: Standard POST endpoint for agent triggering
+- **Beam Studio API**: Primary integration using `https://api.beamstudio.ai/v1/agents/kyc-processor`
+- **API Documentation**: Complete reference at `https://api.beamstudio.ai/public-docs#/`
+- **Webhook Callbacks**: Async processing completion notifications
 - **Template System**: Local template library for workflows and prompts
 - **CRM Integration**: Demo tracking and performance metrics
 - **Client Communication**: Demo access and walkthrough coordination
 
 ## Tools and Resources
+- **Beam Studio API**: Complete API integration with authentication and error handling
+- **API Documentation**: Full reference at `https://api.beamstudio.ai/public-docs#/`
 - **Template Library**: Pre-built demo templates for common scenarios
 - **Prompt Optimization**: Clarity scoring and improvement tools
 - **Test Case Generator**: Automated test case creation from workflows
-- **Webhook Integration**: Standard deployment endpoint
+- **Webhook Integration**: Async processing with callback support
 - **Performance Monitoring**: Demo usage and effectiveness tracking
+- **Code Examples**: JavaScript and Python implementation samples
 
 ## Quality Gates
 - **Template System**: Workflow creation functional with clarity guidelines
 - **Optimization Layer**: Prompt ambiguity detection and test case synchronization
-- **Integration Ready**: Webhook deployment and live testing operational
+- **Beam Studio API Integration**: Complete API integration with proper payload format
+- **Authentication**: Bearer token and client ID configuration validated
+- **Error Handling**: Comprehensive error handling for all API response codes
+- **Integration Ready**: API deployment and live testing operational
 
 ## Risk Mitigation
 - **Prompt Complexity**: Start with simple clarity rules, iterate based on results
-- **Webhook Integration**: Test thoroughly with example payloads
+- **Beam Studio API Integration**: Test thoroughly with example payloads and error scenarios
+- **Authentication Issues**: Implement proper token validation and refresh logic
+- **Rate Limiting**: Implement exponential backoff for 429 responses
+- **Webhook Callbacks**: Ensure reliable callback handling and timeout management
 - **Template Maintenance**: Design for easy updates and improvements
 
 ## Implementation Notes
-- **Last Updated**: 2025-01-27
+- **Last Updated**: 2025-09-26
 - **Created By**: System
 - **Status**: Active
-- **Next Review**: 2025-02-27
+- **Beam Studio API Integration**: Complete with proper payload format
+- **API Documentation**: `https://api.beamstudio.ai/public-docs#/`
+- **Next Review**: 2025-10-26

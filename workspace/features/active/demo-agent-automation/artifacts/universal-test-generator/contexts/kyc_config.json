@@ -1,0 +1,28 @@
+{
+  "document_types": ["carteira_motorista", "conta_luz", "extrato_bancario"],
+  "business_rules": {
+    "validation_rules": ["clarity", "completeness", "authenticity", "currency"],
+    "risk_factors": ["occupation", "income", "document_quality", "geographic_risk"],
+    "approval_criteria": ["all_documents_valid", "identity_verified", "low_risk", "no_watchlist_match"]
+  },
+  "stp_indicators": {
+    "document_validation": "Todos os documentos são legítimos, claros, atuais e sem sinais de adulteração",
+    "identity_verification": "Nome, endereço e dados pessoais consistentes em todos os documentos",
+    "risk_assessment": "Perfil de baixo risco - profissional estabelecido, renda estável, sem histórico de problemas",
+    "decision": "APROVAÇÃO AUTOMÁTICA - Processar imediatamente sem revisão manual"
+  },
+  "document_templates": {
+    "carteira_motorista": {
+      "title": "Carteira Nacional de Habilitação",
+      "fields": ["name", "dob", "address", "city", "state", "zip", "rg", "cpf", "license_number", "expiry_date", "height", "weight", "eyes", "hair"]
+    },
+    "conta_luz": {
+      "title": "Conta de Energia Elétrica",
+      "fields": ["company", "account_number", "customer_name", "cpf", "address", "billing_period", "due_date", "amount", "consumption", "tariff"]
+    },
+    "extrato_bancario": {
+      "title": "Extrato Bancário",
+      "fields": ["bank", "account_holder", "cpf", "agency", "account", "period", "opening_balance", "transactions", "closing_balance", "interest"]
+    }
+  }
+}

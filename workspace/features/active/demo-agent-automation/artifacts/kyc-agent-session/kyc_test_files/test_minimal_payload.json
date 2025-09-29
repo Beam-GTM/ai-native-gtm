@@ -1,0 +1,16 @@
+{
+  "taskQuery": {
+    "query": "Test document processing with a single simple image file",
+    "additionalInfo": "Testing minimal document upload"
+  },
+  "parsingUrls": [],
+  "encodedContextFiles": [
+    {
+      "data": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==",
+      "mimeType": "image/png",
+      "fileName": "test.png",
+      "fileSize": "1"
+    }
+  ],
+  "agentId": "d8b2e9b5-20da-4e69-81cf-5af2933124c9"
+}
