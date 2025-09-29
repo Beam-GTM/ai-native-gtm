@@ -1,0 +1,52 @@
+# Demo Agent Package - Example Company
+company: "Example Company"
+demo_type: "process_automation"
+created_date: "2025-01-27"
+status: "template"
+
+demo_config:
+  scenario: "Document processing automation"
+  duration: "30 minutes"
+  audience: "VP Operations, Technical Team"
+  
+workflow_steps:
+  - step: 1
+    title: "Current Process Analysis"
+    description: "Show current manual document processing"
+    duration: "5 minutes"
+    
+  - step: 2
+    title: "Automation Demo"
+    description: "Live automation of sample documents"
+    duration: "15 minutes"
+    
+  - step: 3
+    title: "ROI Calculation"
+    description: "Show time and cost savings"
+    duration: "5 minutes"
+    
+  - step: 4
+    title: "Implementation Plan"
+    description: "Next steps and timeline"
+    duration: "5 minutes"
+
+test_data:
+  - type: "invoice"
+    file: "sample-invoice.pdf"
+    expected_output: "structured_data.json"
+    
+  - type: "contract"
+    file: "sample-contract.pdf"
+    expected_output: "extracted_terms.yaml"
+
+success_metrics:
+  - accuracy: "> 95%"
+  - processing_time: "< 30 seconds"
+  - cost_reduction: "60%"
+  - manual_intervention: "< 5%"
+
+follow_up:
+  - next_meeting: "Technical validation call"
+  - timeline: "Within 1 week"
+  - deliverables: "Detailed proposal"
+  - decision_date: "End of month"
